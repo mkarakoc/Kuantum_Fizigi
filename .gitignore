@@ -1,3 +1,13 @@
+# personal
+.ipynb_checkpoints
+
+# To remove all your .pyc files from your git repo…
+# https://yuji.wordpress.com/2010/10/29/git-remove-all-pyc/
+# find . -name "*.pyc" -exec git rm -f {} \;
+# Then, add a .gitignore file in the root of your repo and enter a line:
+*.pyc
+
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
