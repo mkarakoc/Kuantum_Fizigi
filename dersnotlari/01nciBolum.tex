@@ -53,7 +53,7 @@
 \newpage
 
 \renewcommand{\contentsname}{İçindekiler}
-\tableofcontents{İçindekiler}
+\tableofcontents{}
 
 \newpage
 
@@ -432,9 +432,21 @@ Deneyde basitçe, A metal plakasına gelen tek renkli ışık eğer elektron kop
 %%
 \begin{figure}[hbtp]
 \center
+\begin{minipage}{0.45\textwidth}
 \includegraphics[scale=.5]{fotoeletrik_enyuksek_KE.png}
 \caption{Fotoelektronların (fotoelektrik etkiyle koparılan elektron) sahip olabileceği en büyük kinetik enerjinin ölçümü \cite{book:EisbergResnick}.}
 \label{fig:fotoeletrik_elektron_KE}
+\end{minipage}
+%%%
+\begin{minipage}{0.05\textwidth}
+\hspace{24pt}
+\end{minipage}
+%%%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[scale=.5]{fotoeletrik_nu0_workFunction.png}
+\caption{Işık gönderilen plakanın cinsine bağlı olarak belirli bir frekans değerinin altındaki değerlerde fotoelektron koparılamaz \cite{book:EisbergResnick}.}
+\label{fig:fotoeletrik_workfunction}
+\end{minipage}
 \end{figure}
 
 Klasik EM teorinin önerilerine rağmen deneylerde gözlenen sonuçlar aşağıdaki gibidir.
@@ -442,15 +454,26 @@ Klasik EM teorinin önerilerine rağmen deneylerde gözlenen sonuçlar aşağıd
 \begin{itemize}
 \item {\bf Belirli bir frekanstaki veya dalga boyundaki ışık ile koparılan bir elektronun en yüksek kinetik enerjisinin ışığın şiddetiyle bağlantısı yoktur:} Şekil \ref{fig:fotoeletrik_elektron_KE}'e göre $i$ akım ekseni ışığın şiddeti arttıkça yayınlanan elektron sayısının arttığının bir ölçüsüdür. Fakat her iki farklı şiddetteki ışığın ortak noktası frekanslarının aynı olmasıdır ve bir elektrona aktarabildikleri enerji aynıdır.
 
-\item {\bf Eğer ışığın frekansı belirli bir değerin altındaysa fotoelektrik etki gerçekleşmez:} Deney düzeneğindeki metal plakanın cinsine bağlı olarak ışığın frekansı yetersizse, şiddeti ne olursa olsun ışık elektron yayınlanmasını sağlayamaz.
+\item {\bf Eğer ışığın frekansı belirli bir değerin altındaysa fotoelektrik etki gerçekleşmez:} Deney düzeneğindeki metal plakanın cinsine bağlı olarak ışığın frekansı yetersizse, şiddeti ne olursa olsun ışık elektron yayınlanmasını sağlayamaz (bkz. Şekil \ref{fig:fotoeletrik_workfunction}).
 
 \item {\bf Işık metal plakaya ulaştıktan $10^{-9}$~s sonra, neredeyse hiç zaman geçmeden, fotoelektron salınımı gerçekleşir:} Bu durum klasik EM dalga teorisinin tahmin ettiği saniye mertebesiyle çelişmektedir.
 
 \end{itemize}
 
+Einstein 1905 yılında Planck'ında fikirlerinden faydalanarak ışığın dalga paketleri halinde,
+\begin{equation}
+\label{eq:photon_E}
+E = h\nu
+\end{equation}
+var olabileceklerini ortaya attı. Planck'da kesikli enerjili ışımaları önermişti fakat Plank'a göre siyah cismin duvarlarından salınan termal ışımalar $h\nu$  enerjisiyle salındıktan sonra tekrar bir su dalgası gibi yayılmaktaydılar. Einstein ise salınan bu ışık paketlerinin (light quanta) dalga gibi yayılmak yerine birer parçacık gibi davrandıklarını iddia etmiştir. Bu parçacığa daha sonraları foton adı verilmiştir.
 
+Foton adlı bu parçacıklar $h \nu$ enerjisi taşımakla beraber boşlukta ışık hızında hareket ederler ve bu yüzden Einstein'in bir başka teorisine göre (özel görelilik) hareket ederler. Bu teoriye uyduklarına göre kütle sahibi olamazlar aksi takdirde ışık hızına ulaştıklarında sonsuz enerjili olmaları gerekir. Bu teoreme göre fotonlar aynı zamanda $p = E/c$ momentumu taşırlar. Böylece kütleli parçacıklara benzer davranışlar göstermiş olurlar.
 
-
+Einstein fotonun enerjisinin fotoelektrona aktarılmasını,
+\begin{equation}
+\label{eq:photon_E}
+E = h\nu
+\end{equation}
 
 \subsection{Compton Etkisi}
 
