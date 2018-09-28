@@ -26,4 +26,6 @@ ENV SHELL "/bin/bash"
 # working directory
 WORKDIR /home/jovyan
 
+ADD . /programlar
+ADD . /dersnotlari
 
