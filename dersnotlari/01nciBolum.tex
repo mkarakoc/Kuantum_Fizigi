@@ -5,11 +5,20 @@
 
 \usepackage[utf8]{inputenc}
 %https://mirror.hmc.edu/ctan/macros/latex/contrib/babel-contrib/turkish/turkish.pdf
-\usepackage[turkish, english]{babel}
+\usepackage[english]{babel}
 %\usepackage[T1]{fontenc}
 
 \usepackage{amsmath,amssymb,mathabx}%\for eqref
 \usepackage{lscape}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black}
+  
 
 %%% \usepackage{svg}
 %%% https://tex.stackexchange.com/questions/122871/include-svg-images-with-the-svg-package/129854
@@ -46,14 +55,19 @@
 
 %% Turkish babel problem
 %% https://tex.stackexchange.com/questions/160385/newgeometry-doesnt-work-with-turkish-babel-package
-\shorthandoff{=}% Make = not active any more
+%%\shorthandoff{=}% Make = not active any more
 
 \maketitle
 
 \newpage
 
+% change name to "İçindekiler"
 \renewcommand{\contentsname}{İçindekiler}
 \tableofcontents{}
+
+\listoffigures
+ 
+\listoftables
 
 \newpage
 
@@ -438,9 +452,7 @@ Deneyde basitçe, A metal plakasına gelen tek renkli ışık eğer elektron kop
 \label{fig:fotoeletrik_elektron_KE}
 \end{minipage}
 %%%
-\begin{minipage}{0.05\textwidth}
 \hspace{24pt}
-\end{minipage}
 %%%
 \begin{minipage}{0.45\textwidth}
 \includegraphics[scale=.5]{fotoeletrik_nu0_workFunction.png}
@@ -488,6 +500,111 @@ Bu denklem ile Einstein fotoelektrik etkinin üç sonucunu da izah etmiş oldu.
 \end{itemize}
 
 \subsection{Compton Etkisi}
+Planck ve Einstein'in katkı sunduğu ışık kuantumlarının (fotonların) enerji taşıyan parçacıklar olduğu kavramını destekler nitelikte Einstein 1916 yılında yaptığı çalışmayla fotonların momentum taşımaları gerektiği sonucuna ulaşmıştır. Bu ulaşılan teorik sonuc Arthur H. Compton tarafından gerçekleştirilen deneyle doğrulanmıştır.
+
+Compton etkisi (saçılması veya olayı) olarak bilinen bu deneyde $X$-ışınları metalik bir yüzeye gönderilmiş ve bu metalden saçılan fotonların dalga boyları, saçılma açıları ve şiddetleri kaydedilmiştir. Şekil \ref{fig:compton_exp}'da verilen deneysel verilere göre metal plakaya gönderilen fotonların bir kısmının dalga boyu değişmezken bir kısmının fark edilir miktarda değiştiği (kaydığı) anlaşılmaktadır.
+
+Bu tür deneyler için geliştirilen J. J. Thomson'un \cite{Thomson1906} klasik EM teori üzerine kurulu teorisine göre saçılan ışığın enerjisi gelen ışığın dalga boyundan bağımsızdı. Compton, Planck ve Einstein'in yolunu takip ederek ışığın bir parçacık gibi davranması gerektiği varsayımıyla deney verilerini açıklamayı başarabilmiştir.
+
+Parçacık modeline göre enerji ve momentum korunumu için,
+\begin{align}
+\label{eq:compton_E_conv1}
+E_\gamma + E_e = E_{\gamma'} + E_{e'}
+\end{align}
+%%
+\begin{align}
+\label{eq:compton_E_conv2}
+\vec{p}_\gamma = \vec{p}_{\gamma'} + \vec{p}_{e'}
+\end{align}
+eşitlikleri yazılabilir. Burada $E_{\gamma} = h\nu$ ve $E_{\gamma'} = h\nu'$ gelen ve saçılan fotonların enerjileridir. Saçılmadan önce elektron neredeyse durgun kabul edildiğinden $E_e = m_ec^2$ enerjisine sahiptir, saçıldıktan sonra ise $E_{e'} = \sqrt{(p_{e'}c)^2 + (m_ec^2)^2}$ enerjisine sahip olabilir (eğer yeterince momentum kazanırsa göreli fiziğin sınırları içine girer). Bu ifadeler  enerji korunumunu tanımlayan Denk. \ref{eq:compton_E_conv1}'da kullanılırsa,
+%%
+\begin{align}
+\label{eq:compton_E_conv3}
+h\nu + m_e c^2 = h\nu' + \sqrt{(p_{e'}c)^2 + (m_e c^2)^2}
+\end{align}
+%%
+\begin{figure}[hbtp]
+\begin{minipage}{0.45\textwidth}
+{\center
+\includegraphics[scale=.8]{compton_exp_data.png}
+%% http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/compdat.html#c1
+\caption{Compton'un deney sonuçları \cite{book:EisbergResnick}. $0^\circ$'den $135^\circ$ dereceye kadar çizilen çizgi gelen fotonun dalga boyunu ($\lambda$), diğer çizgiler ise saçılan fotonun dalga boyunu ($\lambda'$) göstermektedir.}
+\label{fig:compton_exp}}
+%%%%%%%%%%
+\noindent\rule{.98\textwidth}{0.4pt}
+%%
+denklemi elde edilir. Bu denklem yeniden düzenlenerek saçılan elektronun momentumu bulunabilir,
+\begin{align}
+\label{eq:compton_E_conv4}
+p_{e'}^{\, 2}c^2 = (h\nu - h\nu' + m_{e}c^2)^2-m_{e}^2c^4.
+\end{align}
+%%
+\end{minipage}
+%%
+%%
+\hspace{12pt}
+%%
+%%
+\begin{minipage}{0.54\textwidth}
+{\center
+\includegraphics[scale=1.2]{Compton_effect_illust.png}
+\caption{Serbest (veya zayıf bağlı) ve durgun bir elektrona gelen bir fotonun saçılmasının parçacık modeline göre temsili.}
+\label{fig:compton_duzenek}}
+%%%%%%%%%%
+
+\vspace{12pt}
+
+%%%%%%%%%%
+\noindent\rule{.98\textwidth}{0.4pt}
+%%
+Momentumun korunumunu belirleyen Denk. \ref{eq:compton_E_conv2} yeniden düzenlenirse,
+%%
+\begin{align}
+\label{eq:compton_E_conv5}
+\vec{p}_{e'} = \vec{p}_\gamma - \vec{p}_{\gamma'}
+\end{align}
+%%
+halini alır. Saçılan elektronun momentumunun kendisiyle iç (skaler) çarpımı sonucunda,
+\begin{align}
+\label{eq:compton_E_conv6}
+p_{e'}^{\, 2} &= \vec{p}_{e'}\cdot\vec{p}_{e'} = (\vec{p}_\gamma - \vec{p}_{\gamma'}) \cdot (\vec{p}_\gamma - \vec{p}_{\gamma'}) \\
+ &= p_{\gamma}^{\, 2} + p_{\gamma'}^{\, 2} - 2 p_{\gamma}\, p_{\gamma'} \cos\theta. 
+\end{align}
+elde edilir. Elde edilen son eşitliğin her iki tarafı $c^2$ ile çarpılır ve foton momentumları yerine $p = E/c = h\nu$ yazılabileceği hatırlanırsa,
+%%
+\begin{align}
+\label{eq:compton_E_conv7}
+p_{e'}^{\, 2}c^2 = p_{\gamma}^{\, 2}c^2 + p_{\gamma'}^{\, 2}c^2 - 2c^2 p_{\gamma}\, p_{\gamma'} \cos\theta \nonumber \\
+p_{e'}^{\, 2}c^2 = (h \nu)^2 + (h \nu')^2 - 2(h\nu)(h \nu')\cos{\theta}
+\end{align}
+%%
+eşitlikleri elde edilir. Denk. \ref{eq:compton_E_conv4} ve  \ref{eq:compton_E_conv7}'nin sol tarafları eşit olduğuna göre sağ tarafları da birbirine eşit olmalıdır. Bu durumda,
+%%
+\begin{align}
+\label{eq:compton_E_conv8}
+(h\nu - h\nu' + m_e c^2)^2 - m_e^{\, 2}c^4 = \nonumber\\
+= \left(h\nu\right)^2 + \left(h \nu'\right)^2 - 2h^2 \nu\nu'\cos{\theta}
+\end{align}
+%%
+olur. Gerekli sadeleştirmeler yapılırsa,
+%%
+\begin{align}
+\label{eq:compton_E_conv9}
+2 h \nu m_e c^2-2 h \nu' m_e c^2   = 2 h^2 \nu \nu' \left( 1 - \cos \theta \right)
+\end{align}
+olur. Her iki taraf $ 2h\nu\nu'm_e c$ ile sadeleştirilirse ve $\nu = c/\lambda$ olduğu hatırlanırsa,
+%%
+\begin{align}
+\label{eq:compton_E_conv10}
+\lambda'-\lambda = \frac{h}{m_ec}(1-\cos{\theta})
+\end{align}
+dalga boyundaki kaymayı veren denklem elde edilmiş olur.
+
+\end{minipage}
+\end{figure}
+
+
+
 
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
 % and "\renewcommand\bibname{New Title}" for book and report type documents.
