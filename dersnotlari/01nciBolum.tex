@@ -606,11 +606,100 @@ dalga boyundaki kaymayı veren denklem elde edilmiş olur. $h/m_e c \eqsim 2.4\t
 
 \subsection{Parçacık mı, Dalga mı?}
 
-1923'te {\it de Broglie} ``A Tentative Theory of Light Quanta" () adlı çalışmasında,
+1923'te {\it Louis de Broglie} ``Işık paketinin geçici teorisi" adlı çalışmasında her ışık paketinin eylemsiz kütlesinin $m_0$ olması gerektiğini ve
+bu kütle çok küçük olduğundan ışık paketinin (fotonun) hızının neredeyse ışık hızı $c$ çok yakın olması gerektiğini öne sürmüştür. Böylece bir fotonun bütün enerjisi için,
 \begin{equation}
-asdfasd
+\label{eq:foton_deBroglie_E}
+h \nu = \frac{m_0 c^2}{\sqrt{1-v^2/c^2}}
 \end{equation}
+eşitliğini önermiştir \cite{book:FrenchAP}. Bu eşitlikten yola çıkarak hafif kütleli bütün parçacıklar için,
+\begin{equation}
+\label{eq:deBroglie_P}
+\lambda = \frac{h}{p}
+\end{equation}
+olacağını öne sürdü. de Broglie fotonu hafif de olsa kütleli kabul etmiştir, fakat günümüzde fotonun kütlesinin sıfır olduğu kabul edilmektedir. de Broglie'nin asıl katkısı bu formülüne getirdiği yeni yorumdur. Bu yoruma göre ışık paketi {\it dalga-parçacık} ikilik (dualite) doğasına sahipse kütleli parçacıklar da {\it parçacık-dalga} ikilik doğasına sahip olmalıydı. 
 
+Örneğin elektron parçacığı de Broglie'nin önerdiği ifadeyle hesaplanan bir dalga boyuna sahip bir dalga gibi davranabilirdi. Bu öneriye ilk deneysel destek C. J. Davisson ve L. H. Germer tarafından gerçekleştirilen elektron kırınımı (difraksiyonu) deneyinden gelmiştir. 
+
+%%
+\begin{figure}[hbtp]
+\center
+\begin{minipage}{0.45\textwidth}
+\includegraphics[scale=.7]{Davisson-Germer_experiment.png}
+\caption{Davisson ve Germer'in deney düzeneğinin şeması\cite{web:wiki_davisson_germer1}.}
+\label{fig:davisson_germer1}
+\end{minipage}
+%%%
+\hspace{24pt}
+%%%
+\begin{minipage}{0.45\textwidth}
+\includegraphics[scale=.35]{Bell_Labs_APS_plaque_west_side_of_Westbeth_door_jeh_edited.jpg}
+\caption{Davisson ve Germer'in anısına düzenlenen deneyin gerçekleştirildiği Bell laboratuvarındaki anı tablosu\cite{web:wiki_davisson_germer1}.}
+\label{fig:davisson_germer2}
+\end{minipage}
+\end{figure}
+
+Davisson ve Germer Şekil \ref{fig:davisson_germer1}'deki deney düzeneğinde hızlarını belirledikleri elektron demetlerini Nikel kristal hedefe göndererek deneylerini gerçekleştirmişlerdir. Bu hedef Şekil \ref{fig:davisson_germer4}'teki gibi bir geometrik yapıya ve Şekil \ref{fig:davisson_germer3}'teki bir kristal yapıya sahiptir. Uygun momentuma sahip elektronlar şekildeki gibi bir kristal yapıdan saçıldıklarında eğer dalga özelliğine sahiplerse yıkıcı ve yapıcı girişimler yapacaklardır. Bu durumda kısmen Bragg yasasına uyarlar. Böylece Şekil \ref{fig:davisson_germer5}'da verilen denklemlere göre kırınıma uğrayıp yapıcı girişim yapan elektronların dalga boyları bulunabilir. Davisson ve Germer'in deneyinde elde edilen sonuçlar Şekil \ref{fig:davisson_germer4}'ün alt kısmında görülmektedir. Bragg yasasıyla ilişkili olarak elektronların dedektörde gözlenen şiddetlerinin davranışları anlaşılabilir.
+
+Davisson ve Germer'den sonra ise moleküler hidrojen, helyum ve yavaş nötronlarla da benzeri deneyler gerçekleştirilmiş ve parçacıkların dalga yapısındaki davranışları tekrar tekrar gözlenmiştir \cite{book:Gasiorowicz}.
+
+Çok küçüklerin dünyasında (mikroskopik seviyede) dalga davranışını gözlemek mümkünken, büyüklerin dünyasında (makroskopik seviyede) dalga davranışını gözlemek mümkün değildir. Örneğin, 0.1 mm büyüklüğünde ve 10 cm/s ile ilerleyen bir su damlası için De Broglie dalga boyu,
+%%
+\begin{equation*}
+\lambda = h/p = 6.6\times 10^{-27}/(4\times 10^{-5}\eqsim 1.6\times 10^{-22} \text{cm})
+\end{equation*}
+%%
+iken, Proton'un yarı çapı $10^{-13}$~cm'dir. Bu nedenle günlük yaşantımızda ve deneylerimizde makroskopik seviyede dalga etkilerini gözleyemeyiz \cite{book:Gasiorowicz}. Işığın veya elektromanyetik dalganın parçacık yapısı davranışının gözlenebilmesi için ise ışığın paketinin dalga boyu ve momentumunun çarpımı Planck sabiti civarında olmalıdır ($\lambda p \eqsim h$).
+
+
+\begin{figure}[hbtp]
+\center
+\begin{minipage}{0.45\textwidth}
+\includegraphics[scale=.8]{davisson_germer_hyperphysics.png}
+\caption{Davisson ve Germer'in deney sonuçları\cite{web:hyperphysics_davisson_germer1}.}
+\label{fig:davisson_germer3}
+\end{minipage}
+%%%
+\hspace{24pt}
+%%%
+\begin{minipage}{0.35\textwidth}
+\includegraphics[scale=.35]{Davisson-Germer_experiment_nickel_target.png}
+\caption{\label{fig:davisson_germer4} Deneyde kullanılan hedefin geometrik yapısı \cite{DavissonGermer}. Kalın ok gelen elektron demetlerini temsil etmektedir.}
+
+\vspace{24pt}
+
+\includegraphics[scale=.4]{davisson_germer_hyperphysics_bragg.png}
+\caption{\label{fig:davisson_germer5} Deney sonuçlarının Bragg yasası ile ilişkisi \cite{web:hyperphysics_davisson_germer1}.}
+\end{minipage}
+\end{figure}
+
+
+\vspace{24pt}
+
+{\bf Çift yarık deneyi sonra yazılacak...}
+
+\href{https://tr.wikipedia.org/wiki/%C3%87ift_yar%C4%B1k_deneyi}{Bu linkten okunabilir. }
+%% https://tr.wikipedia.org/wiki/Çift_yarık_deneyi
+
+\begin{figure}[hbtp]
+\center
+\begin{minipage}{0.45\textwidth}
+\includegraphics[scale=.4]{Double-slit.png}
+\caption{Tonomura \cite{web:wiki_double_slit_experiment}.}
+\label{fig:tonomura}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\includegraphics[scale=.8]{Double-slit_experiment_results_Tonomura_2.jpg}
+\caption{Tonomura \cite{web:wiki_double_slit_experiment}.}
+\label{fig:tonomura1}
+\end{minipage}
+\end{figure}
+
+\newpage
+
+\subsection{Bohr Atomu}
+
+\newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
 % and "\renewcommand\bibname{New Title}" for book and report type documents.
 \renewcommand\refname{Kaynaklar}
