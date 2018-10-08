@@ -16,8 +16,8 @@
     colorlinks,
     citecolor=black,
     filecolor=black,
-    linkcolor=black,
-    urlcolor=black}
+    linkcolor=blue,
+    urlcolor=red}
   
 
 %%% \usepackage{svg}
@@ -697,7 +697,49 @@ iken, Proton'un yarı çapı $10^{-13}$~cm'dir. Bu nedenle günlük yaşantımı
 
 \newpage
 
-\subsection{Bohr Atomu}
+\subsection{Rutherford ve Bohr Atom Modelleri}
+
+\begin{figure}[hbtp]
+\center
+\includegraphics[scale=.5]{Thomson_vs_Rutherford_Atom.png}
+\caption{ {\it Solda:} Thomson tarafından önerilen atom modeli ve bu modele göre alfa saçılım deneyinin beklenen sonucu. {\it Sağda:} Gerçekleştirilen deneydeki sonuç ve bu sonuca göre Rutherford'un önerdiği gezegen atom modeli. }
+\label{fig:rutherfod_bohr_atom}
+\end{figure}
+
+Henri Becquerel ve Marie Cruie'nin öncülüğüne yaptığı radyoaktivite çalışmaları sonucunda, atomun iç yapısını çalışmak için gerekli araçlar ortaya çıkmış oldu. Bunlardan birisi ilk önceleri $\alpha$ (alfa) parçacıkları olarak adlandırılmış parçacıklardır, çok daha sonra helyum atomunun çekirdeği olduğu anlaşılmıştır. 
+
+Ernest Rutherford'un gözetiminde H. W. Geiger  ve E. Marsden tarafından 1908'de altın bir plakadan alfa parçacıklarının saçılımı deneyleri gerçekleştirilmiştir. Şekil \ref{fig:rutherfod_bohr_atom} temsili gösterilen Thomson atom modeline göre gerçekleştirilen deneylerin sonucunda alfaların çok küçük açılarla saçılacakları öngörülebilir. Çünkü elektronun kütlesi alfa gibi büyük kütleli bir parçacığın büyük açılı saçılmalaya uğraması için yeterli değildir. Modele göre elektronları çevreleyen pozitif bulut (!) ise gerekli saçılmayı sağlayacak kadar yoğun değildir.
+
+Fakat deneylerde nadiren de olsa, Şekil \ref{fig:rutherfod_bohr_atom}'da görüldüğü üzere, büyük açılı saçılmaların gerçekleştiği gözlenmiştir. Deneylerin ayrıntılı tarihçesine {\it \href{https://history.aip.org/exhibits/rutherford/sections/alpha-particles-atom.html}{Alpha Particles and the Atom}} başlıklı web sayfasından ulaşılabilir \cite{web:rutherford_bohr_atom}. Rutherford deney sonuçlarına göre gezegen atom modeli olarak da isimlendirilen atom modelini önermiştir. Bu modele göre pozitif yükler atomun merkezinde ve çok küçük bir hacimde toplanmış olmalıdır. Böylece alfa parçacıkları büyük kütleli bir merkezden daha büyük bir itici potansiyelle saçılırlar. Bu atom modeline göre elektronlar büyük kütleli ve pozitif yüklü bu merkez etrafında $1/r^2$ ile orantılı çekici bir kuvvet etkisinde dairesel veya eliptik yörüngeler izlerler.
+
+Rutherford atom modeliyle büyük açılı alfa saçılmaları açıklanabilmiş, fakat yeni sorunlar ortaya çıkmıştır. Elektronlar atom çekirdeği etrafında dairesel yörüngede dönerken, merkezcil bir ivmeyle, ivmeli hareket yaparlar. Klasik elektrodinamik (KED) teoriye göre ivmeli hareket yapan her elektrik yüklü parçacık ışıma yapar. Bu durumda elektronların nasıl kararlı yörüngelere sahip oldukları açıklanamaz. Çünkü ışıma yapan elektronların enerji kaybederek ve spiral bir yörünge izleyerek \href{http://bcs.wiley.com/he-bcs/Books?action=mininav&bcsId=1533&itemId=0471057002&assetId=17327&resourceId=1342}{10$^{-10}$~s}'de çekirdeğe düşmeleri beklenir. Dahası KED'eye göre yayınlanan ışınımın frekansı elektronun periyodik hareketinin frekansı ile aynı olmalıydı. Fakat, o zamana kadar elde edilen atomik spektrum bilgileriyle bu sonuç çelişmekteydi. Anders Angstrom ve diğerlerinin sonuçlarını inceleyen Swiss Johann Balmer 1885'de ışımaların dalga boyunu veren, 
+%%
+\begin{equation}
+\frac{1}{\lambda}= R_y \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)
+\label{eq:balmer}
+\end{equation}
+formülünü keşfetti. Burada $n_1$ ve $n_2$ tam sayı, $R_y$ bir sabittir \cite{book:Gasiorowicz}.
+
+Neils Bohr 1913 yılında, Rutherford'dan iki yıl sonra, bu çelişkileri ortadan kaldırabilmek için kendi varsayımlarını fizik topluluğu ile paylaştı. Bu varsayımlar klasik fiziğin sınırları dışında kalmakla beraber belli ölçüde Rutherford atom modelindeki çelişkilere cevap verdiği düşünülebilir. Çünkü spektrumu açıklarken, kararlılık problemi üzerinde durmamıştır.
+
+\begin{itemize}
+\item Bir atomik sistemin varlığı ancak {\it kesikli durağan seviyeler} ile izah edilebilir. Buna göre sistemdeki herhangi bir enerji değişikliği böyle iki seviye arasındaki tam geçişlerle mümkün olabilir.
+
+\item İki durağan seviye arasındaki geçişler sırasında yayınlanan veya soğurulan elektromanyetik ışınımın frekansı seviyelerin enerjileri $E_1$ ve $E_2$ ile,
+\begin{equation}
+h\nu = E_1 - E_2
+\label{eq:bohr_states}
+\end{equation}
+şeklinde doğrudan ilişkilidir.
+
+\item Bu durağan seviyeler Rutherford atom modelindeki izinli yörüngelere (orbitlere) karşılık gelirler. Bu yörüngelerde elektronlar klasik fizikteki gibi herhangi bir açısal momentum değerini alamazlar. Bunun yerine açısal momentumu,
+\begin{equation}
+L = m v r  = n \frac{h}{2 \pi}
+\label{eq:bohr_allowed_states}; \;\;\;\; n=1,2,3, \dots
+\end{equation}
+ifadesine uyan ve tam sayılarla ifade edilen yörüngelerede bulunabilirler.
+\end{itemize}
+
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
