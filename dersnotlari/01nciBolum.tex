@@ -727,18 +727,147 @@ Neils Bohr 1913 yılında, Rutherford'dan iki yıl sonra, bu çelişkileri ortad
 
 \item İki durağan seviye arasındaki geçişler sırasında yayınlanan veya soğurulan elektromanyetik ışınımın frekansı seviyelerin enerjileri $E_1$ ve $E_2$ ile,
 \begin{equation}
-h\nu = E_1 - E_2
+h\nu = E_2 - E_1
 \label{eq:bohr_states}
 \end{equation}
 şeklinde doğrudan ilişkilidir.
 
-\item Bu durağan seviyeler Rutherford atom modelindeki izinli yörüngelere (orbitlere) karşılık gelirler. Bu yörüngelerde elektronlar klasik fizikteki gibi herhangi bir açısal momentum değerini alamazlar. Bunun yerine açısal momentumu,
+\item Bu durağan seviyeler Rutherford atom modelindeki izinli yörüngelere (orbitlere) karşılık gelirler. Bu yörüngelerde elektronlar klasik fizikteki gibi herhangi bir açısal momentum değerini alamazlar, bunun yerine açısal momentumları
 \begin{equation}
 L = m v r  = n \frac{h}{2 \pi}
 \label{eq:bohr_allowed_states}; \;\;\;\; n=1,2,3, \dots
 \end{equation}
 ifadesine uyan ve tam sayılarla ifade edilen yörüngelerede bulunabilirler.
 \end{itemize}
+
+\begin{figure}[hbtp]
+\center
+\includegraphics[scale=.8]{Bohr-atom-PAR.png}
+\caption{Bohr ve Rutherford atom modeline göre tek elektronlu bir atomik yapının temsili.}
+\label{fig:bohr_atom}
+\end{figure}
+
+Bu varsayımlardan elde edilen teorik sonuçlar hidrojen gibi tek elektronlu ve dairesel yörüngeli atomları izah etmede başarılı olmuştur. Şekil \ref{fig:bohr_atom}'deki temsile göre elektron üzerinde Coulomb yasası gereğince,
+%%
+\begin{equation}
+F_e = \frac{1}{4\pi\varepsilon_0} \frac{Ze^2}{r^2}
+\label{eq:bohr_elektron}
+\end{equation}
+%%
+çekici kuvveti oluşur. Klasik olarak Newton mekaniğinde bir cisme dışarıdan uygulanan merkezcil kuvvetler için,
+%%
+\begin{equation}
+\sum F_\text{dış} = m_e a = m_e v^2/r
+\label{eq:newton_ma}
+\end{equation}
+%%
+yazılabilir. Elektrona uygulanan tek merkezcil ve dış kuvvet Coulomb kuvveti olduğuna göre elektronun hareketini betimlemek için,
+%%
+\begin{equation}
+\frac{1}{4\pi\varepsilon_0} \frac{Ze^2}{r^2} = \frac{m_e v^2}{r} 
+\label{eq:bohr_orbit_motion}
+\end{equation}
+%%
+yazılabilir. Bohr'un açısal momentum ile ilgili varsayımı (Denklem \ref{eq:bohr_allowed_states}) elde edilen bu son eşitlikte kullanılırsa, sırasıyla elektronun yörünge sürati ve yörünge yarı çapı,
+%%
+\begin{equation}
+v = \frac{Ze^2}{4\pi\varepsilon_0}  \frac{2\pi}{n h}
+\label{eq:bohr_elektron_speed}
+\end{equation}
+%%
+ve
+%%
+\begin{equation}
+r = \left(\frac{n h}{2 \pi} \right)^2 \frac{1}{m_e}\, \frac{1}{(Z e^2/4\pi\varepsilon_0)}
+\label{eq:bohr_elektron_radius}
+\end{equation}
+%%
+olur. Klasik olarak elektronun toplam enerjisi,
+%%
+\begin{equation}
+E = \frac{1}{2}m_e v^2 - \frac{Z e^2}{4\pi\varepsilon_0 r}
+\label{eq:bohr_elektron_energy1}
+\end{equation}
+%%
+ifadesi ile tanımlanır. Bohr'un modelinden elde edilen sürat ve yarıçap bu denklemde yerine konursa,
+%%
+\begin{equation}
+E = -\frac{1}{2} \left(\frac{2\pi}{h} \right)^2 \left(\frac{Ze^2}{4\pi \varepsilon_0} \right) \frac{1}{n^2}
+\label{eq:bohr_elektron_energy2}
+\end{equation}
+%%
+elektronun toplam enerjisi olarak bulunur. Bu sonuç, Bohr'un elektronların yörünge geçişlerinde yayınlanan elektromanyetik dalganın enerjisini tanımlayan varsayımı ile birleştirildiğinde, Balmer tarafından önerilen (Denk. \ref{eq:balmer}) seviye geçişleri denklemine ulaştırır.
+
+Elektronun enerjisi, sürati ve yarıçapı için yukarıda elde edilen ifadeler bir kaç yeni tanımla daha pratik yazılabilirler. İndirgenmiş Plank sabiti 
+%%
+\begin{equation}
+\hbar = \frac{h}{2\pi} = 1.054571800 \times 10^{-34}\ \text{J}\,\text{s}/\text{rad}
+\label{eq:reduced_planck_const}
+\end{equation}
+%%
+olarak tanımlanırsa ve $\nu$ (frekans) yerine $\omega = 2\pi \nu$ (açısal frekans) kullanılırsa Denk. \ref{eq:bohr_states}, 
+%%
+\begin{equation}
+\omega = \frac{E_2 - E_1}{\hbar}
+\label{eq:bohr_states_2pi}
+\end{equation}
+%%
+halini alır. Benzer şekilde, elektromanyetik ışıma paketinin (fotonun) enerjisi,
+%%
+\begin{equation}
+E = \hbar \omega
+\label{eq:foton_energy_2pi}
+\end{equation}
+%%
+olarak yazılabilir. Bohr'un açısal momentum varsayımı,
+%%
+\begin{equation}
+m v r = n \hbar
+\label{eq:bohr_allowed_states_2pi}
+\end{equation}
+%%
+şeklinde yeniden yazılabilir. Ayrıca ``ince yapı sabiit" adı verilen pratik bir sabit de çok sık kullanılır. Bu sabit ise,
+%%
+\begin{equation}
+\alpha = \frac{e^2}{4\pi\varepsilon_0\hbar c} =\frac{1}{137.036}
+\label{eq:fine_structure_const}
+\end{equation}
+%%
+olarak tanımlanmıştır. Bu yeni tanımlarla sürat, yarı çap ve enerji ifadeleri sırasıyla,
+%%
+\begin{equation}
+v = \frac{Z \alpha c}{n} \hspace{24pt} r = \frac{\hbar}{m_e c Z \alpha} n^2
+\label{eq:bohr_v_r_2pi}
+\end{equation}
+%%
+ve
+%%
+\begin{equation}
+E = -\frac{1}{2}m_e (Z \alpha c) \frac{1}{n^2}
+\label{eq:bohr_E_2pi}
+\end{equation}
+%%
+olarak yazılırlar. Bu ifadelerle Şekil \ref{fig:bohr_atom}'deki gibi bir tek elektronlu atom için,
+
+\begin{itemize}
+\item en düşük yörüngenin (n=1) yarı çapı (Bohr yarı çapı olarak da adlandırılır),
+\begin{equation}
+a_0 = \frac{\hbar}{m_e c Z \alpha} 1^2 \eqsim \frac{137\hbar}{m_e c Z} = \frac{0.053}{Z} \text{nm} = \frac{0.53}{Z} \text{\AA}
+\end{equation}
+
+\item dasdfas
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
 
 
 \newpage
