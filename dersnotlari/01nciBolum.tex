@@ -852,15 +852,52 @@ olarak yazılırlar. Bu ifadelerle Şekil \ref{fig:bohr_atom}'deki gibi bir tek 
 \begin{itemize}
 \item en düşük yörüngenin (n=1) yarı çapı (Bohr yarı çapı olarak da adlandırılır),
 \begin{equation}
-a_0 = \frac{\hbar}{m_e c Z \alpha} 1^2 \eqsim \frac{137\hbar}{m_e c Z} = \frac{0.053}{Z} \text{nm} = \frac{0.53}{Z} \text{\AA}
+a_0 = \frac{\hbar}{m_e c Z \alpha} 1^2 \eqsim \frac{137\hbar}{m_e c Z} = \frac{0.053}{Z}\times 10^{-9} \text{m} = \frac{0.053}{Z} \text{nm} = \frac{0.53}{Z} \text{\AA}
+\label{eq:bohr_radius}
 \end{equation}
 
-\item dasdfas
-
+\item en düşük Bohr yörüngesindeki elektronun bağlanma enerjisi ve koparma enerjisi (elektronun serbest hale gelmesi için gerekli enerji),
+%%
+\begin{eqnarray}
+\text{Bağlanma Enerjisi} &\equiv& E(n=1) = -\frac{1}{2}m_e (Z \alpha c) \frac{1}{1^2} \eqsim -13.6 Z^2 \text{eV} \\
+\text{Koparma Enerjisi} &\equiv& E(n\rightarrow\infty) - E(n=1) = 0 - (-13.6 Z^2) = 13.6 Z^2 \text{eV}
+\label{eq:bindingEnergy}
+\end{eqnarray}
 \end{itemize}
+%%
+olarak bulunur. Böyle bir atomda bir elektron n=2 seviyesinden n=1 seviyesine geçişi sırasında elektromanyetik ışınım (foton) yayınlayarak enerji kaybeder. Elektronun kaybettiği enerji veya yayınlanan ışınımın enerjisi,
+%%
+\begin{eqnarray}
+\text{Fotonun Enerjisi} &\equiv& E(n=2) - E(n=1) 
+= -\frac{13.6 Z^2}{2^2} - (-\frac{13.6 Z^2}{1^2}) \nonumber \\ 
+&=&  13.6 Z^2 (1-\frac{1}{4}) \text{ eV} = 10.2 \text{ eV}
+\label{eq:fotonEnergy}
+\end{eqnarray}
+%%
+olacaktır. Yayınlanan fotonun açısal frekansı ise Denk. \ref{eq:bohr_states_2pi}'e göre,
+%%
+\begin{equation*}
+\omega = \frac{E_2 - E_1}{\hbar} = \frac{10.2 \text{ eV}}{6.58\times 10^{-16} \text{ eV s/rad}} \eqsim 1.6 \times 10^{16} \text{ rad/s}
+\end{equation*}
+%%
+dir. Aynı fotonun dalga boyu ise,
+%%
+\begin{eqnarray*}
+E &=& \hbar \omega = \hbar 2\pi \nu = \hbar 2\pi c/\lambda, \\
+\lambda &=& \frac{\hbar 2\pi c}{E} = 
+\frac{6.58\times 10^{-16} \text{ eV s/rad } 2\pi\,3\times 10^8 \text{m/s}}{10.2 \text{eV}}\eqsim 1.2\times 10^{-7} \text{m}\\
+\lambda &=& 120 \text{ nm} = 1200 \text{ \AA} 
+\end{eqnarray*}
+olarak bulunur. Bu ışınım elektromanyetik spektrumun morötesi kısmında yer alır ve deneysel verilerle uyumludur. Böylece daha önce anlaşılamayan deneysel bazı sonuçlar Bohr atom modeli ile aydınlatılabilmiştir. Bohr modeli önemli bir başarı gösterse de, elektronlar ne zaman bir yörüngeden sıçrama yapmalı veya yayınlanan fotonun yönü ne olmalı gibi sorulara yanıt verememiştir. Ayrıca açısal momentumun ve seviyelerin kuantumlanma kuralı sadece dairesel yörüngeli durumlar için geçerlidir. Eliptik yörüngeler için A. Sommerfeld ve W. Wilson bir başka kuantumlanma şartı tanımlamışlardır \cite{book:Gasiorowicz, book:EisbergResnick}. 
+%%
+
+\vspace{12pt}
+
+\href{http://hyperphysics.phy-astr.gsu.edu/hbase/FrHz.html}{Franck-Hetz deneyi.... }
 
 
-
+\subsection{Uygunluk İlkesi}
+\href{http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/hosc6.html}{uygunluk ilkesi}
 
 
 
