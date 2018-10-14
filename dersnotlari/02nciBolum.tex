@@ -91,13 +91,55 @@ sorry I ever got involved with quantum theory.
 \setcounter{section}{1} %% THIS WILL BE DELETED when all chapters merged!
 \section{Dalga-Parçacık İkilemi ve Schrödinger Denklemi}
 
-Kuantum fiziğinin doğum sürecini anlattığımız kısım genellikle \emph{Eski Kuantum Teorisi} olarak adlandırılır. Gerçekleştirilen keşifleri açıklamak için  kullanılan veya ortaya konan kuralların tam olarak birbirleriyle sağlam bir bağlantısının olduğunu söylemek pek mümkün değildir. Daha iyi bir açıklama için ortaya konan ``Kuantum Mekaniği" iki defa keşfedilmiştir denebilir, ilki 1925'te matris mekaniği formalizmiyle Werner Heisenberg tarafından ve ikincisi 1926'da dalga mekaniği ile Erwin Schrödinger tarafındandır. Her ikisinin eş değer olduğu sonradan gösterilmiş olmasına rağmen Schröndinger'in yöntemi daha çok kullanılır hale gelmiştir. Çünkü dalga mekaniğinin matematiği fizikçiler arasında daha yaygındı \cite{book:Gasiorowicz}.
+Kuantum fiziğinin doğum sürecini anlattığımız bir önceki bölümün içeriği genellikle \emph{Eski Kuantum Teorisi} olarak adlandırılır. Çünkü, gerçekleştirilen keşifleri açıklamak için  kullanılan veya ortaya konan kuralların tam olarak birbirleriyle sağlam bir bağlantısının olduğunu söylemek pek mümkün değildir. Daha iyi bir açıklama için ortaya konan ``Kuantum Mekaniği" iki defa keşfedilmiştir denebilir, ilki 1925'te matris mekaniği formalizmiyle Werner Heisenberg tarafından ve ikincisi 1926'da dalga mekaniği ile Erwin Schrödinger tarafındandır. Her ikisinin eş değer olduğu sonradan gösterilmiş olmasına rağmen Schröndinger'in yöntemi daha çok kullanılır hale gelmiştir. Çünkü dalga mekaniğinin matematiği fizikçiler arasında daha yaygındı \cite{book:Gasiorowicz}.
 
 
 \subsection{Dalga-Parçacık İkilemi}
+Kuantum fiziğini başlatan deneyler ve deneyleri açıklamak için geliştirilen teori ve modeller; klasik fizikte parçacık olarak bilinen (elektron, proton, nötron vb.) fiziksel varlıkların dalga özellikleri gösterdiklerini, benzeri şekilde dalga özelliği gösteren elektromanyetik dalganın parçacık (foton) özelliği gösterdiğini doğrulamıştır. 
 
 
-\subsection{Yeni Başlık}
+\begin{figure}[hbtp]
+\center
+\includegraphics[scale=.5]{Wave-particle.png}
+\caption{Işık bir dalgadır!?}
+\label{fig:light_is_a_wave}
+\end{figure}
+
+Bu durumda kuantum fiziğinin sınırları içine giren herhangi bir fiziksel varlık, hem dalga hem de parçacık davranışı gösterebilmektedir. Dalga özelliği gösteriyorsa; kutuplanma, girişim ve kırınım gibi davranışlar göstermesi beklenirken, parçacık özelliği gösterdiğindeyse; klasik fizikteki gibi enerji ve momentum taşıması beklenmektedir. Belirli şartlar altında ışığın veya herhangi bir elektromanyetik dalganın enerji ve momentum taşıdıkları fotoelektrik etkisi, Compton saçılması ve karacisim ışıması deneylerinde göz1enmiştir.
+
+Fakat her iki özelliğin de gözlenebiliyor olması öyle kolayca anlaşılamayabilir. Compton etkisi (veya saçılması) deneyiyle ışığın foton adı verilen bir parçacık gibi davrandığı doğrulanmıştır. İnsan gözüyle fotonlar tek tek seçilemese de, fotonları tek tek seçebilen ve fotoçoklayıcı \cite{book:Gasiorowicz} olarak adlandırılan cihazlar mevcuttur. 
+
+Dirac'ın kuantum mekaniği üzerine yazdığı bir kitabında ilginç bir düşünce deneyi vardır. Belirli bir kutuplanmaya sahip ışık fotoelektrik etkide olduğu gibi elektron elde etmek için kullanılırsa, yayınlanan elektronların açısal dağılımı fotonların kutuplanmasıyla ilişkilidir. Fotoelektrik etkiye göre bir foton bir elektron koparabildiğine göre, fotonlar enerji ve momentuma ek olarak kutuplanmaya da sahiptir. Buna göre başlangıçta $I_0$ şiddetine sahip ve kutuplanmış bir ışık demetini sadece belli bir kutuplanma eksenindeki ışığın geçmesine izin veren bir kristalden geçirdiğimiz düşünelim. Eğer gelen ışığın tamamı kristalden geçecek kutuplanmaya sahipse geçen ışığın şiddeti de $I_0$ olacaktır. Eğer kutuplanma vektörü kristalin kutuplandırma ekseni ile $\theta$ açısı kadar farka sahipse, geçen ışık şiddeti $I_0 \cos^2 \theta$'a kadar olur. Bu durumu her bir foton için tek tek ele alalım. Eğer ışık demeti tamamen kristalin kutuplanma ekseni ile aynı yönde kutuplanmışsa demeti oluşturan bütün fotonların hepsi aynı yöndeki kutuplanmaya sahiptir. Fakat farklı bir polarizasyona (kutuplanmaya) sahip bir ışık demetinde ise demetin şiddeti  $\cos^2 \theta$ ile belirlenen oran kadar azalacaktır. Bunun anlamı bu oran kadar fotonun kristalden geçebilmesidir. Fakat, \emph{fotonlar bölünemezler} bu durumda bir foton kristalden ya geçer ya da geçemez. Bireysel olarak hangi fotonun geçtiğini bilmemiz mümkün değildir. Bütün söyleyebileceğimiz $N$ tane foton geldiyse, bunun $N \cos^2 \theta$ kadarının geçtiğidir. Böyle bir fotonun bu kristalden geçebilme olasılığı $\cos^2\theta$ olur.
+
+Klasik optik fiziğine göre  bir çok foton içeren bir ışık demeti girişim ve kırınım gibi dalga özellikleri gösterecektir. Işığın dalga özelliğinin tek bir foton için de geçerli olduğunu gösteren bazı deneyler gerçekleştirilmiştir. Bunlardan birisi de G. I. Taylor tarafından 1909 yılında yapılmıştır. Bu deneyde bir iğne ucu etrafında çok düşük şiddetteki (bir kerede bir fotonun geçtiği) ışığın bile kırınıma uğradığı gösterilmiştir. Bu bize ışığın dalga davranışının fotonların toplu (kollektif) bir davranışı sonucunda değil de, bireysel özelliklerinin bir sonucu olarak var olduğunu göstermiştir. Bu durumda yeni sorunlar ortaya çıkmaktadır.
+
+
+\begin{figure}[hbtp]
+\center
+\includegraphics[scale=.8]{Double-slit_experiment_unknown_source.png}
+\caption{Buraya benzeri bir başka şekil konacak!}
+\label{fig:dobule_slit_experiment}
+\end{figure}
+
+Taylor'un deneyinin bir benzeri olan çift yarık deneyini düşünelim. Diğer deneydeki gibi her defasında bir foton gelsin ve Şekil \ref{fig:dobule_slit_experiment}'deki gibi yarıklardan birinden geçtikten sonra arkadaki ekranda yakalansın. Her iki yarıkta açıkken, yeterince sayıda foton geçtikten sonra klasik olarak beklendiği üzere (ışık dalga olduğundan) Şekil \ref{fig:dobule_slit_experiment}'in en solundaki gibi bir girişim deseni gözlenir. Klasik olarak bu durum çok rahat açıklanabilir. Eğer yarık 1 ve yarık 2'den geçen elektromanyetik dalgalar $\vec E_1(\vec r, t)$ ve $\vec E_2(\vec r, t)$ ile temsil edilirlerse, arkadaki ekrandaki bir $\vec r$ konumunda $t$ anında toplam dalga bu iki dalganın toplamı olacaktır. Bu klasik elektromanyetik teorinin bir parçası olan Maxwell denkleminin lineer olması dolayısıyla üst üste binme (süperposizyon) ilkesine uymasının sonucudur. Arkadaki ekranda gözlenecek olan ışığın toplam şiddeti ise,
+%%
+\begin{equation}
+I \,\, \propto\,\, E^2 = \vec E \cdot \vec E = |\vec E_1 + \vec E_2|^2 = E_1^2 + E_2^2 + 2\vec E_1 \cdot \vec E_2
+\label{eq:foton_interference}
+\end{equation}
+%%
+denklemi ile belirlenir. Oluşan girişim deseninin matematiksel kaynağı $\vec E_1 \cdot \vec E_2$'dir. Eğer iki yarıktan sadece birisi açık olsaydı, sadece $|\vec E_1|^2$ veya $|\vec E_2|^2$ ile orantılı şiddetler gözlenebilirdi. Eğer bu şiddetleri polarizasyon deneyinde olduğu gibi olasıkla ilişkilendirirsek, sadece birinci veya ikinci yarıktan geçme olasılıkları sırasıyla $P_1(r,t)$ ve $P_2(r,t)$ olurken, her iki delik açıkken geçme olasılıkları bu iki olasılığın doğrudan toplamı olmaz.
+
+Fotonlar bölünemez olduklarına göre ve bu davranış tek bir foton için de geçerli olduğuna göre, bu durum ancak \emph{bir fotonun kendi kendisiyle girişim} yapabileceğini varsaymakla çözülebilir. Böyle bir fotonun iki yarıktan açıkken sahip olacağı klasik elektromanyetik dalga alanı,
+%%
+\begin{equation}
+\vec e = \vec e_1 + \vec e_2
+\label{eq:single_foton_em_field}
+\end{equation}
+%%
+şeklinde olacaktır. Polarizasyon deneyinde olduğu gibi bu deneyde de tek bir fotonun hangi yarıktan geçtiğini bilmek mümkün değildir.
+
+\subsection{Düzlem Dalgalar ve Dalga Paketleri}
 
 
 
