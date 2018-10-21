@@ -201,7 +201,7 @@ olur. Çünkü dağınımsız ortamlarda $\omega$ ve $k$ doğru orantılıdır. 
 bir ilerleyen düzlem dalga yazmak mümkündür. Bu düzlem dalgaların süperpozisyonu ise,
 %%
 \begin{equation}
-\psi(x, t) \equiv \int\limits_{-\infty}^{\infty}dk\,\psi(x, t) = \int\limits_{-\infty}^{\infty}dk\,A(k) \text{e}^{i(kx - \omega t)} 
+\psi(x, t) \equiv \int\limits_{-\infty}^{\infty}dk\,\psi_k(x, t) = \int\limits_{-\infty}^{\infty}dk\,A(k) \text{e}^{i(kx - \omega t)} 
 \label{eq:wave_packet}
 \end{equation}
 %%
@@ -241,10 +241,34 @@ gibi, gausyen (gaussian) dağılım olarak adlandırılan, bir dağılım tercih
 değerine sahiptir ve $\alpha$'dan bağımsızdır. Bu ilişki Fourier türü integrallerin genel bir özelliğidir.
 
 
-\href{https://www.youtube.com/watch?annotation_id=annotation_1566711117&feature=iv&src_vid=MMV2Zt7x430&v=v9DPzMoWpc0
-}{Grup hızı ve faz hızı}
-
-
+Bir dalga paketinin $t=0$ anında sahip olabileceği formunu ve bu formun genişliğini sınırlayan bir bağıntı elde etmiş olduk. Bu dalga paketinin zamanla nasıl ilerleyeceğini ise (şimdilik) yaklaşık olarak çalışmak yeterlidir. Bu yaklaşıklıkta $k_0$ etrafında çok dar bir dağılıma sahip bir dalga paketini düşünelim, böyle bir dağılım için çok geniş bir $x$ dağılımına sahip olacaktır. Bu özelliklere sahip dalga paketi aşağıdaki gibi tanımlanan grup hızı ile hareket eder (\href{https://www.youtube.com/watch?annotation_id=annotation_1566711117&feature=iv&src_vid=MMV2Zt7x430&v=v9DPzMoWpc0
+}{grup hızını ve faz hızını karşılaştıran bir video bağlantısı}).
+%%
+\begin{equation}
+v_g = \frac{\partial \omega(k)}{\partial k} \bigg |_{k=k_0}
+\label{eq:group_velocity}
+\end{equation}
+%%
+Denk. \ref{eq:wave_packet}'e göre $A(k)$ ve $\omega(k)$'nın davranışı bilinirse dalga paketinin zamanla değişimi hakkında bilgi sahibi olunabilir. Dalga paketi$k_0$ etrafında dar bir dağılıma sahip olduğundan $A(k)$ çok keskin artan bir tepe şeklinde olacaktır. $\omega(k)$'nın ise $k$'nın yavaş değişen bir fonksiyonu olduğunu kabul edersek $\omega$ için yaklaşık olarak,
+%%
+\begin{equation}
+\omega(k) \eqsim \omega(k_0) +  (k-k_0) \frac{\partial \omega(k)}{\partial k} \bigg |_{k=k_0} + \frac{1}{2}(k-k_0)^2 \frac{\partial^2 \omega(k)}{\partial k^2} \bigg |_{k=k_0}  
+\end{equation}
+ifadesi yazılabilir. Böylece $(kx-\omega t)$ için de,
+%%
+\begin{equation*}
+(kx - \omega(k)t) \eqsim (k_0 x - t \omega(k_0)) +  (k-k_0)\left[x - t\frac{\partial \omega(k)}{\partial k} \bigg |_{k=k_0} \right] - \frac{t}{2}(k-k_0)^2 \frac{\partial^2 \omega(k)}{\partial k^2} \bigg |_{k=k_0}  
+\end{equation*}
+eşitliği elde edilir. Bu ifade Denk. \ref{eq:wave_packet}'te yerine konursa ve $q=k-k_0$ değişken dönüşümü yapılırsa,
+\begin{equation}
+\psi(x, t) \eqsim  \text{e}^{i(k_0x - \omega(k_0) t)}  \int\limits_{-\infty}^{\infty}dq\,A(q + k_0) \text{e}^{iq(x - v_g t)} \text{e}^{-iq^2\beta t/2} 
+\label{eq:wave_packet_t_change}
+\end{equation}
+dalga paketi integraline ulaşılır, burada $\beta$ sembolü
+\begin{equation*}
+\beta = \frac{\partial^2 \omega(k)}{\partial k^2}\bigg |_{k=k_0}
+\end{equation*}
+olarak integrali kısaltmak için tercih edilmiştir.
 
 
 \newpage
