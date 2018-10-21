@@ -140,7 +140,7 @@ Fotonlar bölünemez olduklarına göre ve bu davranış tek bir foton için de 
 şeklinde olacaktır ve Maxwell'in çizgisel klasik elektromanyetik dalga denklemlerine uygun olacaktır. Polarizasyon deneyinde olduğu gibi bu deneyde de tek bir fotonun hangi yarıktan geçtiğini bilmek mümkün değildir.
 
 
-İlk keşfedildiklerinde elektronların parçacık yönüyle karşılaşılmıştır. Klasik olarak hareketlerinin yörüngesi üzerlerine etki eden manyetik ve elektrik alanlar ile belirlenebilir, kütlelidirler, enerji ve momentum taşırlar. Daha sonraları elektron kırınımı ve elektron için çift yarık deneyleriyle elektronların da dalga davranışı gösterdikleri gösterilmiştir. Elektron için gerçekleştirilen çift yarık deneyinde de, yukarıda foton için gerçekleştirdiğimiz düşünce deneyine benzer şekilde, elektronların çift yarıktan geçtikten sonra arkadaki ekranda girişim desenleri oluşturdukları gözlenmiştir. Fotonlarda girişim deseninin oluşma nedeni toplu bir davranışın değil bireysel davranışların sonucuydu, elektronların girişim deseni de aynı şekilde bireysel bir davranışın bir sonucudur. Foton için tanımladığımız gibi elektronun kendi kendisiyle girişimini ifade eden bir dalga fonksiyonu tanımlamak mümkündür. Böylece çift yarık deneyindeki bir elektronun dalga fonksiyonu,
+İlk keşfedildiklerinde elektronların parçacık yönüyle karşılaşılmıştır. Klasik olarak hareketlerinin yörüngesi üzerlerine etki eden manyetik ve elektrik alanlar ile belirlenebilir, kütlelidirler, enerji ve momentum taşırlar. Daha sonraları elektron kırınımı ve elektron için çift yarık deneyleriyle elektronların da dalga davranışı gösterdikleri gösterilmiştir. Elektron için gerçekleştirilen çift yarık deneyinde de, yukarıda foton için gerçekleştirdiğimiz düşünce deneyine benzer şekilde, elektronların çift yarıktan geçtikten sonra arkadaki ekranda girişim desenleri oluşturdukları gözlenmiştir. Fotonlarda girişim deseninin oluşma nedeni toplu bir davranışın değil bireysel davranışların sonucuydu, elektronların girişim deseni de aynı şekilde bireysel bir davranışın sonucudur. Foton için tanımladığımız gibi elektronun kendi kendisiyle girişimini ifade eden bir dalga fonksiyonu tanımlamak mümkündür. Böylece çift yarık deneyindeki bir elektronun dalga fonksiyonu,
 %%
 \begin{equation}
 \psi(\vec r, t) = \psi_1(\vec r, t) + \psi_2(\vec r, t)
@@ -277,12 +277,12 @@ olarak integrali kısaltmak için tercih edilmiştir. İntegral çözülünce,
 \label{eq:wave_packet_t_approx}
 \end{equation}
 %%
-dalga paketi fonksiyonu elde edilir. Dalga fonksiyonu içinde sanal bir kısım da içerdiğinden pek açık değildir. Fizikçiler arasında daha çok anlamlı bulunan dalga fonksiyonunun mutlak değeridir. Karmaşık sayı yapısına sahip bir dalga fonksiyonunun mutlak değeri ise,
+dalga paketi fonksiyonu elde edilir. Dalga fonksiyonu içinde sanal bir kısım da içerdiğinden pek açık değildir. Fizikçiler arasında daha çok anlamlı bulunan dalga fonksiyonunun mutlak değeridir. Karmaşık sayı yapısına sahip bir dalga fonksiyonunun mutlak değerinin karesi ise,
 %%
 \begin{equation}
 |\psi(x,t)|^2 = \psi^*(x,t)  \psi(x,t) 
 \end{equation}
-dalga fonksiyonunun kendi eşleniği ile çarpılması işlemiyle hesaplanır. Böylece ilgilenilen dalga paketinin mutlak değeri,
+dalga fonksiyonunun kendi eşleniği ile çarpılması işlemiyle hesaplanır. Böylece ilgilenilen dalga paketinin mutlak değerinin karesi,
 %%
 \begin{equation}
 |\psi(x,t)|^2 \eqsim \frac{2\pi}{\sqrt{\alpha^2 + 4 \beta^2 t^2 }} \text{e}^{-\frac{(x-v_g t)^2}{\alpha^2 + 4\beta^2 t^2}}
@@ -302,9 +302,46 @@ olur. Eğer integrale $\omega$'nın ikinci dereceden türevinden gelen terim de 
 \includegraphics[scale=.6]{wave_packet_w_eq_function_of_k.png}
 \end{minipage}
 \caption{$\omega(k)/k$ sabitken ve $k$'nın bir fonksiyonu iken Denk. \ref{eq:wave_packet_t_approx} ile hesaplanan $|\psi(x,t)|^2$'nin değişimi.}
+\label{fig:wave_packet_t}
 \end{figure}
 
 \subsection{Dalga Fonksiyonunun Olasılık Yorumu}
+
+Çift yarık deneyinde bir fotonun kendi kendisiyle girişimini de izah eden toplam dalga fonksiyonunun karesinin fotonun, arka plandaki ekranda, belirli bir konum ve zamanda bulunma olasılığıyla orantılı olduğunu belirtmiştik. Benzetim yaparak $\psi(r,t)$ dalga fonksiyonuyla tanımlanan bir kuantum nesne içinde $|\psi(r,t)|$'nin bu nesnenin belirli bir konumda ve zamanda bulunma olasılığıyla ilişkili olduğunu iddia edebiliriz. Dalga fonksiyonunun olasılık yorumunu ilk ortaya koyan Max Born'dur. Max Born'a göre tek (iki, üç) boyutlu bir uzayda bir kuantum nesnenin (örneğin elektronun) $x$ ile $x+dx$ konumları arasında bulunma olasılığı,
+%%
+\begin{equation}
+P(x,t) dx \equiv |\psi(x,t)|^2 dx
+\label{eq:probability_interp}
+\end{equation}
+ile tanımlanır. Bu yoruma göre $|\psi(x,t)|^2$ zamanla yayılması, dalga fonksiyonu tarafından tanımlanan, ilgili kuantum nesnenin (elektron v.b.) ilerleyen zamanla birlikte artan ihtimalle başlangıçta bulunduğu bölgenin dışında bulunacaktır (bkz. Şekil \ref{fig:wave_packet_t}).
+
+Kuantum fiziğinde olasılık kavramı klasik fiziktekinden farklıdır. Örneğin bir madeni paranın fırlatılmasıyla yazı mı, tura mı geleceğini bilememizin nedeni klasik fizikte sistem hakkındaki bilgimizin yetersizliği olarak belirtilir (örneğin ortamdaki hava moleküllerinin tek tek bireysel olarak para yüzeyi ile aralarındaki etkileşmenin tam bir modelinin olmaması v.b. gibi). Fakat kuantum fiziğinde ihtimaliyet bilgi eksikliğinden değil, dalga fonksiyonu hakkında bilebileceklerimizin temel bir sınırlamasından kaynaklanır.
+
+Olasılık yoğunluğu yorumu çift yarık deneyindeki elektron girişiminin izahı için kullanılırsa, $\psi_1$ ve $\psi_2$ sırasıyla birinci yarık açık ikinci yarık kapalıykenki ve tersi durumdaki dalga fonksiyoları olmak üzere, arkadaki ekranda elektronların bulunma ihtimaliyetleri,
+%%
+\begin{equation}
+P(x,t)^2 = |\psi_1 + \psi_2|^2 = |\psi_1 |^2 + |\psi_2|^2 + 2\text{Re}(\psi_1 + \psi_2^*)
+\label{eq:interference_probability}
+\end{equation}
+%%
+ile orantılıdır. Çünkü en sondaki terim olmadan girişim deseni izah edilemez. Bu nedenle $\psi_1$ ve $\psi_2$ için kurulacak olan diferansiyel denklem çizgisel olmalıdır ve dalga fonksiyonlarının üst üste gelmesi kuralına uygun olmalıdır.
+
+Girişim desenini izah eden bu sonuç her zaman gözlenemeyebilir. Eğer yarıklardan birini kapatarak elektronları sadece bir yarıktan geçmeye zorlarsak ve böylece bir elektronun hangi yarıktan geçtiğini bilirsek elde edeceğimiz olasılık dağılımı,
+%%
+\begin{equation}
+P(x,t)^2 = |\psi_1 |^2 + |\psi_2|^2
+\label{eq:classical_probability}
+\end{equation}
+%%
+olur. Bu durumda girişim deseni gözlenemez. Demek ki; girişim desenini gözleyebilmek için, elektronların geçtikleri yarıkların bilinmemesi gerekmektedir. Böylece şöyle bir sonuca varılabilir, \emph{eğer elektronların hangi yarıktan geçtiği biliniyorsa dalga fonksiyonlarının kareleri toplanarak, aksine hangi yarıktan geçtikleri bilinmiyorsa dalga fonksiyonlarının toplamlarının karesi alınarak olasılık dağılımları bulunur.}
+
+
+\subsection{Schrödinger Denklemi}
+
+
+\subsection{Heisenberg'in Belirsizlik Bağıntıları}
+
+
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
