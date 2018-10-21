@@ -265,10 +265,31 @@ eşitliği elde edilir. Bu ifade Denk. \ref{eq:wave_packet}'te yerine konursa ve
 \label{eq:wave_packet_t_change}
 \end{equation}
 dalga paketi integraline ulaşılır, burada $\beta$ sembolü
+%%
 \begin{equation*}
 \beta = \frac{\partial^2 \omega(k)}{\partial k^2}\bigg |_{k=k_0}
 \end{equation*}
-olarak integrali kısaltmak için tercih edilmiştir.
+%%
+olarak integrali kısaltmak için tercih edilmiştir. İntegral çözülünce,
+%%
+\begin{equation}
+\psi(x,t) \eqsim \sqrt{\frac{2\pi}{\alpha + 2 i \beta t }}\text{e}^{i(k_0x-w_0t)} \text{e}^{-\frac{(x-v_g t)^2}{2\alpha + 4i\beta t}}
+\label{eq:wave_packet_t_approx}
+\end{equation}
+%%
+dalga paketi fonksiyonu elde edilir. Dalga fonksiyonu içinde sanal bir kısım da içerdiğinden pek açık değildir. Fizikçiler arasında daha çok anlamlı bulunan dalga fonksiyonunun mutlak değeridir. Karmaşık sayı yapısına sahip bir dalga fonksiyonunun mutlak değeri ise,
+%%
+\begin{equation}
+|\psi(x,t)|^2 = \psi^*(x,t)  \psi(x,t) 
+\end{equation}
+dalga fonksiyonunun kendi eşleniği ile çarpılması işlemiyle hesaplanır. Böylece ilgilenilen dalga paketinin mutlak değeri,
+%%
+\begin{equation}
+|\psi(x,t)|^2 \eqsim \frac{2\pi}{\sqrt{\alpha^2 + 4 \beta^2 t^2 }} \text{e}^{-\frac{(x-v_g t)^2}{\alpha^2 + 4\beta^2 t^2}}
+\label{eq:wave_packet_t_approx}
+\end{equation}
+%%
+olur. Eğer integrale $\omega$'nın ikinci dereceden türevinden gelen terim de diğer yüksek dereceli terimler gibi sıfır olsaydı. Dalga paketi hiç değişmeden $v_g$ hızı ilerlerdi. Örneğin, boşlukta ilerleyen ışık için $\omega=kc$ ve $v_g=c$ olur ve ışık $v_g$ hızlı bir dalga paketi olarak ilerler. $\beta$ sembolü ile temsil edilen ikinci dereceden bu terim sıfırdan farklı olursa, bu durumda $\text{e}^{-iq^2\beta t/2}$ ifadesinden dolayı dalga paketinin şekli (genişliği ve yüksekliği) değişir. 
 
 
 \newpage
