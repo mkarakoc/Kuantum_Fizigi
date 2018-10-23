@@ -338,11 +338,142 @@ olur. Bu durumda girişim deseni gözlenemez. Demek ki; girişim desenini gözle
 
 \subsection{Schrödinger Denklemi}
 
-Serbest
+Buraya kadar serbest hareket eden bir elektronun x konumunda ve t anında bulunma olasılığını tanımlayan bir dalga fonksiyonu tanınmadık. Planck'ın $E=\hbar\omega$  ve de~Broglie'nin $p=\hbar k$  ($\lambda = h/p$ )  bağlantılarını kullanarak  dalga fonksiyonunun kuantum fiziği ile bağını kurabiliriz.  Bu tanımlamalar ile dalga paketini,
+%%
+\begin{equation}
+\psi \left( x,t\right) =\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dp\phi \left( p\right) e^{-i\left( px-Et\right) /\hbar }
+\label{eq:wave_packet_in_p}
+\end{equation}
+%%
+şeklinde yeniden yazabiliriz.  Burada A(k)'nın  yerini $\frac{\phi(p)}{2\pi\hbar}$  almıştır.  Serbest bir parçacığın toplam enerjisi
+%%
+\begin{equation*}
+E=\dfrac {p^{2}}{2m}
+\end{equation*}
+%%
+ile tanımlanır.  Enerji ifadesi,  Momentum ve grup hızı arasında
+%%
+\begin{equation*}
+v_{g}=\dfrac {\partial \omega }{\partial k}=\dfrac {\hbar }{\hbar }\dfrac {\partial \omega }{\partial k}=\dfrac {\partial\hbar \omega }{\partial \hbar k}=\dfrac {\partial E}{\partial p}=\dfrac {p}{m}
+\end{equation*}
+%%
+bağıntısı ortaya çıkar.  Böylece $E=\hbar \omega$ seçimimizin doğru olduğunu iddia edebiliriz. 
+
+Eğer ilgilendiğimiz parçacık serbest olmasaydı toplam enerji
+%%
+\begin{equation*}
+E=\dfrac {p^{2}}{2m} + V(x)
+\end{equation*}
+%%
+olurdu.  Eğer bu ifadeyi doğrudan Denk.\ref{eq:wave_packet_in_p}'de yerine koyarsak çok anlamlı bir sonuç elde edemeyiz.  Çünkü dalga paketine sadece,
+%%
+\begin{equation*}
+\text{e}^{iV\left( x\right) /\hbar }
+\end{equation*}
+%%
+katkısı gelir.  Bu durumda $V(x)$'in  tanımladığı potansiyelin parçacık üzerindeki etkisini göremeyiz.  Çünkü
+%%
+\begin{equation*}
+\left| \psi \left( x,t\right) \right| ^{2}\sim e^{iV\left( x\right) /\hbar }e^{-iV\left( x\right) /\hbar }=1
+\end{equation*}
+%%
+olur. Bu sonuca göre elektron $V(x)$  potansiyelinden  etkilenmeden serbestçe hareket eder ki,  bu doğru bir  sonuç değildir. Yapılması gereken $V(x)$'in etkisini de hesaba katacak bir denklem geliştirmektir.
+
+
+
 
 \subsection{Heisenberg'in Belirsizlik Bağıntıları}
 
+{\LARGE YAZILACAK...}
 
+\subsection{Dalga Fonksiyonun ve Olasılığın Normalizasyonu}
+
+\begin{equation}
+\int ^{\infty }_{-\infty }dxP\left( x,t\right) =\int ^{\infty }_{-\infty }dx\left| \psi \left( x,t\right) \right| ^{2}=1
+\label{eq:probability_norm}
+\end{equation}
+%%
+
+Olasılık yorumuna göre toplam olasılığı veren yukarıdaki integralin  sonucu sonlu bir değer vermelidir.  Elde edilen integral sonucu birim değere sahip değilse, gelenek olduğu üzere toplam olasılık $1$'e normalize edilir.  Normalizasyon sonucu  elde edilen katsayı ile dalga fonksiyonu çarpılır, böylece elde edilen yeni dalga fonksiyonu da Schrödinger denkleminin bir çözümüdür. Çünkü dalga denklemi çizgiseldir. Yeni dalga fonksiyonuna normalize edilmiş dalga fonksiyonu denir.
+
+Böylece bir kuantum durumu izah edecek başlangıç durumu dalga fonksiyonunun \emph{``karesi integrallenebilir"} bir fonksiyon olması gerekir. 
+%%
+\begin{equation}
+\int ^{\infty }_{-\infty }dx\left| \psi \left( x,0\right) \right| ^{2} < \infty
+\label{eq:square_integrable}
+\end{equation}
+%%
+Karesi integrallenebilir olma şartının matematiksel ifadesi yukarıdaki gibidir. İleride konum ($x$) ve konuma göreve türev ($\partial/\partial x$) içeren bir çok integralle karşılaşacağız. Örneğin,
+%%
+\begin{equation*}
+\int ^{\infty }_{-\infty }dx \psi^* \left( x,t\right) x^n \psi \left( x,t\right) 
+\end{equation*}
+%%
+ve
+%%
+\begin{equation*}
+\int ^{\infty }_{-\infty }dx \psi^* \left( x,t\right) \left(\frac{\partial}{\partial x}\right)^n \psi \left( x,t\right) 
+\end{equation*}
+%%
+gibi, bu integrallerin karesi integrallenebilir olması için $\psi(x,0)$ başlangıç durumu dalga fonksiyonunun $x\rightarrow\pm\infty$ ile hızlıca sıfıra gitmesi gerekir. Ayrıca $\psi(x,t)$ $x$'in sürekli bir fonksiyonu olmalıdır.
+
+\subsubsection{Olasılık Akısının Tanımı ve Önemi}
+
+%% Aşağıdaki denklemler
+%% https://webdemo.myscript.com/views/main/math.html
+%% linkindeki el yazısı tanıyan program kullanırak yazıldı.
+
+Dalga fonksiyonunu $t=0$ anında normalize etmekle, herhangi bir t anında da dalga fonksiyonunu normalize etmiş olur muyuz? Soruyu olumlu cevaplayabilmek için 
+\begin{equation}
+\dfrac {\partial }{\partial t} \int ^{\infty }_{-\infty }dxP\left( x,t\right) = \dfrac {\partial }{\partial t} \int ^{\infty }_{-\infty }dx\left| \psi \left( x,t\right) \right| ^{2}= \dfrac {\partial }{\partial t}N(t) \stackrel{\scalebox{2}{?}}{=} 0 
+\label{eq:probability_norm_derivative}
+\end{equation}
+%%
+Denk. \ref{eq:probability_norm}'in zamana göre kısmi türevi olan yukarıdaki ifadenin belli şartlarda sıfıra eşit olabileceğini göstermek gerekir. Eğer eşitlik sağlanırsa $N(t) = \text{sabit}$ olur. Böylece dalga fonksiyonu herhangi bir $t$ anında normalize edilebilir. Yukarıdaki eşitliği sorgulamak için öncelikle $P(x,t)$ olasılık yoğunluğunun $t$'ye göre kısmi türevi alınırsa,
+%%
+\begin{equation}
+\dfrac {\partial }{\partial t}P\left( x,t\right) = \dfrac {\partial \psi ^{\ast }}{\partial t}\psi +\Psi ^{\ast }\dfrac {\partial \psi }{\partial t}
+\label{eq:probability_derivative_t}
+\end{equation}
+%%
+elde edilir. Elde edilen bu eşitliğin sağ tarafında Schrödinger denklemi ve onun karmaşık eşleniği olan,
+\begin{equation}
+-i\hbar \dfrac {\partial \psi ^{\ast }\left( x,t\right) }{\partial t}=-\dfrac {\hbar ^{2}}{2m}\dfrac {\partial ^{2}\Psi ^{\ast }\left( x,t\right) }{\partial x^{2}}+V\left( x\right) \Psi ^{\ast }\left( x,t\right) 
+\end{equation}
+hali kullanılırsa ve $V(x)$'in reel bir fonksiyon olduğu kabul edilirse,
+%%
+\begin{eqnarray}
+\dfrac {\partial }{\partial t}P\left( x,t\right) &=&\dfrac {1}{i\hbar }\left( \dfrac {\hbar ^{2}}{2m}\right) \left( \dfrac {\partial ^{2}\psi ^{\ast }}{\partial x^{2}}\psi -\psi ^{\ast }\dfrac {\partial ^{2}\psi }{\partial x^{2}}\right) \\
+%%
+&=&-\dfrac {\partial }{\partial x}\left[ \dfrac {\hbar }{2im}\left( \Psi ^{\ast }\dfrac {\partial \psi }{\partial x}-\dfrac {\partial \psi ^{\ast }}{\partial x}\psi \right) \right]
+\end{eqnarray}
+%%
+sonucuna ulaşılır. Burada eşitliğin sağında türevin içinde kalan kısımı \emph{olasılık akısı} olarak tanımlanır,
+%%
+\begin{equation}
+j(x,t)\equiv \dfrac {\hbar }{2im}\left( \Psi ^{\ast }\dfrac {\partial \psi }{\partial x}-\dfrac {\partial \psi ^{\ast }}{\partial x}\psi \right).
+\label{eq:probability_current}
+\end{equation}
+%%
+Bu tanımla olasılık yoğunluğunun zamana göre değişimini veren denklem,
+\begin{equation}
+\dfrac {\partial }{\partial t}P\left( x,t\right) +\dfrac {\partial }{\partial x}j\left( x,t\right) =0
+\label{eq:continuity_equation}
+\end{equation}
+halini alır. Süreklilik denklemi olarak da adlandırılan denklemin $x$'e göre integrali alınırsa,
+%%
+\begin{equation}
+\dfrac {\partial }{\partial t}\int ^{\infty }_{-\infty }dxP\left( x,t\right) =-\int ^{\infty }_{-\infty }dx\dfrac {\partial }{\partial x}j\left( x,t\right) = -j(x,t)\bigg|^{\infty}_{-\infty}
+\end{equation}
+sonucu elde edilir. Bu son eşitliğin en sağ tarafı sıfıra eşit olursa, aradığımız sonuca ulaşımış oluruz. Aranan sıfırın elde edilmesi için \emph{olasılık aksının} denklemini incelemek gerekir: denklemde dalga fonksiyonunun (ve eşleniğinin) kendisi ve birinci türevi vardır. Eğer $x\rightarrow\pm\infty$ durumunda dalga fonksiyonu ve eşleniği sıfıra giderse ve birinci türevleri de sabit değerli kalırsa aranılan sonuca ulaşılabilir. Böylece Denk. \ref{eq:probability_norm_derivative}'nın bu şartlar altında sağlanacağı ve bu şartlara uyan dalga fonksiyonlarının herhangi bir $t$ anında normalize edilebileceği gösterilmiş olur. 
+
+\vspace{18pt}
+{\bf ``MIT Açık Dersler"den güzel bir video dersi kaynağı:}
+
+\href{https://ocw.mit.edu/courses/physics/8-04-quantum-physics-i-spring-2016/video-lectures/part-1/}{Lecture 6: Probability density and current. Hermitian conjugation.}
+
+
+\subsection{Konum ve Momentum Beklenen Değerleri}
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
