@@ -32,6 +32,10 @@
 %% paragraf girintisi
 \setlength{\parindent}{5ex}
 
+%% Daha sonra yazılacak kısımları not düşmek için...
+\newcommand{\YAZILACAK}{{\vspace{18pt}\bf\Large \color{red} YAZILACAK}}
+
+
 \pagestyle{fancy}
 \fancyhf{}
 \lhead{ Kuantum Fiziği }
@@ -379,12 +383,39 @@ katkısı gelir.  Bu durumda $V(x)$'in  tanımladığı potansiyelin parçacık 
 %%
 olur. Bu sonuca göre elektron $V(x)$  potansiyelinden  etkilenmeden serbestçe hareket eder ki,  bu doğru bir  sonuç değildir. Yapılması gereken $V(x)$'in etkisini de hesaba katacak bir denklem geliştirmektir.
 
+\YAZILACAK
+
+\begin{equation}
+-i\hbar \dfrac {\partial \psi \left( x,t\right) }{\partial t}=-\dfrac {\hbar ^{2}}{2m}\dfrac {\partial ^{2}\Psi \left( x,t\right) }{\partial x^{2}}+V\left( x\right) \Psi \left( x,t\right)
+\label{eq:schrodinger_eq}
+\end{equation}
 
 
+\subsubsection{$\phi \left( p\right)$  ve $\psi \left( x,0\right) $}
+\YAZILACAK
 
 \subsection{Heisenberg'in Belirsizlik Bağıntıları}
 
-{\LARGE YAZILACAK...}
+Hatırlanırsa dalga paketinin konuma ve dalga sayısına göre dağılımlarının genişliklerinin çarpımından Denk. \ref{eq:del_x_k}'i elde etmiştik. Bu bağıntı Foruier türü integrallerin daha genel bir sonucu olan,
+\begin{equation}
+\Delta k\Delta x >\dfrac {1}{2}
+\end{equation}
+ifadesinin özel bir halidir. $p = \hbar k$ bağıntısı ve dalga paketininin momentum uzayında da bir karşılığı olduğu hatırlanırsa yukarıdaki ifade,
+%%
+\begin{equation}
+\Delta x \Delta p \geq\dfrac {\hbar}{2}
+\label{eq:heisenberg_uncertainty}
+\end{equation}
+%%
+halini alır ve Heisenberg belirsizlik bağıntısı olarak adlandırılır. Dalga paketlerinin incelenmesi sonucu elde ettiğimiz bu eşitliğin sayesinde anlıyoruz ki; dalga fonksiyonu hem konumu hem de momentumu çok keskin bir doğrulukla veremez. Klasik mekanikteki anlayışımıza ters bir durumdur. Bu eşitlik klasik kavramlar olan konum ve momentumun doğru ölçülmesinde kuantum sistemlerin doğasından kaynaklanan bir sınırlama olduğunu göstermektedir. Klasik fizikteki gibi konum ve momentumun birbirinden bağımsız olacağını söylemek artık mümkün değildir. Bu nedenle bu tür fiziksel nicelikler tümleyen değişkenler olarak adlandırılır.  Kauntum fiziğinin doğasındaki bu sınırlamalar ile ilgili aşağıda örnek verilmiştir.  
+
+\subsubsection{Bir Foton Demetinin Kırınımı}
+\YAZILACAK
+
+\href{https://opentextbc.ca/physicstestbook2/chapter/single-slit-diffraction/}{Tek yarık kırınımı}
+
+\subsubsection{Bohr Yörüngelerinin Yerelleşememesi}
+\YAZILACAK
 
 \subsection{Dalga Fonksiyonun ve Olasılığın Normalizasyonu}
 
@@ -438,7 +469,8 @@ Denk. \ref{eq:probability_norm}'in zamana göre kısmi türevi olan yukarıdaki 
 %%
 elde edilir. Elde edilen bu eşitliğin sağ tarafında Schrödinger denklemi ve onun karmaşık eşleniği olan,
 \begin{equation}
--i\hbar \dfrac {\partial \psi ^{\ast }\left( x,t\right) }{\partial t}=-\dfrac {\hbar ^{2}}{2m}\dfrac {\partial ^{2}\Psi ^{\ast }\left( x,t\right) }{\partial x^{2}}+V\left( x\right) \Psi ^{\ast }\left( x,t\right) 
+-i\hbar \dfrac {\partial \psi ^{\ast }\left( x,t\right) }{\partial t}=-\dfrac {\hbar ^{2}}{2m}\dfrac {\partial ^{2}\Psi ^{\ast }\left( x,t\right) }{\partial x^{2}}+V\left( x\right) \Psi ^{\ast }\left( x,t\right)
+\label{eq:schrodinger_conjugate}
 \end{equation}
 hali kullanılırsa ve $V(x)$'in reel bir fonksiyon olduğu kabul edilirse,
 %%
