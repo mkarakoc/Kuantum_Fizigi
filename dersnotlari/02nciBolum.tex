@@ -507,6 +507,103 @@ sonucu elde edilir. Bu son eşitliğin en sağ tarafı sıfıra eşit olursa, ar
 
 \subsection{Konum ve Momentum Beklenen Değerleri}
 
+Heisenberg'in belirsizlik bağıntıları kavramını incelerken anladığımız üzere bir parçacığın konum veya momentumunu kesin olarak bilmemiz mümkün değildir. Bunun yerine belirli olasılıklarla hangi değerler civarında konuma ve momentuma sahip olabileceği hakkında konuşabiliriz. Böyle bir olasılığı hesaplamak için, bir sınavda alınan notların standart sapmasını belirlemek için kullandığımız yönteme benzer bir yöntem geliştirmeliyiz \cite{book:Towsend}.
+
+Genellikle sınavlarda bilinmek istenen ilk şey: Sınavın not ortalaması nedir? Bütün sınıfın not toplamını sınıf mevcuduna bölersek bu ortalamayı rahatça buluruz. Eş değer olarak aşağıdaki gibi bir olasılık dağılımı oluşturabiliriz,
+%%
+\begin{equation}
+P\left( n\right) =\dfrac {N(n) }{N}
+\label{eq:probability_distrubition_P}
+\end{equation}
+%%
+Burada $N(n)$, $n$ notunu alanların sayısı ve $N$ sınıf mevcududur. Eğer not aralığı $0\leq n \leq 100$ ile tanımlanmışsa $P(n)$,
+%%
+\begin{equation}
+\sum ^{100}_{n=0}P\left( n\right) =\sum ^{100}_{n=0}\dfrac {N(n) }{N}=\dfrac {1}{N}\sum ^{100}_{n=0}N(n) =1
+\label{eq:normalization_P}
+\end{equation}
+%%
+normalizasyon şartını sağlamalıdır. Böylece sınavın ortalaması,
+%%
+\begin{equation}
+\langle n \rangle =\dfrac {1}{N}\sum ^{100}_{n=0}nN\left( n\right) =\sum ^{100}_{n=0}nP\left( n\right) 
+\label{eq:average_grade}
+\end{equation}
+%%
+olur. Ortalamanın yanında ortalama etrafındaki dağılım bilgisini veren \emph{standart sapma}yı da bilmek sınavın not dağılımı hakkında daha çok bilgi edinilmesini sağlar. Tek bir sınav notu için standart sapma,
+%%
+\begin{equation}
+\sigma ^{2}_{n}\equiv(n-\langle n\rangle) ^{2}
+\label{eq:standard_deviation_atom}
+\end{equation}
+%%
+ile tanımlanır. Bütün sınavın standart sapması ise bireysel standart sapmaların ortalamsıdır ve,
+\begin{equation}
+\sigma ^{2}\equiv \langle \left( n-\langle n\rangle \right) ^{2}\rangle =\sum ^{100}_{n=1}\sigma _{n}P\left( n\right) 
+\label{eq:standard_deviation_exam}
+\end{equation}
+ile tanımlanır. Aşağıdaki gibi bir kaç düzenleme ile,
+\begin{eqnarray*}
+\sigma ^{2}=\sum ^{100}_{n=0}\sigma ^{2}_{n}P\left( n\right) &=&\sum ^{100}_{n=0}\left(n -\langle n\rangle \right) ^{2}P\left( n\right) \\
+&=&\sum ^{100}_{n=0}\left( n^{2}P\left( n\right) -2n\langle n\rangle P\left( n\right) +\langle n\rangle ^{2}P\left( n\right) \right)\\
+&=&\sum ^{100}_{n=0}n^{2}P\left( n\right) -2 \langle n \rangle\sum ^{100}_{n=0}nP\left( n\right) +\langle n\rangle ^{2}\sum ^{100}_{n=0}P\left( n\right) \\
+&=&<n^{2}>-2 \langle n \rangle\langle n\rangle +\langle n\rangle ^{2}\\
+\end{eqnarray*}
+%%
+kısaca,
+%%
+\begin{equation}
+\sigma^2 = \langle n^{2}\rangle - \langle n \rangle^{2}
+\end{equation}
+%%
+olarak yazılabilir. Böylece sınavdaki notların,
+\begin{equation*}
+\langle n \rangle - \sigma \leq n \leq \langle n \rangle + \sigma
+\end{equation*}
+ifadesine göre $\langle n \rangle$ ortalaması etrafında dağılım gösterdiklerini söyleyebiliriz. Notların az bir kısmı bu aralık dışında kalabilir.
+
+Benzeri bir uygulamayı ilgilendiğimiz parçacığın konumu ve momentumu için de yapabiliriz. Örneğin konum ($x$) veya konumun bir fonksiyonu ($f(x)$) için ortalama değer,
+%%
+\begin{equation}
+\langle f(x) \rangle =\int ^{\infty }_{-\infty }dx f(x) P\left( x,t\right) =\int ^{\infty }_{-\infty }dx \psi^{\ast }\left(x,t\right) f(x) \psi \left( x,t\right)
+\label{eq:expactation_value}
+\end{equation}
+olarak yazılabilir. Bu ortalama değer genellikle \emph{beklenen değer} olarak adlandırılır. Beklenen değer ifadesinden aynı fiziksel olayın gerçekleştirilen bir dizi deneyinde ölçüm sonuçlarının her zamana $\langle f(x) \rangle$ sonucunu vereceği anlaşılmamalıdır. Ölçümlerin sonuçlarının beklenen değer etrafında $\Delta f(x) = \sqrt{\langle f(x)^2 \rangle - \langle f(x) \rangle^2}$ standart sapmasına göre dağılmaları beklenir. Kuantum fiziğindeki standart sapmanın integral formu aşağıdaki gibidir.
+%%
+\begin{equation}
+\Delta f(x) = \int ^{\infty }_{-\infty }dx \psi^{\ast }\left(x,t\right) f(x)^2 \psi \left( x,t\right) -\left( \int ^{\infty }_{-\infty }dx \psi^{\ast }\left(x,t\right) f(x) \psi \left( x,t\right)\right)^2
+\end{equation}
+%%
+Bir parçacığın konumu için beklenen değeri ve standart sapmayı bulmak kolaydır, $f(x)$ yerine $x$ koymak yeterlidir. 
+
+Parçacığın momentumunun beklenen değeri için nasıl bir yol izleyeceğimiz çok açık değildir. P. Ehrenfest \emph{uygunluk prensibi}nden faydalanarak,
+%%
+\begin{equation*}
+p = m v = m\frac{dx}{dt}
+\end{equation*}
+%%
+klasik ifadesinin,
+%%
+\begin{equation*}
+\langle p \rangle = m\frac{d \langle x \rangle}{dt}
+\end{equation*}
+%%
+olarak kullanılabileceğini göstermiştir. Buradan yola çıkarak,
+%%
+\begin{eqnarray}
+\langle p \rangle &=& m \frac{d}{dt} \int ^{\infty }_{-\infty }dx \psi^{\ast }\left(x,t\right) x \psi \left( x,t\right)\\
+&=&m\int ^{\infty }_{-\infty }dx\left( \dfrac {\partial \psi ^{\ast }\left( x,t\right) }{\partial t}x\psi \left( x,t\right) +\psi ^{\ast }\left( x,t\right) x \dfrac {\partial \psi \left( x,t\right) }{\partial t}\right) \nonumber 
+\end{eqnarray}
+%%
+yazılabilir. Bu hesapta $dx/dt$ türev ifadesinin yer almadığına dikkat edilmelidir. Zamana bağlı olan ifade $\psi(x,t)$ ve onun eşleniğidir. Dalga fonksiyonunun zamanla değişimi $\langle x \rangle$'deki zamana bağlı değişimi belirler. Olasılık akısını hesaplarken yaptığımız gibi yukarıdaki denklemde Schrödinger denklemini ve eşleniğini kullanalarak,
+%%
+\begin{equation}
+\langle p\rangle =\dfrac {\hbar }{2i}\int ^{\infty }_{-\infty }dx\left( \dfrac {\partial ^{2}\psi ^{\ast }}{\partial x^{2}}x\psi -\psi ^{\ast }x\dfrac {\partial ^{2}\psi }{\partial x^{2}}\right)
+\label{eq:expectation_val_p_1}
+\end{equation}
+%%
+sonucuna ulaşırız.
+
 \YAZILACAK
 
 \newpage
