@@ -680,11 +680,52 @@ Bu teste göre eşitlik sağlanır, çünkü son elde edilen terimdeki dalga fon
 Elde ettiğimiz bu hermityen momentum operatörünü kullanarak Schrödinger denklemini,
 %%
 \begin{equation}
-\hat H\psi(x,t) = i\hbar \dfrac{\partial\psi(x,t)}{\partial t}
+\hat H\psi(x,t) = i\hbar \dfrac{\partial}{\partial t}\psi(x,t)
+\label{eq:schrodinger_operator_form}
 \end{equation}
 %%
+operatör formunda yazabiliriz, burada $\hat H$ \emph{Hamiltonyen işlemcisi} olarak adlandırılır ve,
+%%
+\begin{equation}
+\hat H \equiv \frac{\hat p^2}{2 m} + \hat V(x)
+\label{eq:schrodinger_operator_form}
+\end{equation}
+%%
+olarak tanımlanır.
 
+\subsubsection{Momentum Uzayında Beklenen Değer}
 
+Daha önce dalga paketini yerelleştirmek için kullandığımız $\phi(p)$ fonksiyonunun Foruier dönüşümü ile $\psi(x,0)$'dan aşağıdaki ifade ile elde edilebileceğini tartışmıştık.
+%%
+\begin{equation}
+\phi \left( p\right) =\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dx\psi \left( x,0\right) e^{-ipx/\hbar }
+\end{equation}
+%%
+$\phi(p)$'yi yerelleşmeyi sağlaması dışında bir başka şekilde anlamlandırabilir miyiz? Önceklikle, \emph{Parseval teoremine} göre $\psi(x)$ normalize ise $\phi(p)$'de normalizedir. Aşağıdaki matematiksel işlem süreci her iki fonksiyondan birisi normalizeyse diğerininde normalize olacağını ispatlamaktadır.
+%%
+\begin{eqnarray}
+\int ^{\infty }_{-\infty }dp\phi ^{\ast }\left( p\right) \phi \left( p\right) &=&\int ^{\infty }_{-\infty }dp\phi ^{\ast }\left( p\right) \dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dx\psi \left( x\right) e^{-ipx/\hbar }\nonumber \\
+&=&\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dx\psi \left( x\right) \int ^{\infty }_{-\infty }dp\phi \left( p\right) e^{-ipx/\hbar }\nonumber \\
+&=&\int ^{\infty }_{-\infty }dx\psi \left( x\right) \psi ^{\ast }\left( x\right) = 1
+\label{eq:parseval_theorem}
+\end{eqnarray}
+%%
+Şimdi benzer şekilde, Fourier dönüşümlerinden faydalanarak, $\langle \hat p \rangle$ beklenen değerini incelersek,
+%%
+\begin{eqnarray}
+\langle \hat p\rangle &=&\int ^{\infty }_{-\infty }dx\psi \left( x\right) \dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\psi \left( x\right) =\int ^{\infty }_{-\infty }dx\psi \left( x\right) \dfrac {\hbar }{i}\dfrac {d}{dx}\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dp\phi \left( p\right) e^{ipx/\hbar }\nonumber \\
+&=&\int ^{\infty }_{-\infty }dp\phi \left( p\right) \,p\, \dfrac {1}{\sqrt {2\pi x}}\int ^{\infty }_{-\infty }dx\psi ^{\ast }\left( x\right) e^{ipx/\hbar }\nonumber \\
+& =& \int ^{\infty }_{-\infty }dp\phi ^{\ast }(p)\,p\,\phi(p)
+\label{eq:wave_in_momentum_space} 
+\end{eqnarray}
+%%
+Denklem \ref{eq:parseval_theorem} ve \ref{eq:wave_in_momentum_space}'ya dayanarak $\phi(p)$'yi dalga fonksiyonunun momentum uzayındaki temsili olarak veya kısaca momentum uzayıdaki dalga fonksiyonu olarak tanımlayabiliriz. Böylece $|\phi(p)|^2$'yi de bir parçacığın p momentumuna sahip olma olasılık yoğunluğu olarak adlandırabiliriz. Konum uzayında konum operatörü basitçe $\hat x = x$ ve momentum operatörü $\hat p = \dfrac{\hbar}{i}\dfrac{\partial}{\partial x}$ ile tanımlanırken, momentum uzayında konum $\hat x = i \hbar\dfrac{\partial}{\partial p}$ ile momentum ise basitçe $\hat p = p$ ile tanımlanır. Böylece momentum uzayında konumun beklenen değeri,
+%%
+\begin{equation}
+\langle \hat x \rangle =  \int ^{\infty }_{-\infty }dp\phi ^{\ast }(p)\left(i\hbar\dfrac{\partial}{\partial p}\right)\phi(p)
+\end{equation}
+%%
+ifadesi ile hesaplanabilir.
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
