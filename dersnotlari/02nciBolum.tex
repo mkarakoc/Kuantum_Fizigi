@@ -386,7 +386,7 @@ olur. Bu sonuca göre elektron $V(x)$  potansiyelinden  etkilenmeden serbestçe 
 \YAZILACAK
 
 \begin{equation}
--i\hbar \dfrac {\partial \psi \left( x,t\right) }{\partial t}=-\dfrac {\hbar ^{2}}{2m}\dfrac {\partial ^{2}\Psi \left( x,t\right) }{\partial x^{2}}+V\left( x\right) \Psi \left( x,t\right)
+-i\hbar \dfrac {\partial \psi \left( x,t\right) }{\partial t}=-\dfrac {\hbar ^{2}}{2m}\dfrac {\partial ^{2}\psi \left( x,t\right) }{\partial x^{2}}+V\left( x\right) \psi \left( x,t\right)
 \label{eq:schrodinger_eq}
 \end{equation}
 
@@ -463,13 +463,13 @@ Dalga fonksiyonunu $t=0$ anında normalize etmekle, herhangi bir t anında da da
 Denk. \ref{eq:probability_norm}'in zamana göre kısmi türevi olan yukarıdaki ifadenin belli şartlarda sıfıra eşit olabileceğini göstermek gerekir. Eğer eşitlik sağlanırsa $N(t) = \text{sabit}$ olur. Böylece dalga fonksiyonu herhangi bir $t$ anında normalize edilebilir. Yukarıdaki eşitliği sorgulamak için öncelikle $P(x,t)$ olasılık yoğunluğunun $t$'ye göre kısmi türevi alınırsa,
 %%
 \begin{equation}
-\dfrac {\partial }{\partial t}P\left( x,t\right) = \dfrac {\partial \psi ^{\ast }}{\partial t}\psi +\Psi ^{\ast }\dfrac {\partial \psi }{\partial t}
+\dfrac {\partial }{\partial t}P\left( x,t\right) = \dfrac {\partial \psi ^{\ast }}{\partial t}\psi +\psi ^{\ast }\dfrac {\partial \psi }{\partial t}
 \label{eq:probability_derivative_t}
 \end{equation}
 %%
 elde edilir. Elde edilen bu eşitliğin sağ tarafında Schrödinger denklemi ve onun karmaşık eşleniği olan,
 \begin{equation}
--i\hbar \dfrac {\partial \psi ^{\ast }\left( x,t\right) }{\partial t}=-\dfrac {\hbar ^{2}}{2m}\dfrac {\partial ^{2}\Psi ^{\ast }\left( x,t\right) }{\partial x^{2}}+V\left( x\right) \Psi ^{\ast }\left( x,t\right)
+-i\hbar \dfrac {\partial \psi ^{\ast }\left( x,t\right) }{\partial t}=-\dfrac {\hbar ^{2}}{2m}\dfrac {\partial ^{2}\psi ^{\ast }\left( x,t\right) }{\partial x^{2}}+V\left( x\right) \psi ^{\ast }\left( x,t\right)
 \label{eq:schrodinger_conjugate}
 \end{equation}
 hali kullanılırsa ve $V(x)$'in reel bir fonksiyon olduğu kabul edilirse,
@@ -477,13 +477,13 @@ hali kullanılırsa ve $V(x)$'in reel bir fonksiyon olduğu kabul edilirse,
 \begin{eqnarray}
 \dfrac {\partial }{\partial t}P\left( x,t\right) &=&\dfrac {1}{i\hbar }\left( \dfrac {\hbar ^{2}}{2m}\right) \left( \dfrac {\partial ^{2}\psi ^{\ast }}{\partial x^{2}}\psi -\psi ^{\ast }\dfrac {\partial ^{2}\psi }{\partial x^{2}}\right) \\
 %%
-&=&-\dfrac {\partial }{\partial x}\left[ \dfrac {\hbar }{2im}\left( \Psi ^{\ast }\dfrac {\partial \psi }{\partial x}-\dfrac {\partial \psi ^{\ast }}{\partial x}\psi \right) \right]
+&=&-\dfrac {\partial }{\partial x}\left[ \dfrac {\hbar }{2im}\left( \psi ^{\ast }\dfrac {\partial \psi }{\partial x}-\dfrac {\partial \psi ^{\ast }}{\partial x}\psi \right) \right]
 \end{eqnarray}
 %%
 sonucuna ulaşılır. Burada eşitliğin sağında türevin içinde kalan kısımı \emph{olasılık akısı} olarak tanımlanır,
 %%
 \begin{equation}
-j(x,t)\equiv \dfrac {\hbar }{2im}\left( \Psi ^{\ast }\dfrac {\partial \psi }{\partial x}-\dfrac {\partial \psi ^{\ast }}{\partial x}\psi \right).
+j(x,t)\equiv \dfrac {\hbar }{2im}\left( \psi ^{\ast }\dfrac {\partial \psi }{\partial x}-\dfrac {\partial \psi ^{\ast }}{\partial x}\psi \right).
 \label{eq:probability_current}
 \end{equation}
 %%
@@ -602,9 +602,89 @@ yazılabilir. Bu hesapta $dx/dt$ türev ifadesinin yer almadığına dikkat edil
 \label{eq:expectation_val_p_1}
 \end{equation}
 %%
-sonucuna ulaşırız.
+sonucuna ulaşırız. Bu ifadeyi üzerinde biraz daha matematiksel çalışma yapmalıyız.
+%%
+\begin{eqnarray*}
+\dfrac {\partial }{\partial x}\left( \dfrac {\partial \psi ^{\ast }}{\partial x}x\psi \right) =\dfrac {\partial ^{2}\psi^{\ast }}{\partial x^{2}}x\psi +\dfrac {\partial \psi ^{\ast }}{\partial x}\psi +\dfrac {\partial \psi ^{\ast }}{\partial x}x\dfrac {\partial \psi }{\partial x} \\
+\dfrac {\partial }{\partial x}\left( \psi ^{\ast }x\dfrac {\partial \psi }{\partial x}\right) =\dfrac {\partial \psi ^{\ast }}{\partial x}x\dfrac {\partial \psi }{\partial x}+\psi ^{\ast }\dfrac {\partial \psi }{\partial x} + \psi ^{\ast } x \dfrac {\partial ^{2}\psi }{\partial x^{2}}
+\end{eqnarray*}
+%%
+Yukarıdaki iki eşitlikten alttaki üsttekinden çıkarılırsa,
+%%
+\begin{equation*}
+\left( \dfrac {\partial ^{2}\psi ^{\ast }}{\partial x^{2}}x\psi -\psi ^{\ast }x\dfrac {\partial ^{2}\psi }{\partial x^{2}}\right) = \dfrac {\partial }{\partial x}\left( \dfrac {\partial \psi ^{\ast }}{\partial x}x\psi -\psi ^{\ast }x\dfrac {\partial \psi }{\partial x}\right) +\psi ^{\ast }\dfrac {\partial \psi }{\partial x}-\dfrac {\partial \psi ^{\ast }}{\partial x}\psi 
+\end{equation*}
+%%
+elde edilir. Eşitliğin sol tarafındaki son iki terim için de,
+\begin{eqnarray*}
+\dfrac {\partial \psi ^{\ast }\psi }{\partial x}=\dfrac {\partial \psi ^{\ast }}{\partial x}\psi +\psi ^{\ast }\dfrac {\partial \psi }{\partial x}\\
+\dfrac {\partial \psi ^{\ast }}{\partial x}\psi =\dfrac {\partial \psi ^{\ast }\psi }{\partial x}-\psi ^{\ast }\dfrac {\partial \psi }{\partial x}
+\end{eqnarray*}
+bu matematiksel işlemin sonucu kullanılırsa $\langle p \rangle$ için,
+%%
+\begin{equation*}
+\langle p\rangle =\dfrac {\hbar }{2i}\int ^{\infty }_{-\infty }dx\left( \dfrac {\partial ^{2}\psi ^{\ast }}{\partial x^{2}}x\psi -\psi ^{\ast }x\dfrac {\partial ^{2}\psi }{\partial x^{2}}\right) =  \dfrac {\hbar }{2i}\int ^{\infty }_{-\infty }dx \left[\dfrac {\partial }{\partial x}\left( \dfrac {\partial \psi ^{\ast }}{\partial x}x\psi -\psi ^{\ast }x\dfrac {\partial \psi }{\partial x} + \psi^\ast \psi\right) +2\psi ^{\ast }\dfrac {\partial \psi }{\partial x}\right]
+\end{equation*}
+%%
+sonucuna ulaşılır. Bu ifadeyi biraz daha açarsak,
+%%
+\begin{equation*}
+\langle p\rangle = \dfrac {\hbar }{2i}\left( \dfrac {\partial \psi ^{\ast }}{\partial x}x\psi -\psi ^{\ast }x\dfrac {\partial \psi }{\partial x} + \psi^\ast \psi \right){\bigg |}_{-\infty}^{\infty} + \int ^{\infty }_{-\infty }dx \psi ^{\ast }\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi
+\end{equation*}
+%%
+momentumun beklenen değerini bulmaya daha da yakınlaşmış oluruz. Bu son ifadedeki ilk terimdeki dalga fonksiyonları ve eşlenikleri $\pm\infty$ durumları için sıfıra gideceklerinden ilk terim kaybolur ve momentumun beklenen değeri,
+%%
+\begin{equation}
+\langle p\rangle =  \int ^{\infty }_{-\infty }dx \psi(x,t) ^{\ast }\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi(x,t)
+\label{eq:expactation_value_and_op_momentum}
+\end{equation}
+%%
+olarak bulunur. Burada klasik momentumun kuantum fiziğinde bir diferansiyel operatörle (işlemci) ile temsil edildiğini kabul ederiz ve bu operatörün,
+%%
+\begin{equation}
+\hat p \equiv \dfrac {\hbar }{i}\dfrac {\partial}{\partial x}
+\end{equation}
+%%
+ile tanımlarız. Bu tanımı kabullendiğimiz takdirde serbest bir parçacığın enerjisi için
+%%
+\begin{equation}
+\hat E \equiv \dfrac{\hat p^2}{2 m} = \dfrac {1 }{2 m}\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right)^2 = -\dfrac {\hbar^2 }{2 m}\dfrac {\partial^2}{\partial^2 x}
+\end{equation}
+%%
+yazılabilir. Böylece bir serbest parçacığın enerjisinin beklenen değeri,
+%%
+\begin{equation}
+\langle \hat E\rangle =  \int ^{\infty }_{-\infty }dx \psi(x,t) ^{\ast }\left(-\dfrac {\hbar^2 }{2 m}\dfrac {\partial^2}{\partial^2 x}\right) \psi(x,t)
+\label{eq:expactation_value_and_op_energy}
+\end{equation}
+%%
+intergrali ile hesaplanabilir. Dikkat edilirse yeni tanımlandığımız bu operatörleri klasik ifadeden ayırmak için üzerine şapka sembolü ekliyoruz.
 
-\YAZILACAK
+Momentum operatörünün $i$ sanal sayısını içeriyor olması beklenen değerin de bazen sanal sayı içerebileceğini düşünüdürebilir. Beklenen değerin sanal olup olmayacağını,
+%%
+\begin{equation}
+\langle \hat p \rangle - \langle \hat p \rangle^\ast = 0
+\end{equation}
+%%
+ifadesi ile test edebiliriz. Eğer eşitlik sağlanırsa $\langle \hat p \rangle$ reeldir. Çünkü, reel bir sayının eşleniği kendisine eşittir. Şimdi bu eşitliği test edelim.
+%%
+\begin{eqnarray*}
+\langle \hat p \rangle - \langle \hat p \rangle^\ast &=& \int ^{\infty }_{-\infty }dx \psi ^{\ast }\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi - \left(  \int ^{\infty }_{-\infty }dx \psi ^{\ast }\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi  \right)^\ast \\
+&=& \int ^{\infty }_{-\infty }dx \psi ^{\ast }\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi -   \int ^{\infty }_{-\infty }dx \psi \left(-\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi^\ast \\
+&=& \dfrac {\hbar }{i} \int ^{\infty }_{-\infty }dx \left[\psi ^{\ast } \dfrac {\partial}{\partial x} \psi +  \psi \dfrac {\partial}{\partial x}\psi^\ast\right] = \dfrac {\hbar }{i} \int ^{\infty }_{-\infty }dx \dfrac {\partial}{\partial x}\left( \psi ^{\ast } \psi\right)\\
+&=&\psi^\ast \psi {\bigg |}^{\infty}_{-\infty} = 0
+\end{eqnarray*}
+%%
+Bu teste göre eşitlik sağlanır, çünkü son elde edilen terimdeki dalga fonksiyonu ve eşleniği sonsuzda sıfıra gidecektir. Böylece momentumun beklenen değerinin daima reel olacağını söyleyebiliriz. Bu tür reel değerli beklenen değer üreten operatörlere \emph{hermityen operatörler} denir.
+
+Elde ettiğimiz bu hermityen momentum operatörünü kullanarak Schrödinger denklemini,
+%%
+\begin{equation}
+\hat H\psi(x,t) = i\hbar \dfrac{\partial\psi(x,t)}{\partial t}
+\end{equation}
+%%
+
+
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
