@@ -385,6 +385,12 @@ olur. Bu sonuca göre elektron $V(x)$  potansiyelinden  etkilenmeden serbestçe 
 
 \YAZILACAK
 
+\begin{align}
+i \hbar \frac { \partial \psi ( x , t ) } { \partial t } &= \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d p \phi ( p ) E ( p ) e ^ { i ( p x - E ) / \hbar }\\
+&= \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d p \phi ( p ) \frac { p ^ { 2 } } { 2 m } e ^ { i ( p x - E t ) / \hbar }
+\end{align}
+
+
 \begin{equation}
 -i\hbar \dfrac {\partial \psi \left( x,t\right) }{\partial t}=-\dfrac {\hbar ^{2}}{2m}\dfrac {\partial ^{2}\psi \left( x,t\right) }{\partial x^{2}}+V\left( x\right) \psi \left( x,t\right)
 \label{eq:schrodinger_eq}
@@ -474,11 +480,11 @@ elde edilir. Elde edilen bu eşitliğin sağ tarafında Schrödinger denklemi ve
 \end{equation}
 hali kullanılırsa ve $V(x)$'in reel bir fonksiyon olduğu kabul edilirse,
 %%
-\begin{eqnarray}
-\dfrac {\partial }{\partial t}P\left( x,t\right) &=&\dfrac {1}{i\hbar }\left( \dfrac {\hbar ^{2}}{2m}\right) \left( \dfrac {\partial ^{2}\psi ^{\ast }}{\partial x^{2}}\psi -\psi ^{\ast }\dfrac {\partial ^{2}\psi }{\partial x^{2}}\right) \\
+\begin{align}
+\dfrac {\partial }{\partial t}P\left( x,t\right) &=\dfrac {1}{i\hbar }\left( \dfrac {\hbar ^{2}}{2m}\right) \left( \dfrac {\partial ^{2}\psi ^{\ast }}{\partial x^{2}}\psi -\psi ^{\ast }\dfrac {\partial ^{2}\psi }{\partial x^{2}}\right) \\
 %%
-&=&-\dfrac {\partial }{\partial x}\left[ \dfrac {\hbar }{2im}\left( \psi ^{\ast }\dfrac {\partial \psi }{\partial x}-\dfrac {\partial \psi ^{\ast }}{\partial x}\psi \right) \right]
-\end{eqnarray}
+&=-\dfrac {\partial }{\partial x}\left[ \dfrac {\hbar }{2im}\left( \psi ^{\ast }\dfrac {\partial \psi }{\partial x}-\dfrac {\partial \psi ^{\ast }}{\partial x}\psi \right) \right]
+\end{align}
 %%
 sonucuna ulaşılır. Burada eşitliğin sağında türevin içinde kalan kısımı \emph{olasılık akısı} olarak tanımlanır,
 %%
@@ -543,12 +549,12 @@ ile tanımlanır. Bütün sınavın standart sapması ise bireysel standart sapm
 \label{eq:standard_deviation_exam}
 \end{equation}
 ile tanımlanır. Aşağıdaki gibi bir kaç düzenleme ile,
-\begin{eqnarray*}
-\sigma ^{2}=\sum ^{100}_{n=0}\sigma ^{2}_{n}P\left( n\right) &=&\sum ^{100}_{n=0}\left(n -\langle n\rangle \right) ^{2}P\left( n\right) \\
-&=&\sum ^{100}_{n=0}\left( n^{2}P\left( n\right) -2n\langle n\rangle P\left( n\right) +\langle n\rangle ^{2}P\left( n\right) \right)\\
-&=&\sum ^{100}_{n=0}n^{2}P\left( n\right) -2 \langle n \rangle\sum ^{100}_{n=0}nP\left( n\right) +\langle n\rangle ^{2}\sum ^{100}_{n=0}P\left( n\right) \\
-&=&<n^{2}>-2 \langle n \rangle\langle n\rangle +\langle n\rangle ^{2}\\
-\end{eqnarray*}
+\begin{align*}
+\sigma ^{2}=\sum ^{100}_{n=0}\sigma ^{2}_{n}P\left( n\right) &=\sum ^{100}_{n=0}\left(n -\langle n\rangle \right) ^{2}P\left( n\right) \\
+&=\sum ^{100}_{n=0}\left( n^{2}P\left( n\right) -2n\langle n\rangle P\left( n\right) +\langle n\rangle ^{2}P\left( n\right) \right)\\
+&=\sum ^{100}_{n=0}n^{2}P\left( n\right) -2 \langle n \rangle\sum ^{100}_{n=0}nP\left( n\right) +\langle n\rangle ^{2}\sum ^{100}_{n=0}P\left( n\right) \\
+&=<n^{2}>-2 \langle n \rangle\langle n\rangle +\langle n\rangle ^{2}\\
+\end{align*}
 %%
 kısaca,
 %%
@@ -590,10 +596,10 @@ klasik ifadesinin,
 %%
 olarak kullanılabileceğini göstermiştir. Buradan yola çıkarak,
 %%
-\begin{eqnarray}
-\langle p \rangle &=& m \frac{d}{dt} \int ^{\infty }_{-\infty }dx \psi^{\ast }\left(x,t\right) x \psi \left( x,t\right)\\
-&=&m\int ^{\infty }_{-\infty }dx\left( \dfrac {\partial \psi ^{\ast }\left( x,t\right) }{\partial t}x\psi \left( x,t\right) +\psi ^{\ast }\left( x,t\right) x \dfrac {\partial \psi \left( x,t\right) }{\partial t}\right) \nonumber 
-\end{eqnarray}
+\begin{align}
+\langle p \rangle &= m \frac{d}{dt} \int ^{\infty }_{-\infty }dx \psi^{\ast }\left(x,t\right) x \psi \left( x,t\right)\\
+&=m\int ^{\infty }_{-\infty }dx\left( \dfrac {\partial \psi ^{\ast }\left( x,t\right) }{\partial t}x\psi \left( x,t\right) +\psi ^{\ast }\left( x,t\right) x \dfrac {\partial \psi \left( x,t\right) }{\partial t}\right) \nonumber 
+\end{align}
 %%
 yazılabilir. Bu hesapta $dx/dt$ türev ifadesinin yer almadığına dikkat edilmelidir. Zamana bağlı olan ifade $\psi(x,t)$ ve onun eşleniğidir. Dalga fonksiyonunun zamanla değişimi $\langle x \rangle$'deki zamana bağlı değişimi belirler. Olasılık akısını hesaplarken yaptığımız gibi yukarıdaki denklemde Schrödinger denklemini ve eşleniğini kullanalarak,
 %%
@@ -604,10 +610,10 @@ yazılabilir. Bu hesapta $dx/dt$ türev ifadesinin yer almadığına dikkat edil
 %%
 sonucuna ulaşırız. Bu ifadeyi üzerinde biraz daha matematiksel çalışma yapmalıyız.
 %%
-\begin{eqnarray*}
+\begin{align*}
 \dfrac {\partial }{\partial x}\left( \dfrac {\partial \psi ^{\ast }}{\partial x}x\psi \right) =\dfrac {\partial ^{2}\psi^{\ast }}{\partial x^{2}}x\psi +\dfrac {\partial \psi ^{\ast }}{\partial x}\psi +\dfrac {\partial \psi ^{\ast }}{\partial x}x\dfrac {\partial \psi }{\partial x} \\
 \dfrac {\partial }{\partial x}\left( \psi ^{\ast }x\dfrac {\partial \psi }{\partial x}\right) =\dfrac {\partial \psi ^{\ast }}{\partial x}x\dfrac {\partial \psi }{\partial x}+\psi ^{\ast }\dfrac {\partial \psi }{\partial x} + \psi ^{\ast } x \dfrac {\partial ^{2}\psi }{\partial x^{2}}
-\end{eqnarray*}
+\end{align*}
 %%
 Yukarıdaki iki eşitlikten alttaki üsttekinden çıkarılırsa,
 %%
@@ -616,10 +622,10 @@ Yukarıdaki iki eşitlikten alttaki üsttekinden çıkarılırsa,
 \end{equation*}
 %%
 elde edilir. Eşitliğin sol tarafındaki son iki terim için de,
-\begin{eqnarray*}
+\begin{align*}
 \dfrac {\partial \psi ^{\ast }\psi }{\partial x}=\dfrac {\partial \psi ^{\ast }}{\partial x}\psi +\psi ^{\ast }\dfrac {\partial \psi }{\partial x}\\
 \dfrac {\partial \psi ^{\ast }}{\partial x}\psi =\dfrac {\partial \psi ^{\ast }\psi }{\partial x}-\psi ^{\ast }\dfrac {\partial \psi }{\partial x}
-\end{eqnarray*}
+\end{align*}
 bu matematiksel işlemin sonucu kullanılırsa $\langle p \rangle$ için,
 %%
 \begin{equation*}
@@ -668,12 +674,12 @@ Momentum operatörünün $i$ sanal sayısını içeriyor olması beklenen değer
 %%
 ifadesi ile test edebiliriz. Eğer eşitlik sağlanırsa $\langle \hat p \rangle$ reeldir. Çünkü, reel bir sayının eşleniği kendisine eşittir. Şimdi bu eşitliği test edelim.
 %%
-\begin{eqnarray*}
-\langle \hat p \rangle - \langle \hat p \rangle^\ast &=& \int ^{\infty }_{-\infty }dx \psi ^{\ast }\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi - \left(  \int ^{\infty }_{-\infty }dx \psi ^{\ast }\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi  \right)^\ast \\
-&=& \int ^{\infty }_{-\infty }dx \psi ^{\ast }\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi -   \int ^{\infty }_{-\infty }dx \psi \left(-\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi^\ast \\
-&=& \dfrac {\hbar }{i} \int ^{\infty }_{-\infty }dx \left[\psi ^{\ast } \dfrac {\partial}{\partial x} \psi +  \psi \dfrac {\partial}{\partial x}\psi^\ast\right] = \dfrac {\hbar }{i} \int ^{\infty }_{-\infty }dx \dfrac {\partial}{\partial x}\left( \psi ^{\ast } \psi\right)\\
-&=&\psi^\ast \psi {\bigg |}^{\infty}_{-\infty} = 0
-\end{eqnarray*}
+\begin{align*}
+\langle \hat p \rangle - \langle \hat p \rangle^\ast &= \int ^{\infty }_{-\infty }dx \psi ^{\ast }\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi - \left(  \int ^{\infty }_{-\infty }dx \psi ^{\ast }\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi  \right)^\ast \\
+&= \int ^{\infty }_{-\infty }dx \psi ^{\ast }\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi -   \int ^{\infty }_{-\infty }dx \psi \left(-\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi^\ast \\
+&= \dfrac {\hbar }{i} \int ^{\infty }_{-\infty }dx \left[\psi ^{\ast } \dfrac {\partial}{\partial x} \psi +  \psi \dfrac {\partial}{\partial x}\psi^\ast\right] = \dfrac {\hbar }{i} \int ^{\infty }_{-\infty }dx \dfrac {\partial}{\partial x}\left( \psi ^{\ast } \psi\right)\\
+&=\psi^\ast \psi {\bigg |}^{\infty}_{-\infty} = 0
+\end{align*}
 %%
 Bu teste göre eşitlik sağlanır, çünkü son elde edilen terimdeki dalga fonksiyonu ve eşleniği sonsuzda sıfıra gidecektir. Böylece momentumun beklenen değerinin daima reel olacağını söyleyebiliriz. Bu tür reel değerli beklenen değer üreten operatörlere \emph{hermityen operatörler} denir.
 
@@ -703,21 +709,21 @@ Daha önce dalga paketini yerelleştirmek için kullandığımız $\phi(p)$ fonk
 %%
 $\phi(p)$'yi yerelleşmeyi sağlaması dışında bir başka şekilde anlamlandırabilir miyiz? Önceklikle, \emph{Parseval teoremine} göre $\psi(x)$ normalize ise $\phi(p)$'de normalizedir. Aşağıdaki matematiksel işlem süreci her iki fonksiyondan birisi normalizeyse diğerininde normalize olacağını ispatlamaktadır.
 %%
-\begin{eqnarray}
-\int ^{\infty }_{-\infty }dp\phi ^{\ast }\left( p\right) \phi \left( p\right) &=&\int ^{\infty }_{-\infty }dp\phi ^{\ast }\left( p\right) \dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dx\psi \left( x\right) e^{-ipx/\hbar }\nonumber \\
-&=&\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dx\psi \left( x\right) \int ^{\infty }_{-\infty }dp\phi \left( p\right) e^{-ipx/\hbar }\nonumber \\
-&=&\int ^{\infty }_{-\infty }dx\psi \left( x\right) \psi ^{\ast }\left( x\right) = 1
+\begin{align}
+\int ^{\infty }_{-\infty }dp\phi ^{\ast }\left( p\right) \phi \left( p\right) &=\int ^{\infty }_{-\infty }dp\phi ^{\ast }\left( p\right) \dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dx\psi \left( x\right) e^{-ipx/\hbar }\nonumber \\
+&=\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dx\psi \left( x\right) \int ^{\infty }_{-\infty }dp\phi \left( p\right) e^{-ipx/\hbar }\nonumber \\
+&=\int ^{\infty }_{-\infty }dx\psi \left( x\right) \psi ^{\ast }\left( x\right) = 1
 \label{eq:parseval_theorem}
-\end{eqnarray}
+\end{align}
 %%
 Şimdi benzer şekilde, Fourier dönüşümlerinden faydalanarak, $\langle \hat p \rangle$ beklenen değerini incelersek,
 %%
-\begin{eqnarray}
-\langle \hat p\rangle &=&\int ^{\infty }_{-\infty }dx\psi \left( x\right) \dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\psi \left( x\right) =\int ^{\infty }_{-\infty }dx\psi \left( x\right) \dfrac {\hbar }{i}\dfrac {d}{dx}\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dp\phi \left( p\right) e^{ipx/\hbar }\nonumber \\
-&=&\int ^{\infty }_{-\infty }dp\phi \left( p\right) \,p\, \dfrac {1}{\sqrt {2\pi x}}\int ^{\infty }_{-\infty }dx\psi ^{\ast }\left( x\right) e^{ipx/\hbar }\nonumber \\
-& =& \int ^{\infty }_{-\infty }dp\phi ^{\ast }(p)\,p\,\phi(p)
+\begin{align}
+\langle \hat p\rangle &=\int ^{\infty }_{-\infty }dx\psi \left( x\right) \dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\psi \left( x\right) =\int ^{\infty }_{-\infty }dx\psi \left( x\right) \dfrac {\hbar }{i}\dfrac {d}{dx}\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dp\phi \left( p\right) e^{ipx/\hbar }\nonumber \\
+&=\int ^{\infty }_{-\infty }dp\phi \left( p\right) \,p\, \dfrac {1}{\sqrt {2\pi x}}\int ^{\infty }_{-\infty }dx\psi ^{\ast }\left( x\right) e^{ipx/\hbar }\nonumber \\
+&= \int ^{\infty }_{-\infty }dp\phi ^{\ast }(p)\,p\,\phi(p)
 \label{eq:wave_in_momentum_space} 
-\end{eqnarray}
+\end{align}
 %%
 Denklem \ref{eq:parseval_theorem} ve \ref{eq:wave_in_momentum_space}'ya dayanarak $\phi(p)$'yi dalga fonksiyonunun momentum uzayındaki temsili olarak veya kısaca momentum uzayıdaki dalga fonksiyonu olarak tanımlayabiliriz. Böylece $|\phi(p)|^2$'yi de bir parçacığın p momentumuna sahip olma olasılık yoğunluğu olarak adlandırabiliriz. Konum uzayında konum operatörü basitçe $\hat x = x$ ve momentum operatörü $\hat p = \dfrac{\hbar}{i}\dfrac{\partial}{\partial x}$ ile tanımlanırken, momentum uzayında konum $\hat x = i \hbar\dfrac{\partial}{\partial p}$ ile momentum ise basitçe $\hat p = p$ ile tanımlanır. Böylece momentum uzayında konumun beklenen değeri,
 %%

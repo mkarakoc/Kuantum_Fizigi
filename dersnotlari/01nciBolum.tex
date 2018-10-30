@@ -322,11 +322,11 @@ E(T) = \sigma T^4
 %%
 olurdu. Her iki ifade de karacisim ışınımı için benzeri bir sonucu ifade etmektedir ve Stefan-Bolzman yasası olarak bilinmektedir: ``bütün ışıma spektrumu üzerinden alınan integral sonucu elde edilen ışıma enerji yoğunluğu veya ışıma yayınım gücü sıcaklığın dördüncü kuvvetiyle doğru orantılıdır". Her iki ifadedeki sabitlerin değerleri,
 %%
-\begin{eqnarray}
+\begin{align}
 \label{eq:stefan_boltzman}
-\sigma &=&  5.670367(13) \, \times 10^{-8}\ \textrm{W}\,\textrm{m}^{-2}\,\textrm{K}^{-4} \\
-a &=& 4\frac{\sigma}{c} \nonumber
-\end{eqnarray}
+\sigma &=  5.670367(13) \, \times 10^{-8}\ \textrm{W}\,\textrm{m}^{-2}\,\textrm{K}^{-4} \\
+a &= 4\frac{\sigma}{c} \nonumber
+\end{align}
 %%
 olarak verilir ve $\sigma$ Stefan-Boltzmann sabiti \cite{codata:stefan_boltzman} olarak adlandırılır.
 
@@ -858,21 +858,21 @@ a_0 = \frac{\hbar}{m_e c Z \alpha} 1^2 \eqsim \frac{137\hbar}{m_e c Z} = \frac{0
 
 \item en düşük Bohr yörüngesindeki elektronun bağlanma enerjisi ve koparma enerjisi (elektronun serbest hale gelmesi için gerekli enerji),
 %%
-\begin{eqnarray}
-\text{Bağlanma Enerjisi} &\equiv& E(n=1) = -\frac{1}{2}m_e (Z \alpha c)^2 \frac{1}{1^2} \eqsim -13.6 Z^2 \text{eV} \\
-\text{Koparma Enerjisi} &\equiv& E(n\rightarrow\infty) - E(n=1) = 0 - (-13.6 Z^2) = 13.6 Z^2 \text{eV}
+\begin{align}
+\text{Bağlanma Enerjisi} &\equiv E(n=1) = -\frac{1}{2}m_e (Z \alpha c)^2 \frac{1}{1^2} \eqsim -13.6 Z^2 \text{eV} \\
+\text{Koparma Enerjisi} &\equiv E(n\rightarrow\infty) - E(n=1) = 0 - (-13.6 Z^2) = 13.6 Z^2 \text{eV}
 \label{eq:bindingEnergy}
-\end{eqnarray}
+\end{align}
 \end{itemize}
 %%
 olarak bulunur. Böyle bir atoma hidrojen (Z=1) örnek verilebilir, hidrojenin atomunun elektronu n=2 seviyesinden n=1 seviyesine geçişi sırasında elektromanyetik ışınım (foton) yayınlayarak enerji kaybeder. Elektronun kaybettiği enerji veya yayınlanan ışınımın enerjisi,
 %%
-\begin{eqnarray}
-\text{Fotonun Enerjisi} &\equiv& E(n=2) - E(n=1) 
+\begin{align}
+\text{Fotonun Enerjisi} &\equiv E(n=2) - E(n=1) 
 = -\frac{13.6}{2^2} - (-\frac{13.6}{1^2}) \nonumber \\ 
-&=&  13.6 (1-\frac{1}{4}) \text{ eV} = 10.2 \text{ eV}
+&=  13.6 (1-\frac{1}{4}) \text{ eV} = 10.2 \text{ eV}
 \label{eq:fotonEnergy}
-\end{eqnarray}
+\end{align}
 %%
 olacaktır. Yayınlanan fotonun açısal frekansı ise Denk. \ref{eq:bohr_states_2pi}'e göre,
 %%
@@ -882,12 +882,12 @@ olacaktır. Yayınlanan fotonun açısal frekansı ise Denk. \ref{eq:bohr_states
 %%
 dir. Aynı fotonun dalga boyu ise,
 %%
-\begin{eqnarray*}
-E &=& \hbar \omega = \hbar 2\pi \nu = \hbar 2\pi c/\lambda, \\
-\lambda &=& \frac{\hbar 2\pi c}{E} = 
+\begin{align*}
+E &= \hbar \omega = \hbar 2\pi \nu = \hbar 2\pi c/\lambda, \\
+\lambda &= \frac{\hbar 2\pi c}{E} = 
 \frac{6.58\times 10^{-16} \text{ eV s/rad } 2\pi\,3\times 10^8 \text{m/s}}{10.2 \text{eV}}\eqsim 1.2\times 10^{-7} \text{m}\\
-\lambda &=& 120 \text{ nm} = 1200 \text{ \AA} 
-\end{eqnarray*}
+\lambda &= 120 \text{ nm} = 1200 \text{ \AA} 
+\end{align*}
 olarak bulunur. Bu ışınım elektromanyetik spektrumun morötesi kısmında yer alır ve deneysel verilerle uyumludur. Böylece daha önce anlaşılamayan deneysel bazı sonuçlar Bohr atom modeli ile aydınlatılabilmiştir. Bohr modeli önemli bir başarı gösterse de, elektronlar ne zaman bir yörüngeden sıçrama yapmalı veya yayınlanan fotonun yönü ne olmalı gibi sorulara yanıt verememiştir. Ayrıca açısal momentumun ve seviyelerin kuantumlanma kuralı sadece dairesel yörüngeli durumlar için geçerlidir. Eliptik yörüngeler için A. Sommerfeld ve W. Wilson bir başka kuantumlanma şartı tanımlamışlardır \cite{book:Gasiorowicz, book:EisbergResnick}. 
 %%
 
