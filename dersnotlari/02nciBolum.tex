@@ -345,15 +345,16 @@ olur. Bu durumda girişim deseni gözlenemez. Demek ki; girişim desenini gözle
 Buraya kadar serbest hareket eden bir elektronun x konumunda ve t anında bulunma olasılığını tanımlayan bir dalga fonksiyonu tanınmadık. Planck'ın $E=\hbar\omega$  ve de~Broglie'nin $p=\hbar k$  ($\lambda = h/p$ )  bağlantılarını kullanarak  dalga fonksiyonunun kuantum fiziği ile bağını kurabiliriz.  Bu tanımlamalar ile dalga paketini,
 %%
 \begin{equation}
-\psi \left( x,t\right) =\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dp\phi \left( p\right) e^{-i\left( px-Et\right) /\hbar }
+\psi \left( x,t\right) =\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dp\phi \left( p\right) e^{i\left( px-Et\right) /\hbar }
 \label{eq:wave_packet_in_p}
 \end{equation}
 %%
 şeklinde yeniden yazabiliriz.  Burada A(k)'nın  yerini $\frac{\phi(p)}{2\pi\hbar}$  almıştır.  Serbest bir parçacığın toplam enerjisi
 %%
-\begin{equation*}
+\begin{equation}
 E=\dfrac {p^{2}}{2m}
-\end{equation*}
+\label{eq:free_particle_E}
+\end{equation}
 %%
 ile tanımlanır.  Enerji ifadesi,  Momentum ve grup hızı arasında
 %%
@@ -365,9 +366,10 @@ bağıntısı ortaya çıkar.  Böylece $E=\hbar \omega$ seçimimizin doğru old
 
 Eğer ilgilendiğimiz parçacık serbest olmasaydı toplam enerji
 %%
-\begin{equation*}
+\begin{equation}
 E=\dfrac {p^{2}}{2m} + V(x)
-\end{equation*}
+\label{eq:non_free_particle_E}
+\end{equation}
 %%
 olurdu.  Eğer bu ifadeyi doğrudan Denk.\ref{eq:wave_packet_in_p}'de yerine koyarsak çok anlamlı bir sonuç elde edemeyiz.  Çünkü dalga paketine sadece,
 %%
@@ -383,22 +385,59 @@ katkısı gelir.  Bu durumda $V(x)$'in  tanımladığı potansiyelin parçacık 
 %%
 olur. Bu sonuca göre elektron $V(x)$  potansiyelinden  etkilenmeden serbestçe hareket eder ki,  bu doğru bir  sonuç değildir. Yapılması gereken $V(x)$'in etkisini de hesaba katacak bir denklem geliştirmektir.
 
-\YAZILACAK
-
+Eğer Denk. \ref{eq:wave_packet_in_p} ile tanımlanan dalga paketinin zamana göre türevini alırsak,
+%%
 \begin{align}
-i \hbar \frac { \partial \psi ( x , t ) } { \partial t } &= \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d p \phi ( p ) E ( p ) e ^ { i ( p x - E ) / \hbar }\\
+i \hbar \frac { \partial \psi ( x , t ) } { \partial t } &= \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d p \phi ( p ) E ( p ) e ^ { i ( p x - E ) / \hbar } \nonumber\\
 &= \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d p \phi ( p ) \frac { p ^ { 2 } } { 2 m } e ^ { i ( p x - E t ) / \hbar }
 \end{align}
-
-
+%%
+elde ederiz. Konuma göre birinci ve ikinci dereceden türevlerini alırsak,
+%%
+\begin{align}
+\frac { \hbar } { i } \frac { \partial } { \partial x } \psi ( x , t ) = \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d p \phi ( p ) p e ^ { i ( p x - E i )/\hbar }\nonumber\\
+\left( \frac { \hbar } { i } \frac { \partial } { \partial x } \right) ^ { 2 } \psi ( x , t ) = \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d p \phi ( p ) p ^ { 2 } e ^ { i ( p x - E i )/ \hbar }
+\end{align}
+%%
+elde ederiz. Zamana ve konuma göre türevlerden elde ettiğimiz bu sonuçları birleştirirsek,
+%%
 \begin{equation}
--i\hbar \dfrac {\partial \psi \left( x,t\right) }{\partial t}=-\dfrac {\hbar ^{2}}{2m}\dfrac {\partial ^{2}\psi \left( x,t\right) }{\partial x^{2}}+V\left( x\right) \psi \left( x,t\right)
+i\hbar \dfrac {\partial \psi \left( x,t\right) }{\partial t}=-\dfrac {\hbar ^{2}}{2m}\dfrac {\partial ^{2}\psi \left( x,t\right) }{\partial x^{2}}
+\label{eq:schrodinger_eq_free_particle}
+\end{equation}
+serbest bir parçacığın \emph{Schrödinger denklemi} olarak adlandırılan diferansiyel denkleme ulaşırız.
+Denklemi serbest parçacığın klasik enerjisi (Denk. \ref{eq:free_particle_E}) ile kıyaslarsak $E$ ve $p$'nin yerini  sırasıyla $i \hbar \frac { \partial } { \partial t }$ ve $- i \hbar \frac { \partial } { \partial x }$ ifadelerinin aldığını söyleyebiliriz. Bu benzetmeyi serbest olmayan bir parçacığın klasik enerji ifadesi (Denk. \ref{eq:non_free_particle_E}) ile de yaparsak,
+%%
+\begin{equation}
+i\hbar \dfrac {\partial \psi \left( x,t\right) }{\partial t}=-\dfrac {\hbar ^{2}}{2m}\dfrac {\partial ^{2}\psi \left( x,t\right) }{\partial x^{2}}+V\left( x\right) \psi \left( x,t\right)
 \label{eq:schrodinger_eq}
 \end{equation}
+%%
+serbest ve serbest olmayan parçacıkları tanımlayabileceğimiz, daha genel bir Schrödinger denklemi yazmış oluruz.
 
+\subsubsection{$\phi\left(p\right)$  ve $\psi\left( x,0\right)$ Arasındaki İlişki}
 
-\subsubsection{$\phi \left( p\right)$  ve $\psi \left( x,0\right) $}
-\YAZILACAK
+Serbest parçacık durumunu düşünecek olursak, Schrödinger denkleminin en genel çözümü $\phi(p)$'nin şekline (davranışına) bağlıdır. $\phi(p)$'nin şeklini ise $t=0$ anındaki dalga paketi $\psi(x,0)$,
+%%
+\begin{equation}
+\psi \left( x,0\right) =\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dp\phi \left( p\right) e^{i px /\hbar }
+\label{eq:wave_packet_in_t0}
+\end{equation}
+%%
+integrali ile belirler. Bu integral aslında bir Foruier dönüşümü integralidir ve aşağıdaki yöntemle ters Foruier dönüşümü yapılırsa,
+%%
+\begin{equation}
+\int _ { - \infty } ^ { \infty } d x \psi ( x , 0 ) e ^ { - i p ^ { \prime } x / \hbar } = \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d x \int _ { - \infty } ^ { \infty } d p \phi ( p ) e ^ { i \left( p - p ^ { \prime } \right) x / \hbar }
+\label{eq:wave_packet_in_p_t0}
+\end{equation}
+%%
+ve $\int _ { - \infty } ^ { \infty } d x e ^ { i \left( p - p ^ { \prime } \right) x/\hbar } = 2 \pi \hbar \delta \left( p - p ^ { \prime } \right)$ olduğundan faydalanılırsa eşitliğin sol tarafı $\sqrt { 2 \pi  \hbar } \phi \left( p ^ { \prime } \right)$ olur. Böylece,
+%%
+\begin{equation}
+\phi ( p ) = \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d x \psi ( x , 0 ) e ^ { - i p x/ h }
+\end{equation}
+%%
+sonucuna ulaşılır. 
 
 \subsection{Heisenberg'in Belirsizlik Bağıntıları}
 
@@ -419,6 +458,24 @@ halini alır ve Heisenberg belirsizlik bağıntısı olarak adlandırılır. Dal
 \YAZILACAK
 
 \href{https://opentextbc.ca/physicstestbook2/chapter/single-slit-diffraction/}{Tek yarık kırınımı}
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figurler/tek_yarik_deneyi}
+	\caption{Tek yarıktan geçen ve kırınıma uğrayan foton demeti}
+	\label{fig:tekyarikdeneyi}
+\end{figure}
+
+Şekil \ref{fig:tekyarikdeneyi}'teki gibi bir tek yarıklı filtreye foton demeti gönderdiğimizi düşünelim. Foton demetinin dalga davranışı gösterdiğini düşünecek olursak, şekildeki gibi bir kırınım deseni oluşturarak dağılacaktır. Bu dağılmanın miktarını,
+%%
+\begin{equation*}
+\theta \eqsim \frac{\lambda}{a}
+\end{equation*}
+%%
+ifadesi belirler. Dalga parçacık ikileminin bir sonucu olarak foton demetini aynı yarıktan geçen parçacıklar olarak da düşünmek mümkündür. Eğer foton parçacıklarının momentumlarını ve konumlarını kesin bir doğrulukla bilebilseydik, foton demetinin dağılması gerçekleşmezdi. Fakat fotonu parçacık olarak da düşünsek, dalga olarak da düşünsen bu dağılım gerçekleşmektedir. 
+
+Burada bir paradoks varmış gibi görünmekle beraber, bizi bu sözde paradokstan kurtaran Heisenberg'in belirsizlik bağıntısıdır. Eğer fotonların $x$ doğrultusundaki momentumları $p_x~=~h/\lambda$ ise
+
 
 \subsubsection{Bohr Yörüngelerinin Yerelleşememesi}
 \YAZILACAK
