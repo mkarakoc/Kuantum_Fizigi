@@ -497,10 +497,35 @@ olur. Böylece foton demetini elektromanyetik dalga olarak incelediğimiz durumd
 
 
 \subsubsection{Bohr Yörüngelerinin Yerelleşememesi}
-\YAZILACAK
+%%
+Kuantum fiziğine göre; bir elektronun bağlı bulunduğu atom etrafındaki klasik bir kapalı yörüngede hareket etmesi kavramı anlamını yitirmiştir. Çünkü bir elektronun bir kapalı yörüngeyi izlediğini söyleyebilmek için o yörünge üzerinde elektron yörüngeyi tamamlayana kadar elektronu izlemek gerekir. Böyle bir izlemenin yapabilmesi için elektronun yörünge üzerindeki herhangi bir andaki konumunun büyük bir kesinlikle bilinmesi gerekir.
 
-
-
+Geçici olarak, Bohr'un varsayımlarına göre bir dairesel yörüngeyi izlediğini iddia ettiğimiz bir elektronu düşünelim. Böyle bir elektronun yörünge üzerinde hangi konumda bulunduğu ölçebilmek için üzerine bir foton göndermeliyiz. Böyle bir fotonun dalga boyunun atomun klasik yörüngelerini çözme gücüne sahip olması gerekir, diğer bir deyişle fotonun dalga boyu iki klasik yörünge arası mesafeden küçük olması gerekir. Bohr'un varsayımlarından yola çıkarak elde ettiğimiz yörünge yarıçapı ifadesini iki yörünge arasındaki uzaklığı bulmak için,
+%%
+\begin{equation*}
+r _ { n + 1 } - r _ { n } = \frac { \hbar } { m _ { e } c \alpha } \left[ ( n + 1 ) ^ { 2 } - n ^ { 2 } \right] = \frac { \hbar } { m _ { e } c \alpha } (2n+1) \approx \frac { \hbar } { m _ { e } c \alpha } n
+\end{equation*}
+%%
+kullanabiliriz. Aradığımız çözünürlüğe ulaşabilmek için fotonun dalga boyu bu uzaklıktan küçük olmalıdır,
+%%
+\begin{equation*}
+\lambda << r _ { n + 1 } - r _ { n }.
+\end{equation*}
+%%
+Böyle bir fotonun momentumu ise,
+%%
+\begin{equation*}
+p_{ \gamma } \approx \frac { h } { \lambda } >> \frac { m _ { e } c \alpha } { 2\pi n }
+\end{equation*}
+%%
+olur ki, bu momentumun tamamının konumunu bilmek istediğimiz elektrona aktarıldığını düşünelim. Elektronun enerjisindeki değişim yaklaşık olarak veya elektrona aktarılan enerji,
+%%
+\begin{align*}
+E = \frac{p^2}{2m_e} \Rightarrow \Delta E &\approx \frac { p \Delta p } { m _ { e } } \approx \frac { p p _ { \gamma } } { m _ { e } } = \frac{(m_e c) (m_e c \alpha/2\pi n)}{m_e}\\
+&\approx \frac { m_e c^2 \alpha} { 2\pi n } >> \frac { m _ { e } ( c \alpha ) ^ { 2 } } { n ^ { 2 } }
+\end{align*}
+%%
+hesaplamalarıyla bulunur ki, bu enerji yukarıdaki ifadelerden anlaşılacağı üzere elektronun bağlanma enerjisinden çok daha büyüktür. Böyle bir enerji ile konumunu bilmek istediğimiz elektronu yörüngesinden çıkarmış oluruz. Ortaya çıkan sonuca göre konumunu yüksek kesinlikle bilmek istediğimiz sistemin, momenumu hakkındaki bilgi edinme kabiliyetimizi büyük ölçüde zayıflatmış oluruz. Böylece Heisenberg'in belirsizlik bağıntısının bir kere daha doğrulandığını söyleyebiliriz.
 
 \subsection{Dalga Fonksiyonun ve Olasılığın Normalizasyonu}
 
