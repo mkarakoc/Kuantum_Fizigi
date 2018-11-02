@@ -499,6 +499,9 @@ olur. Böylece foton demetini elektromanyetik dalga olarak incelediğimiz durumd
 \subsubsection{Bohr Yörüngelerinin Yerelleşememesi}
 \YAZILACAK
 
+
+
+
 \subsection{Dalga Fonksiyonun ve Olasılığın Normalizasyonu}
 
 \begin{equation}
@@ -591,7 +594,7 @@ sonucu elde edilir. Bu son eşitliğin en sağ tarafı sıfıra eşit olursa, ar
 
 Heisenberg'in belirsizlik bağıntıları kavramını incelerken anladığımız üzere bir parçacığın konum veya momentumunu kesin olarak bilmemiz mümkün değildir. Bunun yerine belirli olasılıklarla hangi değerler civarında konuma ve momentuma sahip olabileceği hakkında konuşabiliriz. Böyle bir olasılığı hesaplamak için, bir sınavda alınan notların standart sapmasını belirlemek için kullandığımız yönteme benzer bir yöntem geliştirmeliyiz \cite{book:Towsend}.
 
-Genellikle sınavlarda bilinmek istenen ilk şey: Sınavın not ortalaması nedir? Bütün sınıfın not toplamını sınıf mevcuduna bölersek bu ortalamayı rahatça buluruz. Eş değer olarak aşağıdaki gibi bir olasılık dağılımı oluşturabiliriz,
+Genellikle sınavlarda bilinmek istenen ilk şey: Sınavın not ortalaması nedir? Bütün sınavın not toplamını sınava giren toplam kişi sayısına bölersek bu ortalamayı rahatça buluruz. Eş değer olarak aşağıdaki gibi bir olasılık dağılımı oluşturabiliriz,
 %%
 \begin{equation}
 P\left( n\right) =\dfrac {N(n) }{N}
@@ -621,7 +624,7 @@ olur. Ortalamanın yanında ortalama etrafındaki dağılım bilgisini veren \em
 %%
 ile tanımlanır. Bütün sınavın standart sapması ise bireysel standart sapmaların ortalamsıdır ve,
 \begin{equation}
-\sigma ^{2}\equiv \langle \left( n-\langle n\rangle \right) ^{2}\rangle =\sum ^{100}_{n=1}\sigma _{n}P\left( n\right) 
+\sigma ^{2}\equiv \langle \left( n-\langle n\rangle \right) ^{2}\rangle =\sum ^{100}_{n=1}\sigma _{n}^2P\left( n\right) 
 \label{eq:standard_deviation_exam}
 \end{equation}
 ile tanımlanır. Aşağıdaki gibi bir kaç düzenleme ile,
@@ -653,7 +656,7 @@ Benzeri bir uygulamayı ilgilendiğimiz parçacığın konumu ve momentumu için
 olarak yazılabilir. Bu ortalama değer genellikle \emph{beklenen değer} olarak adlandırılır. Beklenen değer ifadesinden aynı fiziksel olayın gerçekleştirilen bir dizi deneyinde ölçüm sonuçlarının her zamana $\langle f(x) \rangle$ sonucunu vereceği anlaşılmamalıdır. Ölçümlerin sonuçlarının beklenen değer etrafında $\Delta f(x) = \sqrt{\langle f(x)^2 \rangle - \langle f(x) \rangle^2}$ standart sapmasına göre dağılmaları beklenir. Kuantum fiziğindeki standart sapmanın integral formu aşağıdaki gibidir.
 %%
 \begin{equation}
-\Delta f(x) = \int ^{\infty }_{-\infty }dx \psi^{\ast }\left(x,t\right) f(x)^2 \psi \left( x,t\right) -\left( \int ^{\infty }_{-\infty }dx \psi^{\ast }\left(x,t\right) f(x) \psi \left( x,t\right)\right)^2
+\Delta f(x)^2 = \int ^{\infty }_{-\infty }dx \psi^{\ast }\left(x,t\right) f(x)^2 \psi \left( x,t\right) -\left( \int ^{\infty }_{-\infty }dx \psi^{\ast }\left(x,t\right) f(x) \psi \left( x,t\right)\right)^2
 \end{equation}
 %%
 Bir parçacığın konumu için beklenen değeri ve standart sapmayı bulmak kolaydır, $f(x)$ yerine $x$ koymak yeterlidir. 
@@ -787,7 +790,7 @@ $\phi(p)$'yi yerelleşmeyi sağlaması dışında bir başka şekilde anlamland�
 %%
 \begin{align}
 \int ^{\infty }_{-\infty }dp\phi ^{\ast }\left( p\right) \phi \left( p\right) &=\int ^{\infty }_{-\infty }dp\phi ^{\ast }\left( p\right) \dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dx\psi \left( x\right) e^{-ipx/\hbar }\nonumber \\
-&=\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dx\psi \left( x\right) \int ^{\infty }_{-\infty }dp\phi \left( p\right) e^{-ipx/\hbar }\nonumber \\
+&=\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dx\psi \left( x\right) \int ^{\infty }_{-\infty }dp\phi^\ast \left( p\right) e^{-ipx/\hbar }\nonumber \\
 &=\int ^{\infty }_{-\infty }dx\psi \left( x\right) \psi ^{\ast }\left( x\right) = 1
 \label{eq:parseval_theorem}
 \end{align}
@@ -795,7 +798,7 @@ $\phi(p)$'yi yerelleşmeyi sağlaması dışında bir başka şekilde anlamland�
 Şimdi benzer şekilde, Fourier dönüşümlerinden faydalanarak, $\langle \hat p \rangle$ beklenen değerini incelersek,
 %%
 \begin{align}
-\langle \hat p\rangle &=\int ^{\infty }_{-\infty }dx\psi \left( x\right) \dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\psi \left( x\right) =\int ^{\infty }_{-\infty }dx\psi \left( x\right) \dfrac {\hbar }{i}\dfrac {d}{dx}\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dp\phi \left( p\right) e^{ipx/\hbar }\nonumber \\
+\langle \hat p\rangle &=\int ^{\infty }_{-\infty }dx\psi^\ast \left( x\right) \dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\psi \left( x\right) =\int ^{\infty }_{-\infty }dx\psi^\ast \left( x\right) \dfrac {\hbar }{i}\dfrac {d}{dx}\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dp\phi \left( p\right) e^{ipx/\hbar }\nonumber \\
 &=\int ^{\infty }_{-\infty }dp\phi \left( p\right) \,p\, \dfrac {1}{\sqrt {2\pi x}}\int ^{\infty }_{-\infty }dx\psi ^{\ast }\left( x\right) e^{ipx/\hbar }\nonumber \\
 &= \int ^{\infty }_{-\infty }dp\phi ^{\ast }(p)\,p\,\phi(p)
 \label{eq:wave_in_momentum_space} 
