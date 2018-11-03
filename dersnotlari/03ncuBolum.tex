@@ -130,7 +130,40 @@ denklemine ulaşırız. Bu denklemin her iki tarafını $T ( t ) u ( x )$ ifades
 %%
 \begin{equation}
 i \hbar \frac { 1 } { T ( t ) } \frac { d T ( t ) } { d t } = \frac { 1 } { u ( x ) } \left\{ - \frac { \hbar ^ { 2 } } { 2 m } \frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } + V ( x ) u ( x ) \right\}
+\label{eq:sch_separeted}
 \end{equation}
+%%
+her iki tarafı sadece bir bağımsız değişkene bağlı bir eşitlik elde ederiz. Eşitliğin sağlanabilmesi için her iki tarafında tek bir sabite eşit olması gerekir. Denklemin sol tarafındaki $i \hbar \frac { 1 } { T ( t ) }$ ifadesi enerji boyutunda olduğundan eşitliği sağlayacak olan sabitte enerji boyutunda olmalıdır. Böyle bir sabit kapalı sistemlerde $E$ sembolü ile gösterilen ve ilgili sistemin veya parçacığın hareket sabiti olan toplam enerji olabilir. Böylece ayrıştırılmış denklemin sol tarafı,
+%%
+\begin{equation}
+i \hbar \frac { d T ( t ) } { d t } = E T ( t )
+\end{equation}
+%%
+halini alır. Bu denklemin çözümü,
+%%
+\begin{equation}
+T ( t ) = T(0) e ^ { - i E t / \hbar }
+\end{equation}
+%%
+olur, burada $T(0)$ sistemin $t=0$ anındaki başlangıç durumunu temsil eder. Denk. \ref{eq:sch_separeted}'in sağ tarafı ise,
+%%
+\begin{equation}
+- \frac { \hbar ^ { 2 } } { 2 m } \frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } + V ( x ) u ( x ) = E u ( x )
+\label{eq:time_independent_sch_eq}
+\end{equation}
+%%
+halini alır ve \emph{zamandan bağımsız Schrödinger denklemi} olarak adlandırılır. Zamana bağlı Schrödinger denklemi parçacığın zamanla davranışını betimlerken, yeni elde ettiğimiz zamandan bağımsız denklem ilgili parçacığın veya sistemin karakteristik özellikleri olan özdeğerlerini (eigenvalue) ve özfonksiyonlarını (eigenfunction) belirler.
+
+\subsubsection{Özdeğer Denklemleri}
+
+\begin{align*} 
+	\hat O f ( x ) &= f ( x ) + x ^ { 3 }  \\ 
+	\hat O f ( x ) &= [ f ( x ) ] ^ { 4 }  \\ 
+	\hat O f ( x ) &= f ( 5 x ) ^ { 3 }  \\ 
+	\hat O f ( x ) &= [ d^2 f ( x ) / d x^2 ] ^ { 2 }  \\ 
+	\hat O f ( x ) &= d f ( x ) / d x - 4 f ( x )  \\ 
+	\hat O f ( x ) &= \lambda f ( x )  
+\end{align*}
 
 
 \newpage
