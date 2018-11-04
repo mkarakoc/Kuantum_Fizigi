@@ -154,8 +154,17 @@ olur, burada $T(0)$ sistemin $t=0$ anındaki başlangıç durumunu temsil eder. 
 %%
 halini alır ve \emph{zamandan bağımsız Schrödinger denklemi} olarak adlandırılır. Zamana bağlı Schrödinger denklemi parçacığın zamanla davranışını betimlerken, yeni elde ettiğimiz zamandan bağımsız denklem ilgili parçacığın veya sistemin karakteristik özellikleri olan özdeğerlerini (eigenvalue) ve özfonksiyonlarını (eigenfunction) belirler.
 
+Zamandan bağımsız $V(x)$ potansiyel sayesinde ikiye ayırabildiğimiz zamana bağlı Schrödinger denkleminin çözümü, her iki denklemin çözümlerinin birleştirilmesiyle aşağıdaki gibi yazılabilir,
+%%
+\begin{equation}
+\psi(x,t) = u(x) e ^ { - i E t / \hbar }.
+\end{equation}
+
+
 \subsubsection{Özdeğer Denklemleri}
 
+Özdeğer denklemlerini daha iyi anlayabilmek için işlemci (operatör) kavramını anlamak gerekir. Basitçe bir operatör üzerine etki ettiği bir fonksiyonu bir başka fonksiyona dönüştürür veya bezer. 
+%%
 \begin{align*} 
 	\hat O f ( x ) &= f ( x ) + x ^ { 3 }  \\ 
 	\hat O f ( x ) &= [ f ( x ) ] ^ { 4 }  \\ 
@@ -164,7 +173,48 @@ halini alır ve \emph{zamandan bağımsız Schrödinger denklemi} olarak adland�
 	\hat O f ( x ) &= d f ( x ) / d x - 4 f ( x )  \\ 
 	\hat O f ( x ) &= \lambda f ( x )  
 \end{align*}
+%%
+Yukarıda verilen örneklerin hepsinde $f(x)$ gibi bir fonksiyon $\hat O$ operatörleri tarafından belirlenen bir kural çerçevesinde eşitliğin sağındaki hallerini alırlar. Bizim çalışacağımız operatörler genellikle $\hat O$ gibi genel bir operatör değil $\hat L$ ile göstereceğimiz lineer operatörlerdir. Bu operatörler, $c$ karmaşık bir sayı olmak üzere, aşağıdaki iki kurala uymalıdırlar.
+%%
+\begin{equation}
+\hat L \left[ f _ { 1 } ( x ) + f _ { 2 } ( x ) \right] = \hat  L f _ { 1 } ( x ) + \hat  L f _ { 2 } ( x )
+\end{equation}
+%%
+\begin{equation}
+\hat L c f ( x ) = c \hat L f ( x )
+\end{equation}
+%%
+Bu kurallara göre yukarıdaki örneklerde (yukarıdan aşağıya doğru) üçüncü, beşinci ve altıncı örneklerdeki operatörler lineerdir. 
 
+Örneğin, yukarıdan seçtiğimiz örneklerden,
+%%
+\begin{equation*}
+\hat  L f ( x ) = \frac { d f ( x ) } { d x } - 4 f ( x )
+\end{equation*}
+%%
+için $\hat L$ işemcisi lineerdir. Çünkü,
+%%
+\begin{align*}
+\hat  L (f ( x ) + g(x)) &= \frac { d f ( x ) + g(x)} { d x } - 4 (f ( x ) + g ( x ))\\
+&= \frac { d f ( x ) } { d x } - 4 f ( x ) + \frac { d g ( x ) } { d x } - 4 g ( x ) \\
+&= \hat  L (f ( x )) + \hat  L (g ( x ))
+\end{align*}
+%%
+ve
+%%
+\begin{align*}
+\hat  L (c f ( x )) &= \frac { d (c f ( x ))} { d x } - 4 (c f ( x ))\\
+&= c\frac { d f ( x ) } { d x } - c 4 f ( x ) \\
+&= c(\frac { d f ( x ) } { d x } -  4 f ( x )) \\
+&=  c \hat L (f ( x ))
+\end{align*}
+%%
+ifadeleri ile gösterildiği üzere, her iki şartı da sağlamaktadır.
+
+
+\begin{equation}
+\psi ( x , t ) = \sum _ { n } C _ { n } u _ { n } ( x ) e ^ { - i E _ { n } t / \hbar } + \int d E C ( E ) u _ { E } ( x ) e ^ { - E t / \hbar }
+\end{equation}
 
 \newpage
 \begin{figure}[hbtp]
