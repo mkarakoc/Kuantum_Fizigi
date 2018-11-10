@@ -213,20 +213,47 @@ ifadeleri ile gösterildiği üzere, her iki şartı da sağlamaktadır.
 
 
 \begin{equation}
-\psi ( x , t ) = \sum _ { n } C _ { n } u _ { n } ( x ) e ^ { - i E _ { n } t / \hbar } + \int d E C ( E ) u _ { E } ( x ) e ^ { - E t / \hbar }
+\psi ( x , t ) = \sum _ { n } C _ { n } u _ { n } ( x ) e ^ { - i E _ { n } t / \hbar } + \int d E \, C ( E ) u _ { E } ( x ) e ^ { - E t / \hbar }
 \end{equation}
 
 
-\subsection{Bir Kutudaki Bir Parçacık için Enerji Özdeğer Problemi }
+\subsection{Sonsuz Kuyudaki Parçacık için Enerji Özdeğer Problemi}
 
-
-\newpage
+Sonsuz bir kuyu (Şekil \ref{fig:infinite_well}) içinde hapsolmuş bir parçacığın davranışı Denk. \ref{eq:time_independent_sch_eq}'de verilen zamandan bağımsız Schrödinger denklemiyle tanımlanabilir.
+%%
 \begin{figure}[hbtp]
 \center
-\includegraphics[scale=.5]{Wave-particle.png}
-\caption{Işık bir dalgadır!?}
-\label{fig:light_is_a_wave}
+\includegraphics[scale=.65]{infinite_well.png}
+\caption{Sonsuz kuyu}
+\label{fig:infinite_well}
 \end{figure}
+%%
+Tek boyutlu böyle bir kuyu Schrödinger denklemine,
+%%
+\begin{equation}
+V ( x ) = \left\{
+\begin{array} { c l } 
+{ \infty } & { \Leftarrow x \leq 0 , x \geq a } \\ 
+{ 0 } & { \Leftarrow 0 < x < a } \end{array} 
+\right.
+\label{eq:infinite_well}
+\end{equation}
+%%
+potansiyelinin konmasıyla tanımlanabilir. Parçacık $0<x<a$ aralığında hapsolduğundan parçacığın dalga fonksiyonu kuyu sınırlarında ve dışında sıfır olmalıdır,
+%%
+\begin{align*} 
+u ( x ) &= 0 \quad x \leq 0 \\ 
+u ( x ) &= 0 \quad x \geq a .
+\end{align*}
+%%
+Problemin doğasından ortaya çıkan bu şartlar \emph{sınır şartları} olarak adlandırılır. Kutu dışındaki her yerde dalga fonksiyonu sıfır olduğundan kutunun dışı için Schrödinger denklemi yazılamaz. Kutunun içi içinse $V(x)=0$ olduğundan, birazcık matematiksel düzenlemeyle, Schrödinger denklemi,
+%%
+\begin{equation}
+\frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } + \frac { 2 m E } { \hbar ^ { 2 } } u ( x ) = 0
+\label{eq:infinite_well_schrodinger}
+\end{equation}
+%%
+olarak yazılılır.
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
