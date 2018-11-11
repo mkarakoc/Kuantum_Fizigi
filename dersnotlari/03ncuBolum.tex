@@ -307,8 +307,34 @@ olacağı açıktır. Özfonksiyonlar ise normalize edildiklerinde $A=\sqrt { \f
 u _ { n } ( x ) = \sqrt { \frac { 2 } { a } } \sin \frac { n \pi x } { a }
 \end{equation}
 %%
-halinde elde edilirler.
-
+halinde elde edilirler. Çözümlerin ilginç bir sonucu vardır; farklı enerji özdeğerlerine ortaya çıkaran farklı özfonksiyonlar bibrbirlerine \emph{diktir}. Ayrıca birbirine dik olan bu özfonksiyonlar normalize edilmişler ise \emph{ortonormal} özfonksiyonlar olarak adlandırılırlar. Çalıştığımız problemdeki özfonksiyonlar ortonormaldir, aşağıdaki matematiksel işlem süreciyle bu gösterilmiştir.
+%%
+\begin{align} 
+	\int _ { 0 } ^ { a } d x \, u _ { n } ^ { * } ( x ) u _ { m } ( x ) 
+	& = \int _ { 0 } ^ { a } d x \frac { 2 } { a } \sin \frac { n \pi x } { a } \sin \frac { m \pi x } { a } \nonumber\\ 
+	& = \frac { 1 } { a } \int _ { 0 } ^ { a } d x \left\{ \cos \frac { ( n - m ) \pi x } { a } - \cos \frac { ( n + m ) \pi x } { a } \right\} \nonumber\\ 
+	& = \frac { \sin ( n - m ) \pi } { ( n - m ) \pi } - \frac { \sin ( n + m ) \pi } { ( n + m ) \pi }
+\end{align}
+%%
+İntegrallerin herhangi bir $n$ ve $m$ için cevabı yukarıdaki gibidir, $n$ ve $m$ tam sayılar olduklarından integral sonucu aşağıdaki gibi özetlenebilir.
+%%
+\begin{equation}
+\int _ { 0 } ^ { a } d x \, u _ { n } ^ { * } ( x ) u _ { m } ( x )  = \left\{
+\begin{array} { c l } 
+{ 0 } & { \Leftarrow n \neq m } \\ 
+{ 1 } & { \Leftarrow n = m} 
+\end{array} 
+\right.
+\label{eq:orthonormality}
+\end{equation}
+%%
+En son olarak aşağıdaki gibi daha güzel bir şekilde Kronecker-Delta fonksiyonu kullanılarak yazılabilir.
+%%
+\begin{equation}
+\int _ { 0 } ^ { a }  d x \, u _ { n } ^ { * } ( x ) u _ { m } ( x ) = \delta _ { m n }
+\end{equation}
+%%
+Bu son eşitlik \emph{ortonormalite şartı} olarak tanımlanır. Çalıştığımız problemlerde özfonksiyonlar reel olsa da başka problemler için böyle olmak zorunda değildir, bu nedenle yapılan tanımda özfonksiyonun eşleniği ve kendisi bulunmaktadır.
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
