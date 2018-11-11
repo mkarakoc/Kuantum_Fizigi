@@ -336,6 +336,76 @@ En son olarak aşağıdaki gibi daha güzel bir şekilde Kronecker-Delta fonksiy
 %%
 Bu son eşitlik \emph{ortonormalite şartı} olarak tanımlanır. Çalıştığımız problemlerde özfonksiyonlar reel olsa da başka problemler için böyle olmak zorunda değildir, bu nedenle yapılan tanımda özfonksiyonun eşleniği ve kendisi bulunmaktadır.
 
+Enerji özdeğer ve özfonksiyon çözümlerinden bazı fiziksel yorumlar çıkarabiliriz.
+
+\begin{enumerate}
+	\item En düşük enerji seviyesi durumu $u_1(x)$ özfonksiyonu ile tanımlanır ve parçacığın sahip olduğu enerji \emph{taban durum enerjisi} olarak adlandırılır,
+	%%
+	\begin{equation}
+	E _ { 1 } = \frac { \pi ^ { 2 } \hbar ^ { 2 } } { 2 m a ^ { 2 } }.
+	\end{equation}
+	%%
+	Klasik durumda en düşük enerji seviyesi kinetik ve potansiyel enerjinin sıfır, yani toplam enerjinin sıfır olduğu durumdur. Kuantum fiziğinde ise minimumda olsa bir enerjinin varlığı söz konusudur.
+	
+	\item $\langle p \rangle$ beklenen değerini bu sistem için hesaplarken  öncelikle özfonksiyonların reel olduğu hatırlanırsa $u^\ast_{ n } = u _ { n }$ olur. Böylece,
+	%%
+	\begin{equation}
+	\begin{aligned} 
+	\langle p \rangle 
+	& = \int _ { 0 } ^ { a } d x u _ { n } ( x ) \left( - i \hbar \frac { d u _ { n } ( x ) } { d x } \right) 
+	= - i \hbar \int _ { 0 } ^ { a } d x \frac { d } { d x } \frac { \left( u _ {n} ( x ) \right) ^ { 2 } } { 2 } \\ 
+	& = - \frac { i \hbar } { 2 } \left[ u _ { n } ^ { 2 } ( a ) - u _ { n } ^ { 2 } ( 0 ) \right] = 0 
+	\end{aligned}
+	\end{equation}
+	%%
+	sonucuna ulaşılır. $\langle p \rangle = 0$ olması parçacığın $-x$ ve $+x$ yönlerinde eşit miktarda hareket etmiş olması olarak yorumlanabilir.
+	
+	\item Diğer taraftan $\left\langle p ^ { 2 } \right\rangle$ sıfır olmaz, herhangi bir $u_n(x)$ özfonksiyonu için,
+	%%
+	\begin{equation}
+	\left\langle p ^ { 2 } \right\rangle = 2 m E _ { n } = \frac { \hbar ^ { 2 } \pi ^ { 2 } n ^ { 2 } } { a ^ { 2 } }
+	\end{equation}
+	%%
+	olarak bulunur.
+	
+	
+\end{enumerate}
+
+
+
+
+
+
+
+
+\begin{equation}
+\begin{aligned} 
+\langle K \rangle 
+& = \frac { \left\langle p ^ { 2 } \right\rangle } { 2 m } = - \frac { \hbar ^ { 2 } } { 2 m } \int _ { - \infty } ^ { \infty } d x u ^ { * } ( x ) \frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } \\ 
+& = - \frac { \hbar ^ { 2 } } { 2 m } \int _ { - \infty } ^ { \infty } d x \left\{ \frac { d } { d x } \left( u ^ { * } ( x ) \frac { d u ( x ) } { d x } \right) - \frac { d u ^ { * } ( x ) } { d x } \frac { d u ( x ) } { d x } \right\} \\ 
+& = \frac { \hbar ^ { 2 } } { 2 m } \int _ { - \infty } ^ { \infty } d x \left| \frac { d u ( x ) } { d x } \right| ^ { 2 } 
+\end{aligned}
+\end{equation}
+
+\begin{equation*}
+x \rightarrow x - \frac { a } { 2 }
+\end{equation*}
+
+
+\begin{equation}
+\sin \frac { n \pi x } { a } \rightarrow \sin \left( \frac { n \pi x } { a } - \frac { n \pi } { 2 } \right) = \sin \frac { n \pi x } { a } \cos \frac { n \pi } { 2 } - \cos \frac { n \pi x } { a } \sin \frac { n \pi } { 2 }
+\end{equation}
+
+
+\begin{equation}
+\sqrt { \frac { 2 } { a } } \sin \frac { n \pi x } { a } \quad \text { with } n = 2,4,6 , \dots
+\end{equation}
+
+
+\begin{equation}
+\sqrt { \frac { 2 } { a } } \cos \frac { n \pi x } { a } \quad \text { with } n = 1,3,5 , \dots
+\end{equation}
+
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
 % and "\renewcommand\bibname{New Title}" for book and report type documents.
