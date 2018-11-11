@@ -246,14 +246,69 @@ u ( x ) &= 0 \quad x \leq 0 \\
 u ( x ) &= 0 \quad x \geq a .
 \end{align*}
 %%
-Problemin doğasından ortaya çıkan bu şartlar \emph{sınır şartları} olarak adlandırılır. Kutu dışındaki her yerde dalga fonksiyonu sıfır olduğundan kutunun dışı için Schrödinger denklemi yazılamaz. Kutunun içi içinse $V(x)=0$ olduğundan, birazcık matematiksel düzenlemeyle, Schrödinger denklemi,
+Problemin doğasından ortaya çıkan bu şartlar \emph{sınır şartları} olarak adlandırılır. Kutu dışındaki her yerde dalga fonksiyonu sıfır olduğundan kutunun dışı için Schrödinger denklemi yazılamaz. Kutunun içindeyse $V(x)=0$ olduğundan, birazcık matematiksel düzenlemeyle, Schrödinger denklemi,
 %%
 \begin{equation}
 \frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } + \frac { 2 m E } { \hbar ^ { 2 } } u ( x ) = 0
 \label{eq:infinite_well_schrodinger}
 \end{equation}
 %%
-olarak yazılılır.
+olarak yazılılır. Eğer parçacığın enerjisi ($E<0$) negatif ise, $\kappa ^ { 2 } = 2 m | E | / \hbar ^ { 2 }$ olmak üzere,
+%%
+\begin{equation}
+\frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } - \kappa ^ { 2 } u ( x ) = 0
+\end{equation}
+%%
+denklemine ulaşılır. Bu denklemin en genel çözümü $e ^ { - \kappa x }$ ve $e ^ {\kappa x }$ ifadelerinin lineer bir kombinasyonu olur. Elde edilen çözüm $x=0$'da sınır şartlarını sağlasa da $x=a$'da sınır şartlarını sağlamaz. Böylece $E<0$ seçeneği anlamsızlaşır.
+
+Eğer parçacığın enerjisi ($E>0$) pozitif ise,
+%%
+\begin{equation}
+k ^ { 2 } = \frac { 2 m E } { \hbar ^ { 2 } }
+\end{equation}
+%%
+olmak üzere,
+%%
+\begin{equation}
+\frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } + k ^ { 2 } u ( x ) = 0
+\end{equation}
+%%
+denklemi elde edilir. Bu denklemin en genel çözümlerinden birisi aşağıdaki gibidir.
+%%
+\begin{equation}
+u(x) = A \sin k x + B \cos k x
+\end{equation}
+%%
+$u(0)=0$ sınır şartı gereğince,
+\begin{equation*}
+u(0) = A\cdot 0 + B = 0
+\end{equation*}
+olduğundan $B=0$ olur ve birinci sınır şartını sağlayan genel çözüm,
+%%
+\begin{equation}
+u(x) = A \sin k x
+\end{equation}
+%%
+olarak bulunur. Diğer sınır şartına göre $u(a)=0$ olmalıdır, bu şartın sağlanması ancak,
+%%
+\begin{equation}
+k a = n \pi \quad n = 1,2,3 , \ldots
+\end{equation}
+%%
+olması ile mümkündür. Böylece, $E = p^2/2m = (\hbar k)^2/2m$ olduğu da hatırlanırsa parçacığın sahip olabileceği izinli enerji değerlerinin veya yeni adıyla enerji özdeğerlerinin,
+%%
+\begin{equation}
+E _ { n } = \frac { \hbar ^ { 2 } k ^ { 2 } } { 2 m } = \frac { \hbar ^ { 2 } \pi ^ { 2 } n ^ { 2 } } { 2 m a ^ { 2 } } \quad n = 1,2,3 , \ldots
+\end{equation}
+%%
+olacağı açıktır. Özfonksiyonlar ise normalize edildiklerinde $A=\sqrt { \frac { 2 } { a } }$ olacağından,
+%%
+\begin{equation}
+u _ { n } ( x ) = \sqrt { \frac { 2 } { a } } \sin \frac { n \pi x } { a }
+\end{equation}
+%%
+halinde elde edilirler.
+
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
