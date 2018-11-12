@@ -313,7 +313,8 @@ halinde elde edilirler. Çözümlerin ilginç bir sonucu vardır; farklı enerji
 	\int _ { 0 } ^ { a } d x \, u _ { n } ^ { * } ( x ) u _ { m } ( x ) 
 	& = \int _ { 0 } ^ { a } d x \frac { 2 } { a } \sin \frac { n \pi x } { a } \sin \frac { m \pi x } { a } \nonumber\\ 
 	& = \frac { 1 } { a } \int _ { 0 } ^ { a } d x \left\{ \cos \frac { ( n - m ) \pi x } { a } - \cos \frac { ( n + m ) \pi x } { a } \right\} \nonumber\\ 
-	& = \frac { \sin ( n - m ) \pi } { ( n - m ) \pi } - \frac { \sin ( n + m ) \pi } { ( n + m ) \pi }
+	& = \frac { \sin ( n - m ) \pi } { ( n - m ) \pi } - \frac { \sin ( n + m ) \pi } { ( n + m ) \pi } = 0 \quad \Leftarrow n \neq m \nonumber\\
+	& = \frac{1}{a}\left[x-\frac{a}{2 n \pi}\sin(\frac{2n\pi x}{a})\right]_0^a = 1 \quad \Leftarrow n = m
 \end{align}
 %%
 İntegrallerin herhangi bir $n$ ve $m$ için cevabı yukarıdaki gibidir, $n$ ve $m$ tam sayılar olduklarından integral sonucu aşağıdaki gibi özetlenebilir.
@@ -360,7 +361,7 @@ Enerji özdeğer ve özfonksiyon çözümlerinden bazı fiziksel yorumlar çıka
 	%%
 	sonucuna ulaşılır. $\langle p \rangle = 0$ olması parçacığın $-x$ ve $+x$ yönlerinde eşit miktarda hareket etmiş olması olarak yorumlanabilir.
 	
-	\item Diğer taraftan $\left\langle p ^ { 2 } \right\rangle$ sıfır olmaz, herhangi bir $u_n(x)$ özfonksiyonu için,
+	\item Diğer taraftan $\left\langle p ^ { 2 } \right\rangle$ sıfır olmaz ve herhangi bir $u_n(x)$ özfonksiyonu için,
 	%%
 	\begin{equation}
 	\left\langle p ^ { 2 } \right\rangle = 2 m E _ { n } = \frac { \hbar ^ { 2 } \pi ^ { 2 } n ^ { 2 } } { a ^ { 2 } }
@@ -373,53 +374,172 @@ Enerji özdeğer ve özfonksiyon çözümlerinden bazı fiziksel yorumlar çıka
 		\centering
 		\includegraphics[width=\linewidth]{infinite_well_eigenfunctions.png}
 		\caption{Sonsuz kuyudaki parçacığın özfonksiyonları. Dikkat edilirse genlikler sabit ve artan $n$ değerinden bağımsızdır.}
-		\label{fig:infinitewelleigenfunctions}
+		\label{fig:infinitewell_eigenfunctions}
     \end{minipage}	
     \hspace{12pt}
 	\begin{minipage}{.48\textwidth}
 	\centering
 	\includegraphics[width=\linewidth]{infinite_well_derivative_of_eigenfunctions.png}
 	\caption{Sonsuz kuyudaki parçacığın özfonksiyonlarının türevlerinin kareleri. Dikkat edilirse artan $n$ ile genlikler de büyümektedir.}
-	\label{fig:infinitewelleigenfunctions}
+	\label{fig:infinitewell_derivative_eigenfunctions}
      \end{minipage}
 	\end{figure}
+	
+	
+	\item Düğüm sayısı ($N_D \equiv n-1$) olarak tanımlanabilir, çünkü genellikle sınırlardaki sıfırlar sayılmaz. Bu tanıma göre $n=1$ için $N_D=0$ düğüm varken, $n=2$'de sadece $N_D=1$ düğüm vardır ve bu düğüm tam özfonksiyonun $x=a/2$'de sıfır olduğu yerdir. Düğüm noktası sayısı ($N_D$) arttıkça veya daha üst seviyelere ($n$) çıkıldıkça kinetik enerji artmaktadır. Bunun sebebi aşağıda hesaplanan $\langle K \rangle $ kinetik enerji beklenen değerinden açıkca görülmektedir. Çünkü $\langle K \rangle = E_n$'dir. Ayrıca Şekil \ref{fig:infinitewell_derivative_eigenfunctions}'ten görüleceği üzere integralin iç kısmının genliği $n$ ve $N_D$ arttıkça artmaktadır.
+	%%
+	\begin{equation}
+	\begin{aligned} 
+	\langle K \rangle 
+	& = \frac { \left\langle p ^ { 2 } \right\rangle } { 2 m } = - \frac { \hbar ^ { 2 } } { 2 m } \int _ { - \infty } ^ { \infty } d x u ^ { * } ( x ) \frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } \\ 
+	& = - \frac { \hbar ^ { 2 } } { 2 m } \int _ { - \infty } ^ { \infty } d x \left\{ \frac { d } { d x } \left( u ^ { * } ( x ) \frac { d u ( x ) } { d x } \right) - \frac { d u ^ { * } ( x ) } { d x } \frac { d u ( x ) } { d x } \right\} \\ 
+	& = \frac { \hbar ^ { 2 } } { 2 m } \int _ { - \infty } ^ { \infty } d x \left| \frac { d u ( x ) } { d x } \right| ^ { 2 } \\
+	&= \frac { \hbar ^ { 2 } \pi ^ { 2 } n ^ { 2 } } { 2 m a ^ { 2 } }
+	\end{aligned}
+	\end{equation}
+		
+	
+	\item Şekil \ref{fig:infinitewell_eigenfunctions}'deki özfonksiyonlar arasında ilginç bir davranış gözlenmektedir. Eğer tam orta noktaya ($x=a/2$) bir ayna yerleştirdiğimizi düşünürsek; tek değerli $n=1, 3, 5 \ldots$ özfonksiyonlar simetriktirler, çift değerli $n=1, 3, 5 \ldots$ olanlar ise anti-simetriktirler (yani işaret değiştirmektedirler). Bu simetrinin bir benzerini aynayı $x=0$'a taşıyarak ve, 
+	%%
+	\begin{equation*}
+	x \rightarrow x - \frac { a } { 2 }
+	\end{equation*}
+	%%
+	yaparak da gözleyebiliriz. Böylece, ortaya çıkardığımız bu simetri kullanılarak, sınırları $x=-a/2$ ve $x=a/2$ olan sonsuz kuyu için de çözümler elde edilebilir. Yukarıda yaptığımız değişken dönüşümünü özfonksiyonda da işletirsek,
+	%%
+	\begin{equation}
+	\sin \frac { n \pi x } { a } \rightarrow \sin \left( \frac { n \pi x } { a } - \frac { n \pi } { 2 } \right) = \sin \frac { n \pi x } { a } \cos \frac { n \pi } { 2 } - \cos \frac { n \pi x } { a } \sin \frac { n \pi } { 2 }
+	\end{equation}
+	%%
+	elde ederiz. Bu ifadeden anlaşılacağı üzere $x=\pm a/2$ sınırlarına sahip sonsuz kuyu için çift ve tek değerli durumların özfonksiyonları aşağıdaki gibi olacaktır.
+	%%
+	\begin{equation}
+	\sqrt { \frac { 2 } { a } } \sin \frac { n \pi x } { a } \quad \text { with } n = 2,4,6, \dots
+	\end{equation}
+	%%
+	%%
+	\begin{equation}
+	\sqrt { \frac { 2 } { a } } \cos \frac { n \pi x } { a } \quad \text { with } n = 1,3,5 , \dots
+	\end{equation}
 	
 \end{enumerate}
 
 
 
-\YAZILACAK
+\subsection{Açılım Varsayımı ve Fiziksel Yorumu }
 
+Fourier teoremine göre $\psi ( 0 ) = 0$ ve $\psi ( a ) = 0$ şartlarını sağlayan herhangi bir sürekli $\psi ( x )$ fonksiyonu,
+%%
+\begin{equation}
+\psi ( x ) = \sum _ { n = 1 } ^ { \infty } C _ { n } \sin \frac { n \pi x } { a }
+\end{equation}
+%%
+formunda yazılabilir. Sonsuz kuyu problemindeki $u_n(x)$ özfonksiyonları sadece bir katsayı farkıyla $\sin n \pi x / a$ ifadesi ile aynıdır. Böylece sonsuz kuyudaki parçacığın toplam dalga fonksiyonunu $u_n(x)$'ler cinsinden,
+%%
+\begin{equation}
+\psi ( x ) = \sum _ { n = 1 } ^ { \infty } A _ { n } u _ { n } ( x )
+\end{equation}
+%%
+olarak elde edeceğimizi iddia edebiliriz. $A_n$ katsayıları ortonormalite şartından aşağıdaki gibi hesaplanabilir:
+%%
+\begin{equation}
+\begin{aligned} \int _ { 0 } ^ { a } d x u _ { m } ^ { * } ( x ) \psi ( x ) & = \int _ { 0 } ^ { a } d x u _ { m } ^ { * } ( x ) \sum _ { n = 1 } ^ { \infty } A _ { n } u _ { n } ( x ) \\ & = \sum _ { n = 1 } ^ { \infty } A _ { n } \int _ { 0 } ^ { a } d x u _ { m } ^ { * } ( x ) u _ { n } ( x ) = \sum _ { n = 1 } ^ { \infty } A _ { n } \delta _ { m n } = A _ { m } \end{aligned}
+\end{equation}
+%%
+olduğundan,
+%%
+\begin{equation}
+A _ { m } = \int _ { 0 } ^ { a } d x u _ { m } ^ { * } ( x ) \psi ( x )
+\end{equation}
+%%
+yazılabilir.
 
+Daha önce serbest parçacığın dalga paketi için yaptığımız tartışmadaki gibi açılım yöntemiyle parçacığın dalga fonksiyonu $\psi(x,t)$'nin zamana bağlı davranışını,
+%%
+\begin{equation}
+\psi ( x , t ) = \psi ( x ) T(t) = \sum A _ { n } u _ { n } ( x ) e ^ { - i E _ { n } t / \hbar }
+\end{equation}
+%%
+olarak yazabiliriz. Hatırlanmalıdır ki, Schrödinger denklemininin kısmi değişkenlere ($x$ ve $t$) ayrıştırılmış halini eşitleyen sabit $E_n$'dir, bu sayede yukarıdaki $e ^ { - i E _ { n } t / \hbar }$ ifadesinin varlığı anlaşılabilir. Bu kısım sadece zaman davranışını izah eden kısmın çözümüdür.
 
+Burada gerçekleştirdiğimiz açılımın vektör analizinde de bir benzeri vardır. $n$ boyutlu bir uzay düşünelim: bu uzayda $\hat i_k$ dik birim vektörlerinin kümesi, özfonksiyonların tam kümesiyle benzer davranışı gösterir. Burada tamlık ile ifade edilmek istenen $n$ boyutlu uzaydaki herhangi bir $\vec a$ vektörü $\hat i_k$ birim vektörlerine açılarak,
+%%
+\begin{equation}
+\vec a = \sum _ { m = 1 } ^ { n } a _ { k } \hat i _ { k }
+\end{equation}
+%%
+şeklinde yazılabilir. Bu birim vektörler dik bir baz oluşturduklarından herhangi iki birim vektör arasında,
+%%
+\begin{equation}
+\hat i  _ { m } \cdot \hat { i } _ { k } = \delta _ { m k }
+\end{equation}
+%%
+bağıntısı vardır. Açılımdaki $a_k$ katsayıları birim vektörler ve $\vec a$ vektörünün iç çarpımı ile,
+%%
+\begin{equation}
+a _ { k } = \hat i _ { k } \cdot \vec a
+\end{equation}
+%%
+bulunabilirler. Böylece anlıyoruz ki; vektörlerdeki iç çarpımın karşılığı özfonksiyonlar durumunda $dx$ üzerinden bir integraldir, ayrıca  $\psi(x)$ ile $\vec a$ ve $u_n(x)$ ile $\hat i_k$ benzer davranışları üstlenmişlerdir.
 
+\subsubsection{Açılım Katsayılarının Fiziksel Yorumu}
+
+$A_n$ katsayılarını yorumlayabilmek için enerjinin beklenen değerini keyfi bir $\psi(x)$ durumunda hesaplayalım. Çalıştığımız örnekte, kuyu içinde $H=p^2/2m$, kuyu dışında $\psi(x)=0$ ve
+%%
+\begin{equation}
+H u _ { n } ( x ) = E _ { n } u _ { n } ( x )
+\end{equation}
+%%
+olduğuna göre,
+%%
 \begin{equation}
 \begin{aligned} 
-\langle K \rangle 
-& = \frac { \left\langle p ^ { 2 } \right\rangle } { 2 m } = - \frac { \hbar ^ { 2 } } { 2 m } \int _ { - \infty } ^ { \infty } d x u ^ { * } ( x ) \frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } \\ 
-& = - \frac { \hbar ^ { 2 } } { 2 m } \int _ { - \infty } ^ { \infty } d x \left\{ \frac { d } { d x } \left( u ^ { * } ( x ) \frac { d u ( x ) } { d x } \right) - \frac { d u ^ { * } ( x ) } { d x } \frac { d u ( x ) } { d x } \right\} \\ 
-& = \frac { \hbar ^ { 2 } } { 2 m } \int _ { - \infty } ^ { \infty } d x \left| \frac { d u ( x ) } { d x } \right| ^ { 2 } 
+\langle H \rangle = \int _ { 0 } ^ { a } d x \psi ^ { * } ( x ) H \psi ( x ) 
+& = \int _ { 0 } ^ { a } d x \psi ^ { * } ( x ) H \sum _ { n } A _ { n } u _ { n } ( x ) \\ 
+& = \sum _ { n } A _ { n } ^ { a } d x \psi ^ { * } ( x ) E _ { n } u _ { n } ( x ) \\ 
+& = \sum _ { n } E _ { n } \left| A _ { n } \right| ^ { 2 } 
 \end{aligned}
 \end{equation}
-
-\begin{equation*}
-x \rightarrow x - \frac { a } { 2 }
-\end{equation*}
-
-
+%%
+sonucuna ulaşırız. Ayrıca,
+%%
 \begin{equation}
-\sin \frac { n \pi x } { a } \rightarrow \sin \left( \frac { n \pi x } { a } - \frac { n \pi } { 2 } \right) = \sin \frac { n \pi x } { a } \cos \frac { n \pi } { 2 } - \cos \frac { n \pi x } { a } \sin \frac { n \pi } { 2 }
+\int _ { 0 } ^ { a } d x \psi ^ { * } ( x ) \psi ( x ) = 1
 \end{equation}
-
-
+%%
+olduğundan,
+%%
+\begin{equation}\label{key}
+\int _ { 0 } ^ { a } d x \psi ^ { * } ( x ) \sum _ { n } A _ { n } u _ { n } ( x ) = \sum _ { n } A _ { n } A _ { n } ^ { * } = \sum _ { n } \left| A _ { n } \right| ^ { 2 } = 1
+\end{equation}
+%%
+olur. $|A_n|^2$'yi anlamak için her bir enerji ölçümünün sadece bir enerji özdeğeri ortaya çıkaracağını kabul etmeliyiz. Bu önerme Bohr'un atom modelinde durağan durumlar için, üstü kapalı da olsa, yapılmıştır. Önermeyi kuantum mekaniğine taşırsak; ölçülen bir enerji enerji operatörünün özdeğerlerinden birine karşılık gelir. Bu durumda ortalama enerji ölçümü,
+%%
 \begin{equation}
-\sqrt { \frac { 2 } { a } } \sin \frac { n \pi x } { a } \quad \text { with } n = 2,4,6, \dots
+E _ {ort} = \langle \hat H \rangle = \sum _ { n } E _ { n } P _ { n }
 \end{equation}
-
-
+%%
+olur. Burada $P_n$ elde edilen her bir ölçümde $E_n$ enerji özdeğerini ölçme olasılığıdır. Olasılıkların toplamı,
+%%
 \begin{equation}
-\sqrt { \frac { 2 } { a } } \cos \frac { n \pi x } { a } \quad \text { with } n = 1,3,5 , \dots
+\sum _ { n } P _ { n } = 1
 \end{equation}
+%%
+olacaktır. Bu sonuçlardan,
+%%
+\begin{equation}
+P_n = |A_n|^2
+\end{equation}
+%%
+olduğu ve \emph{`` $|A_n|^2$ yapılan bir enerji ölçümünde $\psi(x)$ durumunun $E_n$ enerji özdeğeri üretme olasılığıdır"} yorumlarını yapabiliriz. Daha önce de gösterdiğimiz üzere $A_n$ katsayıları,
+%%
+\begin{equation}
+A _ { n } = \int _ { 0 } ^ { a } d x u _ { n } ^ { * } ( x ) \psi ( x )
+\end{equation}
+%%
+ile elde edilirler.
+
+
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
