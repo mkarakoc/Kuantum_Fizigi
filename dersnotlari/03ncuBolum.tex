@@ -635,14 +635,30 @@ olarak yazılır. Bu diferansiyel denklemin çözümleri $e ^ { i k x }$, $e ^ {
 \begin{equation}
 u(x) = A e ^ { i k x } + B e ^ { - i k x }
 \end{equation}
-gibi bir çözüm önerilebilir. Böyle bir çözümün problemi karesi integrallenebilir olmamasıdır.
-
-\begin{equation}
+gibi bir çözüm önerilebilir. Fakat bu çözümün problemi karesi integrallenebilir olmamasıdır.
+%%
+\begin{align}
 \int _ { - \infty } ^ { \infty } d x \left|u(x) \right| ^ { 2 } 
-= \int _ { - \infty } ^ { \infty } d x \left|u(x) \right| ^ { 2 } 
-\end{equation}
+&= \int _ { - \infty } ^ { \infty } d x \left(A^2 + B^2 + AB\left(e ^ { -i 2k x } + e ^ {  i 2k x }\right) \right)\\
+&= \int _ { - \infty } ^ { \infty } d x \left(A^2 + B^2 + 2AB\cos 2kx \right)\\
+&= \left[\left(A^2 + B^2\right)x + \frac{AB}{k}AB\sin 2kx \right]_{-\infty}^\infty
+\end{align}
+%%
+Çünkü yukarıdaki işlemlerin sonucundan anlaşılacağı üzere integral ıraksar (patlar). Dolayısıyla bu tür sistemlerin dalga fonksiyonlarını normalize etmenin başka yolları önerilmiştir.
+%%
+\begin{enumerate}
+	\item 1
+	
+	\item 2
+	
+	\item 3		
+\end{enumerate}
 
-
+% READ FOLLOWING!
+% http://www.physics.udel.edu/~msafrono/424-2011/Lecture%209final.pdf
+% http://fisica.ugto.mx/~supercuerdas/miembros/QM/qm4.pdf
+% http://folk.uio.no/trondson/freeparticle.pdf
+% https://physics.stackexchange.com/questions/165373/normalizing-the-solution-to-free-particle-schr%C3%B6dinger-equation
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
