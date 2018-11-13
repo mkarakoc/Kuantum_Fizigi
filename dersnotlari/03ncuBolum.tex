@@ -496,7 +496,7 @@ olduğuna göre,
 \begin{aligned} 
 \langle H \rangle = \int _ { 0 } ^ { a } d x \psi ^ { * } ( x ) H \psi ( x ) 
 & = \int _ { 0 } ^ { a } d x \psi ^ { * } ( x ) H \sum _ { n } A _ { n } u _ { n } ( x ) \\ 
-& = \sum _ { n } A _ { n } ^ { a } d x \psi ^ { * } ( x ) E _ { n } u _ { n } ( x ) \\ 
+& = \sum _ { n } A _ { n } \int^ { a }_{ 0 } d x \psi ^ { * } ( x ) E _ { n } u _ { n } ( x ) \\ 
 & = \sum _ { n } E _ { n } \left| A _ { n } \right| ^ { 2 } 
 \end{aligned}
 \end{equation}
@@ -509,8 +509,10 @@ sonucuna ulaşırız. Ayrıca,
 %%
 olduğundan,
 %%
-\begin{equation}\label{key}
-\int _ { 0 } ^ { a } d x \psi ^ { * } ( x ) \sum _ { n } A _ { n } u _ { n } ( x ) = \sum _ { n } A _ { n } A _ { n } ^ { * } = \sum _ { n } \left| A _ { n } \right| ^ { 2 } = 1
+\begin{equation}
+\int _ { 0 } ^ { a } d x \psi ^ { * } ( x ) \sum _ { n } A _ { n } u _ { n } ( x ) 
+= \sum _ { n } A _ { n } A _ { n } ^ { * } 
+= \sum _ { n } \left| A _ { n } \right| ^ { 2 } = 1
 \end{equation}
 %%
 olur. $|A_n|^2$'yi anlamak için her bir enerji ölçümünün sadece bir enerji özdeğeri ortaya çıkaracağını kabul etmeliyiz. Bu önerme Bohr'un atom modelinde durağan durumlar için, üstü kapalı da olsa, yapılmıştır. Önermeyi kuantum mekaniğine taşırsak; ölçülen bir enerji enerji operatörünün özdeğerlerinden birine karşılık gelir. Bu durumda ortalama enerji ölçümü,
@@ -539,7 +541,86 @@ A _ { n } = \int _ { 0 } ^ { a } d x u _ { n } ^ { * } ( x ) \psi ( x )
 %%
 ile elde edilirler.
 
+\subsection{Serbest Parçacık ve Momentum Özfonksiyonu}
 
+Enerji operatörü $\hat H$ dışında da özfonksiyon ve özdeğerleri olan operatörler vardır. Bunlardan birisi $\hat p$ \emph{momenum operatörüdür}: bu operatör dalga fonksiyonuna işletildiğinde,
+%%
+\begin{equation}
+\hat p u _ { p } ( x ) = p u _ { p } ( x ), \quad \hat p = \frac{\hbar}{i} \frac{d}{dx}
+\end{equation}
+%%
+özfonskiyon ve özdeğerleri ortaya çıkar. Operatörün açık halini yazacak olursak,
+%%
+\begin{equation}
+\frac { d u _ { p } ( x ) } { d x } = \frac { i p } { \hbar } u _ { p } ( x )
+\end{equation}
+%%
+birinci dereceden adi bir diferansiyel denklem ortaya çıkar. Bu denklemin genel çözümü,
+%%
+\begin{equation}
+u _ { p } ( x ) = C e ^ { i p x / \hbar }
+\end{equation}
+%%
+şeklindedir. Burada $C$ belirsiz bir sabittir ve normalizasyon ile hesaplanabilir. $p$ özdeğeri reel değerlidir böylece $u_p(x)$ özfonksionu $x \rightarrow \pm \infty$ durumunda patlamaz ve sonlu kalır. Serbest bir parçacık için $\hat p$ operatörünün davranışını incelediğimizden, p özdeğeri kesikli değerler değil sürekli değerler alır. Diğer bir ifadeyle $\hat p$'nin sürekli bir spektrumu vardır, denebilir. Enerji özfonksiyonları gibi momentum özfonksiyonları da,
+%%
+\begin{equation}
+\int _ { - \infty } ^ { \infty } d x u _ { p ^ { \prime } } ^ { * } ( x ) u _ { p } ( x ) = \delta \left( p - p ^ { \prime } \right)
+ = \left\{
+\begin{array} { c l } 
+{ 0 } & { \Leftarrow p \neq p^\prime } \\ 
+{ 1 } & { \Leftarrow p   =  p^\prime} 
+\end{array} 
+\right.
+\end{equation}
+%%
+yukarıda verilen ortonormalite (dik ve birim olma) şartına uyuyorlarsa,
+
+\begin{equation}
+\begin{aligned} 
+\int _ { - \infty } ^ { \infty } d x u _ { p ^ { \prime } } ^ { * } ( x ) u _ { p } ( x ) 
+& = | C | ^ { 2 } \int _ { - \infty } ^ { \infty } d x e ^ { i \left( p - p ^ { \prime } \right) x / \hbar } \\ 
+& = 2 \pi | C | ^ { 2 } \hbar \delta \left( p - p ^ { \prime } \right) 
+\end{aligned}
+\end{equation}
+%%
+olacaktır.İntegralin sonucu $p=p^\prime$ için $1$ olacağından $C$'nin değeri de bulunmuş olur. Böylece momentum özfonksiyonu,
+%%
+\begin{equation}
+u _ { p } ( x ) = \frac { 1 } { \sqrt { 2 \pi \hbar } } e ^ { i p x / \hbar }
+\end{equation}
+%%
+olarak bulunur. Enerji özfonksiyonolarının tam bir setiyle seriye açtığımız $\psi(x)$'i momentum özfonksiyonlarının tam bir setiyle de seriye açabiliriz. Tek fark enerji özdeğerleri kesikli iken, momentum özdeğerleri süreklidir. Eğer momentum özdeğerleri kesikli olsaydı, $\psi(x)$
+%%
+\begin{equation}
+\psi ( x ) = \sum _ { n = 1 } ^ { \infty } A _ { p_n } u _ {p_ n } ( x )
+\end{equation}
+%%
+ifadesine benzer şekilde kesikli özfonksiyonların açılımı şeklinde yazılabilirdi. Fakat $\hat p$ sürekli bir spektruma sahip olduğundan,
+%%
+\begin{equation}
+\psi ( x )  
+= \int _ { - \infty } ^ { \infty } d p \phi ( p ) u_p(x)
+= \int _ { - \infty } ^ { \infty } d p \phi ( p ) \frac { e ^ { i p x \hbar \hbar } } { \sqrt { 2 \pi \hbar } }
+\label{eq:psi_x_complete_set_expansion}
+\end{equation}
+%%
+$\psi(x)$ $u_p(x)$ özfonksiyonlarının tam bir setiyle yukarıdaki gibi yazılmalıdır. Burada,
+%%
+\begin{align*}
+\phi(p) &\leftrightarrow A_n \\
+u_p(x)  &\leftrightarrow u_n(x) 
+\end{align*}
+%%
+benzerliklerinin varlığına dikkat edilmelidir. $A_n$'lerin bulunmasına benzer şekide $\phi(p)$'lerde
+%%
+\begin{equation}
+\phi ( p )
+= \int _ { - \infty } ^ { \infty } d x u^\ast_p(x)  \psi ( x )
+= \int _ { - \infty } ^ { \infty } d x \left( \frac { e ^ { i p x / \hbar } } { \sqrt { 2 \pi \hbar } } \right) ^ { * } \psi ( x )
+\label{eq:phi_p_complete_set_expansion}
+\end{equation}
+%%
+integraliyle (iç çarpımıyla) hesaplanabilirler. Aslında Denk. \ref{eq:psi_x_complete_set_expansion} ve \ref{eq:phi_p_complete_set_expansion} karşılaştırmalı olarak incelenirse; Denk. \ref{eq:psi_x_complete_set_expansion}'te $\psi(x)$'in momentum özfonksiyonlarının ve $\phi(p)$ katsayılarının bir açılımı olarak, Denk. \ref{eq:phi_p_complete_set_expansion}'da ise $\phi(p)$'nin momentum özfonksiyonlarının ve $\psi(x)$ katsayılarının bir açılımı olarak yazıldığı düşünülebilir. Böylece daha önce de bahsettiğimiz gibi $\psi(x)$ konum uzayındaki dalga fonksiyonu iken, $\phi(p)$ momentum uzayındaki dalga fonksiyonudur önermesi daha kuvvetli bir dayanak kazanmış olur.
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
