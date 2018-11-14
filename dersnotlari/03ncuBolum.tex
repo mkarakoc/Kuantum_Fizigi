@@ -630,21 +630,32 @@ Serbest parçacık durumunu incelemeye devam edelim. Serbest parçacık için po
 \frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } + \frac { 2 m E } { \hbar ^ { 2 } } u ( x ) = \frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } + k ^ { 2 } u ( x ) = 0
 \end{equation}
 %%
-olarak yazılır. Bu diferansiyel denklemin çözümleri $e ^ { i k x }$, $e ^ { - i k x }$ veya $\sin kx$, $\cos kx$ fonksiyonlarının lineer kombinasyonları olacaktır. Örneğin;
+olarak yazılır. Bu diferansiyel denklemin çözümleri $e ^ { i k x }$, $e ^ { - i k x }$ veya $\sin kx$, $\cos kx$ fonksiyonlarının lineer kombinasyonları olacaktır. Örneğin, $+x$ yönünde ilerleyen bir parçacık için
 %%
 \begin{equation}
-u(x) = A e ^ { i k x } + B e ^ { - i k x }
+\psi(x,t) = u(x) T(t) = A e ^ { i k x -\omega t}
 \end{equation}
-gibi bir çözüm önerilebilir. Fakat bu çözümün problemi karesi integrallenebilir olmamasıdır.
+%%
+şeklinde bir serbest dalga fonksiyonu önerilebilir. Zamandan bağımsız Schrödinger denkleminin çözümü ise,
+%%
+\begin{equation}
+u(x) = A e ^ { i k x }
+\end{equation}
+%%
+olacaktır. Fakat bu çözümün problemi karesi integrallenebilir olmamasıdır.
 %%
 \begin{align}
 \int _ { - \infty } ^ { \infty } d x \left|u(x) \right| ^ { 2 } 
-&= \int _ { - \infty } ^ { \infty } d x \left(A^2 + B^2 + AB\left(e ^ { -i 2k x } + e ^ {  i 2k x }\right) \right)\\
-&= \int _ { - \infty } ^ { \infty } d x \left(A^2 + B^2 + 2AB\cos 2kx \right)\\
-&= \left[\left(A^2 + B^2\right)x + \frac{AB}{k}AB\sin 2kx \right]_{-\infty}^\infty
+&= \int _ { - \infty } ^ { \infty } d x \left|A e ^ { i k x } \right|^2 \nonumber\\
+&= \int _ { - \infty } ^ { \infty } d x A^2 \left|e ^ { i k x } \right|^2
+= \int _ { - \infty } ^ { \infty } d x A^2 \nonumber\\
+&= A^2 x\bigg|_{-\infty}^\infty
 \end{align}
 %%
-Çünkü yukarıdaki işlemlerin sonucundan anlaşılacağı üzere integral ıraksar (patlar). Dolayısıyla bu tür sistemlerin dalga fonksiyonlarını normalize etmenin başka yolları önerilmiştir.
+Çünkü yukarıdaki işlemlerin sonucundan anlaşılacağı üzere integral ıraksar (patlar). 
+
+Bu sonuç, bir örnekle şöyle yorumlanabilir: Bir elektron tabancasından çıkan elektron demetinin momentumu çok iyi bilindiğinden ($\Delta p \rightarrow 0$), Heisenberg'in belirsizlik ilkesine göre, konumu hakkındaki bilgi tamamen kaybolmuştur ($\Delta x \rightarrow \infty$). Diğer bir ifadeyle $|u(x)|^2 dx = A^2 dx$ parçacığın $dx$ ve $x+dx$ aralığında bulunma olasılığı bütün uzayda aynı değere sahiptir. 
+Böyle bir durumu fiziksel olarak kabul etmek pek mümkün değildir. Çünkü elektron tabancasından çıkan elektron demetinin (veya bir başka parçacık hızlandırıcıdan çıkan parçacık demetinin) boyu bilinmektedir. Hızlandırılan parçacık ilk defa tabancadan çıktığında bu demet için de bir yerde olmalıdır. Bu nedenle parçacığın serbest olma özelliğini kaybetmeden parçacığın konumunu yerelleştirebilecek normalizasyon yöntemlerine ihtiyaç duyulur. Dolayısıyla bu tür sistemlerin dalga fonksiyonlarını normalize etmenin farklı yolları önerilmiştir.
 %%
 \begin{enumerate}
 	\item 1
