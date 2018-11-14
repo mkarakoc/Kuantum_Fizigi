@@ -600,7 +600,7 @@ ifadesine benzer şekilde kesikli özfonksiyonların açılımı şeklinde yazı
 \begin{equation}
 \psi ( x )  
 = \int _ { - \infty } ^ { \infty } d p \phi ( p ) u_p(x)
-= \int _ { - \infty } ^ { \infty } d p \phi ( p ) \frac { e ^ { i p x \hbar \hbar } } { \sqrt { 2 \pi \hbar } }
+= \int _ { - \infty } ^ { \infty } d p \phi ( p ) \frac { e ^ { i p x /\hbar } } { \sqrt { 2 \pi \hbar } }
 \label{eq:psi_x_complete_set_expansion}
 \end{equation}
 %%
@@ -658,12 +658,68 @@ Bu sonuç, bir örnekle şöyle yorumlanabilir: Bir elektron tabancasından çı
 Böyle bir durumu fiziksel olarak kabul etmek pek mümkün değildir. Çünkü elektron tabancasından çıkan elektron demetinin (veya bir başka parçacık hızlandırıcıdan çıkan parçacık demetinin) boyu bilinmektedir. Hızlandırılan parçacık ilk defa tabancadan çıktığında bu demet için de bir yerde olmalıdır. Bu nedenle parçacığın serbest olma özelliğini kaybetmeden parçacığın konumunu yerelleştirebilecek normalizasyon yöntemlerine ihtiyaç duyulur. Dolayısıyla bu tür sistemlerin dalga fonksiyonlarını normalize etmenin farklı yolları önerilmiştir.
 %%
 \begin{enumerate}
-	\item 1
+	\item İlk yöntem sonsuz kuyu sınırları $x=\pm a/2$'yi çok genişletmek ve çok daha geniş bir kuyu elde etmek. Fakat ne kadar genişletilse de $\bf e ^ { \pm i k x }$ şeklindeki dalga fonksiyonları sınırlarda yok (sıfır) olmayacaktır. Bu nedenle $\psi (x=\pm a / 2 ) = 0$ sınır şartı değiştirilerek,
+	%%
+	\begin{equation}
+	\psi ( x-a/2) = \psi ( x + a/2 )
+	\end{equation}
+	%%
+	şeklinde yeniden tanımlanır. Yeni tanımlanan bu şart, dalga fonksiyonunun, parçacık serbest olduğu ve her yerde aynı olasılıkla bulunabileceği için, $x=-a/2$ ve $x=+a/2$'de sürekli olmasının gerekliliğinden ortaya çıkar. Böylece,
+    %%
+	\begin{align*}
+	e ^ { i k (x-a/2) } &= e ^ { i k (x+a/2) }\\
+	e ^ { i k x}	e ^ { -i k a/2}  &= e ^ { i k x } 	e ^ { i k a/2} \\
+	e ^ { i k a} &= 1
+	\end{align*}
+	%%
+	sonucu ortaya çıkar. Genişletilmiş kuyudaki bu yeni sınır şartına uyan dalga için $k~=~2 n \pi / a$ veya $p = 2 \hbar n \pi / a$ olur. Burada $a$ kuyu genişliği ve $n=1,2,3, \ldots$ bir tam sayıdır. Serbest parçacık için momentum herhangi bir değerde olabilir. Bu nedenle $a$ ne kadar genişletilirse parçacığın momentumunu verecek olan $n$ değeri de buna göre büyütülmelidir. Genişletilmiş bu kuyuda artık,
+	%%
+	\begin{equation}
+	A ^ { 2 } \int _ { -a/2 } ^ { a/2 } d x \left| e ^ { i k x } \right| ^ { 2 } = A ^ { 2 } a = 1
+	\end{equation}
+	%%
+	normalizasyonu yapılabilir. Böylece serbest parçacığı temsil eden düzlem dalgalar,
+	%%
+	\begin{equation}
+	u(x) = \frac{1}{\sqrt{a}} e ^ { \pm i k x }
+	\end{equation}
+	%%
+	şeklinde normalize edilmiş olarak yazılabilirler.
 	
-	\item 2
+	
+	\item Elektron tabancasından çıkan elektron örneğiyle devam edersek, momentumu çok iyi bilindiğinden momentum uzayında,
+	%%
+	\begin{equation}
+	\phi ( p ) = \sqrt { 2 \pi \hbar } \delta ( p - p^\prime )
+	\end{equation}
+	%%
+	şeklinde bir dalga paketi fonksiyonu önerebiliriz. Bu dalga fonksiyonu sadece $p=p^\prime$ iken sıfırdan farklı diğer durumlarda sıfırdır, böylece momentumun değeri kesin olarak bilinmiş olmaktadır.
+	Önerdiğimiz bu dalga paketi ile,
+	%%
+	\begin{equation}
+	u _ { p } ( x ) = \frac { 1 } { \sqrt { 2 \pi \hbar } } e ^ { i p x / \hbar }
+	\end{equation}
+	%%
+	olarak tanımlı serbest parçacık momentum özfonksiyonunu beraber kullanarak, serbest parçacığın $\psi(x)$ dalga fonksiyonunu,
+	%%
+	\begin{align}
+	\psi ( x )  
+	&= \int _ { - \infty } ^ { \infty } d p \phi ( p ) u_p(x)
+	= \int _ { - \infty } ^ { \infty } d p  (\sqrt { 2 \pi \hbar } \delta ( p - p^\prime ) \frac { e ^ { i p x /\hbar } } { \sqrt { 2 \pi \hbar } }\\
+	&= e ^ { i p x /\hbar } =  e ^ { i k x }
+	\end{align}
+	%%
+	şeklinde dalga paketi olarak yazabiliriz. Bu normalizasyon yöntemi \emph{Dirac normalizasyonu} olarak adlandırlır. Bir önceki normalizasyondaki gibi bir sonuç elde etmek için Dirac delta gibi çok keskin bir dalga paketi yerine yine keskin ama her noktada tanımlı bir dalga paketi tercih edilebilir. Böylece gerçek fiziksel demet daha iyi temsil edilmiş olur. Buradaki momentum dalga paketi fonksiyonu çok keskin olduğundan $\Delta p = 0$'dir, fakat Heisenberg'in belirsizlik ilkesi gereği, $\Delta x \rightarrow \infty$ olur {\bf REF(\YAZILACAK http://fisica.ugto.mx/~supercuerdas/miembros/QM/qm4.pdf)}.
 	
 	\item 3		
+	\begin{equation}
+	j ( x ) = \frac { \hbar } { 2 i m } \left[ \psi * ( x ) \frac { d \psi ( x ) } { d x } - \frac { d \psi ^ { * } ( x ) } { d x } \psi ( x ) \right]
+	\end{equation}
 \end{enumerate}
+
+\subsubsection{Yozlaşmış (Dejenere) Durumlar}
+
+\subsubsection{Parite}
 
 % READ FOLLOWING!
 % http://www.physics.udel.edu/~msafrono/424-2011/Lecture%209final.pdf
