@@ -7,6 +7,8 @@
 # Then, add a .gitignore file in the root of your repo and enter a line:
 *.pyc
 
+## bat windows files
+*.bat
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
