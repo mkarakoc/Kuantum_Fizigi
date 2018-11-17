@@ -20,7 +20,7 @@
     urlcolor=red}
   
 
-%%% \usepackage{svg}
+%\usepackage{svg}
 %%% https://tex.stackexchange.com/questions/122871/include-svg-images-with-the-svg-package/129854
 \usepackage{graphicx}
 \graphicspath{ {./figurler/} }
@@ -705,12 +705,40 @@ Böyle bir durumu fiziksel olarak kabul etmek pek mümkün değildir. Çünkü e
 	\begin{align}
 	\psi ( x )  
 	&= \int _ { - \infty } ^ { \infty } d p \phi ( p ) u_p(x)
-	= \int _ { - \infty } ^ { \infty } d p  (\sqrt { 2 \pi \hbar } \delta ( p - p^\prime ) \frac { e ^ { i p x /\hbar } } { \sqrt { 2 \pi \hbar } }\\
+	= \int _ { - \infty } ^ { \infty } d p  \{\sqrt { 2 \pi \hbar } \delta ( p - p^\prime )\} \frac { e ^ { i p x /\hbar } } { \sqrt { 2 \pi \hbar } }\\
 	&= e ^ { i p x /\hbar } =  e ^ { i k x }
 	\end{align}
 	%%
 	şeklinde dalga paketi olarak yazabiliriz. Bu normalizasyon yöntemi \emph{Dirac normalizasyonu} olarak adlandırlır. Bir önceki normalizasyondaki gibi bir sonuç elde etmek için Dirac delta gibi çok keskin bir dalga paketi yerine yine keskin ama her noktada tanımlı bir dalga paketi tercih edilebilir. Böylece gerçek fiziksel demet daha iyi temsil edilmiş olur. Buradaki momentum dalga paketi fonksiyonu çok keskin olduğundan $\Delta p = 0$'dir, fakat Heisenberg'in belirsizlik ilkesi gereği, $\Delta x \rightarrow \infty$ olur.
     % REF: http://fisica.ugto.mx/~supercuerdas/miembros/QM/qm4.pdf)
+	%%
+	\begin{figure}[hbtp]	
+	\begin{minipage}{.45\textwidth}
+	\centering
+	\includegraphics[width=.9\linewidth]{Dirac_distribution_PDF.pdf}
+	\caption{Dirac dağılımı.}
+	\label{fig:diracdistribution}
+	\end{minipage}
+    %%
+	\begin{minipage}{.10\textwidth}
+		\hspace{12pt}
+	\end{minipage}
+	\begin{minipage}{.45\textwidth}
+	\centering
+	\includegraphics[width=.7\linewidth]{Dirac_delta_gaussian.png}
+	\caption{$\alpha \rightarrow 0$ için Dirac dağılımına yaklaşan bir gausyen fonksiyon.}
+	\label{fig:diracdistribution1}
+    \end{minipage}
+    \end{figure}			
+	%%
+	$\psi(x)$'i daha gerçekçi ve normalize edilebilir hale getirmek için dirac delta fonksiyonu yerine Şekil \ref{fig:diracdistribution1}'teki gibi bir gausyen fonksiyon seçilebilir. Böylece $q=p-p^\prime$ olmak üzere $\psi(x)$ için,
+    %%
+	\begin{align}
+	\psi ( x )  
+	&= e ^ { i p^\prime x /\hbar }  \int _ { - \infty } ^ { \infty } d q  \delta ( q )  e ^ { i q x /\hbar }
+	\end{align}
+	%%
+	dalga paketi yazılabilir. Bu dalga paketi çok yavaş değişen ve ilgilenilen bölgede (örneğin demet uzunluğu) neredeyse sabit olan bir dağılım olacaktır. Böylece ıraksamayan, normalize edilebilen daha gerçekçi bir serbest dalga yazılmış olur.
 	
 	\item Normalizasyonu
 	%%
@@ -721,7 +749,11 @@ Böyle bir durumu fiziksel olarak kabul etmek pek mümkün değildir. Çünkü e
 
 \subsubsection{Yozlaşmış (Dejenere) Durumlar}
 
+\YAZILACAK
+
 \subsubsection{Parite}
+
+\YAZILACAK
 
 % READ FOLLOWING!
 % http://www.physics.udel.edu/~msafrono/424-2011/Lecture%209final.pdf
