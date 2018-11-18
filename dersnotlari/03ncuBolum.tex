@@ -698,6 +698,7 @@ Böyle bir durumu fiziksel olarak kabul etmek pek mümkün değildir. Çünkü e
 	%%
 	\begin{equation}
 	u _ { p } ( x ) = \frac { 1 } { \sqrt { 2 \pi \hbar } } e ^ { i p x / \hbar }
+	\label{eq:free_particle_wf}
 	\end{equation}
 	%%
 	olarak tanımlı serbest parçacık momentum özfonksiyonunu beraber kullanarak, serbest parçacığın $\psi(x)$ dalga fonksiyonunu,
@@ -740,11 +741,40 @@ Böyle bir durumu fiziksel olarak kabul etmek pek mümkün değildir. Çünkü e
 	%%
 	dalga paketi yazılabilir. Bu dalga paketi çok yavaş değişen ve ilgilenilen bölgede (örneğin demet uzunluğu) neredeyse sabit olan bir dağılım olacaktır. Böylece ıraksamayan, normalize edilebilen daha gerçekçi bir serbest dalga yazılmış olur.
 	
-	\item Normalizasyonu
+	\item Serbest parçacık dalga fonksiyonunun normalizasyonun ıraksamasına sebep olan parçacığın, sonsuz kuyuda olduğu gibi, uzayda herhangi bir yere hapsedilmemiş olmasından kaynaklanmaktadır. Eğer parçacığın sınırlı bir bölgede nerede olduğu sorusunun cevabını aramayı bırakırsak böyle bir sorun da ortaya çıkmamış olur. Bunun yerine olasılık akımı veya akısı ile ilgilenirsek,
 	%%
 	\begin{equation}
 	j ( x ) = \frac { \hbar } { 2 i m } \left[ \psi^\ast ( x ) \frac { d \psi ( x ) } { d x } - \frac { d \psi ^ { \ast } ( x ) } { d x } \psi ( x ) \right]
 	\end{equation}
+	%%
+	normalizasyon problemini daha rahat aşabiliriz. Yukarıdaki tanımına göre $C e ^ {\pm i p x / \hbar }$ gibi bir serbest dalga fonksiyonu için akı $\pm | C | ^ { 2 } p / m$ olur. Olasılık yoğunluğu ve dalga fonksiyonu arasındaki bağıntı hatırlanırsa,
+	%%
+	\begin{equation}
+	P(x) dx = |\psi(x)|^2 dx = |C|^2 dx \quad \Rightarrow \quad [|C|^2]\equiv 1/m
+	\end{equation}
+	%%
+	serbest parçacığın düzlem dalgası için $|C|^2$'nin bir boyutta \emph{1 parçacık/m} kadarlık bir parçacık olasılık yoğunluğunu tanımladığı ortaya çıkar. Böylece $[\pm | C | ^ { 2 } p / m] \equiv 1/s$ olacağı açıktır. Sonuçta bir boyutlu olasılık akısı ile birim uzunluktan ve birim zamanda geçebilecek parçacık olasılığı hesaplanmış olur. Bu sonuca göre, normalize etmeye çalıştığımız serbest parçacık dalga fonksiyonu (Denk. 	\ref{eq:free_particle_wf}) $|C|^2 = 1 / 2 \pi \hbar$~(1/metre) yoğunluklu bir parçacık demetini temsil etmektedir.
+	%%
+	%% Unit of a wavefunction read from the following link
+	%% https://www.researchgate.net/post/Does_wave_function_in_Quantum_mechanics_have_a_unit
+	
+	Üç boyutlu durumdaysa serbest parçacık dalga fonksiyonu,
+	%%
+	\begin{equation}
+	u _ { p } ( \vec{ r } ) = C e ^ { i \vec { p } \cdot \vec { r } / \hbar }
+	\end{equation}
+	%%
+	halini alır ve akı yine $|C|^2 p/m$ olur. Fakat birimi $\frac{1/s}{m^2}$ olur, çünkü $\vec p$ momentum vektörüne dik bir birim alandan geçen ve birim hacim başına $|C|^2$ kadar yoğunluğa sahip parçacık demetini temsil eder.
+	%%
+	\begin{figure}[hbtp]
+		\centering
+		\includegraphics[width=0.5\linewidth]{figurler/normalization_and_probab_flux}
+		\caption{\YAZILACAK, değişecek veya silinecek...}
+		\label{fig:normalizationandprobabflux}
+	\end{figure}
+	
+	
+	
 \end{enumerate}
 
 \subsubsection{Yozlaşmış (Dejenere) Durumlar}
