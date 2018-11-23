@@ -99,14 +99,16 @@ sorry I ever got involved with quantum theory.
 
 
 \subsection{Basamak Potansiyeli}
-
+%%
 \begin{figure}[hbtp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{figurler/Basamak_Potansiyeli}
 	\caption{Basamak potansiyeli.}
 	\label{fig:basamakpotansiyeli}
 \end{figure}
-
+%%
+Basamak potansiyeli için bir örnek yukarıdaki şekildeki gibi olur. Şekilden anlaşılacağı üzere basamak potansiyeli; birbirinden farklı sabit potansiyellere sahip iki bölge içeren bir durumdur. Bir boyutlu hali için matematiksel ifadesi aşağıdaki gibidir.
+%%
 \begin{equation}
 V ( x )  = \left\{ 
 \begin{array} { l l } 
@@ -114,26 +116,33 @@ V ( x )  = \left\{
 { V _ { 0 } } & {\Leftarrow x \geq 0 } 
 \end{array} \right. 
 \end{equation}
+%%
 
+Bu potansiyeli zamandan bağımsız Schrödinger denklemi ile çalışabiliriz. Öncelikle Schrödinger denklemini yazılışı daha kolay olan,
+%%
 \begin{equation}
 - \frac { \hbar ^ { 2 } } { 2 m } \frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } + V ( x ) u ( x ) = E u ( x )
 \end{equation}
-
+%%
+formuna dönüştürebiliriz.
 
 \begin{equation}
 \frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } + \frac { 2 m } { \hbar ^ { 2 } } [ E - V ( x ) ] u ( x ) = 0
 \end{equation}
-
-
+%%
+Basamak potansiyelinin değerinin sıfır olduğu bölge için,
+%%
 \begin{equation}
 \frac { 2 m E } { \hbar ^ { 2 } } = k ^ { 2 }
 \end{equation}
-
-
+%%
+tanımını ve sıfırdan farklı olduğu bölge için
+%%
 \begin{equation}
 \frac { 2 m \left( E - V _ { 0 } \right) } { \hbar ^ { 2 } } = q ^ { 2 }
 \end{equation}
-
+%%
+tanımını yapabiliriz.
 
 \begin{equation}
 u ( x ) = e ^ { i k x } + R e ^ { - i k x }
