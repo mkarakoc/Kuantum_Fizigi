@@ -145,14 +145,14 @@ tanımını ve sıfırdan farklı olduğu bölge için
 tanımını yapabiliriz. $x<0$ ve $V(x)=0$ bölgesi için çözüm
 %%
 \begin{equation}
-u ( x ) = e ^ { i k x } + R e ^ { - i k x }
+u ( x ) = u_1 ( x ) = e ^ { i k x } + R e ^ { - i k x }
 \end{equation}
 %%
 olarak yazılabilir. Burada $e ^ { i k x }$, $x=-\infty$'deki bir kaynaktan gelen serbest düzlem dalga olarak düşünülebilir, $R e ^ { -i k x }$ ise $x=0$ noktasında ortam değişikliğinden dolayı yansıyan dalga olarak düşünülebilir. Bu bölge için $+x$ doğrultusundaki olasılık akısı,
 %%
 \begin{equation}
 \begin{array} { r l } 
-{ j } & = \frac { \hbar } { 2 i m } \left( u ^ { * } \frac { d u } { d x } - \frac { d u ^ { * } } { d x } u \right) \\
+{ j } &= { j_1 } = \frac { \hbar } { 2 i m } \left( u ^ { * } \frac { d u } { d x } - \frac { d u ^ { * } } { d x } u \right) \\
 & = \frac { \hbar } { 2 i m } \left[ \left( e ^ { - i k x } + R ^ { * } e ^ { i k x } \right) \left( i k e ^ { i k x } - i k R e ^ { - i k } \right) - \left( -i k e ^ { -i k x } + i k R^* e ^ {  i k } \right) \left( e ^ { i k x } + R  e ^ { -i k x } \right)  \right]  \\ 
 { } & { = \frac { \hbar k } { m } \left( 1 - | R | ^ { 2 } \right) } \end{array}
 \end{equation}
@@ -160,24 +160,46 @@ olarak yazılabilir. Burada $e ^ { i k x }$, $x=-\infty$'deki bir kaynaktan gele
 olur. $x>0$ ve $V(x)=V_0$ için ise,
 %%
 \begin{equation}
-u ( x ) = T e ^ { i q x }
+u ( x ) = u_2 ( x ) = T e ^ { i q x }
 \end{equation}
 %%
-çözümü elde edilir. Sadece $e ^ { i q x }$ kısmı vardır, çünkü bu bölge $x=+\infty$'a kadar uzanmaktadır ve potansiyel sabittir bu yüzden, yansıyan dalga söz konusu değildir. Sadece $+x$ yönünde ilerleyen olasılık dalgası vardır.
-
-
-
-
+çözümü elde edilir. Sadece $e ^ { i q x }$ kısmı vardır, çünkü bu bölge $x=+\infty$'a kadar uzanmaktadır ve potansiyel sabittir bu yüzden, yansıyan dalga söz konusu değildir. Sadece $+x$ yönünde ilerleyen olasılık dalgası vardır. Bu olasılık dalgası için olasılık akısı,
+%%
 \begin{equation}
-j = \frac { \hbar q } { m } | T | ^ { 2 }
+j = j_2 = \frac { \hbar q } { m } | T | ^ { 2 }
 \end{equation}
-
-
-
+%%
+bulunur. Her iki bölgedeki olasılık akıları ($j_1 = j2$) birbirine eşit olmalıdır. Eğer,
+%%
+\begin{equation}
+\frac { \partial } { \partial t } P ( x , t ) + \frac { \partial } { \partial x } j ( x , t ) = 0
+\end{equation}
+%%
+olduğu hatırlanırsa ve kısmi değişkenlere ayrılabilir dalga fonksiyonu ile çalıştığımızdan $P(x, t) = \psi(x,t) \psi^*(x,t) = u(x) u^*(x)$ olacağına göre,
+%%
+\begin{equation}\label{key}
+\frac { \partial } { \partial t } P ( x , t ) = \frac { \partial } { \partial t } |u ( x)|^2 = 0
+\end{equation}
+%%
+elde edilir. Buradan,
+%%
+\begin{equation}
+\frac { \partial } { \partial x } j ( x , t ) = 0
+\end{equation}
+%%
+sonucuna ulaşırız. $x=0$ civarında $x=\pm\varepsilon \rightarrow 0$ aralığında yukarıdaki ifadenin integrali,
+%%
+\begin{equation}
+\int^{\varepsilon}_{-\varepsilon} dx \frac { \partial } { \partial x } j ( x , t ) = j (\varepsilon  , t ) - j ( -\varepsilon , t ) = 0
+\end{equation}
+%%
+sonucunu verir. Böylece $j_1 = j_2$ olması gerektiği ortaya çıkar. Her iki bölgedeki olasılık akıları da $x$'ten bağımsız olduklarından sınırda eşitlerse bütün tanımlı uzay boyunca birbirlerine eşit olmalıdırlar,
+%%
 \begin{equation}
 \frac { \hbar k } { m } \left( 1 - | R | ^ { 2 } \right) = \frac { \hbar q } { m } | T | ^ { 2 }
 \end{equation}
-
+%%
+yukarıdaki eşitlikle bu sonuç ifade edilmiş olur. Böylece bu tür sistemler için olasılık akısının bir 
 
 
 \begin{equation}
