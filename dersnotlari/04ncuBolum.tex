@@ -196,34 +196,99 @@ sonucuna ulaşırız. $x=0$ civarında $x=\pm\varepsilon \rightarrow 0$ aralığ
 sonucunu verir. Böylece $j_1 = j_2$ olması gerektiği ortaya çıkar. Her iki bölgedeki olasılık akıları da $x$'ten bağımsız olduklarından sınırda eşitlerse bütün tanımlı uzay boyunca birbirlerine eşit olmalıdırlar,
 %%
 \begin{equation}
-\frac { \hbar k } { m } \left( 1 - | R | ^ { 2 } \right) = \frac { \hbar q } { m } | T | ^ { 2 }
+\frac { \hbar k } { m } \left( | A | ^ { 2 }  - | B | ^ { 2 } \right) = \frac { \hbar q } { m } | C | ^ { 2 }
 \end{equation}
 %%
-yukarıdaki eşitlikle bu sonuç ifade edilmiş olur. Böylece bu tür sistemler için olasılık akısının bir 
-
-
+yukarıdaki eşitlikle bu sonuç ifade edilmiş olur. Dalga fonksiyonlarının $x=0$'daki sürekliliğinden ise,
+%%
+\begin{align}
+u_1(0) &= u_2(0) \\
+A + B  &= C
+\end{align}
+%%
+elde edilir. Basamak potansiyeli $x=0$'da süreksiz olmasına rağmen, sistemin dalga fonksiyonu $u(x)$ süreklidir, dalga fonksiyonun türevinin de $x=0$'da sürekli olacağı aşağıda verilen matematik süreçle gösterilmiş olur.
+%%
 \begin{equation}
-1 + R = T
+\begin{array} { r l } { \left( \frac { d u } { d x } \right) _ { +\varepsilon } - \left( \frac { d u } { d x } \right) _ { - \varepsilon } } & { = \int _ { - \varepsilon } ^ { +\varepsilon } d x \frac { d } { d x } \frac { d u } { d x } } \\ { } & { = \int _ { - \varepsilon } ^ { +\varepsilon } d x \frac { 2 m } { \hbar ^ { 2 } } [ V ( x ) - E ] u ( x ) = 0 } \end{array}
 \end{equation}
+%%
+Burada $\varepsilon$ sonsuz küçük bir pozitif reel sayıdır. $x=0$'ın $-\varepsilon$ ve $+\varepsilon$ civarında dalga fonksiyonlarının türevlerinin farkı yukarıdaki eşitliğin sol tarafındaki gibidir ve bu farkın integral formuda eşitliğin sağ tarafındaki gibidir. Eşitliğin sol tarafı Schrödinger denkleminden faydalanılarak $V(X)$, $E$ ve $u(x)$'i içerecek şekilde yeniden yazılabilir. Bu problemde $V(x)$ ve $E$ birer sabit sayı olduklarından, $\pm \varepsilon \rightarrow \infty$ olduğundan ve böylece $u(x)$'in sürekliliği gerçekleştiğinden bu integralin cevabı sıfır olacaktır. Böylece bu tür problemler için dalga fonksiyonlarının türevlerinin de  sürekli oldukları kabul edilebilir. 
 
-
-
+Yeri geldiğinden ve daha sonra kullanılacağı için şimdiden belirtmek gerekir ki, bu süreklilik $\lambda \delta(x-a)$ benzeri Dirac-delta fonksiyonu içeren potansiyeller için geçerli değildir. Böyle potansiyeller için süreklilik aşağıdaki gibi bir süreksizlik halin alır.
+%%
 \begin{equation}
-\begin{array} { r l } { \left( \frac { d u } { d x } \right) _ { s } - \left( \frac { d u } { d x } \right) _ { - \varepsilon } } & { = \int _ { - \varepsilon } ^ { \varepsilon } d x \frac { d } { d x } \frac { d u } { d x } } \\ { } & { = \int _ { - s } ^ { s } d x \frac { 2 m } { \hbar ^ { 2 } } [ V ( x ) - E ] u ( x ) = 0 } \end{array}
+\begin{aligned} \left( \frac { d u } { d x } \right) _ { a + \varepsilon } - \left( \frac { d u } { d x } \right) _ { a - \varepsilon } & = \frac { 2 m } { \hbar ^ { 2 } } \int _ { a - \varepsilon } ^ { a + \varepsilon } d x \lambda \delta ( x - a ) u ( x ) \\ & = \frac { 2 m } { \hbar ^ { 2 } } \lambda u ( a ) \end{aligned}
 \end{equation}
+%%
 
-
-
-
+Bu problemde türevlerinin sürekliliği sağlandığına göre; türevlerinin sürekliliğinden,
+%%
+\begin{align}
+\frac{d}{dx}u_1(x) \bigg|_{x=0-} &= \frac{d}{dx}u_2(x) \bigg|_{x=0+} \\
+i k ( A - B ) &= i q C
+\end{align}
+%%
+elde edilir. Böylece, akının korunumunda, dalga fonksiyonları ve türevlerinin sürekliliğinden,
+%%
+%%
+\begin{align}
+\frac { \hbar k } { m } \left( | A | ^ { 2 }  - | B | ^ { 2 } \right) &= \frac { \hbar q } { m } | C | ^ { 2 }\\
+A + B  &= C \\
+i k ( A - B ) &= i q C
+\end{align}
+%%
+eşitlikleri elde edilmiş olur. Bu tür problemleri çalışılırken, klasik bir dalga sisteminin davranışına benzer olarak yansıma ve geçme olasılıklarından bahsetmek mümkündür. Bu olasılıklarla ilişklili olarak, genellikle geçme ve yansıma katsayıları
+%%
+%%
+\begin{align}
+R = \frac{|j_\text{yansıyan}|}{|j_\text{gelen}|} \\
+T = \frac{|j_\text{geçen}|}{|j_\text{gelen}|}
+\end{align}
+%%
+şeklinde tanımlanırlar. $R$ ve $T$'yi hesaplamadan önce olasılık akısı üzerinde biraz daha bilgilerimizi genişletmeliyiz: olasılık akısını üç boyutlu durum için yazacak olursak,
+%%
 \begin{equation}
-\begin{aligned} \left( \frac { d u } { d x } \right) _ { a + s } - \left( \frac { d u } { d x } \right) _ { a - s } & = \frac { 2 m } { \hbar ^ { 2 } } \int _ { a - s } ^ { a + s } d x \lambda \delta ( x - a ) u ( x ) \\ & = \frac { 2 m } { \hbar ^ { 2 } } \lambda u ( a ) \end{aligned}
+\vec j = \frac{\hbar}{2 m i} \left[
+\Psi^*(\vec r, t) \vec \nabla \Psi(\vec r, t) - 
+\Psi(\vec r, t) \vec \nabla \Psi^*(\vec r, t)
+\right]
 \end{equation}
-
-
+%%
+bir vektör davranışına sahip olduğu açıkca görülür. Basamak potansiyeli probleminde, $j_1$ aslında,
+%%
 \begin{equation}
-i k ( 1 - R ) = i q T
+\vec j_1 = \vec j_\text{gelen} + \vec j_\text{yansıyan}
 \end{equation}
+%%
+olarak yazılabilir. $j_2$ ise,
+%%
+\begin{equation}
+\vec j_2 = \vec j_\text{geçen}
+\end{equation}
+%%
+olarak yazılabilir. Akının korunumu ise,
+%%
+%%
+\begin{equation}
+\vec j_\text{gelen} + \vec j_\text{yansıyan} = \vec j_\text{geçen}
+\end{equation}
+%%
+olmasını gerektirir. Tekrar basamak potansiyeli çalıştığımız bir boyutlu duruma döner ve vektör notasyonunu bırakırsak ve yönleri sadece $+$ ve $-$ işaretleriyle temsil edersek,
+%%
+\begin{equation}
+j_\text{gelen} =  \frac{\hbar}{2 m i} \left[u^*_g \frac{d}{dx}u_g - u_g (\frac{d}{dx}u_g)^*\right]
+\end{equation}
+%%
+olur. Burada $u_g = A e ^ { i k x } $'tir. Böylece gelen akı,
+%%
+\begin{equation}
+j_\text{gelen} =  \frac{\hbar k}{m} |A|^2
+\end{equation}
+%%
+olur.
 
+
+%u_1 ( x ) \equiv u ( x ) = A e ^ { i k x } + B e ^ { - i k x }
 
 \begin{equation}
 \begin{array} { l } { R = \frac { k - q } { k + q } } \\ { T = \frac { 2 k } { k + q } } \end{array}
