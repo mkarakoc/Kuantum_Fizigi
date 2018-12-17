@@ -228,21 +228,14 @@ Bu problemde türevlerinin sürekliliği sağlandığına göre; türevlerinin s
 i k ( A - B ) &= i q C
 \end{align}
 %%
-elde edilir. Böylece, akının korunumunda, dalga fonksiyonları ve türevlerinin sürekliliğinden,
+elde edilir.
+
+Bu tür problemleri çalışılırken, klasik bir dalga sisteminin davranışına benzer olarak yansıma ve geçme olasılıklarından bahsetmek mümkündür. Bu olasılıklarla ilişklili olarak, genellikle yansıma ve geçme katsayıları, sırasıyla,
 %%
 %%
 \begin{align}
-\frac { \hbar k } { m } \left( | A | ^ { 2 }  - | B | ^ { 2 } \right) &= \frac { \hbar q } { m } | C | ^ { 2 }\\
-A + B  &= C \\
-i k ( A - B ) &= i q C
-\end{align}
-%%
-eşitlikleri elde edilmiş olur. Bu tür problemleri çalışılırken, klasik bir dalga sisteminin davranışına benzer olarak yansıma ve geçme olasılıklarından bahsetmek mümkündür. Bu olasılıklarla ilişklili olarak, genellikle geçme ve yansıma katsayıları
-%%
-%%
-\begin{align}
-R = \frac{|j_\text{yansıyan}|}{|j_\text{gelen}|} \\
-T = \frac{|j_\text{geçen}|}{|j_\text{gelen}|}
+R \equiv \frac{|j_\text{yansıyan}|}{|j_\text{gelen}|} \\
+T \equiv \frac{|j_\text{geçen}|}{|j_\text{gelen}|}
 \end{align}
 %%
 şeklinde tanımlanırlar. $R$ ve $T$'yi hesaplamadan önce olasılık akısı üzerinde biraz daha bilgilerimizi genişletmeliyiz: olasılık akısını üç boyutlu durum için yazacak olursak,
@@ -279,25 +272,67 @@ olmasını gerektirir. Tekrar basamak potansiyeli çalıştığımız bir boyutl
 j_\text{gelen} =  \frac{\hbar}{2 m i} \left[u^*_g \frac{d}{dx}u_g - u_g (\frac{d}{dx}u_g)^*\right]
 \end{equation}
 %%
-olur. Burada $u_g = A e ^ { i k x } $'tir. Böylece gelen akı,
+olur. Burada $u_g = A e ^ { i k x } $ ile verilir ve $x=-\infty$'den gelen dalga fonksiyonunu temsil eder. Böylece gelen akı,
 %%
 \begin{equation}
 j_\text{gelen} =  \frac{\hbar k}{m} |A|^2
 \end{equation}
 %%
-olur.
-
-
-%u_1 ( x ) \equiv u ( x ) = A e ^ { i k x } + B e ^ { - i k x }
-
+olur. Benzer şekilde, yansıyan dalga $u_y = B e ^ { -i k x } $ ve geçen dalga $u_t = C e ^ { i q x } $ ifadeleri ile tanımlanırlar. Böylece yansıyan ve geçen olasılık akıları,
+%%
 \begin{equation}
-\begin{array} { l } { R = \frac { k - q } { k + q } } \\ { T = \frac { 2 k } { k + q } } \end{array}
+j_\text{yansıyan} =  -\frac{\hbar k}{m} |B|^2 \quad \text{ ve } \quad
+j_\text{geçen} =  \frac{\hbar q}{m} |C|^2 
 \end{equation}
-
-
+%%
+olarak bulunurlar. Yansıma ve geçme katsayıları ise,
+%%
+%%
 \begin{equation}
-\begin{array} { l } { \frac { \hbar k } { m } | R | ^ { 2 } = \frac { \hbar k } { m } \left( \frac { k - q } { k + q } \right) ^ { 2 } } \\ { \frac { \hbar q } { m } | T | ^ { 2 } = \frac { \hbar k } { m } \frac { 4 k q } { ( k + q ) ^ { 2 } } } \end{array}
+R =  \frac{|B|^2}{|A|^2} \quad \text{ ve } \quad
+T =  \frac{q}{k} \frac{|C|^2}{|A|^2}
 \end{equation}
+%%
+olarak bulunurlar. $R$ ve $T$'yi bilinmeyen $A$, $B$ ve $C$ kat sayılarından
+kurtarabiliriz. Bunun için akının korunumundan, dalga fonksiyonlarının ve türevlerinin sürekliliğinden,
+%%
+%%
+\begin{align}
+\frac { \hbar k } { m } \left( | A | ^ { 2 }  - | B | ^ { 2 } \right) &= \frac { \hbar q } { m } | C | ^ { 2 }\\
+A + B  &= C \\
+i k ( A - B ) &= i q C
+\end{align}
+%%
+elde ettiğimiz yukarıdaki eşitlikleri kullanabiliriz. Akının korunumundan elde ettiğimiz denklemin yardımıyla, kolayca,
+%%
+\begin{equation}
+T + R =  \frac{q}{k} \frac{|C|^2}{|A|^2} + \frac{|B|^2}{|A|^2} = 1
+\end{equation}
+%%
+olacağı gösterilebilir. Sürekliliklerden elde edilen denklemlerden de,
+%%
+\begin{equation}
+B =  \frac{k-q}{k+q} A \quad \text{ ve } \quad
+C =  \frac{2k}{k+q} A
+\end{equation}
+%%
+olacağı gösterilebilir. Böylece $R$ ve $T$,
+%%
+\begin{equation}
+R =  \left(\frac{k-q}{k+q}\right)^2  \quad \text{ ve } \quad
+T =  \frac{4kq}{(k+q)^2}
+\end{equation}
+%%
+olarak bulunurlar.
+
+\begin{figure}[!hbtp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{figurler/Basamak_Potansiyeli_TR_EV0_grafigi}
+	\caption{}
+	\label{fig:basamakpotansiyelitrev0grafigi}
+\end{figure}
+
+
 
 
 \begin{equation}
