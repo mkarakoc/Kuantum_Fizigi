@@ -303,7 +303,7 @@ A + B  &= C \\
 i k ( A - B ) &= i q C
 \end{align}
 %%
-elde ettiğimiz yukarıdaki eşitlikleri kullanabiliriz. Akının korunumundan elde ettiğimiz denklemin yardımıyla, kolayca,
+elde ettiğimiz yukarıdaki eşitlikleri kullanabiliriz. Olasılık akısının korunumundan elde ettiğimiz denklemin yardımıyla, kolayca,
 %%
 \begin{equation}
 T + R =  \frac{q}{k} \frac{|C|^2}{|A|^2} + \frac{|B|^2}{|A|^2} = 1
@@ -323,32 +323,66 @@ R =  \left(\frac{k-q}{k+q}\right)^2  \quad \text{ ve } \quad
 T =  \frac{4kq}{(k+q)^2}
 \end{equation}
 %%
-olarak bulunurlar.
+olarak bulunurlar. 
+
+$E<V_0$ durumu için dalga fonksiyonu,
+%%
+\begin{equation}
+u ( x ) = T e ^ { - \eta x }
+\end{equation}
+%%
+halini alır. Burada $\eta$ ($V_0>E$ olduğundan),
+%%
+\begin{equation}
+\frac { 2 m} { \hbar ^ { 2 } }  \left(V _ { 0 } -E \right) = \eta ^ { 2 }
+\end{equation}
+%%
+olarak tanımlanır. Benzer bir matematiksel süreçten geçilerek hesaplar yapıldığında dalga fonksiyonu genlikleri arasınada,
+%%
+\begin{equation}
+B =  \frac{ik + \eta}{i k- \eta} A \quad \text{ ve } \quad
+C =  \frac{i 2k}{i k-\eta} A
+\end{equation}
+%%
+ilişkileri bulunur. Olasılık akıları hesaplandında, gelen ve yansıyan akıların aynı kaldığı, fakat geçen akının sıfır olduğu görülecektir. Bu nedenle her ne kadar basamağın içine giren dalga fonksiyonunun genliği $C$ sıfır olmasa da $j_\text{geçen} = 0$ olduğundan, geçme olasılığı katsayısı,
+\begin{equation}
+T = \frac{|j_\text{geçen}|}{|j_\text{gelen}|} = 0
+\end{equation}
+%%
+olur. Yansıma olasılığı katsayısı ise,
+%%
+\begin{equation}
+R = \frac{B B^*}{A A^*} = \left(  \frac{ik + \eta}{i k- \eta} \right) \left( \frac{ik - \eta}{i k + \eta} \right)  = 1
+\end{equation}
+%%
+olur. Aşağıdaki şekillerde $R$, $T$ ve dalga fonksiyonlarının genliklerinin $E/V_0$ oranına göre davranışları gösterilmiştir.
 
 \begin{figure}[!hbtp]
-	\centering
-	\includegraphics[width=0.7\linewidth]{figurler/Basamak_Potansiyeli_TR_EV0_grafigi}
-	\caption{}
-	\label{fig:basamakpotansiyelitrev0grafigi}
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{Basamak_Potansiyeli_TR_EV0_grafigi.png}
+		\caption{Yansıma ve geçiş katsayılarının $E/V_0$'a göre davranışları.}
+		\label{fig:basamakpotansiyelitrev0grafigi}
+	\end{minipage}
+	\begin{minipage}{.5\textwidth}
+		\centering
+		\includegraphics[width=1.0\linewidth]{Basamak_Potansiyeli_ABC_EV0_grafigi.png}
+		\caption{Dalga fonksiyonu genliklerinin $E/V_0$'a göre davranışları.}
+		\label{fig:basamakpotansiyeliABCev0grafigi}
+	\end{minipage}
 \end{figure}
 
-
-
-
-\begin{equation}
-u ( x ) = T e ^ { - | q | x }
-\end{equation}
-
-
-\begin{equation}
-| R | ^ { 2 } = \left( \frac { k - i | q | } { k + i | q | } \right) \left( \frac { k - i | q | } { k + i | q | } \right) ^ { * } = 1
-\end{equation}
-
-
-\begin{equation}
-T = \frac { 2 k } { k + i | q | }
-\end{equation}
-
+Elde edilen sonuçlar hakkında bazı fiziksel yorumlar yapılabilir:
+\begin{itemize}
+	\item Klasik mekanik açısından bakıldığında buradaki yansıma olayı ilginçtir. Çünkü, bir potansiyelden geçen bir parçacığın kinetik enerjisini kaybedip, potansiyel enerjiye dönüştürerek, yavaşlaması beklenir. Burada gözlediğimiz yansıma davranışı ancak ilgilendiğimiz sistemdeki parçacıkların dalga davranışı gösterdiklerini ve dalga mekaniği davranışına uygun davrandıklarını göstermektedir.
+	
+	\item $T + R = 1$ olması olasılık akısının korunumunun geçerliliğini onaylamaktadır. Eğer bütün parçacıkların, bütün uzay içerisinde var olma olasılığı $1$ ise yansıma ve geçme olasılıklarının toplamının $1$ olması, korunumun sağlandığını göstermektedir.
+	
+	\item $E>>V_0$ için $R\rightarrow0$ ve $q\rightarrow k$, bunun nedeni kolayca anlaşılabilir. Parçacığın veya sistemin enerjisi arttıkça basamak potansiyelinin etkisi neredeyse yok gibidir.
+	
+	\item $E<V_0$ ise
+	
+\end{itemize}
 
 \subsection{Sonlu Potansiyel Kuyusu}
 
