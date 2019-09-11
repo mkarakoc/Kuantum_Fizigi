@@ -11,3 +11,5 @@ Notlar daha yeni yeni hazırlandıklarından bir kaç uyarı kaçınılmazdır.
 Jupyter Notebook
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mkarakoc/Kuantum_Fizigi/master)
+
+[![](https://nbviewer.jupyter.org/static/img/nav_logo.svg)](https://nbviewer.jupyter.org/github/mkarakoc/Kuantum_Fizigi/tree/master/programlar/)
