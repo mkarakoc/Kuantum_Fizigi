@@ -2,7 +2,7 @@
 
 Bu ders notları 2019-2020 güz yarıyılı için hazırlanmaktadır. 
 
-<img width=100 src='https://github.com/mkarakoc/Kuantum_Fizigi/blob/master/dersnotlari/figurler/blackbody_spect_vs_lambdaT.png'>
+<img width=300 src='https://github.com/mkarakoc/Kuantum_Fizigi/blob/master/dersnotlari/figurler/blackbody_spect_vs_lambdaT.png'>
 
 Ders notları için aşağıdaki uyarıları dikkate alınız.
 
@@ -14,6 +14,4 @@ Ders notları için aşağıdaki uyarıları dikkate alınız.
 
 | Etkileşimli  | Statik   |
 |---|---|
-| [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mkarakoc/Kuantum_Fizigi/master)  | [
-
-<img width=100 src='https://nbviewer.jupyter.org/static/img/nav_logo.svg'>](https://nbviewer.jupyter.org/github/mkarakoc/Kuantum_Fizigi/tree/master/programlar/)  |
+| [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mkarakoc/Kuantum_Fizigi/master)  | [<img width=100 src='https://nbviewer.jupyter.org/static/img/nav_logo.svg'>](https://nbviewer.jupyter.org/github/mkarakoc/Kuantum_Fizigi/tree/master/programlar/)  |
