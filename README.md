@@ -1,8 +1,8 @@
 # Kuantum Fiziği / FİZ 319
 
-Bu ders notları 2018-2019 güz yarıyılı için hazırlanmaktadır. 
+Bu ders notları 2019-2020 güz yarıyılı için hazırlanmaktadır. 
 
-Notlar daha yeni yeni hazırlandıklarından bir kaç uyarı kaçınılmazdır.
+Ders notları için aşağıdaki uyarıları dikkate alınız.
 
 1. Bir çok hata içeriyor olabilirler.
 2. Bütün materyal tam anlamıyla özgün değildir.
