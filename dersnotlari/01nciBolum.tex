@@ -114,7 +114,7 @@ On dokuzuncu yüzyılın başlarında fizikçilerin en çok ilgilendikleri konul
 Kirchhoff ``Işık ve ısının yayılımı ve soğurulması arasındaki ilişki" \cite{book:Jammer, Kirchhoff1859} adlı makalesinde etrafları mükemmel yansıtıcılarla sarılmış iki yayıcı ve soğurucu sonsuz paralel plakanın ısıl denge durumundaki ışınım alış verişlerini inceledi. Plakaların ışın yayma, soğurma ve yansıtma özelikleri için sırasıyla $E(\lambda, T)$, $A$ ve $R$ ifadelerini aşağıdaki gibi tanımladı:
 
 \begin{itemize}
-\item $E(\lambda, T)$: yayınlanma gücü herhangi bir $T$ sıcaklığında  herhangi bir $\lambda$ dalga boyundaki ışımanın birim alan ve birim zaman başına şiddetini tanımlar ve birimi $W/m^2\equiv \frac{J}{s} \frac{1}{m^2}$'dir.
+\item $E(\lambda, T)$ (yayınlanma gücü): herhangi bir $T$ sıcaklığında  birim dalga boyuna ışımanın birim alan ve birim zaman başına şiddetini tanımlar ve birimi W/m$^3\equiv \frac{\text{J}}{\text{s}} \frac{1}{\text{m}^3}$'dir.
 \item $A$ plakanın kendi üzerine gelen ışının plaka tarafından soğurulma oranıdır.
 \item $R$ plakanın kendi üzerine gelen ışının plaka tarafından yansıtılma  oranıdır.
 \item Bu tanımlara göre $A + R = 1$'dir.
@@ -162,14 +162,14 @@ Kirchhoff bu yasaya dayanarak kovuğun içinde termal ışımanın homojen olmas
 
 %% The third law of thermodynamics is sometimes stated as follows, regarding the properties of closed systems in thermodynamic equilibrium: The entropy of a system approaches a constant value as its temperature approaches absolute zero.
 
-Kovuğun içindeki enerji yoğunluğunun ($w(\lambda,T)$) yayınlama gücü $E(\lambda,T)$ ile olan ilişkisi aşağıdaki gibidir,
+Kovuğun içinde $\lambda$ ile $\lambda+d\lambda$ dalga boyları aralığındaki ışımalar için enerji yoğunluğu $w(\lambda,T) d\lambda$'dır ve yayınlama gücü $E(\lambda,T)$ ile olan ilişkisi aşağıdaki gibidir,
  
 \begin{equation}
 \label{eq:emissiveDensity}
 w(\lambda,T) = \frac{4 E(\lambda,T)}{c}.
 \end{equation}
 %%
-burada $c$ ışığın boşluktaki hızıdır ve $w$'nin birimi $J/m^3$'tür. Wilhelm Wien 1894 yılında enerji yoğunluğunun (deneysel verilerin bir sonucu olarak), 
+burada $c$ ışığın boşluktaki hızıdır ve $w(\lambda,T)d\lambda$'nin birimi J/m$^3$'tür. Wilhelm Wien 1894 yılında enerji yoğunluğunun (deneysel verilerin bir sonucu olarak), 
 %%
 \begin{equation}
 \label{eq:f_lambdaT}
@@ -198,12 +198,12 @@ w(\lambda,T)|d\lambda| = w(c/\nu,T)\frac{c}{\nu^2}|d\nu|
 \label{eq:uw_densities2}
 u(\nu,T) \equiv w(c/\nu,T)\frac{c}{\nu^2}.
 \end{equation}
-
-Tanımlanan yeni ifade ile önceki ifade arasında,
+%%
+Tanımlanan yeni ifade ile önceki ifade arasında (SI birimleri: $[w(\lambda,T)]$ = J/m$^4$ ve $[u(\nu,T)]$~=~J~s/m$^3$),
 
 \begin{equation}
 \label{eq:uw_densities3}
-u(\nu,T) = w(\lambda,T)\left|\frac{d\lambda}{d\nu}\right|
+u(\nu,T)|d\nu| = w(\lambda,T)|d\lambda|
 \end{equation}
 %%
 bağıntısı ortaya çıkar. Böylece Wien'in önerdiği tek parametreli bilinmeyen fonksiyon,
@@ -338,14 +338,14 @@ sonucuna ulaşılır. Gerekli matematiksel işlemler tamamlandığında \cite{bo
 %%
 olarak bulunur. Elde edilen bu sonuç birim hacimdeki harmonik osilatör sayısı ($\frac{8 \pi \nu^{2}}{c^{3}}$) ile çarpıldığında Denk. \ref{eq:Planck}'deki Planck dağılımı elde edilmiş olur. 
 
-Şekil \ref{fig:karaSpektrum_nu} ve \ref{fig:karaSpektrum_lambda}'te sürekli çizgiyle çizilen dağılım Planck dağılımıdır ve deneysel verileri en iyi açıklayan dağılımdır. Ek olarak Planck enerji yoğunluğu dağılımının bütün frekanslar üzerinden integrali alındığında Rayleigh-Jeans gibi ıraksamaz ve sonlu bir değerde kalır. Integral ve sonucu aşağıdaki gibidir.
+Şekil \ref{fig:karaSpektrum_nu} ve \ref{fig:karaSpektrum_lambda}'te sürekli çizgiyle çizilen dağılım Planck dağılımıdır ve deneysel verileri en iyi açıklayan dağılımdır. Ek olarak Planck enerji yoğunluğu dağılımının bütün frekanslar üzerinden integrali alındığında Rayleigh-Jeans gibi ıraksamaz ve sonlu bir değerde kalır. Integralin sonucunda toplam enerji yoğunluğu ($[U(T)]=$J/m$^3$) aşağıdaki gibi olur.
 %%
 \begin{equation}
 \label{eq:Planck_U_total}
 U(T) = \frac{8 \pi h}{c^{3}} \int\limits_0^\infty d\nu \frac{\nu^{3}}{e^{\frac{h \nu}{k_{B} T}} - 1} = a T^4
 \end{equation}
 %%
-Eğer integral yayınım gücü yoğunluğu üzerinden alınmış olsaydı sonuç,
+Eğer integral yayınım gücü yoğunluğu üzerinden alınmış olsaydı sonuçta toplam birim alan başına güç ($[E(T)]=$W/m$^2$) ise,
 %%
 \begin{equation}
 \label{eq:Planck_E_total}
