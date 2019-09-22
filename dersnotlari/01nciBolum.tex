@@ -534,9 +534,9 @@ Bu denklem ile Einstein fotoelektrik etkinin üç sonucunu da izah etmiş oldu.
 \subsection{Compton Etkisi}
 Planck ve Einstein'in katkı sunduğu ışık kuantumlarının (fotonların) enerji taşıyan parçacıklar olduğu kavramını destekler nitelikte Einstein 1916 yılında yaptığı çalışmayla fotonların momentum taşımaları gerektiği sonucuna ulaşmıştır. Bu ulaşılan teorik sonuc Arthur H. Compton tarafından gerçekleştirilen deneyle doğrulanmıştır.
 
-Compton etkisi (saçılması veya olayı) olarak bilinen bu deneyde $X$-ışınları metalik bir yüzeye gönderilmiş ve bu metalden saçılan fotonların dalga boyları, saçılma açıları ve şiddetleri kaydedilmiştir. Şekil \ref{fig:compton_exp}'de verilen deneysel verilere göre metal plakaya gönderilen fotonların bir kısmının dalga boyu değişmezken bir kısmının fark edilir miktarda değiştiği (kaydığı) anlaşılmaktadır.
+Compton etkisi (saçılması veya olayı) olarak bilinen bu deneyde $X$-ışınları metalik bir yüzeye gönderilmiş ve bu metalden saçılan fotonların dalga boyları, saçılma açıları ve şiddetleri kaydedilmiştir. Şekil \ref{fig:compton_exp}'de verilen deneysel verilere göre metal plakaya gönderilen fotonların bir kısmının dalga boyu değişmezken bir kısmının fark edilir miktarda değiştiği anlaşılmaktadır.
 
-Klasik EM teorinin temelleri üzerine bu tür deneylerin açıklanması için J. J. Thomson \cite{Thomson1906}  tarafından geliştirilen teoriye göre saçılan ışığın enerjisi gelen ışığın dalga boyundan bağımsızdı. Fakat, Compton, Planck ve Einstein'in yolunu takip ederek ışığın bir parçacık gibi davranması gerektiği varsayımıyla deney verilerini açıklamayı başarabilmiştir.
+Klasik EM teorinin temelleri üzerine bu tür deneylerin açıklanması için J. J. Thomson \cite{Thomson1906}  tarafından geliştirilen teoriye göre saçılan ışığın enerjisi gelen ışığın dalga boyundan bağımsızdı. Fakat, Compton, Planck ve Einstein'in yolunu takip ederek, ışığın bir parçacık gibi davranması gerektiği varsayımıyla yaptığı deneyin verilerini açıklamayı başarabilmiştir.
 
 Parçacık modeline göre enerji ve momentum korunumu için,
 \begin{align}
@@ -554,22 +554,36 @@ eşitlikleri yazılabilir. Burada $E_{\gamma} = h\nu$ ve $E_{\gamma'} = h\nu'$ g
 \label{eq:compton_E_conv3}
 h\nu + m_e c^2 = h\nu' + \sqrt{(p_{e'}c)^2 + (m_e c^2)^2}
 \end{align}
+%%%%%%%%%%
+\noindent denklemi elde edilir. Bu denklem yeniden düzenlenerek saçılan elektronun momentumu bulunabilir,
+\begin{align}
+\label{eq:compton_E_conv4}
+p_{e'}^{\, 2}c^2 = (h\nu - h\nu' + m_{e}c^2)^2-m_{e}^2c^4.
+\end{align}
+%%
+Momentumun korunumunu belirleyen Denk. \ref{eq:compton_E_conv2} yeniden düzenlenirse,
+%%
+\begin{align}
+\label{eq:compton_E_conv5}
+\vec{p}_{e'} = \vec{p}_\gamma - \vec{p}_{\gamma'}
+\end{align}
+%%
+halini alır. Saçılan elektronun momentumunun kendisiyle iç (skaler) çarpımı sonucunda,
+\begin{align}
+\label{eq:compton_E_conv6}
+p_{e'}^{\, 2} &= \vec{p}_{e'}\cdot\vec{p}_{e'} = (\vec{p}_\gamma - \vec{p}_{\gamma'}) \cdot (\vec{p}_\gamma - \vec{p}_{\gamma'}) \\
+&= p_{\gamma}^{\, 2} + p_{\gamma'}^{\, 2} - 2 p_{\gamma}\, p_{\gamma'} \cos\theta. 
+\end{align}
+elde edilir. Elde edilen son eşitliğin her iki tarafı $c^2$ ile çarpılır ve foton momentumları yerine $p = E/c = h\nu$ yazılabileceği hatırlanırsa,
 %%
 \begin{figure}[hbtp]
 \begin{minipage}{0.45\textwidth}
 {\center
 \includegraphics[scale=.8]{compton_exp_data.png}
 %% http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/compdat.html#c1
-\caption{Compton'un deney sonuçları \cite{book:EisbergResnick}. $0^\circ$'den $135^\circ$ dereceye kadar çizilen çizgi gelen fotonun dalga boyunu ($\lambda$), diğer çizgiler ise saçılan fotonun dalga boyunu ($\lambda'$) göstermektedir.}
+%% https://phys.libretexts.org/Bookshelves/University_Physics/Book%3A_University_Physics_(OpenStax)/Map%3A_University_Physics_III_-_Optics_and_Modern_Physics_(OpenStax)/6%3A_Photons_and_Matter_Waves/6.3%3A_The_Compton_Effect
+\caption{Compton'un deney sonuçları \cite{Compton1923, book:EisbergResnick, web:hyperphysics_compton}. $0^\circ$'den $135^\circ$ dereceye kadar çizilen çizgi gelen fotonun (aslında neredeyse kinetik enerji ve momentumunu hiç kaybetmeden saçılan fotonun \cite{web:hyperphysics_compton}) dalga boyunu ($\lambda$) , diğer çizgiler ise saçılan fotonun dalga boyunu ($\lambda'$) göstermektedir.}
 \label{fig:compton_exp}}
-%%%%%%%%%%
-\noindent\rule{.98\textwidth}{0.4pt}
-%%
-denklemi elde edilir. Bu denklem yeniden düzenlenerek saçılan elektronun momentumu bulunabilir,
-\begin{align}
-\label{eq:compton_E_conv4}
-p_{e'}^{\, 2}c^2 = (h\nu - h\nu' + m_{e}c^2)^2-m_{e}^2c^4.
-\end{align}
 %%
 \end{minipage}
 %%
@@ -588,21 +602,6 @@ p_{e'}^{\, 2}c^2 = (h\nu - h\nu' + m_{e}c^2)^2-m_{e}^2c^4.
 
 %%%%%%%%%%
 \noindent\rule{.98\textwidth}{0.4pt}
-%%
-Momentumun korunumunu belirleyen Denk. \ref{eq:compton_E_conv2} yeniden düzenlenirse,
-%%
-\begin{align}
-\label{eq:compton_E_conv5}
-\vec{p}_{e'} = \vec{p}_\gamma - \vec{p}_{\gamma'}
-\end{align}
-%%
-halini alır. Saçılan elektronun momentumunun kendisiyle iç (skaler) çarpımı sonucunda,
-\begin{align}
-\label{eq:compton_E_conv6}
-p_{e'}^{\, 2} &= \vec{p}_{e'}\cdot\vec{p}_{e'} = (\vec{p}_\gamma - \vec{p}_{\gamma'}) \cdot (\vec{p}_\gamma - \vec{p}_{\gamma'}) \\
- &= p_{\gamma}^{\, 2} + p_{\gamma'}^{\, 2} - 2 p_{\gamma}\, p_{\gamma'} \cos\theta. 
-\end{align}
-elde edilir. Elde edilen son eşitliğin her iki tarafı $c^2$ ile çarpılır ve foton momentumları yerine $p = E/c = h\nu$ yazılabileceği hatırlanırsa,
 %%
 \begin{align}
 \label{eq:compton_E_conv7}
@@ -635,6 +634,8 @@ dalga boyundaki kaymayı veren denklem elde edilmiş olur. $h/m_e c \eqsim 2.4\t
 \end{minipage}
 \end{figure}
 
+
+\newpage
 
 \subsection{Parçacık mı, Dalga mı?}
 
@@ -671,11 +672,16 @@ olacağını öne sürdü. de Broglie fotonu hafif de olsa kütleli kabul etmiş
 \end{minipage}
 \end{figure}
 
-Davisson ve Germer Şekil \ref{fig:davisson_germer1}'deki deney düzeneğinde hızlarını belirledikleri elektron demetlerini Nikel kristal hedefe göndererek deneylerini gerçekleştirmişlerdir. Bu hedef Şekil \ref{fig:davisson_germer4}'teki gibi bir geometrik yapıya ve Şekil \ref{fig:davisson_germer3}'teki bir kristal yapıya sahiptir. Uygun momentuma sahip elektronlar şekildeki gibi bir kristal yapıdan saçıldıklarında eğer dalga özelliğine sahiplerse yıkıcı ve yapıcı girişimler yapacaklardır. Bu durumda kısmen Bragg yasasına uyarlar. Böylece Şekil \ref{fig:davisson_germer5}'da verilen denklemlere göre kırınıma uğrayıp yapıcı girişim yapan elektronların dalga boyları bulunabilir. Davisson ve Germer'in deneyinde elde edilen sonuçlar Şekil \ref{fig:davisson_germer4}'ün alt kısmında görülmektedir. Bragg yasasıyla ilişkili olarak elektronların dedektörde gözlenen şiddetlerinin davranışları anlaşılabilir.
+Davisson ve Germer Şekil \ref{fig:davisson_germer1}'teki deney düzeneğinde hızlarını belirledikleri elektron demetlerini Nikel kristal hedefe göndererek deneylerini gerçekleştirmişlerdir. Bu hedef Şekil \ref{fig:davisson_germer4}'daki gibi bir geometrik yapıya ve Şekil \ref{fig:davisson_germer3}'teki bir kristal yapıya sahiptir. Uygun momentuma sahip elektronlar şekildeki gibi bir kristal yapıdan saçıldıklarında eğer dalga özelliğine sahiplerse yıkıcı ve yapıcı girişimler yapacaklardır. Bu durumda kısmen Bragg yasasına uyarlar. Böylece Şekil \ref{fig:davisson_germer5}'de verilen denklemlere göre kırınıma uğrayıp yapıcı girişim yapan elektronların dalga boyları bulunabilir. Davisson ve Germer'in deneyinde elde edilen sonuçlar Şekil \ref{fig:davisson_germer4}'nın alt kısmında görülmektedir. Bragg yasasının dalgaların yapıcı veya yıkıcı girişimlerini izah eden formülüyle (Denk. \ref{eq:bragg}) ilişkili olarak elektronların spektrumlarındaki tepe ve çukur değerlerinin varlığı anlaşılabilir.
+%%
+\begin{align}
+\label{eq:bragg}
+n\lambda = 2 d \sin\theta
+\end{align}
 
 Davisson ve Germer'den sonra ise moleküler hidrojen, helyum ve yavaş nötronlarla da benzeri deneyler gerçekleştirilmiş ve parçacıkların dalga yapısındaki davranışları tekrar tekrar gözlenmiştir \cite{book:Gasiorowicz}.
 
-Çok küçüklerin dünyasında (mikroskopik seviyede) dalga davranışını gözlemek mümkünken, büyüklerin dünyasında (makroskopik seviyede) dalga davranışını gözlemek mümkün değildir. Örneğin, 0.1 mm yarıçaplı, $4\times 10^{-3}$~mg kütleli ve 10 cm/s ile ilerleyen bir su damlası için De Broglie dalga boyu,
+Çok küçüklerin dünyasında (mikroskopik seviyede) parçacıkların dalga davranışını gözlemek mümkünken, büyüklerin dünyasında (makroskopik seviyede) parçacıkların dalga davranışını gözlemek mümkün değildir. Örneğin, 0.1 mm yarıçaplı, $4\times 10^{-3}$~mg kütleli ve 10 cm/s ile ilerleyen bir su damlası için De Broglie dalga boyu,
 %%
 \begin{equation*}
 \lambda = h/p = 6.6\times 10^{-27} \text{[erg s]}\,/\,(4\times 10^{-5} \text{[g cm/s]}) \eqsim 1.6\times 10^{-22}\,\text{cm}
@@ -713,7 +719,17 @@ iken, Proton'un yarı çapı $10^{-13}$~cm'dir. Bu nedenle günlük yaşantımı
 \YAZILACAK
 
 \href{https://tr.wikipedia.org/wiki/%C3%87ift_yar%C4%B1k_deneyi}{Bu linkten okunabilir. }
+
+%% http://toutestquantique.fr/en/duality/
+\href{https://youtu.be/qCmtegdqOOA}{Çift yarık animasyonu}
+
+%% The Royal Institution
+\href{https://youtu.be/O81Cilon10M}{Parçacık/Dalga?}
+
+	
 %% https://tr.wikipedia.org/wiki/Çift_yarık_deneyi
+%% Matter–wave interference of particles selected from a molecular library with masses exceeding 10 000 amu
+%% https://pubs.rsc.org/en/content/articlelanding/2013/CP/c3cp51500a#!divAbstract
 
 \begin{figure}[hbtp]
 \center
@@ -948,6 +964,7 @@ olarak bulunur. Bu ışınım elektromanyetik spektrumun morötesi kısmında ye
 \bibliography{quantumBIB}{}
 %% https://www.sharelatex.com/learn/latex/bibtex_bibliography_styles
  \bibliographystyle{plain}
+ 
 %% \bibliographystyle{alpha}
 %%\bibliographystyle{apalike}
 \end{document}
