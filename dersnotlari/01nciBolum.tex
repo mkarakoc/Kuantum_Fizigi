@@ -9,6 +9,7 @@
 %\usepackage[T1]{fontenc}
 
 \usepackage{amsmath,amssymb,mathabx}%\for eqref
+\usepackage{siunitx} %% SI units
 \usepackage{lscape}
 
 \usepackage{hyperref}
@@ -637,7 +638,7 @@ dalga boyundaki kaymayı veren denklem elde edilmiş olur. $h/m_e c \eqsim 2.4\t
 
 \newpage
 
-\subsection{Parçacık mı, Dalga mı?}
+\subsection{Elektron: Parçacık mı, Dalga mı?}
 
 1923'te {\it Louis de Broglie} ``Işık paketinin geçici teorisi" adlı çalışmasında her ışık paketinin eylemsiz kütlesinin $m_0$ olması gerektiğini ve
 bu kütle çok küçük olduğundan ışık paketinin (fotonun) hızının neredeyse ışık hızı $c$ çok yakın olması gerektiğini öne sürmüştür. Böylece bir fotonun bütün enerjisi için,
@@ -763,11 +764,13 @@ iken, Proton'un yarı çapı $10^{-13}$~cm'dir. Bu nedenle günlük yaşantımı
 
 Henri Becquerel ve Marie Cruie'nin öncülüğüne yaptığı radyoaktivite çalışmaları sonucunda, atomun iç yapısını çalışmak için gerekli araçlar ortaya çıkmış oldu. Bunlardan birisi ilk önceleri $\alpha$ (alfa) parçacıkları olarak adlandırılmış parçacıklardır, çok daha sonra helyum atomunun çekirdeği olduğu anlaşılmıştır. 
 
-Ernest Rutherford'un gözetiminde H. W. Geiger  ve E. Marsden tarafından 1908'de altın bir plakadan alfa parçacıklarının saçılımı deneyleri gerçekleştirilmiştir. Şekil \ref{fig:rutherfod_bohr_atom} temsili gösterilen Thomson atom modeline göre gerçekleştirilen deneylerin sonucunda alfaların çok küçük açılarla saçılacakları öngörülebilir. Çünkü elektronun kütlesi alfa gibi büyük kütleli bir parçacığın büyük açılı saçılmalaya uğraması için yeterli değildir. Modele göre elektronları çevreleyen pozitif bulut (!) ise gerekli saçılmayı sağlayacak kadar yoğun değildir.
+Ernest Rutherford'un gözetiminde H. W. Geiger  ve E. Marsden tarafından 1908'de altın bir plakadan alfa parçacıklarının saçılımı deneyleri gerçekleştirilmiştir. Şekil \ref{fig:rutherfod_bohr_atom} temsili gösterilen Thomson atom modeline göre gerçekleştirilen deneylerin sonucunda alfaların çok küçük açılarla saçılacakları öngörülebilir. Çünkü elektronun kütlesi alfa gibi büyük kütleli bir parçacığın büyük açılı saçılmalara uğraması için yeterli değildir. Modele göre elektronları çevreleyen pozitif bulut (!) ise gerekli saçılmayı sağlayacak kadar yoğun değildir.
 
-Fakat deneylerde nadiren de olsa, Şekil \ref{fig:rutherfod_bohr_atom}'da görüldüğü üzere, büyük açılı saçılmaların gerçekleştiği gözlenmiştir. Deneylerin ayrıntılı tarihçesine {\it \href{https://history.aip.org/exhibits/rutherford/sections/alpha-particles-atom.html}{Alpha Particles and the Atom}} başlıklı web sayfasından ulaşılabilir \cite{web:rutherford_bohr_atom}. Rutherford deney sonuçlarına göre gezegen atom modeli olarak da isimlendirilen atom modelini önermiştir. Bu modele göre pozitif yükler atomun merkezinde ve çok küçük bir hacimde toplanmış olmalıdır. Böylece alfa parçacıkları büyük kütleli bir merkezden daha büyük bir itici potansiyelle saçılırlar. Bu atom modeline göre elektronlar büyük kütleli ve pozitif yüklü bu merkez etrafında $1/r^2$ ile orantılı çekici bir kuvvet etkisinde dairesel veya eliptik yörüngeler izlerler.
+Thomson modelinin öngörülerine karşın deneylerde nadiren de olsa, Şekil \ref{fig:rutherfod_bohr_atom}'da görüldüğü üzere, büyük açılı saçılmaların gerçekleştiği gözlenmiştir. Deneylerin ayrıntılı tarihçesine {\it \href{https://history.aip.org/exhibits/rutherford/sections/alpha-particles-atom.html}{Alpha Particles and the Atom}} başlıklı web sayfasından ulaşılabilir \cite{web:rutherford_bohr_atom}. Rutherford deney sonuçlarına göre gezegen atom modeli olarak da isimlendirilen atom modelini önermiştir. Bu modele göre pozitif yükler atomun merkezinde ve çok küçük bir hacimde toplanmış olmalıdır. Böylece alfa parçacıkları büyük kütleli bir merkezden daha büyük bir itici potansiyelle saçılırlar. Bu atom modeline göre elektronlar büyük kütleli ve pozitif yüklü bu merkez etrafında $1/r^2$ ile orantılı çekici bir kuvvet etkisinde dairesel veya eliptik yörüngeler izlerler.
 
-Rutherford atom modeliyle büyük açılı alfa saçılmaları açıklanabilmiş, fakat yeni sorunlar ortaya çıkmıştır. Elektronlar atom çekirdeği etrafında dairesel yörüngede dönerken, merkezcil bir ivmeyle, ivmeli hareket yaparlar. Klasik elektrodinamik (KED) teoriye göre ivmeli hareket yapan her elektrik yüklü parçacık ışıma yapar. Bu durumda elektronların nasıl kararlı yörüngelere sahip oldukları açıklanamaz. Çünkü ışıma yapan elektronların enerji kaybederek ve spiral bir yörünge izleyerek \href{http://bcs.wiley.com/he-bcs/Books?action=mininav&bcsId=1533&itemId=0471057002&assetId=17327&resourceId=1342}{10$^{-10}$~s}'de çekirdeğe düşmeleri beklenir. Dahası KED'eye göre yayınlanan ışınımın frekansı elektronun periyodik hareketinin frekansı ile aynı olmalıydı. Fakat, o zamana kadar elde edilen atomik spektrum bilgileriyle bu sonuç çelişmekteydi. Anders Angstrom ve diğerlerinin sonuçlarını inceleyen Swiss Johann Balmer 1885'de ışımaların dalga boyunu veren, 
+Rutherford atom modeliyle büyük açılı alfa saçılmaları açıklanabilmiş, fakat yeni sorunlar ortaya çıkmıştır. Elektronlar atom çekirdeği etrafında dairesel yörüngede dönerken, merkezcil bir ivmeyle, ivmeli hareket yaparlar. Klasik elektrodinamik (KED) teoriye göre ivmeli hareket yapan herhangi bir elektrik yüklü parçacık ışıma yapar. Bu durumda elektronların nasıl kararlı yörüngelere sahip oldukları açıklanamaz. Çünkü ışıma yapan elektronların enerji kaybederek ve spiral bir yörünge izleyerek \href{http://bcs.wiley.com/he-bcs/Books?action=mininav&bcsId=1533&itemId=0471057002&assetId=17327&resourceId=1342}{10$^{-10}$~s}'de çekirdeğe düşmeleri beklenir. 
+
+Dahası KED'eye göre yayınlanan ışınımın frekansı elektronun periyodik hareketinin frekansı ile aynı olmalıydı. Fakat, o zamana kadar elde edilen atomik spektrum bilgileriyle bu sonuç çelişmekteydi. Anders Jonas \SI{}{\angstrom}ngstrom ve diğerlerinin sonuçlarını inceleyen Johann Jakob Balmer 1885'de ışımaların dalga boyunu veren, 
 %%
 \begin{equation}
 \frac{1}{\lambda}= R_y \left( \frac{1}{n_1^2} - \frac{1}{n_2^2} \right)
@@ -943,12 +946,19 @@ E &= \hbar \omega = \hbar 2\pi \nu = \hbar 2\pi c/\lambda, \\
 \frac{6.58\times 10^{-16} \text{ eV s/rad } 2\pi\,3\times 10^8 \text{m/s}}{10.2 \text{eV}}\eqsim 1.2\times 10^{-7} \text{m}\\
 \lambda &= 120 \text{ nm} = 1200 \text{ \AA} 
 \end{align*}
-olarak bulunur. Bu ışınım elektromanyetik spektrumun morötesi kısmında yer alır ve deneysel verilerle uyumludur. Böylece daha önce anlaşılamayan deneysel bazı sonuçlar Bohr atom modeli ile aydınlatılabilmiştir. Bohr modeli önemli bir başarı gösterse de, elektronlar ne zaman bir yörüngeden sıçrama yapmalı veya yayınlanan fotonun yönü ne olmalı gibi sorulara yanıt verememiştir. Ayrıca açısal momentumun ve seviyelerin kuantumlanma kuralı sadece dairesel yörüngeli durumlar için geçerlidir. Eliptik yörüngeler için A. Sommerfeld ve W. Wilson bir başka kuantumlanma şartı tanımlamışlardır \cite{book:Gasiorowicz, book:EisbergResnick}. 
+olarak bulunur. Bu değer Lynman serisi olarak adlandırılan ve fotonların seviyeler arası geçişlerini tanımlayan spektrumdaki bir değerdir.
+
+[\href{https://en.wikipedia.org/wiki/Hydrogen_spectral_series}{Hidrojenin Spektrum Çizgileri}]
+
+Bu ışınım elektromanyetik spektrumun morötesi kısmında yer alır ve deneysel verilerle uyumludur. Böylece daha önce anlaşılamayan deneysel bazı sonuçlar Bohr atom modeli ile aydınlatılabilmiştir. Bohr modeli önemli bir başarı gösterse de, elektronlar ne zaman bir yörüngeden sıçrama yapmalı veya yayınlanan fotonun yönü ne olmalı gibi sorulara yanıt verememiştir. Ayrıca açısal momentumun ve seviyelerin kuantumlanma kuralı sadece dairesel yörüngeli durumlar için geçerlidir. Eliptik yörüngeler için A. Sommerfeld ve W. Wilson başka bir kuantumlanma şartı tanımlamışlardır \cite{book:Gasiorowicz, book:EisbergResnick}. 
 %%
+
 
 \vspace{12pt}
 
 \href{http://hyperphysics.phy-astr.gsu.edu/hbase/FrHz.html}{Franck-Hertz deneyi.... (James Frank, Gustav Hertz (nephew of Heinrich Hertz))}
+
+\href{https://en.wikipedia.org/wiki/Franck%E2%80%93Hertz_experiment}{Wikipedia}
 
 \YAZILACAK
 
