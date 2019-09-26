@@ -15,3 +15,6 @@ Ders notları için aşağıdaki uyarıları dikkate alınız.
 | Etkileşimli  | Statik   |
 |---|---|
 | [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mkarakoc/Kuantum_Fizigi/master)  | [<img width=100 src='https://nbviewer.jupyter.org/static/img/nav_logo.svg'>](https://nbviewer.jupyter.org/github/mkarakoc/Kuantum_Fizigi/tree/master/programlar/)  |
+
+# İleri Fizik Laboratuarı / FİZ 339
+[Deney föylerine bu bağlantıdan erişebilirsiniz.](https://github.com/mkarakoc/Kuantum_Fizigi/blob/master/zz99_laboratuvar_foyu_ileri_fizik/ileri_Fizik_Laboratuvari_deney_foyu_2019.pdf)
