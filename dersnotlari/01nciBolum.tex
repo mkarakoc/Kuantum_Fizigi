@@ -963,20 +963,85 @@ Bu ışınım elektromanyetik spektrumun morötesi kısmında yer alır ve deney
 %%
 
 
+\subsection{Franck-Hertz Deneyi}
 \vspace{12pt}
+% Katot
+% https://www.merriam-webster.com/dictionary/cathode
+%1: the electrode of an electrochemical cell at which reduction occurs:
+%     a: the negative terminal of an electrolytic cell
+%     b: the positive terminal of a galvanic cell
+%2: the electron-emitting electrode of an electron tube
+%     broadly : the negative electrode of a diode
+%— compare ANODE
 
-\href{http://hyperphysics.phy-astr.gsu.edu/hbase/FrHz.html}{Franck-Hertz deneyi.... (James Frank, Gustav Hertz (nephew of Heinrich Hertz))}
 
-\href{https://en.wikipedia.org/wiki/Franck%E2%80%93Hertz_experiment}{Wikipedia}
+%%\href{http://hyperphysics.phy-astr.gsu.edu/hbase/FrHz.html}{Franck-Hertz deneyi.... (James Frank, Gustav Hertz (nephew of Heinrich Hertz))}
+%%\href{https://en.wikipedia.org/wiki/Franck%E2%80%93Hertz_experiment}{Wikipedia}
 
-\YAZILACAK
+Thompson'ın modelinden Rutherford'unkine ve sonra 1913'te Bohr'un atom modeline ulaşılmakla beraber Bohr'un modelinde önerdiği gibi elektronlar için kesikli yörüngelerin varlığına dair kanıt sunan bir deney daha ortaya çıkmamıştı. James Franck ve Gustav Hertz Bohr'un modelinin farkında olmadan 1914'te  Franck-Hertz deneyi olarak adlandırılacak olan deneylerini gerçekleştirdiler. Bohr 1915'te bu deneyin sonuçlarının kendi modelini izah ettiğini ve desteklediğini açıkladı. Fakat Franck ve Hertz bunu 1917 yılına kadar farketmediler \cite{book:Greenberger}. Her iki deneyci de 1925'te bu deneylerinin katkısı dolayısıyla 1925'te Nobel Fizik Ödülünü aldılar.
 
+\begin{figure}[hbtp]
+	\center
+	\begin{minipage}{.3\textwidth}
+		\center
+		\includegraphics[scale=.8]{FranckHertz_schema.png}
+		\caption{Franck-Hertz deney düzeneğinin şeması.}
+		\label{fig:franck_hertz_schema}
+	\end{minipage}
+	\hspace{12pt}
+	\begin{minipage}{.48\textwidth}
+		\center
+		\vspace{12pt}
+		\includegraphics[scale=.4]{Franck_Hertz_tube_horizontal.png}
+		\vspace{6pt}
+		\caption{Franck-Hertz deneyinde kullanılan civa dolu tüp. Şekilde Katot (C), Izgara (G) ve Anot (A) işaretlenmiştir.}
+		\label{fig:franck_hertz_tube}
+	\end{minipage}
+\end{figure}
+
+Franck-Hertz deneyinin şeması ve deneyde kullanılan civa dolu tüpün bir resmi Şekil \ref{fig:franck_hertz_schema} ve \ref{fig:franck_hertz_tube}'te görülmektedir. Bu deneyde ısıtılan katottan (C) ortaya çıkan elektronlar içi civa dolu tüpteki artı yüklü ızgaraya (G) doğru hızlanmaktadırlar. Izgarayı geçtikten sonra ise anota (A) doğru giderken 1.5 Volt gibi daha düşük fakat ters kutuplu bir potansiyelle yavaşlatılmaktadırlar. Izgaraya gelirken civa atomlarının elektronlarıyla çeşitli çarpışmalar gerçekleştiren elektronların yeterince kinetik enerjisi kaldıysa anota ulaşabilirler. Anot'a elektronların ulaşıp ulaşmadığı ise anot çıkışına bağlanan ampermetrede okunun akımın artması ve azalmasıyla gözlenir. Eğer akım artıyorsa elektronların çoğunluğunun ulaşmış olduğu şeklinde yorumlanabilir. Deneyinde sonunda ortaya çıkan akım artış ve azalışlarının grafiği elektronlara kinetik enerjisini kazandıran elektrik potansiyeline karşı Şekil \ref{fig:Franck_Hertz_Volt_v_Current}'te gösterilmiştir.
+
+Şekil \ref{fig:Franck_Hertz_Volt_v_Current} incelendiğinde elektronlar enerji kazandıkça anota ulaşan elektron sayısı artmaktadır. Fakat 4.9 V civarına gelindiğinde ilginç bir şekilde anottan okunan akım büyük miktarda azalmaktadır ve benzeri davranış 4.9 Voltun tam katları şeklinde devam etmektedir. Bohr'un yorumuna göre; bu değer civa atomunun kesikli yörüngelerinden birine denk gelmektedir ve bir elektron bu kinetik enerjiye ulaşınca 4.9 eV'luk enerjisini bir civa atomunun iç yörüngelerinden birindeki bir elektrona aktarmaktadır. Şekilde anot akımın değerinin düşüşünün birden çok görülmesinin nedeni elektronların birden çok civa atomuyla çarpışması olarak yorumlanabilir. Elektronları inelastik olarak uyarılan bu civa atomları tekrar taban durumuna dönmek için 4.9 eV'luk bu uyarılma enerjisini foton paketleri halinde yayınlamak durumunda olmalıydılar. Franck ve Hertz bu fotonu da gözlediklerini ve dalga boyunun 254 nm olduğunu rapor ettiler. Böylece Bohr'un atom modeli büyük bir deneysel desteğe kavuşmuş oldu ve \emph{eski kuantum teorisinin} bir parçası haline geldi.
+
+
+\begin{figure}[hbtp]
+	\center
+	\begin{minipage}{.48\textwidth}
+		\center
+		\includegraphics[scale=.5]{Franck_Hertz_Volt_v_Current.png}
+		\caption{Franck-Hertz deneyinde Katot ve Izgara arasına uygulanan elektrik potansiyeline karşı Anotta oluşan akımın grafiği. Şekildeki çukurlar arası uzaklık 4.9 Volt'tur.}
+		\label{fig:Franck_Hertz_Volt_v_Current}
+	\end{minipage}
+	\hspace{12pt}
+	\begin{minipage}{.48\textwidth}
+		\center
+		\includegraphics[scale=.38]{Franck_Hertz_Mercury_spectrum.png}
+		\caption{Şeklin sol tarafında civa (Hg) atomlarının uyarılmış atomlarının taban duruma dönebilmek için yayınladıkları fotonların dalga boyu spektrumu verilmiştir. Sağ trafta ise Franck-Hertz deneyinde gözlenen (254 nm) fotonların dalga boyu verilmiştir.}
+		\label{fig:Franck_Hertz_Mercury_spectrum}
+	\end{minipage}
+\end{figure}
+
+%%\newpage
 \subsection{Uygunluk İlkesi}
-\href{http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/hosc6.html}{uygunluk ilkesi}
+\href{http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/hosc6.html}{The Correspondence Principle and the Quantum Oscillator}
+
+Niels Bohr kuantum teorisinin klasik fiziğin alanına giren bölgelerde klasik fizikle aynı sonuçları vermesi gerektiğini önerdi. Bu fikir \emph{uygunluk ilkesi [correspondence principle]} olarak adlandırıldı. Buna göre bir kuantum sisteminin \emph{"kuantum sayıları"} çok büyük değerlere ulaştığında bu sistemin asimtotik davranışı klasik fizikle uyumlu olmalıdır.
+
+Bir elektronun klasik olarak dairesel yörüngede yapacağı ışımanın frekansı:
+\begin{equation}
+\nu_{c l}=\frac{v}{2 \pi r}=\frac{Z \alpha c}{n} \frac{Z \alpha m_{e} c}{2 \pi n^{2} \hbar}=\frac{(Z \alpha)^{2} m_{e} c^{2}}{2 \pi \hbar} \frac{1}{n^{3}}
+\end{equation}
+
+$n>>1$ durumunda bir elektronun $n+1 \longrightarrow n$ seviye geçişinde
+yapacağı ışımanın frekansı:
+\begin{equation}
+\nu=\frac{\omega}{2 \pi}=\frac{1}{2 \pi \hbar} \frac{m_{e} c^{2}(Z \alpha)^{2}}{2}\left(\frac{1}{n^{2}}-\frac{1}{(n+1)^{2}}\right)
+\end{equation}
 
 \YAZILACAK
 
-
+%%Bir atomun dairesel yörüngesindeki bir elektronun klasik ve kuantum %%davranışları $n+1 \longrightarrow n$ geçişleri uygunluk prensiyle uyumluyken,
+%%$n+2 \longrightarrow n$ geçişi için 
 
 
 
