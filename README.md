@@ -1,5 +1,16 @@
 # Kuantum Fiziği / FİZ 319
 
+---
+Başarı puanlarınız aşağıdaki yüzdelere göre hesaplanacaktır. Bu oranlar dersi "Tekrar" olarak alan öğrenciler için de geçerlidir.
+
+1. Ödevler (%30)
+2. Ara Sınav (%30)
+3. Yarıyıl Sonu Sınavı (%40)
+
+Değerlendirme sistemi "Bağıl" sistemdir.
+
+---
+
 Bu ders notları 2019-2020 güz yarıyılı için hazırlanmaktadır. 
 
 <img width=500 src='https://github.com/mkarakoc/Kuantum_Fizigi/blob/master/dersnotlari/figurler/blackbody_spect_vs_lambdaT.png'>
