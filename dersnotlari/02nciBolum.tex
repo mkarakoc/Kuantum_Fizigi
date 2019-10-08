@@ -246,7 +246,7 @@ gibi, gausyen (gaussian) dağılım olarak adlandırılan, bir dağılım tercih
 $t=0$'daki dalga paketini tanımlayan integral önce $q' = k-k_0$ değişken dönüşümü yapılarak,
 %%
 \begin{equation}
-\psi(x, 0) = \text{e}^{ik_0x} \text{e}^{x^2/2\alpha} \int\limits_{-\infty}^{\infty}dq' \, \text{e}^{-\alpha q'^2/2} = \sqrt{\frac{2\pi}{\alpha}} \text{e}^{ik_0x} \text{e}^{x^2/2\alpha}
+\psi(x, 0) = \text{e}^{ik_0x} \text{e}^{-x^2/2\alpha} \int\limits_{-\infty}^{\infty}dq' \, \text{e}^{-\alpha q'^2/2} = \sqrt{\frac{2\pi}{\alpha}} \text{e}^{ik_0x} \text{e}^{-x^2/2\alpha}
 \label{eq:wave_packet_t0}
 \end{equation}
 %%
@@ -403,15 +403,15 @@ olur. Bu sonuca göre elektron $V(x)$  potansiyelinden  etkilenmeden serbestçe 
 Eğer Denk. \ref{eq:wave_packet_in_p} ile tanımlanan dalga paketinin zamana göre türevini alırsak,
 %%
 \begin{align}
-i \hbar \frac { \partial \psi ( x , t ) } { \partial t } &= \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d p \phi ( p ) E ( p ) e ^ { i ( p x - E ) / \hbar } \nonumber\\
+i \hbar \frac { \partial \psi ( x , t ) } { \partial t } &= \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d p \phi ( p ) E ( p ) e ^ { i ( p x - E t) / \hbar } \nonumber\\
 &= \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d p \phi ( p ) \frac { p ^ { 2 } } { 2 m } e ^ { i ( p x - E t ) / \hbar }
 \end{align}
 %%
 elde ederiz. Konuma göre birinci ve ikinci dereceden türevlerini alırsak,
 %%
 \begin{align}
-\frac { \hbar } { i } \frac { \partial } { \partial x } \psi ( x , t ) = \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d p \phi ( p ) p e ^ { i ( p x - E i )/\hbar }\nonumber\\
-\left( \frac { \hbar } { i } \frac { \partial } { \partial x } \right) ^ { 2 } \psi ( x , t ) = \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d p \phi ( p ) p ^ { 2 } e ^ { i ( p x - E i )/ \hbar }
+\frac { \hbar } { i } \frac { \partial } { \partial x } \psi ( x , t ) = \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d p \phi ( p ) p e ^ { i ( p x - E t )/\hbar }\nonumber\\
+\left( \frac { \hbar } { i } \frac { \partial } { \partial x } \right) ^ { 2 } \psi ( x , t ) = \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d p \phi ( p ) p ^ { 2 } e ^ { i ( p x - E t )/ \hbar }
 \end{align}
 %%
 elde ederiz. Zamana ve konuma göre türevlerden elde ettiğimiz bu sonuçları birleştirirsek,
@@ -421,7 +421,7 @@ i\hbar \dfrac {\partial \psi \left( x,t\right) }{\partial t}=-\dfrac {\hbar ^{2}
 \label{eq:schrodinger_eq_free_particle}
 \end{equation}
 serbest bir parçacığın \emph{Schrödinger denklemi} olarak adlandırılan diferansiyel denkleme ulaşırız.
-Denklemi serbest parçacığın klasik enerjisi (Denk. \ref{eq:free_particle_E}) ile kıyaslarsak $E$ ve $p$'nin yerini  sırasıyla $i \hbar \frac { \partial } { \partial t }$ ve $- i \hbar \frac { \partial } { \partial x }$ ifadelerinin aldığını söyleyebiliriz. Bu benzetmeyi serbest olmayan bir parçacığın klasik enerji ifadesi (Denk. \ref{eq:non_free_particle_E}) ile de yaparsak,
+Denklemi serbest parçacığın klasik enerjisi (Denk. \ref{eq:free_particle_E}) ile kıyaslarsak $E$ ve $p$'nin yerini  sırasıyla $i \hbar \frac { \partial } { \partial t }$ ve $\frac{\hbar}{i} \frac { \partial } { \partial x }$ ifadelerinin aldığını söyleyebiliriz. Bu benzetmeyi serbest olmayan bir parçacığın klasik enerji ifadesi (Denk. \ref{eq:non_free_particle_E}) ile de yaparsak,
 %%
 \begin{equation}
 i\hbar \dfrac {\partial \psi \left( x,t\right) }{\partial t}=-\dfrac {\hbar ^{2}}{2m}\dfrac {\partial ^{2}\psi \left( x,t\right) }{\partial x^{2}}+V\left( x\right) \psi \left( x,t\right)
@@ -430,29 +430,6 @@ i\hbar \dfrac {\partial \psi \left( x,t\right) }{\partial t}=-\dfrac {\hbar ^{2}
 %%
 serbest ve serbest olmayan parçacıkları tanımlayabileceğimiz, daha genel bir Schrödinger denklemi yazmış oluruz.
 
-\subsubsection{$\phi\left(p\right)$  ve $\psi\left( x,0\right)$ Arasındaki İlişki}
-
-Serbest parçacık durumunu düşünecek olursak, Schrödinger denkleminin en genel çözümü $\phi(p)$'nin şekline (davranışına) bağlıdır. $\phi(p)$'nin şeklini ise $t=0$ anındaki dalga paketi $\psi(x,0)$,
-%%
-\begin{equation}
-\psi \left( x,0\right) =\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dp\phi \left( p\right) e^{i px /\hbar }
-\label{eq:wave_packet_in_t0}
-\end{equation}
-%%
-integrali ile belirler. Bu integral aslında bir Foruier dönüşümü integralidir ve aşağıdaki yöntemle ters Foruier dönüşümü yapılırsa,
-%%
-\begin{equation}
-\int _ { - \infty } ^ { \infty } d x \psi ( x , 0 ) e ^ { - i p ^ { \prime } x / \hbar } = \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d x \int _ { - \infty } ^ { \infty } d p \phi ( p ) e ^ { i \left( p - p ^ { \prime } \right) x / \hbar }
-\label{eq:wave_packet_in_p_t0}
-\end{equation}
-%%
-ve $\int _ { - \infty } ^ { \infty } d x e ^ { i \left( p - p ^ { \prime } \right) x/\hbar } = 2 \pi \hbar \delta \left( p - p ^ { \prime } \right)$ olduğundan faydalanılırsa eşitliğin sol tarafı $\sqrt { 2 \pi  \hbar } \phi \left( p ^ { \prime } \right)$ olur. Böylece,
-%%
-\begin{equation}
-\phi ( p ) = \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d x \psi ( x , 0 ) e ^ { - i p x/ h }
-\end{equation}
-%%
-sonucuna ulaşılır. 
 
 \subsection{Heisenberg'in Belirsizlik Bağıntıları}
 
@@ -473,6 +450,11 @@ halini alır ve Heisenberg belirsizlik bağıntısı olarak adlandırılır. Dal
 
 \href{https://opentextbc.ca/physicstestbook2/chapter/single-slit-diffraction/}{Tek yarık kırınımı}
 
+%% https://www.reddit.com/r/askscience/comments/2x5pof/in_the_single_slit_experiment_where_does_the/
+%% https://crackingthenutshell.org/heisenbergs-uncertainty-principle/
+%% Single-slit diffraction and the Heisenberg principle for position and momentum
+%% https://arxiv.org/pdf/0812.4775.pdf
+%% https://www.youtube.com/watch?v=iK2Fm4XmmZs
 \begin{figure}[hbtp]
 	\centering
 	\includegraphics[width=0.7\linewidth]{figurler/tek_yarik_deneyi.eps}
@@ -486,7 +468,7 @@ halini alır ve Heisenberg belirsizlik bağıntısı olarak adlandırılır. Dal
 \theta \eqsim \frac{\lambda}{a}
 \end{equation*}
 %%
-ifadesi belirler. Dalga parçacık ikileminin bir sonucu olarak foton demetini aynı yarıktan geçen parçacıklar olarak da düşünmek mümkündür. Eğer foton parçacıklarının momentumlarını ve konumlarını kesin bir doğrulukla bilebilseydik, foton demetinin dağılmasının gerçekleşmesi beklenmeyebilirdi. Fakat fotonu parçacık olarak da düşünsek, dalga olarak da düşünsek bu dağılım gerçekleşmektedir. 
+ifadesi belirler. Dalga parçacık ikileminin bir sonucu olarak foton demetini aynı yarıktan geçen parçacıklar olarak da düşünmek mümkündür. Eğer foton parçacıklarının momentumlarını ve konumlarını kesin bir doğrulukla bilebilseydik, foton (parçacık) demetinin dağılmadan tek yarıktan geçmesi sağlanabilirdi. Fakat, fotonu parçacık olarak da düşünsek, dalga olarak da düşünsek yapılan deneylerde bu dağılım ortaya çıkmaktadır. 
 
 Burada bir paradoks varmış gibi görünmekle beraber, bizi bu sözde paradokstan kurtaran Heisenberg'in belirsizlik bağıntısıdır. Fotonlar $x$ doğrultusunda $p_x~=~h/\lambda$ momentumuna sahip olacak şekilde bir kaynaktan çıkıyor olsunlar. $y$ doğrultusundaki konumlarını,
 %%
@@ -500,8 +482,8 @@ aralığıyla sınırlı bir belirsizliği içerecek kadar bilebiliriz. Bu durum
 \Delta p_y \geq \frac{h}{\Delta y}>\frac{h}{a}
 \end{equation*}
 %%
-civarında bir belirsikliğe sahip olur. Yarıktan geçmeden önce fotonlar sadece $p_x$ momentumlu iken sonrasında $\Delta p_y$ belirsizliği civarındaki ve $y$ doğrultusundaki momentumlara sahip olacaklardır.
-$\Delta p_y$'yi başlangıçtaki $p_x$ momentumundan sapma miktarı gibi düşünürsek ve $p$'yi yarıktan sonraki toplam momentum olarak tanımlarsak, her iki doğrultadki momentumların bir birine oranı demetin dağılma miktarı hakkında bilgi verecektir. Buna göre,
+civarında bir belirsizliğe sahip olur. Yarıktan geçmeden önce fotonlar sadece $p_x$ momentumlu iken sonrasında $\Delta p_y$ belirsizliği civarındaki ve $y$ doğrultusundaki momentumlara sahip olacaklardır.
+$\Delta p_y$'yi başlangıçtaki $p_x$ momentumundan sapma miktarı gibi düşünürsek ve $p$'yi yarıktan sonraki toplam momentum olarak tanımlarsak, her iki doğrultudaki momentumların bir birine oranı demetin dağılma miktarı hakkında bilgi verecektir. Buna göre,
 %%
 %%
 \begin{align}
@@ -783,7 +765,7 @@ yazılabilir. Böylece bir serbest parçacığın enerjisinin beklenen değeri,
 \label{eq:expactation_value_and_op_energy}
 \end{equation}
 %%
-intergrali ile hesaplanabilir. Dikkat edilirse yeni tanımlandığımız bu operatörleri klasik ifadeden ayırmak için üzerine şapka sembolü ekliyoruz.
+intergrali ile hesaplanabilir. Dikkat edilirse yeni tanımlandığımız bu operatörleri klasik ifadelerden ayırmak için üzerine şapka sembolü ekliyoruz.
 
 Momentum operatörünün $i$ sanal sayısını içeriyor olması beklenen değerin de bazen sanal sayı içerebileceğini düşünüdürebilir. Beklenen değerin sanal olup olmayacağını,
 %%
@@ -817,6 +799,32 @@ operatör formunda yazabiliriz, burada $\hat H$ \emph{Hamiltonyen işlemcisi} ol
 \end{equation}
 %%
 olarak tanımlanır.
+
+
+\subsubsection{$\phi\left(p\right)$  ve $\psi\left( x,0\right)$ Arasındaki İlişki}
+
+Serbest parçacık durumunu düşünecek olursak, Schrödinger denkleminin en genel çözümü $\phi(p)$'nin şekline (davranışına) bağlıdır. $\phi(p)$'nin şeklini ise $t=0$ anındaki dalga paketi $\psi(x,0)$,
+%%
+\begin{equation}
+\psi \left( x,0\right) =\dfrac {1}{\sqrt {2\pi \hbar }}\int ^{\infty }_{-\infty }dp\phi \left( p\right) e^{i px /\hbar }
+\label{eq:wave_packet_in_t0}
+\end{equation}
+%%
+integrali ile belirler. Bu integral aslında bir Foruier dönüşümü integralidir ve aşağıdaki yöntemle ters Foruier dönüşümü yapılırsa,
+%%
+\begin{equation}
+\int _ { - \infty } ^ { \infty } d x \psi ( x , 0 ) e ^ { - i p ^ { \prime } x / \hbar } = \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d x \int _ { - \infty } ^ { \infty } d p \phi ( p ) e ^ { i \left( p - p ^ { \prime } \right) x / \hbar }
+\label{eq:wave_packet_in_p_t0}
+\end{equation}
+%%
+ve $\int _ { - \infty } ^ { \infty } d x e ^ { i \left( p - p ^ { \prime } \right) x/\hbar } = 2 \pi \hbar \delta \left( p - p ^ { \prime } \right)$ olduğundan faydalanılırsa eşitliğin sol tarafı $\sqrt { 2 \pi  \hbar } \phi \left( p ^ { \prime } \right)$ olur. Böylece,
+%%
+\begin{equation}
+\phi ( p ) = \frac { 1 } { \sqrt { 2 \pi \hbar } } \int _ { - \infty } ^ { \infty } d x \psi ( x , 0 ) e ^ { - i p x/ h }
+\end{equation}
+%%
+sonucuna ulaşılır. 
+
 
 \subsubsection{Momentum Uzayında Beklenen Değer}
 
