@@ -8,6 +8,8 @@
 \usepackage[english]{babel}
 %\usepackage[T1]{fontenc}
 
+\usepackage{enumitem}
+
 \usepackage{amsmath,amssymb,mathabx}%\for eqref
 \usepackage{lscape}
 
@@ -165,16 +167,22 @@ Zamandan bağımsız $V(x)$ potansiyel sayesinde ikiye ayırabildiğimiz zamana 
 
 Özdeğer denklemlerini daha iyi anlayabilmek için işlemci (operatör) kavramını anlamak gerekir. Basitçe bir operatör üzerine etki ettiği bir fonksiyonu bir başka fonksiyona dönüştürür veya bezer. 
 %%
-\begin{align*} 
-	\hat O f ( x ) &= f ( x ) + x ^ { 3 }  \\ 
-	\hat O f ( x ) &= [ f ( x ) ] ^ { 4 }  \\ 
-	\hat O f ( x ) &= f ( 5 x^2 + 4 )  \\ 
-	\hat O f ( x ) &= [ d^2 f ( x ) / d x^2 ] ^ { 2 }  \\ 
-	\hat O f ( x ) &= d f ( x ) / d x - 4 f ( x )  \\ 
-	\hat O f ( x ) &= \lambda f ( x )  
-\end{align*}
+\begin{center}
+\begin{minipage}{.5\textwidth}
+\begin{enumerate}[itemsep=1pt]
+\item $\hat O f ( x ) = f ( x ) + x ^ { 3 }  $ 
+\item $\hat O f ( x ) = [ f ( x ) ] ^ { 4 }  $ 
+\item $\hat O f ( x ) = f ( 5 x^2 + 4 )  $ 
+\item $\hat O f ( x ) = [ d^2 f ( x ) / d x^2 ] ^ { 2 }  $
+\item $\hat O f ( x ) = d f ( x ) / d x - 4 f ( x )  $
+\item $\hat O f ( x ) = \lambda f ( x )$
+\end{enumerate}
+\end{minipage}
+\end{center}
+
+
 %%
-Yukarıda verilen örneklerin hepsinde $f(x)$ gibi bir fonksiyon $\hat O$ operatörleri tarafından belirlenen bir kural çerçevesinde eşitliğin sağındaki hallerini alırlar. Bizim çalışacağımız operatörler genellikle $\hat O$ gibi genel bir operatör değil $\hat L$ ile göstereceğimiz lineer operatörlerdir. Bu operatörler, $c$ karmaşık bir sayı olmak üzere, aşağıdaki iki kurala uymalıdırlar.
+Yukarıda verilen örneklerin hepsinde $f(x)$ gibi bir fonksiyon $\hat O$ operatörleri tarafından belirlenen bir kural çerçevesinde eşitliğin sağındaki hallerini alırlar. Bizim çalışacağımız operatörler genellikle $\hat O$ gibi genel bir operatör değil $\hat L$ ile göstereceğimiz lineer operatörlerdir. Bu operatörlerin, $c$ karmaşık bir sayı olmak üzere, aşağıdaki iki kurala uymaları beklenir.
 %%
 \begin{equation}
 \hat L \left[ f _ { 1 } ( x ) + f _ { 2 } ( x ) \right] = \hat  L f _ { 1 } ( x ) + \hat  L f _ { 2 } ( x )
@@ -184,17 +192,16 @@ Yukarıda verilen örneklerin hepsinde $f(x)$ gibi bir fonksiyon $\hat O$ operat
 \hat L c f ( x ) = c \hat L f ( x )
 \end{equation}
 %%
-Bu kurallara göre yukarıdaki örneklerde (yukarıdan aşağıya doğru) üçüncü, beşinci ve altıncı örneklerdeki operatörler lineerdir. 
-
-Örneğin, yukarıdan seçtiğimiz örneklerden,
+Bu kurallara göre yukarıdaki örneklerden üçüncüsü, beşincisi ve altıncısı  lineer operatörlerdir. Yukarıdaki örneklerden beşincinin,
 %%
 \begin{equation*}
-\hat  L f ( x ) = \frac { d f ( x ) } { d x } - 4 f ( x )
+\hat  L \equiv \frac { d  } { d x } - 4 
 \end{equation*}
 %%
-için $\hat L$ işemcisi lineerdir. Çünkü,
+bu kurallara uyan lineer $\hat L$ bir işlemci olduğunu göstermek kolaydır:
 %%
 \begin{align*}
+\hat  L (f ( x ) + g(x)) &= \bigg(\frac { d } { d x } - 4\bigg) (f ( x ) + g(x))\\
 \hat  L (f ( x ) + g(x)) &= \frac { d f ( x ) + g(x)} { d x } - 4 (f ( x ) + g ( x ))\\
 &= \frac { d f ( x ) } { d x } - 4 f ( x ) + \frac { d g ( x ) } { d x } - 4 g ( x ) \\
 &= \hat  L (f ( x )) + \hat  L (g ( x ))
@@ -203,19 +210,35 @@ için $\hat L$ işemcisi lineerdir. Çünkü,
 ve
 %%
 \begin{align*}
+\hat  L (c f( x )) &= \bigg(\frac { d } { d x } - 4\bigg) (c f( x ))\\
 \hat  L (c f ( x )) &= \frac { d (c f ( x ))} { d x } - 4 (c f ( x ))\\
 &= c\frac { d f ( x ) } { d x } - c 4 f ( x ) \\
 &= c(\frac { d f ( x ) } { d x } -  4 f ( x )) \\
 &=  c \hat L (f ( x ))
 \end{align*}
 %%
-ifadeleri ile gösterildiği üzere, her iki şartı da sağlamaktadır.
+ifadeleri ile gösterildiği üzere, her iki şartı da sağlamaktadır. Benzeri şekilde altıncı örneğinde lineer olduğu gösterilebilir. Bu örnekte verilen ifade aynı zamanda bir özdeğer denklemidir. Bu örneğe benzer şekilde Denk. \ref{eq:time_independent_sch_eq}'de
+%%
+\begin{equation}
+H u_{E}(x)=E u_{E}(x)
+\end{equation}
+%%
+şeklinde bir özdeğer denklemi olarak yazılabilir. Burada $H$ Hamiltonyen operatörü dalga fonksiyonlarına etki ettiğinde sabit bir sayı ve dalga fonksiyonunun kendisini tekrar üretirse; bu işlem sonucu üretilen bu tür sayılara \emph{özdeğerler} ve dalga fonksiyonlarına da \emph{özfonksiyonlar} denir. Denklemdeki dalga fonksiyonları özel olarak $E$ özdeğerleriyle ilişkili özfonksiyonlar oldukları için $E$ alt indisi ile etiketlenmişlerdir. Bir kuantum sisteminde özdeğerler kesikli veya sürekli olabilirler. Bizim ilgilendiğimiz zamandan bağımsız Schrödinger denkleminde $H$ operatörü,
+%%
+\begin{equation}
+H\equiv\frac{\hat p^{2}}{2 m}+V(x)
+\end{equation}
+%%
+şeklinde olduğundan. Denklemin çözümü sonucu ortaya çıkan özdeğerler \emph{enerji özdeğerleri} ve özfonksiyonlar da \emph{enerji özfonksiyonları} olarak adlandırılırlar.
 
-
+Denk. \ref{eq:time_depended_schrodinger_eq}'deki zamana bağlı Schrödinger denkleminin çözümü $u_{E}(x) e ^ { - i E t / \hbar }$ şeklindedir, fakat Schrödinger denklemi lineer bir denklem olduğu için bütün izinli $E$ enerji özdeğerlerine ait çözümlerin toplamı da bu denklemin çözümüdür. Eğer $E$ ve $u_{E}$ bu sistemin sürekli çözümleriyse ve aynı sistemin kesikli çözümleri de mevcutsa ve bu çözümler $E_n$ ve $u_{n}$ (n=1,2,3, \ldots) ile temsil edilirlerse;
+bu sistemin en genel çözümü,
+%%
 \begin{equation}
 \psi ( x , t ) = \sum _ { n } C _ { n } u _ { n } ( x ) e ^ { - i E _ { n } t / \hbar } + \int d E \, C ( E ) u _ { E } ( x ) e ^ { - E t / \hbar }
 \end{equation}
-
+%%
+olarak yazılabilir. Burada $C_n$ ve $C(E)$ karesi integrallenebilir ifadelerdir ve her bir özfonksiyonun toplam dalga fonksiyonuna katkı miktarını belirlemektedirler.
 
 \subsection{Sonsuz Kuyudaki Parçacık için Enerji Özdeğer Problemi}
 
@@ -313,8 +336,12 @@ halinde elde edilirler. Çözümlerin ilginç bir sonucu vardır; farklı enerji
 	\int _ { 0 } ^ { a } d x \, u _ { n } ^ { * } ( x ) u _ { m } ( x ) 
 	& = \int _ { 0 } ^ { a } d x \frac { 2 } { a } \sin \frac { n \pi x } { a } \sin \frac { m \pi x } { a } \nonumber\\ 
 	& = \frac { 1 } { a } \int _ { 0 } ^ { a } d x \left\{ \cos \frac { ( n - m ) \pi x } { a } - \cos \frac { ( n + m ) \pi x } { a } \right\} \nonumber\\ 
-	& = \frac { \sin ( n - m ) \pi } { ( n - m ) \pi } - \frac { \sin ( n + m ) \pi } { ( n + m ) \pi } = 0 \quad \Leftarrow n \neq m \nonumber\\
-	& = \frac{1}{a}\left[x-\frac{a}{2 n \pi}\sin(\frac{2n\pi x}{a})\right]_0^a = 1 \quad \Leftarrow n = m
+&=\left\{
+\begin{array} { c l }
+{ \frac { \sin ( n - m ) \pi } { ( n - m ) \pi } - \frac { \sin ( n + m ) \pi } { ( n + m ) \pi } = 0 } & { \Leftarrow n \neq m } \\ 
+{\frac{1}{a}\left[x-\frac{a}{2 n \pi}\sin(\frac{2n\pi x}{a})\right]_0^a = 1 } & { \Leftarrow n = m} 
+\end{array} 
+\right.
 \end{align}
 %%
 İntegrallerin herhangi bir $n$ ve $m$ için cevabı yukarıdaki gibidir, $n$ ve $m$ tam sayılar olduklarından integral sonucu aşağıdaki gibi özetlenebilir.
@@ -386,7 +413,7 @@ Enerji özdeğer ve özfonksiyon çözümlerinden bazı fiziksel yorumlar çıka
 	\end{figure}
 	
 	
-	\item Düğüm sayısı ($N_D \equiv n-1$) olarak tanımlanabilir, çünkü genellikle sınırlardaki sıfırlar sayılmaz. Bu tanıma göre $n=1$ için $N_D=0$ düğüm varken, $n=2$'de sadece $N_D=1$ düğüm vardır ve bu düğüm tam özfonksiyonun $x=a/2$'de sıfır olduğu yerdir. Düğüm noktası sayısı ($N_D$) arttıkça veya daha üst seviyelere ($n$) çıkıldıkça kinetik enerji artmaktadır. Bunun sebebi aşağıda hesaplanan $\langle K \rangle $ kinetik enerji beklenen değerinden açıkca görülmektedir. Çünkü $\langle K \rangle = E_n$'dir. Ayrıca Şekil \ref{fig:infinitewell_derivative_eigenfunctions}'ten görüleceği üzere integralin iç kısmının genliği $n$ ve $N_D$ arttıkça artmaktadır.
+	\item Düğüm sayısı ($N_D \equiv n-1$) olarak tanımlanabilir, çünkü genellikle sınırlardaki sıfırlar sayılmaz. Bu tanıma göre $n=1$ için $N_D=0$ düğüm varken, $n=2$'de sadece $N_D=1$ düğüm vardır ve bu düğüm tam özfonksiyonun $x=a/2$'de sıfır olduğu yerdir. Düğüm noktası sayısı ($N_D$) arttıkça veya daha üst seviyelere ($n$) çıkıldıkça kinetik enerji artmaktadır. Bunun sebebi aşağıda hesaplanan $\langle K \rangle $ kinetik enerji beklenen değerinden açıkca görülmektedir. Çünkü $\langle K \rangle = E_n$'dir. Ayrıca Şekil \ref{fig:infinitewell_derivative_eigenfunctions}'ten görüleceği üzere integralin iç kısmının genliği $n$ veya $N_D$ arttıkça artmaktadır.
 	%%
 	\begin{equation}
 	\begin{aligned} 
