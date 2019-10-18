@@ -235,7 +235,7 @@ Denk. \ref{eq:time_depended_schrodinger_eq}'deki zamana bağlı Schrödinger den
 bu sistemin en genel çözümü,
 %%
 \begin{equation}
-\psi ( x , t ) = \sum _ { n } C _ { n } u _ { n } ( x ) e ^ { - i E _ { n } t / \hbar } + \int d E \, C ( E ) u _ { E } ( x ) e ^ { - E t / \hbar }
+\psi ( x , t ) = \sum _ { n } C _ { n } u _ { n } ( x ) e ^ { - i E _ { n } t / \hbar } + \int d E \, C ( E ) u _ { E } ( x ) e ^ { - i E t / \hbar }
 \end{equation}
 %%
 olarak yazılabilir. Burada $C_n$ ve $C(E)$ karesi integrallenebilir ifadelerdir ve her bir özfonksiyonun toplam dalga fonksiyonuna katkı miktarını belirlemektedirler.
@@ -426,30 +426,34 @@ Enerji özdeğer ve özfonksiyon çözümlerinden bazı fiziksel yorumlar çıka
 	\end{equation}
 		
 	
-	\item Şekil \ref{fig:infinitewell_eigenfunctions}'deki özfonksiyonlar arasında ilginç bir davranış gözlenmektedir. Eğer tam orta noktaya ($x=a/2$) bir ayna yerleştirdiğimizi düşünürsek; tek değerli $n=1, 3, 5 \ldots$ özfonksiyonlar simetriktirler, çift değerli $n=1, 3, 5 \ldots$ olanlar ise anti-simetriktirler (yani işaret değiştirmektedirler). Bu simetrinin bir benzerini aynayı $x=0$'a taşıyarak ve, 
+	\item Şekil \ref{fig:infinitewell_eigenfunctions}'deki özfonksiyonlar arasında ilginç bir davranış gözlenmektedir. Eğer tam orta noktaya ($x=a/2$) bir ayna yerleştirdiğimizi düşünürsek; tek değerli $n=1, 3, 5 \ldots$ özfonksiyonlar simetriktirler, çift değerli $n=2, 4, 6 \ldots$ olanlar ise anti-simetriktirler (yani işaret değiştirmektedirler). Bu simetrinin bir benzerini, 
 	%%
 	\begin{equation*}
 	x \rightarrow x - \frac { a } { 2 }
 	\end{equation*}
 	%%
-	yaparak da gözleyebiliriz. Böylece, ortaya çıkardığımız bu simetri kullanılarak, sınırları $x=-a/2$ ve $x=a/2$ olan sonsuz kuyu için de çözümler elde edilebilir. Yukarıda yaptığımız değişken dönüşümünü özfonksiyonda da işletirsek,
+	olacak şekilde kuyuyu kaydırarak ve sonra aynayı $x=0$'a taşıyarak da gözleyebiliriz. Böylece, ortaya çıkardığımız bu simetri kullanılarak, sınırları $x=-a/2$ ve $x=a/2$ olan sonsuz kuyu için de çözümler elde edilebilir. Yukarıda yaptığımız değişken dönüşümünü özfonksiyonda da işletirsek,
 	%%
 	\begin{equation}
 	\sin \frac { n \pi x } { a } \rightarrow \sin \left( \frac { n \pi x } { a } - \frac { n \pi } { 2 } \right) = \sin \frac { n \pi x } { a } \cos \frac { n \pi } { 2 } - \cos \frac { n \pi x } { a } \sin \frac { n \pi } { 2 }
 	\end{equation}
 	%%
-	elde ederiz. Bu ifadeden anlaşılacağı üzere $x=\pm a/2$ sınırlarına sahip sonsuz kuyu için çift ve tek değerli durumların özfonksiyonları aşağıdaki gibi olacaktır.
+	sonucunu elde ederiz. Bu ifadeden anlaşılacağı üzere $x=\pm a/2$ sınırlarına sahip sonsuz kuyu için çift ve tek değerli durumların özfonksiyonları aşağıdaki gibi olacaktır;
+	
 	%%
 	\begin{equation}
-	\sqrt { \frac { 2 } { a } } \sin \frac { n \pi x } { a } \quad \text { with } n = 2,4,6, \dots
+	u _ { n } ( x ) = \sqrt { \frac { 2 } { a } } \cos \frac { n \pi x } { a } \quad \text {için } n = 1,3,5 , \dots
 	\end{equation}
-	%%
 	%%
 	\begin{equation}
-	\sqrt { \frac { 2 } { a } } \cos \frac { n \pi x } { a } \quad \text { with } n = 1,3,5 , \dots
+	u _ { n } ( x ) = \sqrt { \frac { 2 } { a } } \sin \frac { n \pi x } { a } \quad \text{için } n = 2,4,6, \dots
 	\end{equation}
+	%%
+	Ayrıca, $n = 1,3,5, \dots$ tek sayı şeklindenki kuantum sayılarına karşılık gelen özfonksiyonlar kosinüs fonksiyonları olduklarından $x$'e göre \emph{çift fonksiyon}durlar. Benzeri şekilde $n = 2,4,6, \dots$ çift sayılarına karşılık gelen özfonksiyonlar ise sinüs fonksiyonları olduklarından  $x$'e göre \emph{tek fonksiyon}durlar. Böylece, sonsuz kuyunun ortasında hayal edilen aynaya göre özfonksiyonların neden simetrik ve anti-simetrik davranışlar gösterdikleri daha iyi anlaşılabilir.
+
 	
 \end{enumerate}
+
 
 
 
@@ -655,6 +659,7 @@ Serbest parçacık durumunu incelemeye devam edelim. Serbest parçacık için po
 %%
 \begin{equation}
 \frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } + \frac { 2 m E } { \hbar ^ { 2 } } u ( x ) = \frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } + k ^ { 2 } u ( x ) = 0
+\label{eq:freeParticle_schEq}
 \end{equation}
 %%
 olarak yazılır. Bu diferansiyel denklemin çözümleri $e ^ { i k x }$, $e ^ { - i k x }$ veya $\sin kx$, $\cos kx$ fonksiyonlarının lineer kombinasyonları olacaktır. Örneğin, $+x$ yönünde ilerleyen bir parçacık için
@@ -806,6 +811,14 @@ Böyle bir durumu fiziksel olarak kabul etmek pek mümkün değildir. Çünkü e
 
 \subsubsection{Yozlaşmış (Dejenere) Durumlar}
 
+Enerji özdeğeri denkleminin (Denk. \ref{eq:freeParticle_schEq}), $u_1(x) = e^{i k x}$ ve $u_2(x) = e^{-i k x}$  olmak üzere birbirinden bağımsız iki çözümü vardır. Benzer şekilde bu denklemin reel çözümleri $u_1(x) = \cos(kx)$ ve $u_2(x) = \sin(kx)$'te bağımsız çözümlerdir. Bu çözümlerden hangi $u_1(x)$, $u_2(x)$ ikilisi seçilirse seçilsin, sonsuz kuyudaki parçacık probleminden farklı olarak, her ikiside aynı enerji özdeğerine sahip olacaktır. Serbest enerji işlemcisi her iki çözüme uygulandığında aşağıdaki sonuca ulaşılcağı rahatça gösterilebilir.
+
+\begin{equation}
+-\frac{ \hbar ^ { 2 } } { 2 m} \frac { d ^ { 2 } u_1 ( x ) } { d x ^ { 2 } }  =  E u_1 ( x ), \quad\quad
+-\frac{ \hbar ^ { 2 } } { 2 m} \frac { d ^ { 2 } u_2 ( x ) } { d x ^ { 2 } }  =  E u_2 ( x )
+\end{equation}
+
+
 \YAZILACAK
 
 \subsubsection{Parite}
@@ -819,6 +832,17 @@ Böyle bir durumu fiziksel olarak kabul etmek pek mümkün değildir. Çünkü e
 % http://fisica.ugto.mx/~supercuerdas/miembros/QM/qm4.pdf
 % http://folk.uio.no/trondson/freeparticle.pdf
 % https://physics.stackexchange.com/questions/165373/normalizing-the-solution-to-free-particle-schr%C3%B6dinger-equation
+
+
+Herhangi bir $\psi(x)$ fonksiyonu aşağıdaki gibi tek ve çift fonksiyonların toplamı olarak yazılabilir,
+
+\begin{align}
+\label{eq:odd_even}
+\psi(x) = \frac {\psi(x) + \psi(-x)}2  + \frac {\psi(x) - \psi(-x)}2.
+\end{align}
+
+%% https://math.stackexchange.com/questions/2816109/prove-that-any-function-can-be-written-as-the-sum-of-an-even-function-and-an-odd
+{\bf İspatı:} $\psi(x)$ çift  $g$ ve tek $h$ fonksiyonlarının toplamı olsun. Böylece $\psi(x) = g(x) + h(x)$ yazılabilir. Bu durumda $\psi(-x) = g(x) - h(x)$ olur. Sonrasında ise $g(x) = \frac {\psi(x) + \psi(-x)}2$ ve $h(x) = \frac {\psi(x) - \psi(-x)}2$ olarak bulunur. $h(x)$ ve $g(x)$ yerlerine konursa Denk. \ref{eq:odd_even}'e ulaşılır.
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
