@@ -823,7 +823,7 @@ Birden çok bağımsız özfonksiyonun bir hermityen işlemcinin aynı özdeğer
 Her iki dejenere özfonksiyon ikilisi de birbirlerine diktir (ortogonaldir). Aşağıdaki integraller $k\neq0$ ve $a\rightarrow\infty$ (serbest parçacık olması için $a$ sonsuza gitmelidir) olmak üzere dejenere özfonksiyonların birbirlerine dik olduklarının kanıtlarıdır.
 %%
 \begin{align}
-	{\int\limits_{-a}^{a} d x\left(\frac{1}{\sqrt a}e^{-i k x}\right)^{*} \frac{1}{\sqrt a}e^{i k x}=0} \text{ \quad ve \quad }
+	{\int\limits_{-a}^{a} d x\left(\frac{1}{\sqrt a}e^{-i k x}\right)^{*} \left(\frac{1}{\sqrt a}e^{i k x}\right)=0} \text{ \quad ve \quad }
 	{\int\limits_{-a}^{a} d x \sin k x \cos k x=0}
 \end{align}
 %%
@@ -852,8 +852,6 @@ Yukarıdaki işlemlerin sonucuna göre her iki özfonksiyon için $\hat P$'nin $
 
 %% watch: https://www.youtube.com/watch?v=yArprk0q9eE
 
-\YAZILACAK
-
 % READ FOLLOWING!
 % http://www.physics.udel.edu/~msafrono/424-2011/Lecture%209final.pdf
 % http://fisica.ugto.mx/~supercuerdas/miembros/QM/qm4.pdf
@@ -861,7 +859,40 @@ Yukarıdaki işlemlerin sonucuna göre her iki özfonksiyon için $\hat P$'nin $
 % https://physics.stackexchange.com/questions/165373/normalizing-the-solution-to-free-particle-schr%C3%B6dinger-equation
 
 
-Serbest parçacığın veya sınırları $-a/2$ ve $+a/2$ aralığında olan bir kuyu içindeki parçacığın $\sin(kx)$ ve $\cos(kx)$ özfonksiyonlarıyla tanımlanabildiğini gördük. Bu özfonksiyonlar $x \rightarrow -x$ dönüşümü altında \emph{tek} veya \emph{çift} fonksiyonlardır.
+Bir serbest parçacığın veya ($-a/2$ ve $+a/2$ sınırlı ve  $x=0$ etrafında simetrik olan) bir sonsuz kuyu içindeki parçacığın $\sin(kx)$ ve $\cos(kx)$ özfonksiyonlarıyla tanımlanabildiğini gördük. Bu özfonksiyonlar $x \rightarrow -x$ dönüşümü altında \emph{tek} veya \emph{çift} fonksiyonlardır.
+Sonsuz kuyu içeresindeki örneği düşünecek olursak; bu sistemin (taban seviyesindeki) ilk durumu $\psi(x)$ $x$'e göre çifttir. Bunun anlamı $n=1,3,5,\ldots$ olmak üzere $\psi(x)$,
+%%
+\begin{equation}
+\psi(x)=\sum_{n} A_{n} \sqrt{\frac{2}{a}} \cos \frac{n \pi x}{a}
+\end{equation}
+%%
+şeklinde olmalıdır. Zamana göre değişimi ise,
+%%
+\begin{equation}
+\psi(x, t)=\sum_{n} A_{n} \sqrt{\frac{2}{a}} \cos \frac{n \pi x}{a} e^{-i E_{n} t / \hbar}
+\end{equation}
+%%
+olacaktır. Zamana bağlı dalga fonksiyonunun da $x$'e göre hala \emph{çift} kalacağı açıktır. Aynı durum başlangıçta \emph{tek} fonksiyon olan dalga fonksiyonları için de geçerlidir. Böylece $x=0$ civarında simetrik olan bu sistem için \emph{çiftlik} veya \emph{teklik} zamandan bağımsız bir özelliktir. Bu durumda \emph{çift} ve \emph{tek} olma durumlarına bu \emph{hareketin sabitleri}dir, denebilir. 
+
+Fizikte herhangi bir harekete ait sabit daima önemlidir, çünkü sabitin temsil ettiği ilgili niceliğin zamanla (veya ilgili olduğu boyutla; zaman, konum, momentum vb.) korunduğunu gösterir. Bu tür sabitleri formülleştirmek faydalıdır; \emph{çift} veya \emph{tek} olma durumunu parite işlemcisi $\hat P$ ile formülleştirebiliriz. İşlemcinin görevi basitçe $x\rightarrow -x$ yansımasını gerçekleştirmektir. Parite işlemcisi herhangi bir dalga fonksiyonuna uygulandığına,
+%%
+\begin{equation}
+\hat P \psi(x)=\psi(-x)
+\end{equation}
+%%
+işlemini gerçekleştirir.
+
+
+
+\bigskip
+\begin{table}[!hbtp]
+	\begin{tabular}{l}
+		\YAZILACAK\\
+		\hline
+	\end{tabular}
+
+\end{table}
+\bigskip
 
 Herhangi bir $\psi(x)$ fonksiyonu aşağıdaki gibi tek ve çift fonksiyonların toplamı olarak yazılabilir,
 
