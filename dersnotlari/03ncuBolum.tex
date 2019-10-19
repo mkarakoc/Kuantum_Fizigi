@@ -12,6 +12,7 @@
 
 \usepackage{amsmath,amssymb,mathabx}%\for eqref
 \usepackage{lscape}
+\usepackage{tcolorbox}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -883,7 +884,8 @@ Fizikte herhangi bir harekete ait sabit daima önemlidir, çünkü sabitin temsi
 işlemini gerçekleştirir. Çift ve tek fonksiyonlar için bu işlemin sonucu,
 %%
 \begin{align}
-\hat P \psi^{(+)}(x)=\psi^{(+)}(x)\quad \text{ ve } \quad \hat P \psi^{(-)}(x)=-\psi^{(-)}(x)
+\hat P \psi^{(+)}(x)=\psi^{(+)}(x)
+\quad \text{ ve } \quad \hat P \psi^{(-)}(x)=-\psi^{(-)}(x)
 \end{align}
 %%
 olarak bulunur. Bu iki denklem özdeğer denklemleridir; $\hat P$'nin $+1$ özdeğeri veren durumu için özfonksiyonlar çift fonksiyonlardır ve $-1$ özdeğeri için ise tek fonksiyonlardır. Sonsuz kuyu durumundaki özfonksiyonlar sadece $H$'nin özfonksiyonu değillerdir, aynı zamanda $\hat P$'nin de özfonksiyonlarıdırlar. Parite işlemcisinin sadece $\pm 1$ özdeğerlerini alması mümkündür. Farz edelim ki;
@@ -895,10 +897,11 @@ olarak bulunur. Bu iki denklem özdeğer denklemleridir; $\hat P$'nin $+1$ özde
 olsun. $\hat P$'yi bir kere daha uygularsak,
 %%
 \begin{align}
-\hat P^2 u(x)=\hat P \lambda u(x)= \lambda^2 u(x) \quad \text{ ve böylece }  \quad  \hat P^2 u(x)= u(x) 
+\hat P^2 u(x)=\hat P \lambda u(x)
+= \lambda^2 u(x) \quad \text{ ve böylece }  \quad  \hat P^2 u(x)= u(x) 
 \end{align}
 %%
-olur. Çünkü  iki defa yansıma altında $u(x)$ aynı kalmalıdır. Böylece $\lambda^2 = 1$ olacağından $\lambda = \pm 1$ olacağı açıktır. Herhangi bir $\psi(x)$ fonksiyonu aşağıdaki gibi tek ve çift fonksiyonların toplamı olarak yazılabilir,
+olur. Çünkü  iki defa yansıma altında $u(x)$ aynı kalır. Böylece $\lambda^2 = 1$ olacağından $\lambda = \pm 1$ olacağı açıktır. Herhangi bir $\psi(x)$ fonksiyonu aşağıdaki gibi tek ve çift fonksiyonların toplamı olarak yazılabilir,
 
 \begin{align}
 \label{eq:odd_even}
@@ -906,7 +909,71 @@ olur. Çünkü  iki defa yansıma altında $u(x)$ aynı kalmalıdır. Böylece $
 \end{align}
 
 %% https://math.stackexchange.com/questions/2816109/prove-that-any-function-can-be-written-as-the-sum-of-an-even-function-and-an-odd
-{\bf İspatı:} $\psi(x)$ çift  $g$ ve tek $h$ fonksiyonlarının toplamı olsun. Böylece $\psi(x) = g(x) + h(x)$ yazılabilir. Bu durumda $\psi(-x) = g(x) - h(x)$ olur. Sonrasında ise $g(x) = \frac {\psi(x) + \psi(-x)}2$ ve $h(x) = \frac {\psi(x) - \psi(-x)}2$ olarak bulunur. $h(x)$ ve $g(x)$ yerlerine konursa Denk. \ref{eq:odd_even}'e ulaşılır.
+\begin{tcolorbox}
+{\bf İspat:} $\psi(x)$ çift  $g$ ve tek $h$ fonksiyonlarının toplamı olsun. Böylece $\psi(x) = g(x) + h(x)$ yazılabilir. Bu durumda $\psi(-x) = g(x) - h(x)$ olur. Sonrasında ise $g(x) = \frac {\psi(x) + \psi(-x)}2$ ve $h(x) = \frac {\psi(x) - \psi(-x)}2$ olarak bulunur. $h(x)$ ve $g(x)$ yerlerine konursa Denk. \ref{eq:odd_even}'e ulaşılır.
+\end{tcolorbox}
+
+Böylece $\hat H$ işlemcisinin buraya kaddar bahsedilen özfonksiyonları için olduğu gibi herhangi bir dalga fonksiyonu da bu yeni işlemcinin özfonksiyonlarının açılımı olarak yazılabilir.
+
+Çift ve tek olma durumlarının çok açık bir şekilde görünür olmasının nedeni sonsuz kuyunun merkezini $x=0$'da seçmiş olmamızdandır. Eğer $0$ ve $a$ sınırlarına sahip sonsuz kuyu durumunu çalışsaydık bile, pek değişen bir şey olmazdı. İlkine göre bu durumda simetrinin gözlenmesi daha açık olmasa da simetri ekseninin $x=a/2$'de olacağı kestirilebilirdi. Buradan çıkarılabilecek önemli bir ders: kuantum mekaniği problemlerinde Hamiltonyen işlemcisinin mümkün olan simetrilerinin ortaya çıkarılmasının önemli olduğudur. Simetrileri daha açık hale getirecek koordinatların seçiminin de ayrıca önemli olduğu ortadadır.
+
+Eğer Şekil \ref{fig:nonSymmetricPot}'deki bir potansiyel içeren bir kuantum sistemi çalışılıyor olsaydı, koordinat sistemi tercihiyle simetrik bir durum yaratmak mümkün olmazdı. Anlaşılıyor ki; \emph{simetrinin Hamiltonyen} içinde olmalıdır. Bu durum hangi şartlar altında çift (veya tek) özfonksiyonlar zamanla değişmeden kalır sorusunun cevaplanmasıyla ortaya çıkarılabilir.
+%%
+%%
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figurler/non_symmetric_pot.png}
+	\caption{\YAZILACAK, değişecek veya silinecek...}
+	\label{fig:nonSymmetricPot}
+\end{figure}
+
+Şekil \ref{fig:nonSymmetricPot}'deki gib bir sistemin bir çift özfonksiyonu başlangıçta ($t=0$'da),
+%%
+\begin{equation}
+\psi(x, 0)=\psi(-x, 0) \equiv \psi^{(+)}(x)
+\end{equation}
+%%
+olarak tanımlanabilir. Bu sistemin zamanla gelişimi,
+%%
+\begin{equation}
+i \hbar \frac{\partial \psi(x, t)}{\partial t}= \hat H \psi(x, t)
+\end{equation}
+%%
+ile tanımlanır. Bu denkleme $\hat P$ işlemcisi uygulanırsa,
+%%
+\begin{equation}
+i \hbar \frac{\partial}{\partial t} P \psi(x, t)=P H \psi(x, t)
+\end{equation}
+%%
+elde edilir. Eğer $\hat H$, $x \rightarrow -x$ yansıması altında, çift kalıyorsa (V(x) ve $\frac{d^2}{dx^2}$ çift ise bu mümkündür);
+%%
+\begin{equation}
+i \hbar \frac{\partial}{\partial t}[P \psi(x, t)]=H[P \psi(x, t)]
+\end{equation}
+%%
+sonucuna ulaşılır. Böylece
+%%
+\begin{equation}
+\psi^{(+)}(x, t)=\frac{1}{2}(1+P) \psi(x, t) \quad \text{ ve } \quad \psi^{(-)}(x, t)=\frac{1}{2}(1-P) \psi(x, t) 
+\end{equation}
+%%
+Schrödinger denklemini birbirinden bağımsız olarak sağlayan bu iki çözüm önerilebilir. Çözümlerin zamanla bir birine karışmayacağı ve sistemin ilk durumu ne olursa olsun ilk durumun zamanla değişmeden korunacağı iki çözüm elde edilmiş olur.
+Paritenin zamanla değişmezliğini bütün mümkün durumlar için aşağıdaki eşitlğin sağlanması garanti altına alır. 
+%%
+\begin{equation}
+(P H-H P) \psi(x, t)=0
+\end{equation}
+%%
+Bu eşitlik kısaca,
+%%
+\begin{equation}
+[P, H]=0
+\end{equation}
+%%
+olarak yazılabilir ve $\hat P$ ve $\hat H$ işlemcilerinin komütasyon özelliğini sağlaması şartı olarak adlandırılır.
+
+Bu önemli şart oldukça genel bir ifadeyle ``zamana bağlılığı açık olmayan ve $\hat H$ Hamiltonyen ile komüte eden herhangi bir işlemci ilgili hareketin sabitidir" olarak tanımlanır.
+
 
 
 \bigskip
