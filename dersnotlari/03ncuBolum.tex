@@ -876,25 +876,29 @@ olacaktır. Zamana bağlı dalga fonksiyonunun da $x$'e göre hala \emph{çift} 
 
 Fizikte herhangi bir harekete ait sabit daima önemlidir, çünkü sabitin temsil ettiği ilgili niceliğin zamanla (veya ilgili olduğu boyutla; zaman, konum, momentum vb.) korunduğunu gösterir. Bu tür sabitleri formülleştirmek faydalıdır; \emph{çift} veya \emph{tek} olma durumunu parite işlemcisi $\hat P$ ile formülleştirebiliriz. İşlemcinin görevi basitçe $x\rightarrow -x$ yansımasını gerçekleştirmektir. Parite işlemcisi herhangi bir dalga fonksiyonuna uygulandığına,
 %%
-\begin{equation}
+\begin{align}
 \hat P \psi(x)=\psi(-x)
-\end{equation}
+\end{align}
 %%
-işlemini gerçekleştirir.
-
-
-
-\bigskip
-\begin{table}[!hbtp]
-	\begin{tabular}{l}
-		\YAZILACAK\\
-		\hline
-	\end{tabular}
-
-\end{table}
-\bigskip
-
-Herhangi bir $\psi(x)$ fonksiyonu aşağıdaki gibi tek ve çift fonksiyonların toplamı olarak yazılabilir,
+işlemini gerçekleştirir. Çift ve tek fonksiyonlar için bu işlemin sonucu,
+%%
+\begin{align}
+\hat P \psi^{(+)}(x)=\psi^{(+)}(x)\quad \text{ ve } \quad \hat P \psi^{(-)}(x)=-\psi^{(-)}(x)
+\end{align}
+%%
+olarak bulunur. Bu iki denklem özdeğer denklemleridir; $\hat P$'nin $+1$ özdeğeri veren durumu için özfonksiyonlar çift fonksiyonlardır ve $-1$ özdeğeri için ise tek fonksiyonlardır. Sonsuz kuyu durumundaki özfonksiyonlar sadece $H$'nin özfonksiyonu değillerdir, aynı zamanda $\hat P$'nin de özfonksiyonlarıdırlar. Parite işlemcisinin sadece $\pm 1$ özdeğerlerini alması mümkündür. Farz edelim ki;
+%%
+\begin{align}
+\hat P u(x)=\lambda u(x)
+\end{align}
+%%
+olsun. $\hat P$'yi bir kere daha uygularsak,
+%%
+\begin{align}
+\hat P^2 u(x)=\hat P \lambda u(x)= \lambda^2 u(x) \quad \text{ ve böylece }  \quad  \hat P^2 u(x)= u(x) 
+\end{align}
+%%
+olur. Çünkü  iki defa yansıma altında $u(x)$ aynı kalmalıdır. Böylece $\lambda^2 = 1$ olacağından $\lambda = \pm 1$ olacağı açıktır. Herhangi bir $\psi(x)$ fonksiyonu aşağıdaki gibi tek ve çift fonksiyonların toplamı olarak yazılabilir,
 
 \begin{align}
 \label{eq:odd_even}
@@ -903,6 +907,18 @@ Herhangi bir $\psi(x)$ fonksiyonu aşağıdaki gibi tek ve çift fonksiyonların
 
 %% https://math.stackexchange.com/questions/2816109/prove-that-any-function-can-be-written-as-the-sum-of-an-even-function-and-an-odd
 {\bf İspatı:} $\psi(x)$ çift  $g$ ve tek $h$ fonksiyonlarının toplamı olsun. Böylece $\psi(x) = g(x) + h(x)$ yazılabilir. Bu durumda $\psi(-x) = g(x) - h(x)$ olur. Sonrasında ise $g(x) = \frac {\psi(x) + \psi(-x)}2$ ve $h(x) = \frac {\psi(x) - \psi(-x)}2$ olarak bulunur. $h(x)$ ve $g(x)$ yerlerine konursa Denk. \ref{eq:odd_even}'e ulaşılır.
+
+
+\bigskip
+\begin{table}[!hbtp]
+	\begin{tabular}{l}
+		\YAZILACAK\\
+		\hline
+	\end{tabular}
+	
+\end{table}
+\bigskip
+
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
