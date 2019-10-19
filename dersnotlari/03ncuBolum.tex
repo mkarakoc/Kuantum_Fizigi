@@ -811,15 +811,42 @@ Böyle bir durumu fiziksel olarak kabul etmek pek mümkün değildir. Çünkü e
 
 \subsubsection{Yozlaşmış (Dejenere) Durumlar}
 
-Enerji özdeğeri denkleminin (Denk. \ref{eq:freeParticle_schEq}), $u_1(x) = e^{i k x}$ ve $u_2(x) = e^{-i k x}$  olmak üzere birbirinden bağımsız iki çözümü vardır. Benzer şekilde bu denklemin reel çözümleri $u_1(x) = \cos(kx)$ ve $u_2(x) = \sin(kx)$'te bağımsız çözümlerdir. Bu çözümlerden hangi $u_1(x)$, $u_2(x)$ ikilisi seçilirse seçilsin, sonsuz kuyudaki parçacık probleminden farklı olarak, her ikiside aynı enerji özdeğerine sahip olacaktır. Serbest enerji işlemcisi her iki çözüme uygulandığında aşağıdaki sonuca ulaşılcağı rahatça gösterilebilir.
+Enerji özdeğeri denkleminin (Denk. \ref{eq:freeParticle_schEq}), $u_1(x) = e^{i k x}$ ve $u_2(x) = e^{-i k x}$  olmak üzere birbirinden bağımsız iki çözümü vardır. Benzer şekilde bu denklemin reel çözümleri $u_1(x) = \cos(kx)$ ve $u_2(x) = \sin(kx)$'te bağımsız çözümlerdir. Bu çözümlerden hangi $u_1(x)$, $u_2(x)$ ikilisi seçilirse seçilsin, sonsuz kuyudaki parçacık probleminden farklı olarak, her ikiside aynı enerji özdeğerine sahip olacaktır. Serbest parçacık için Hamiltonyen işlemcisi her iki çözüme uygulandığında aşağıdaki sonuca ulaşılacağı rahatça gösterilebilir.
 
 \begin{equation}
 -\frac{ \hbar ^ { 2 } } { 2 m} \frac { d ^ { 2 } u_1 ( x ) } { d x ^ { 2 } }  =  E u_1 ( x ), \quad\quad
 -\frac{ \hbar ^ { 2 } } { 2 m} \frac { d ^ { 2 } u_2 ( x ) } { d x ^ { 2 } }  =  E u_2 ( x )
 \end{equation}
 
+Birden çok bağımsız özfonksiyonun bir hermityen işlemcinin aynı özdeğerine karşılık geldikleri durumlarla karşılaşılabilir, bu tür durumlara yozlaşmış (dejenere) durumlar denir.
 
-\YAZILACAK
+Her iki dejenere özfonksiyon ikilisi de birbirlerine diktir (ortogonaldir). Aşağıdaki integraller $k\neq0$ ve $a\rightarrow\infty$ (serbest parçacık olması için $a$ sonsuza gitmelidir) olmak üzere dejenere özfonksiyonların birbirlerine dik olduklarının kanıtlarıdır.
+%%
+\begin{align}
+	{\int\limits_{-a}^{a} d x\left(\frac{1}{\sqrt a}e^{-i k x}\right)^{*} \frac{1}{\sqrt a}e^{i k x}=0} \text{ \quad ve \quad }
+	{\int\limits_{-a}^{a} d x \sin k x \cos k x=0}
+\end{align}
+%%
+Aynı enerjiye $E=\hbar^{2} k^{2} / 2 m$ karşılık gelen kaç tane dejenere durum (özfonksiyon) olursa olsun, bu özfonksiyonlar \emph{farklı enerjilere} ait özfonksiyonlara daima diktirler. 
+
+Enerji özdeğerine göre dejenere olan özfonksiyonlar başka bir operatörün de özfonksiyonları olabilirler ve bu diğer operatöre göre dejenere olmayabilirler. Örneğin momentum işlemcisi ($\hat p$) için $e^{\pm i k x}$ özfonksiyonları dejenere değildirler.
+%%
+\begin{align}
+\hat p e^{i k x}&=\frac{\hbar}{i} \frac{d}{d x} e^{i k x}=\hbar k e^{i k x} \nonumber\\
+\hat p e^{- i k x}&=\frac{\hbar}{i} \frac{d}{d x} e^{- i k x}=- \hbar k e^{- i k x}
+\end{align}
+%%
+$p=\hbar k$ olmak üzere $\pm p$ her iki özfonksiyon için iki farklı özdeğer mevcuttur.
+
+Eğer $\cos(kx)$ ve $\sin(kx)$ çiftini inceleyecek olsaydık, bu iki özfonksiyonu birbirinden ayırt edecek olan momentum işlemcisi olmazdı. Çünkü bu özfonksiyonlar momentum işlemcisinin özfonksiyonları değildirler. Bu özfonksiyonları ayırt etmemizi sağlayacak başka bir kavram vardır: $x$'e göre $\cos(kx)$ çift ve $\sin(kx)$ tek fonksiyondur. \emph{Çift} veya \emph{tek} olma özdeğerleri olarak adlandırabileceğimiz bu durumları $\hat P$ parite işlemcisi olarak adlandırcağımız işlemci vermektedir.
+%%
+\begin{align}
+\hat P \cos( k x)&= \cos( - k x) = +1 \cos(k x)  \nonumber\\
+\hat P \sin( k x)&= \sin( - k x) = -1 \sin(k x)
+\end{align}
+%%
+Yukarıdaki işlemlerin sonucuna göre her iki özfonksiyon için $\hat P$'nin $\pm 1$ şeklinde farklı iki özdeğeri mevcuttur. Buna göre $\cos(kx)$ \emph{çift parite} ve $\sin(kx)$ \emph{tek parite} özdeğerlidir.
+
 
 \subsubsection{Parite}
 
@@ -833,6 +860,8 @@ Enerji özdeğeri denkleminin (Denk. \ref{eq:freeParticle_schEq}), $u_1(x) = e^{
 % http://folk.uio.no/trondson/freeparticle.pdf
 % https://physics.stackexchange.com/questions/165373/normalizing-the-solution-to-free-particle-schr%C3%B6dinger-equation
 
+
+Serbest parçacığın veya sınırları $-a/2$ ve $+a/2$ aralığında olan bir kuyu içindeki parçacığın $\sin(kx)$ ve $\cos(kx)$ özfonksiyonlarıyla tanımlanabildiğini gördük. Bu özfonksiyonlar $x \rightarrow -x$ dönüşümü altında \emph{tek} veya \emph{çift} fonksiyonlardır.
 
 Herhangi bir $\psi(x)$ fonksiyonu aşağıdaki gibi tek ve çift fonksiyonların toplamı olarak yazılabilir,
 
