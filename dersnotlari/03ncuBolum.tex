@@ -942,52 +942,43 @@ i \hbar \frac{\partial \psi(x, t)}{\partial t}= \hat H \psi(x, t)
 ile tanımlanır. Bu denkleme $\hat P$ işlemcisi uygulanırsa,
 %%
 \begin{equation}
-i \hbar \frac{\partial}{\partial t} P \psi(x, t)=P H \psi(x, t)
+i \hbar \frac{\partial}{\partial t} \hat P \psi(x, t)= \hat P  \hat H \psi(x, t)
 \end{equation}
 %%
 elde edilir. Eğer $\hat H$, $x \rightarrow -x$ yansıması altında, çift kalıyorsa (V(x) ve $\frac{d^2}{dx^2}$ çift ise bu mümkündür);
 %%
 \begin{equation}
-i \hbar \frac{\partial}{\partial t}[P \psi(x, t)]=H[P \psi(x, t)]
+i \hbar \frac{\partial}{\partial t}[ \hat P \psi(x, t)]= \hat H[ \hat P \psi(x, t)]
 \end{equation}
 %%
 sonucuna ulaşılır. Böylece
 %%
 \begin{equation}
-\psi^{(+)}(x, t)=\frac{1}{2}(1+P) \psi(x, t) \quad \text{ ve } \quad \psi^{(-)}(x, t)=\frac{1}{2}(1-P) \psi(x, t) 
+\psi^{(+)}(x, t)=\frac{1}{2}(1+ \hat P) \psi(x, t) \quad \text{ ve } \quad \psi^{(-)}(x, t)=\frac{1}{2}(1- \hat P) \psi(x, t) 
 \end{equation}
 %%
 Schrödinger denklemini birbirinden bağımsız olarak sağlayan bu iki çözüm önerilebilir. Çözümlerin zamanla bir birine karışmayacağı ve sistemin ilk durumu ne olursa olsun ilk durumun zamanla değişmeden korunacağı iki çözüm elde edilmiş olur.
 Paritenin zamanla değişmezliğini bütün mümkün durumlar için aşağıdaki eşitlğin sağlanması garanti altına alır. 
 %%
 \begin{equation}
-(P H-H P) \psi(x, t)=0
+( \hat P  \hat H-  \hat H  \hat P) \psi(x, t)=0
 \end{equation}
 %%
 Bu eşitlik kısaca,
 %%
 \begin{equation}
-[P, H]=0
+[ \hat P,  \hat H]=0
 \end{equation}
 %%
 olarak yazılabilir ve $\hat P$ ve $\hat H$ işlemcilerinin komütasyon özelliğini sağlaması şartı olarak adlandırılır.
 
-Bu önemli şart oldukça genel bir ifadeyle ``zamana bağlılığı açık olmayan ve $\hat H$ Hamiltonyen ile komüte eden herhangi bir işlemci ilgili hareketin sabitidir" olarak tanımlanır.
+Bu önemli şart oldukça genel bir ifadeyle ``zamana bağlılığı açık olmayan ve $\hat H$ Hamiltonyen ile komüte eden herhangi bir işlemci ilgili hareketin sabitidir" olarak tanımlanır. Örneğin potansiyel $V(x,t)$ şeklinde zamana bağlı ise enerji artık bir hareket sabiti olmaktan çıkar. Dahası, bu durmda Schrödinger denklemi zamana bağlı ve zamandan bağımsız kısım olarak ikiye ayrılamayacağından bir enerji özdeğeri denklemi de elde edilemez.
+
+Özet olarak, dejenere özfonksiyonların birbirinden farklı olduklarınının gözlenmesini sağlayan aynı özfonksiyonların başka bir hermityen işlemcinin de özfonksiyonları olmalarıdır. Yukarıda bahsi geçen  $\hat p$ ve $\hat P$ işlemcilerinin her ikisi de $\hat H$ Hamiltonyen işlemcisiyle komüt edebilirler. Her iki işlemci de $\hat H$ ile komütasyon şartını sağladıklarından $\hat H$'nin özfonsiyonları bu iki işlemcinin de eşzamanlı özfonksiyonlarıdır. Fakat bu durumun aksine $\hat p$ ve $\hat P$ komüt etmezler bu nedenle özfonksiyonları aynı değildir.
 
 
 
-\bigskip
-\begin{table}[!hbtp]
-	\begin{tabular}{l}
-		\YAZILACAK\\
-		\hline
-	\end{tabular}
-	
-\end{table}
-\bigskip
-
-
-\newpage
+%%\newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
 % and "\renewcommand\bibname{New Title}" for book and report type documents.
 \renewcommand\refname{Kaynaklar}
