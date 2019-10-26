@@ -10,6 +10,7 @@
 
 \usepackage{amsmath,amssymb,mathabx}%\for eqref
 \usepackage{lscape}
+\usepackage{tcolorbox}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -95,19 +96,19 @@ sorry I ever got involved with quantum theory.
 \setcounter{section}{3} %% THIS WILL BE DELETED when all chapters merged!
 \section{Bir Boyutlu Potansiyeller}
 
-Üç boyutlu bir evrende yaşıyor olmamıza rağmen, bir çok fiziksel olayı (hareketi) bir boyutlu olarak tanımlamak mümkündür. Bu nedenle bu bölümde klasik fiziğin açıklayamadığı fakat kuantum fiziğiyle çalışabildiğimiz bazı bir boyutlu sistemleri inceleyeceğiz.
+Üç boyutlu bir evrende yaşıyor olmamıza rağmen, bir çok fiziksel olayı (hareketi) bir boyutlu olarak tanımlamak mümkündür. Bu nedenle bu bölümde klasik fiziğin sınırları dışına çıkan ve kuantum fiziğiyle çalışabildiğimiz bazı bir boyutlu sistemleri inceleyeceğiz.
 
 
 \subsection{Basamak Potansiyeli}
 %%
 \begin{figure}[hbtp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{figurler/Basamak_Potansiyeli}
+	\includegraphics[width=0.6\linewidth]{figurler/Basamak_Potansiyeli}
 	\caption{Basamak potansiyeli.}
 	\label{fig:basamakpotansiyeli}
 \end{figure}
 %%
-Basamak potansiyeli için bir örnek yukarıdaki şekildeki gibi olur. Şekilden anlaşılacağı üzere basamak potansiyeli; birbirinden farklı sabit potansiyellere sahip iki bölge içeren bir durumdur. Bir boyutlu hali için matematiksel ifadesi aşağıdaki gibidir.
+Bir boyutlu basamak potansiyelinin bir örneği yukarıdaki şekilde gösterilmiştir. Şekilden anlaşılacağı üzere basamak potansiyeli; birbirinden farklı sabit potansiyellere sahip iki bölgeden oluşur. Bir boyutlu bu potansiyelin matematiksel ifadesi aşağıdaki gibidir.
 %%
 \begin{equation}
 V ( x )  = \left\{ 
@@ -212,15 +213,17 @@ elde edilir. Basamak potansiyeli $x=0$'da süreksiz olmasına rağmen, sistemin 
 \begin{array} { r l } { \left( \frac { d u } { d x } \right) _ { +\varepsilon } - \left( \frac { d u } { d x } \right) _ { - \varepsilon } } & { = \int _ { - \varepsilon } ^ { +\varepsilon } d x \frac { d } { d x } \frac { d u } { d x } } \\ { } & { = \int _ { - \varepsilon } ^ { +\varepsilon } d x \frac { 2 m } { \hbar ^ { 2 } } [ V ( x ) - E ] u ( x ) = 0 } \end{array}
 \end{equation}
 %%
-Burada $\varepsilon$ sonsuz küçük bir pozitif reel sayıdır. $x=0$'ın $-\varepsilon$ ve $+\varepsilon$ civarında dalga fonksiyonlarının türevlerinin farkı yukarıdaki eşitliğin sol tarafındaki gibidir ve bu farkın integral formuda eşitliğin sağ tarafındaki gibidir. Eşitliğin sol tarafı Schrödinger denkleminden faydalanılarak $V(X)$, $E$ ve $u(x)$'i içerecek şekilde yeniden yazılabilir. Bu problemde $V(x)$ ve $E$ birer sabit sayı olduklarından, $\pm \varepsilon \rightarrow \infty$ olduğundan ve böylece $u(x)$'in sürekliliği gerçekleştiğinden bu integralin cevabı sıfır olacaktır. Böylece bu tür problemler için dalga fonksiyonlarının türevlerinin de  sürekli oldukları kabul edilebilir. 
+Burada $\varepsilon$ sonsuz küçük bir pozitif reel sayıdır. $x=0$'ın $-\varepsilon$ ve $+\varepsilon$ civarında dalga fonksiyonlarının türevlerinin farkı yukarıdaki eşitliğin sol tarafındaki gibidir ve bu farkın integral formuda eşitliğin sağ tarafındaki gibidir. Eşitliğin sol tarafı Schrödinger denkleminden faydalanılarak $V(X)$, $E$ ve $u(x)$'i içerecek şekilde yeniden yazılabilir. Bu problemde $V(x)$ ve $E$ birer sabit sayı olduklarından, $\pm \varepsilon \rightarrow 0$ olduğundan ve böylece $u(x)$'in sürekliliği gerçekleştiğinden bu integralin cevabı sıfır olacaktır. Böylece bu tür problemler için dalga fonksiyonlarının türevlerinin de  sürekli oldukları kabul edilebilir. 
 
-Yeri geldiğinden ve daha sonra kullanılacağı için şimdiden belirtmek gerekir ki, bu süreklilik $\lambda \delta(x-a)$ benzeri Dirac-delta fonksiyonu içeren potansiyeller için geçerli değildir. Böyle potansiyeller için süreklilik aşağıdaki gibi bir süreksizlik halin alır.
+\begin{tcolorbox}
+Yeri geldiğinden ve daha sonra kullanılacağı için şimdiden belirtmek gerekir ki, bu süreklilik $\lambda \delta(x-a)$ benzeri Dirac-delta fonksiyonu içeren potansiyeller için geçerli değildir. Böyle potansiyeller için süreklilik aşağıdaki gibi bir süreksizlik halini alır.
 %%
 \begin{equation}
 \begin{aligned} \left( \frac { d u } { d x } \right) _ { a + \varepsilon } - \left( \frac { d u } { d x } \right) _ { a - \varepsilon } & = \frac { 2 m } { \hbar ^ { 2 } } \int _ { a - \varepsilon } ^ { a + \varepsilon } d x \lambda \delta ( x - a ) u ( x ) \\ & = \frac { 2 m } { \hbar ^ { 2 } } \lambda u ( a ) \end{aligned}
 \end{equation}
 %%
-
+\end{tcolorbox}
+	
 Bu problemde türevlerinin sürekliliği sağlandığına göre; türevlerinin sürekliliğinden,
 %%
 \begin{align}
@@ -230,11 +233,11 @@ i k ( A - B ) &= i q C
 %%
 elde edilir.
 
-Bu tür problemleri çalışılırken, klasik bir dalga sisteminin davranışına benzer olarak yansıma ve geçme olasılıklarından bahsetmek mümkündür. Bu olasılıklarla ilişklili olarak, genellikle yansıma ve geçme katsayıları, sırasıyla,
+Bu tür problemleri çalışılırken, klasik bir dalga sisteminin davranışına benzer olarak yansıma ve geçme olasılıklarından bahsetmek mümkündür. Bu olasılıklarla ilişkili olarak, genellikle yansıma ve geçme katsayıları, sırasıyla,
 %%
 %%
 \begin{align}
-R \equiv \frac{|j_\text{yansıyan}|}{|j_\text{gelen}|} \\
+R \equiv \frac{|j_\text{yansıyan}|}{|j_\text{gelen}|} \quad \text{ ve } \quad
 T \equiv \frac{|j_\text{geçen}|}{|j_\text{gelen}|}
 \end{align}
 %%
@@ -247,26 +250,26 @@ T \equiv \frac{|j_\text{geçen}|}{|j_\text{gelen}|}
 \right]
 \end{equation}
 %%
-bir vektör davranışına sahip olduğu açıkca görülür. Basamak potansiyeli probleminde, $j_1$ aslında,
+bir vektör davranışına sahip olduğu açıkça görülür. Basamak potansiyeli probleminde, $j_1$ (1. bölgedeki olasılık akısı) aslında,
 %%
 \begin{equation}
 \vec j_1 = \vec j_\text{gelen} + \vec j_\text{yansıyan}
 \end{equation}
 %%
-olarak yazılabilir. $j_2$ ise,
+olarak yazılabilir. $j_2$  (2. bölgedeki olasılık akısı) ise,
 %%
 \begin{equation}
 \vec j_2 = \vec j_\text{geçen}
 \end{equation}
 %%
-olarak yazılabilir. Akının korunumu ise,
+olarak yazılabilir. Akının korunumu, $\frac { \partial } { \partial x } j ( x , t ) = 0$, ise
 %%
 %%
 \begin{equation}
-\vec j_\text{gelen} + \vec j_\text{yansıyan} = \vec j_\text{geçen}
+\vec j_1 = \vec j_2 \quad \text{ veya } \quad \vec j_\text{gelen} + \vec j_\text{yansıyan} = \vec j_\text{geçen}
 \end{equation}
 %%
-olmasını gerektirir. Tekrar basamak potansiyeli çalıştığımız bir boyutlu duruma döner ve vektör notasyonunu bırakırsak ve yönleri sadece $+$ ve $-$ işaretleriyle temsil edersek,
+olmasını gerektirir. Tekrar basamak potansiyeli çalıştığımız bir boyutlu duruma döner ve vektör notasyonunu bırakırsak ve yönleri sadece $``+"$ ve $``-"$  işaretleriyle temsil edersek,
 %%
 \begin{equation}
 j_\text{gelen} =  \frac{\hbar}{2 m i} \left[u^*_g \frac{d}{dx}u_g - u_g (\frac{d}{dx}u_g)^*\right]
@@ -294,7 +297,7 @@ T =  \frac{q}{k} \frac{|C|^2}{|A|^2}
 \end{equation}
 %%
 olarak bulunurlar. $R$ ve $T$'yi bilinmeyen $A$, $B$ ve $C$ kat sayılarından
-kurtarabiliriz. Bunun için akının korunumundan, dalga fonksiyonlarının ve türevlerinin sürekliliğinden,
+kurtarabiliriz. Bunun için akının korunumundan ve dalga fonksiyonlarının ve türevlerinin sürekliliğinden,
 %%
 %%
 \begin{align}
@@ -339,10 +342,10 @@ halini alır. Burada $\eta$ ($V_0>E$ olduğundan),
 %%
 olarak tanımlanır. Benzer bir matematiksel süreçten geçilerek hesaplar yapıldığında dalga fonksiyonu genlikleri arasınada,
 %%
-\begin{equation}
-B =  \frac{ik + \eta}{i k- \eta} A \quad \text{ ve } \quad
-C =  \frac{i 2k}{i k-\eta} A
-\end{equation}
+\begin{align}
+%%B =  \frac{ik + \eta}{i k- \eta} A \quad \text{ ve } \quad C =  \frac{i 2k}{i k-\eta} A\\
+B =  \frac{k - i \eta}{k + i \eta} A \quad \text{ ve } \quad C =  \frac{2k}{ k+i \eta} A
+\end{align}
 %%
 ilişkileri bulunur. Olasılık akıları hesaplandında, gelen ve yansıyan akıların aynı kaldığı, fakat geçen akının sıfır olduğu görülecektir. Bu nedenle her ne kadar basamağın içine giren dalga fonksiyonunun genliği $C$ sıfır olmasa da $j_\text{geçen} = 0$ olduğundan, geçme olasılığı katsayısı,
 \begin{equation}
@@ -352,7 +355,7 @@ T = \frac{|j_\text{geçen}|}{|j_\text{gelen}|} = 0
 olur. Yansıma olasılığı katsayısı ise,
 %%
 \begin{equation}
-R = \frac{B B^*}{A A^*} = \left(  \frac{ik + \eta}{i k- \eta} \right) \left( \frac{ik - \eta}{i k + \eta} \right)  = 1
+R = \frac{B B^*}{A A^*} = \left(  \frac{k - i \eta}{k + i \eta} \right) \left( \frac{k + i \eta}{k - i \eta} \right)  = 1
 \end{equation}
 %%
 olur. Aşağıdaki şekillerde $R$, $T$ ve dalga fonksiyonlarının genliklerinin $E/V_0$ oranına göre davranışları gösterilmiştir.
@@ -380,7 +383,7 @@ Elde edilen sonuçlar hakkında bazı fiziksel yorumlar yapılabilir:
 	
 	\item $E>>V_0$ için $R\rightarrow0$ ve $q\rightarrow k$, bunun nedeni kolayca anlaşılabilir. Parçacığın veya sistemin enerjisi arttıkça basamak potansiyelinin etkisi neredeyse yok gibidir.
 	
-	\item $E<V_0$ ise
+	\item $E<V_0$ durumu için dalga fonksiyonun $x$'in üstel azalan reel bir fonksiyonu olduğuna dikkat ediniz. Böylece $x\rightarrow+\infty$ durumunda dalga fonksiyonu ıraksamamış (patlamamış) olur. Klasik mekanikle uyumlu şekilde $R=1$ ve $T=0$ (veya ($j_\text{geçen} = 0$))olduğuna da dikkat ediniz. Fakat geçen dalganın genliği ($C\neq0$) sıfır olmamıştır ve bu bir dalganın gösterebileceği davranıştır. Bu davranış kuantum fiziğinde \emph{``tünelleme"} olarak adlandırılır. Sonsuza uzanan basamak potansiyeli yerine sonlu kalan bir bariyer potansiyeli çalışıldığında klasik olarak yasaklı olan bölgeden bir parçacığın geçebileceği (tünelleme yapabileceği) görülecektir. 
 	
 \end{itemize}
 
