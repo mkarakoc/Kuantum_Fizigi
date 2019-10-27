@@ -103,20 +103,20 @@ sorry I ever got involved with quantum theory.
 %%
 \begin{figure}[hbtp]
 	\centering
-	\includegraphics[width=0.6\linewidth]{figurler/Basamak_Potansiyeli}
+	\includegraphics[width=0.6\linewidth]{figurler/Basamak_Potansiyeli.png}
 	\caption{Basamak potansiyeli.}
 	\label{fig:basamakpotansiyeli}
 \end{figure}
 %%
 Bir boyutlu basamak potansiyelinin bir örneği yukarıdaki şekilde gösterilmiştir. Şekilden anlaşılacağı üzere basamak potansiyeli; birbirinden farklı sabit potansiyellere sahip iki bölgeden oluşur. Bir boyutlu bu potansiyelin matematiksel ifadesi aşağıdaki gibidir.
 %%
-\begin{equation}
+\begin{align}
 V ( x )  = \left\{ 
 \begin{array} { l l } 
 { 0 } & {\Leftarrow x < 0 } \\ 
 { V _ { 0 } } & {\Leftarrow x \geq 0 } 
 \end{array} \right. 
-\end{equation}
+\end{align}
 %%
 
 Bu potansiyeli zamandan bağımsız Schrödinger denklemi ile çalışabiliriz. Öncelikle Schrödinger denklemini yazılışı daha kolay olan,
@@ -388,6 +388,110 @@ Elde edilen sonuçlar hakkında bazı fiziksel yorumlar yapılabilir:
 \end{itemize}
 
 \subsection{Sonlu Potansiyel Kuyusu}
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{figurler/SonluKuyu_Potansiyeli.png}
+	\caption{Sonlu kuyu potansiyeli, $E>V_0$ durumu.}
+	\label{fig:sonlukuyupotansiyeli}
+\end{figure}
+
+Şekil 	\ref{fig:sonlukuyupotansiyeli}'te gösterilen sonlu kuyu potansiyelinin matematik gösterimi,
+%%
+\begin{align}
+V ( x )  = \left\{ 
+\begin{array} { l l } 
+{ \quad 0 } & {\Leftarrow -a > x } \\
+{-V _ { 0 } } & {\Leftarrow -a \leq x \leq a } \quad \text{ (kuyunun içi)} \\
+{ \quad 0 } & {\Leftarrow \quad a > x }
+\end{array} \right. 
+\end{align}
+%%
+olarak yazılabilir. Şekil incelendiğinde 1. ve 3. bölgelerde sabit ve sıfır değerli potansiyellerin, 2. bölgede ise sabit $-V_0$ değerli bir potansiyelin olduğu görülebilir.
+%%
+\begin{equation}
+- \frac { \hbar ^ { 2 } } { 2 m } \frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } + V ( x ) u ( x ) = E u ( x )
+\end{equation}
+%%
+
+Zamandan bağımsız Schrödinger denklemi bu sistem için yukarıdaki gibi olacaktır. Birinci ve üçüncü bölge için denklem,
+%%
+\begin{align}
+\frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } +  \frac { 2 m} { \hbar ^ { 2 } } E u ( x ) = 0 \quad \text{ ve } \quad \frac { 2 m} { \hbar ^ { 2 } } E = k ^ { 2 }
+\end{align}
+%%
+ikinci bölge için ise,
+\begin{align}
+\frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } +  \frac { 2 m} { \hbar ^ { 2 } }  \left( E - V _ { 0 } \right) u ( x ) = 0 \quad \text{ ve } \quad \frac { 2 m} { \hbar ^ { 2 } }  \left( E + V _ { 0 } \right) = q ^ { 2 }
+\end{align}
+%%
+halini alır. Böylece bu sistemin en genel çözümü,
+%%
+\begin{align}
+u ( x )  = \left\{ 
+\begin{array} { l l } 
+{u_1(x) = A_I e^{i k x} + A_R e^{-i k x} } & {\Leftarrow -a > x } \\
+{u_2(x) = A e^{i k x} + B e^{-i k x} } & {\Leftarrow -a \leq x \leq a } \quad \text{ (kuyunun içi)} \\
+{u_3(x) = A_T e^{i k x}} & {\Leftarrow \quad a > x }
+\end{array} \right. 
+\end{align}
+%%
+olur. Eğer çözümleri basitleştirmek için $A_I=1$ tercih edilirse, üç bölgenin olasılık akıları,
+%%
+\begin{align}
+j ( x )  = \left\{ 
+\begin{array} { l l } 
+{j_1 = \frac{\hbar k}{m}\left(1-|A_R|^{2}\right) } & {\Leftarrow -a > x } \\
+{j_2 = \frac{\hbar q}{m}\left(|A|^{2}-|B|^{2}\right) } & {\Leftarrow -a \leq x \leq a } \quad \text{ (kuyunun içi)} \\
+{j_3 = \frac{\hbar k}{m}|A_T|^{2}} & {\Leftarrow \quad a > x }
+\end{array} \right. 
+\end{align}
+%%
+halini alırlar. Zamandan bağımsız bir davranış incelediğimizden önceki çalıştığımız sonsuz kuyu sistemine benzer şekilde olasılık akısı korunmalıdır. Böylece üç bölgenin akıları arasında,
+%%
+\begin{align}
+	j_1 = 	j_2 = 	j_3 \Longrightarrow \frac{\hbar k}{m}\left(1-|A_R|^{2}\right)=\frac{\hbar q}{m}\left(|A|^{2}-|B|^{2}\right)=\frac{\hbar k}{m}|A_T|^{2}
+	\label{eq:sonlukuyu_j1j2j3}
+\end{align}
+%%
+eşitliği ortaya çıkar. Üç bölgenin dalga fonksiyonlarının ve türevlerinin $x=\pm$'deki değerleri, süreklilik gereğince, birbirlerine eşit olmalıdır. Buna göre türevlerden ve dalga fonksiyonlardan elde edilen denklemlerin birbirlerine oranları da, aşağıda gösterildiği gibi, birbirlerine eşit olmalıdır. 
+%%
+\begin{align}
+\frac{1}{u_1(x)} \frac{d}{d x}u_1(x)\bigg|_{x=-a} = \frac{1}{u_2(x)} \frac{d}{d x}u_2(x)\bigg|_{x=-a}  &\Longrightarrow \frac{i q A e^{-i q a}-i q B e^{i q a}}{A e^{-i q a}+B e^{i q a}}=\frac{i k e^{-i k a}-i k A_R e^{i k a}}{e^{-i k a}+ A_R e^{i k a}} \nonumber\\
+\frac{1}{u_2(x)} \frac{d}{d x}u_2(x)\bigg|_{x=+a} = \frac{1}{u_3(x)} \frac{d}{d x}u_3(x)\bigg|_{x=+a} &\Longrightarrow \frac{i q A e^{i q a}-i q B e^{-i q a}}{A e^{i q a}+B e^{-i q a}}=\frac{i k A_T e^{i k a}}{A_T e^{i k a}}=i k
+\label{eq:sonlukuyu_u1u2u3}
+\end{align}
+%%
+
+Denk. \ref{eq:sonlukuyu_u1u2u3}'de verilen eşitlikler ve bu eşitliklerin pay ve paydalarının ayrı ayrı eşitlikleri de kullanılarak,
+%%
+%\begin{align}
+%{A_R=i e^{-i 2 k a} \frac{\left(q^{2}-k^{2}\right) \sin 2 q a}{2 k q \cos 2 q a-i\left(q^{2}+k^{2}\right) \sin 2 q a}} \\ 
+%{A_T=e^{-i 2 k a} \frac{2 k q}{2 k q \cos 2 q a-i\left(q^{2}+k^{2}\right) \sin 2 q a}}
+%\end{align}
+%%
+\begin{align}
+{A_R= e^{-i 2 k a} \frac{\left(k^{2}-q^{2}\right) \sin 2 q a}{\left(k^{2}+q^{2}\right) \sin 2 q a + i 2 k q \cos 2 q a}} \\ 
+{A_T= i e^{-i 2 k a} \frac{2 k q}{\left(k^{2}+q^{2}\right) \sin 2 q a + i 2 k q \cos 2 q a}}
+\end{align}
+%%
+%%
+yansıyan ($A_R$) ve geçen ($A_T$) dalgaların genlikleri bulunmuş olur. İncelediğimiz bu sistemi sanki $x = -\infty$'daki bir kuantum parçacığı kaynağından gelen parçacıkların sonlu kuyudan saçılması olarak düşünebiliriz. Dolayısıyla çözüm olarak önerdiğimiz dalga fonksiyonları $u_1~=~u_{gelen}~+~u_\text{yansıyan}$ ve $u_3 = u_\text{geçen}$ olarak da düşünülebilir. Bu durumda,
+%%
+\begin{align}
+u_{gelen} &= A_I e^{i k x}, \quad j_{gelen}~=~\frac{\hbar k} {m}, \quad (A_I = 1)\\
+u_\text{yansıyan} &= A_R e^{-i k x}, \quad j_\text{yansıyan} = \frac{\hbar k} {m} |A_R|^2\\
+u_\text{geçen} &= A_T e^{i q x}, \quad j_\text{geçen} = \frac{\hbar q} {m} |A_T|^2
+\end{align}
+%%
+ifadeleri ortaya çıkar. Geçiş $T$ ve $R$ yansıma katsayılarının tanımları hatırlanırsa sonlu kuyu için,
+%%
+\begin{align}
+T &= \frac{|j_\text{geçen}|}{|j_\text{gelen}|} = \frac{q}{k}  |A_T|^2  \quad \text{(1. bölgeden 3. bölgeye)}\\
+R &= \frac{|j_\text{yansıyan}|}{|j_\text{gelen}|} = |A_R|^2 \quad \text{(2. bölge sınırından 1. bölgeye)}
+\end{align}
+%%
+olarak bulunurlar.
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
