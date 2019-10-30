@@ -666,7 +666,7 @@ Serbest parçacık durumunu incelemeye devam edelim. Serbest parçacık için po
 olarak yazılır. Bu diferansiyel denklemin çözümleri $e ^ { i k x }$, $e ^ { - i k x }$ veya $\sin kx$, $\cos kx$ fonksiyonlarının lineer kombinasyonları olacaktır. Örneğin, $+x$ yönünde ilerleyen bir parçacık için
 %%
 \begin{equation}
-\psi(x,t) = u(x) T(t) = A e ^ { i k x -\omega t}
+\psi(x,t) = u(x) T(t) = A e ^ { (i k x -\omega t)}
 \end{equation}
 %%
 şeklinde bir serbest dalga fonksiyonu önerilebilir. Zamandan bağımsız Schrödinger denkleminin çözümü ise,
@@ -697,7 +697,7 @@ Böyle bir durumu fiziksel olarak kabul etmek pek mümkün değildir. Çünkü e
 	\psi ( x-a/2) = \psi ( x + a/2 )
 	\end{equation}
 	%%
-	şeklinde yeniden tanımlanır. Yeni tanımlanan bu şart, dalga fonksiyonunun, parçacık serbest olduğu ve her yerde aynı olasılıkla bulunabileceği için, $x=-a/2$ ve $x=+a/2$'de sürekli olmasının gerekliliğinden ortaya çıkar. Böylece,
+	şeklinde yeniden tanımlanır. Yeni tanımlanan bu şart parçacık serbest olduğu ve her yerde aynı olasılıkla bulunabileceği için, $x=-a/2$ ve $x=+a/2$'de  dalga fonksiyonunun sürekli olmasının gerekliliğinden ortaya çıkar. Böylece,
     %%
 	\begin{align*}
 	e ^ { i k (x-a/2) } &= e ^ { i k (x+a/2) }\\
@@ -734,16 +734,16 @@ Böyle bir durumu fiziksel olarak kabul etmek pek mümkün değildir. Çünkü e
 	\label{eq:free_particle_wf}
 	\end{equation}
 	%%
-	olarak tanımlı serbest parçacık momentum özfonksiyonunu beraber kullanarak, serbest parçacığın $\psi(x)$ dalga fonksiyonunu,
+	olarak tanımlı serbest parçacık momentum özfonksiyonunu beraber kullanarak, serbest parçacığın $\psi(x)$ dalga fonksiyonunu aşağıdaki gibi dalga paketi olarak yazabiliriz,
 	%%
 	\begin{align}
 	\psi ( x )  
 	&= \int _ { - \infty } ^ { \infty } d p \phi ( p ) u_p(x)
 	= \int _ { - \infty } ^ { \infty } d p  \{\sqrt { 2 \pi \hbar } \delta ( p - p^\prime )\} \frac { e ^ { i p x /\hbar } } { \sqrt { 2 \pi \hbar } }\\
-	&= e ^ { i p x /\hbar } =  e ^ { i k x }
+	&= e ^ { i p x /\hbar } =  e ^ { i k x }.
 	\end{align}
 	%%
-	şeklinde dalga paketi olarak yazabiliriz. Bu normalizasyon yöntemi \emph{Dirac normalizasyonu} olarak adlandırlır. Bir önceki normalizasyondaki gibi bir sonuç elde etmek için Dirac delta gibi çok keskin bir dalga paketi yerine yine keskin ama her noktada tanımlı bir dalga paketi tercih edilebilir. Böylece gerçek fiziksel demet daha iyi temsil edilmiş olur. Buradaki momentum dalga paketi fonksiyonu çok keskin olduğundan $\Delta p = 0$'dir, fakat Heisenberg'in belirsizlik ilkesi gereği, $\Delta x \rightarrow \infty$ olur.
+Fakat, momentum çok iyi bilindiğinden ortaya bir dalga paketi değil düzlem dalga çıkmıştır. Bu normalizasyon yöntemi \emph{Dirac normalizasyonu} olarak adlandırlır. Bir önceki normalizasyondaki gibi bir sonuç elde etmek için Dirac delta gibi çok keskin bir dalga paketi yerine yine keskin ama her noktada tanımlı bir dalga paketi tercih edilebilir. Böylece gerçek fiziksel demet daha iyi temsil edilmiş olur. Buradaki momentum dalga paketi fonksiyonu çok keskin olduğundan $\Delta p = 0$'dir, fakat Heisenberg'in belirsizlik ilkesi gereği, $\Delta x \rightarrow \infty$ olur.
     % REF: http://fisica.ugto.mx/~supercuerdas/miembros/QM/qm4.pdf)
 	%%
 	\begin{figure}[hbtp]	
@@ -875,7 +875,7 @@ Sonsuz kuyu içeresindeki örneği düşünecek olursak; bu sistemin (taban sevi
 %%
 olacaktır. Zamana bağlı dalga fonksiyonunun da $x$'e göre hala \emph{çift} kalacağı açıktır. Aynı durum başlangıçta \emph{tek} fonksiyon olan dalga fonksiyonları için de geçerlidir. Böylece $x=0$ civarında simetrik olan bu sistem için \emph{çiftlik} veya \emph{teklik} zamandan bağımsız bir özelliktir. Bu durumda \emph{çift} ve \emph{tek} olma durumlarına bu \emph{hareketin sabitleri}dir, denebilir. 
 
-Fizikte herhangi bir harekete ait sabit daima önemlidir, çünkü sabitin temsil ettiği ilgili niceliğin zamanla (veya ilgili olduğu boyutla; zaman, konum, momentum vb.) korunduğunu gösterir. Bu tür sabitleri formülleştirmek faydalıdır; \emph{çift} veya \emph{tek} olma durumunu parite işlemcisi $\hat P$ ile formülleştirebiliriz. İşlemcinin görevi basitçe $x\rightarrow -x$ yansımasını gerçekleştirmektir. Parite işlemcisi herhangi bir dalga fonksiyonuna uygulandığına,
+Fizikte herhangi bir harekete ait sabitler daima önemlidir, çünkü sabitin temsil ettiği ilgili niceliğin zamanla (veya ilgili olduğu boyutla; zaman, konum, momentum vb.) korunduğunu gösterir. Bu tür sabitleri formülleştirmek faydalıdır; \emph{çift} veya \emph{tek} olma durumunu parite işlemcisi $\hat P$ ile formülleştirebiliriz. İşlemcinin görevi basitçe $x\rightarrow -x$ yansımasını gerçekleştirmektir. Parite işlemcisi herhangi bir dalga fonksiyonuna uygulandığına,
 %%
 \begin{align}
 \hat P \psi(x)=\psi(-x)
@@ -888,7 +888,7 @@ işlemini gerçekleştirir. Çift ve tek fonksiyonlar için bu işlemin sonucu,
 \quad \text{ ve } \quad \hat P \psi^{(-)}(x)=-\psi^{(-)}(x)
 \end{align}
 %%
-olarak bulunur. Bu iki denklem özdeğer denklemleridir; $\hat P$'nin $+1$ özdeğeri veren durumu için özfonksiyonlar çift fonksiyonlardır ve $-1$ özdeğeri için ise tek fonksiyonlardır. Sonsuz kuyu durumundaki özfonksiyonlar sadece $H$'nin özfonksiyonu değillerdir, aynı zamanda $\hat P$'nin de özfonksiyonlarıdırlar. Parite işlemcisinin sadece $\pm 1$ özdeğerlerini alması mümkündür. Farz edelim ki;
+olarak bulunur. Bu iki denklem özdeğer denklemleridir; $\hat P$'nin $+1$ özdeğeri veren durumu için özfonksiyonlar çift fonksiyonlardır ve $-1$ özdeğeri için ise tek fonksiyonlardır. Sonsuz kuyu durumundaki özfonksiyonlar sadece $\hat H$'nin özfonksiyonu değillerdir, aynı zamanda $\hat P$'nin de özfonksiyonlarıdırlar. Parite işlemcisinin sadece $\pm 1$ özdeğerlerini alması mümkündür. Farz edelim ki;
 %%
 \begin{align}
 \hat P u(x)=\lambda u(x)
@@ -913,11 +913,11 @@ olur. Çünkü  iki defa yansıma altında $u(x)$ aynı kalır. Böylece $\lambd
 {\bf İspat:} $\psi(x)$ çift  $g$ ve tek $h$ fonksiyonlarının toplamı olsun. Böylece $\psi(x) = g(x) + h(x)$ yazılabilir. Bu durumda $\psi(-x) = g(x) - h(x)$ olur. Sonrasında ise $g(x) = \frac {\psi(x) + \psi(-x)}2$ ve $h(x) = \frac {\psi(x) - \psi(-x)}2$ olarak bulunur. $h(x)$ ve $g(x)$ yerlerine konursa Denk. \ref{eq:odd_even}'e ulaşılır.
 \end{tcolorbox}
 
-Böylece $\hat H$ işlemcisinin buraya kaddar bahsedilen özfonksiyonları için olduğu gibi herhangi bir dalga fonksiyonu da bu yeni işlemcinin özfonksiyonlarının açılımı olarak yazılabilir.
+Böylece $\hat H$ işlemcisinin buraya kadar bahsedilen özfonksiyonları için olduğu gibi herhangi bir dalga fonksiyonu da bu yeni işlemcinin özfonksiyonlarının açılımı olarak yazılabilir.
 
 Çift ve tek olma durumlarının çok açık bir şekilde görünür olmasının nedeni sonsuz kuyunun merkezini $x=0$'da seçmiş olmamızdandır. Eğer $0$ ve $a$ sınırlarına sahip sonsuz kuyu durumunu çalışsaydık bile, pek değişen bir şey olmazdı. İlkine göre bu durumda simetrinin gözlenmesi daha açık olmasa da simetri ekseninin $x=a/2$'de olacağı kestirilebilirdi. Buradan çıkarılabilecek önemli bir ders: kuantum mekaniği problemlerinde Hamiltonyen işlemcisinin mümkün olan simetrilerinin ortaya çıkarılmasının önemli olduğudur. Simetrileri daha açık hale getirecek koordinatların seçiminin de ayrıca önemli olduğu ortadadır.
 
-Eğer Şekil \ref{fig:nonSymmetricPot}'deki bir potansiyel içeren bir kuantum sistemi çalışılıyor olsaydı, koordinat sistemi tercihiyle simetrik bir durum yaratmak mümkün olmazdı. Anlaşılıyor ki; \emph{simetrinin Hamiltonyen} içinde olmalıdır. Bu durum hangi şartlar altında çift (veya tek) özfonksiyonlar zamanla değişmeden kalır sorusunun cevaplanmasıyla ortaya çıkarılabilir.
+Eğer Şekil \ref{fig:nonSymmetricPot}'deki gibi bir potansiyel içeren bir kuantum sistemi çalışılıyor olsaydı, koordinat sistemi tercihiyle simetrik bir durum yaratmak mümkün olmazdı. Anlaşılıyor ki; \emph{simetri Hamiltonyenin} içinde olmalıdır. Bu durum hangi şartlar altında çift (veya tek) özfonksiyonlar zamanla değişmeden kalır sorusunun cevaplanmasıyla ortaya çıkarılabilir.
 %%
 %%
 \begin{figure}[hbtp]
@@ -927,7 +927,7 @@ Eğer Şekil \ref{fig:nonSymmetricPot}'deki bir potansiyel içeren bir kuantum s
 	\label{fig:nonSymmetricPot}
 \end{figure}
 
-Şekil \ref{fig:nonSymmetricPot}'deki gib bir sistemin bir çift özfonksiyonu başlangıçta ($t=0$'da),
+Şekil \ref{fig:nonSymmetricPot}'deki gibi bir sistemin bir çift özfonksiyonu başlangıçta ($t=0$'da),
 %%
 \begin{equation}
 \psi(x, 0)=\psi(-x, 0) \equiv \psi^{(+)}(x)
@@ -958,7 +958,7 @@ sonucuna ulaşılır. Böylece
 \end{equation}
 %%
 Schrödinger denklemini birbirinden bağımsız olarak sağlayan bu iki çözüm önerilebilir. Çözümlerin zamanla bir birine karışmayacağı ve sistemin ilk durumu ne olursa olsun ilk durumun zamanla değişmeden korunacağı iki çözüm elde edilmiş olur.
-Paritenin zamanla değişmezliğini bütün mümkün durumlar için aşağıdaki eşitlğin sağlanması garanti altına alır. 
+Paritenin zamanla değişmezliğini bütün mümkün durumlar için aşağıdaki eşitliğin sağlanması garanti altına alır. 
 %%
 \begin{equation}
 ( \hat P  \hat H-  \hat H  \hat P) \psi(x, t)=0
@@ -972,7 +972,7 @@ Bu eşitlik kısaca,
 %%
 olarak yazılabilir ve $\hat P$ ve $\hat H$ işlemcilerinin komütasyon özelliğini sağlaması şartı olarak adlandırılır.
 
-Bu önemli şart oldukça genel bir ifadeyle ``zamana bağlılığı açık olmayan ve $\hat H$ Hamiltonyen ile komüte eden herhangi bir işlemci ilgili hareketin sabitidir" olarak tanımlanır. Örneğin potansiyel $V(x,t)$ şeklinde zamana bağlı ise enerji artık bir hareket sabiti olmaktan çıkar. Dahası, bu durmda Schrödinger denklemi zamana bağlı ve zamandan bağımsız kısım olarak ikiye ayrılamayacağından bir enerji özdeğeri denklemi de elde edilemez.
+Bu önemli şart oldukça genel bir ifadeyle ``zamana bağlılığı açık olmayan ve $\hat H$ Hamiltonyen ile komüte eden herhangi bir işlemci ilgili hareketin sabitidir" olarak tanımlanır. Örneğin potansiyel $V(x,t)$ şeklinde zamana bağlı ise enerji artık bir hareket sabiti olmaktan çıkar. Dahası, bu durumda Schrödinger denklemi zamana bağlı ve zamandan bağımsız kısım olarak ikiye ayrılamayacağından bir enerji özdeğeri denklemi de elde edilemez.
 
 Özet olarak, dejenere özfonksiyonların birbirinden farklı olduklarınının gözlenmesini sağlayan aynı özfonksiyonların başka bir hermityen işlemcinin de özfonksiyonları olmalarıdır. Yukarıda bahsi geçen  $\hat p$ ve $\hat P$ işlemcilerinin her ikisi de $\hat H$ Hamiltonyen işlemcisiyle komüt edebilirler. Her iki işlemci de $\hat H$ ile komütasyon şartını sağladıklarından $\hat H$'nin özfonsiyonları bu iki işlemcinin de eşzamanlı özfonksiyonlarıdır. Fakat bu durumun aksine $\hat p$ ve $\hat P$ komüt etmezler bu nedenle özfonksiyonları aynı değildir.
 
