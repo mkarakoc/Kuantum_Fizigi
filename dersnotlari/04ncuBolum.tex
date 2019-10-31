@@ -377,7 +377,7 @@ Elde edilen sonuçlar hakkında bazı fiziksel yorumlar yapılabilir:
 	
 	\item $E>>V_0$ için $R\rightarrow0$ ve $q\rightarrow k$, bunun nedeni kolayca anlaşılabilir. Parçacığın veya sistemin enerjisi arttıkça basamak potansiyelinin etkisi neredeyse yok gibidir.
 	
-	\item $E<V_0$ durumu için dalga fonksiyonun $x$'in üstel azalan reel bir fonksiyonu olduğuna dikkat ediniz. Böylece $x\rightarrow+\infty$ durumunda dalga fonksiyonu ıraksamamış (patlamamış) olur. Klasik mekanikle uyumlu şekilde $R=1$ ve $T=0$ (veya ($j_\text{geçen} = 0$))olduğuna da dikkat ediniz. Fakat geçen dalganın genliği ($C\neq0$) sıfır olmamıştır ve bu bir dalganın gösterebileceği davranıştır. Bu davranış kuantum fiziğinde \emph{``tünelleme"} olarak adlandırılır. Sonsuza uzanan basamak potansiyeli yerine sonlu kalan bir bariyer potansiyeli çalışıldığında klasik olarak yasaklı olan bölgeden bir parçacığın geçebileceği (tünelleme yapabileceği) görülecektir. 
+	\item $E<V_0$ durumu için dalga fonksiyonun $x$'in üstel azalan reel bir fonksiyonu olduğuna dikkat ediniz. Böylece $x\rightarrow+\infty$ durumunda dalga fonksiyonu ıraksamamış (patlamamış) olur. Klasik mekanikle uyumlu şekilde $R=1$ ve $T=0$ (veya ($j_\text{geçen} = 0$))olduğuna da dikkat ediniz. Fakat geçen dalganın genliği ($C\neq0$) sıfır olmamıştır (bkz. Şekil \ref{fig:basamakpotansiyeliABCev0grafigi} ) ve bu bir dalganın gösterebileceği davranıştır. Bu davranış kuantum fiziğinde \emph{``tünelleme"} olarak adlandırılır. Sonsuza uzanan basamak potansiyeli yerine sonlu kalan bir bariyer potansiyeli çalışıldığında klasik olarak yasaklı olan bölgeden bir parçacığın geçebileceği (tünelleme yapabileceği) görülecektir. 
 	
 \end{itemize}
 
@@ -425,7 +425,7 @@ halini alır. Böylece bu sistemin en genel çözümü,
 u ( x )  = \left\{ 
 \begin{array} { l l } 
 {u_1(x) = A_I e^{i k x} + A_R e^{-i k x} } & {\Leftarrow -a > x } \\
-{u_2(x) = A e^{i k x} + B e^{-i k x} } & {\Leftarrow -a \leq x \leq a } \quad \text{ (kuyunun içi)} \\
+{u_2(x) = A e^{i q x} + B e^{-i q x} } & {\Leftarrow -a \leq x \leq a } \quad \text{ (kuyunun içi)} \\
 {u_3(x) = A_T e^{i k x}} & {\Leftarrow \quad a > x }
 \end{array} \right. 
 \end{align}
@@ -475,13 +475,13 @@ yansıyan ($A_R$) ve geçen ($A_T$) dalgaların genlikleri bulunmuş olur. İnce
 \begin{align}
 u_{gelen} &= A_I e^{i k x}, \quad j_{gelen}~=~\frac{\hbar k} {m}, \quad (A_I = 1)\\
 u_\text{yansıyan} &= A_R e^{-i k x}, \quad j_\text{yansıyan} = \frac{\hbar k} {m} |A_R|^2\\
-u_\text{geçen} &= A_T e^{i q x}, \quad j_\text{geçen} = \frac{\hbar q} {m} |A_T|^2
+u_\text{geçen} &= A_T e^{i k x}, \quad j_\text{geçen} = \frac{\hbar k} {m} |A_T|^2
 \end{align}
 %%
 ifadeleri ortaya çıkar. Geçiş $T$ ve $R$ yansıma katsayılarının tanımları hatırlanırsa sonlu kuyu için,
 %%
 \begin{align}
-T &= \frac{|j_\text{geçen}|}{|j_\text{gelen}|} = \frac{q}{k}  |A_T|^2  \quad \text{(1. bölgeden 3. bölgeye)}\\
+T &= \frac{|j_\text{geçen}|}{|j_\text{gelen}|} = |A_T|^2  \quad \text{(1. bölgeden 3. bölgeye)}\\
 R &= \frac{|j_\text{yansıyan}|}{|j_\text{gelen}|} = |A_R|^2 \quad \text{(2. bölge sınırından 1. bölgeye)}
 \end{align}
 %%
