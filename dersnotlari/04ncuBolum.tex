@@ -385,7 +385,7 @@ Elde edilen sonuçlar hakkında bazı fiziksel yorumlar yapılabilir:
 
 \begin{figure}[hbtp]
 	\centering
-	\includegraphics[width=0.7\linewidth]{figurler/SonluKuyu_Potansiyeli.png}
+	\includegraphics[width=0.62\linewidth]{figurler/SonluKuyu_Potansiyeli.png}
 	\caption{Sonlu kuyu potansiyeli, $E>V_0$ durumu.}
 	\label{fig:sonlukuyupotansiyeli}
 \end{figure}
@@ -478,14 +478,67 @@ u_\text{yansıyan} &= A_R e^{-i k x}, \quad j_\text{yansıyan} = \frac{\hbar k} 
 u_\text{geçen} &= A_T e^{i k x}, \quad j_\text{geçen} = \frac{\hbar k} {m} |A_T|^2
 \end{align}
 %%
-ifadeleri ortaya çıkar. Geçiş $T$ ve $R$ yansıma katsayılarının tanımları hatırlanırsa sonlu kuyu için,
+ifadeleri ortaya çıkar. Geçiş $T$ ve yansıma $R$ katsayılarının tanımları hatırlanırsa sonlu kuyu için,
 %%
 \begin{align}
-T &= \frac{|j_\text{geçen}|}{|j_\text{gelen}|} = |A_T|^2  \quad \text{(1. bölgeden 3. bölgeye)}\\
-R &= \frac{|j_\text{yansıyan}|}{|j_\text{gelen}|} = |A_R|^2 \quad \text{(2. bölge sınırından 1. bölgeye)}
+R &= \frac{|j_\text{yansıyan}|}{|j_\text{gelen}|} = |A_R|^2 \quad \text{(2. bölge sınırından 1. bölgeye)}\\
+T &= \frac{|j_\text{geçen}|}{|j_\text{gelen}|} = |A_T|^2  \quad \text{(1. bölgeden 3. bölgeye)}
 \end{align}
 %%
-olarak bulunurlar.
+olarak bulunurlar. Elde edilen $R$ ve $T$ katsayılarının davranışları Şekil \ref{fig:sonlukuyupot_EV0_1} ve Şekil \ref{fig:sonlukuyupot_EV0_2}'da verilmiştir. Şekil \ref{fig:sonlukuyupot_EV0_1}'te $0<E\ll V_0$ durumunda, beklendiği üzere, geçişin ($T\rightarrow0$) gittikçe azaldığı görülmektedir. Bunun aksine, Şekil \ref{fig:sonlukuyupot_EV0_2}'da $E\gg V_0>0$ durumunda, beklendiği üzere, yansımanın ($R\rightarrow0$) gittikçe azaldığı görülmektedir. Fakat her iki durumda da bazı özel enerjilerde geçisin en büyük değere ($T=1$) ve yansımanın da en düşük değere ($R=0$) ulaştığı görülmektedir. Bu özel enerjiler ``\emph{geçiş rezonansları}" olarak adlandırılan rezonans durumlarının enerjileridir. 
+
+Bu tür saçılmalar düşük enerjili (0.1 eV) elektronların soygaz atomlardan (neon, argon v.b.) saçılması durumlarında gözlenmiştir. Bu etkiyi ilk farkedenler Ramsauer ve Towsend olmuştur \cite{book:Gasiorowicz} ve bu duruma ``\emph{geçiş rezonansları}" adını vermişlerdir. Bu rezonansları veren enerjiler $\sin(2 q a) = 0$ şartını sağlayan enerjiledir. Böylece $A_R=0$ ve dolayısıyla $R=0$ olacaktır. Bu şartı sağlayan enerjilerin,
+%%
+\begin{align}
+E_n=-V_{0}+\frac{n^{2} \pi^{2} \hbar^{2}}{8 m a^{2}} \quad n=1,2,3, \ldots
+\end{align}
+%%
+olacağı rahatça gösterilebilir. Şekil \ref{fig:sonlukuyupot_imU} bu tür bir rezonans enerjisinde sonlu kuyudaki dalgaların sanal kısımlarının davranışları görülmektedir. Dikkatlice bakılırsa gelen dalganın genliğinin ve fazının hiç değişmeden geçtiği kolayca görülebilir. Dolayısıyla hiç yansımanın gerçekleşmediği ve tam bir geçişin gerçekleştiği söylenebilir. Şekil \ref{fig:sonlukuyupot_u2}'da ise rezonansın gerçekleştiği enerjide dalgaların karelerinin (olasılık yoğunluklarının) davranışları verilmiştir. Bu şekilden gelen dalganın tamamen geçtiği daha açıkça anlaşılabilir. Eğer birinci bölgede yansıma sıfırdan farklı olsaydı, olasılık yoğunluğu düz bir çizgi yerine sinüssel olması (gelen ve yansıyan dalgaların tamamen yapıcı veya yıkıcı olmayan faz dışı girişimlerinden dolayı) gerekirdi.
+%%
+\begin{figure}[hbtp]
+\begin{minipage}{.48\textwidth}
+	\centering
+	\includegraphics[width=\linewidth]{figurler/SonluKuyu_Potansiyeli_TR_EV0_1.png}
+	\caption{$E/V_0 \leq 1$ durumunda $E\rightarrow0$ oldukça $T\rightarrow0$ ve $R\rightarrow1$ davranışları göstermelerine karşın, bazı özel enerji değerlerinde ($T=1$, $R=0$ olan yerlerde) ``\emph{geçiş rezonansları}" vardır.}
+	\label{fig:sonlukuyupot_EV0_1}
+\end{minipage}
+\hspace{24pt}
+\begin{minipage}{.48\textwidth}
+	\centering
+	\includegraphics[width=\linewidth]{figurler/SonluKuyu_Potansiyeli_TR_EV0_2.png}
+	\caption{$E/V_0\geq 1$ durumunda $T\rightarrow1$ ve $R\rightarrow0$ davranışlarını göstermektedir. Çünkü enerji arttıkça beklendiği gibi kuyunun yansıtma etkisi zayıflamaktadır.
+	\vspace{12pt}}
+	\label{fig:sonlukuyupot_EV0_2}
+\end{minipage}
+\end{figure}
+%%
+\begin{figure}[hbtp]
+	\begin{minipage}{.48\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{figurler/SonluKuyu_Potansiyeli_TR_imU.png}
+		\caption{Şekil \ref{fig:sonlukuyupot_EV0_1}'teki $E/V_0 = 0.885$ değerinde rezonansın varlığı görülebilir. Bu değer için sonlu kuyuda gelen, geçen ve kuyu içindeki dalgaların sanal kısımlarının davranışları görülmektedir.}
+		\label{fig:sonlukuyupot_imU}
+	\end{minipage}
+	\hspace{24pt}
+	\begin{minipage}{.48\textwidth}
+		\centering
+\includegraphics[width=\linewidth]{figurler/SonluKuyu_Potansiyeli_TR_u2.png}
+\caption{Şekil \ref{fig:sonlukuyupot_EV0_1}'teki $E/V_0 = 0.885$ değerinde rezonansın varlığı görülebilir. Bu değer için sonlu kuyuda gelen, geçen ve kuyu içindeki dalgaların karelerinin (olasılık yoğunluklarının) davranışları görülmektedir.}
+\label{fig:sonlukuyupot_u2}
+	\end{minipage}
+\end{figure}
+
+Yansıma olmamasının nedeni kuyunun içindeki dalganın birden çok yansıma yapması ve bu yansımaların tekrar birinci bölgeye geçerek birinci bölgedeki yansıyan dalgayla yıkıcı girişim yapması olarak izah edilebilir. Rezonsın gerçekleşme şartının
+aşağıdaki şekilde yeniden yazılmış hali optikte Fabry-Perot interferometresinin davranışını izah etmektedir \cite{book:Gasiorowicz}.
+%%
+\begin{align}
+\lambda=\frac{2 \pi}{q}=\frac{4 a}{n}
+\end{align}
+%%
+
+\subsection{Bariyer Potansiyeli}
+
+\YAZILACAK
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
