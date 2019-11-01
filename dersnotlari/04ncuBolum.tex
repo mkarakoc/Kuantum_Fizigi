@@ -537,7 +537,100 @@ aşağıdaki şekilde yeniden yazılmış hali optikte Fabry-Perot interferometr
 %%
 
 \subsection{Bariyer Potansiyeli}
+%%
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics[width=0.62\linewidth]{figurler/Bariyer_Potansiyeli.png}
+	\caption{Bariyer potansiyeli, $E<V_0$ durumu.}
+	\label{fig:bariyerpotansiyeli}
+\end{figure}
+%%
+Şekil \ref{fig:bariyerpotansiyeli}'daki bariyer potansiyeline $x=-\infty$'dan $0<E<V_0$ aralığında bir enerjiyle gelen bir kuantum nesnenin durumunu inceleyelim. Bu problemin ilginçliği: klasik olarak yasaklı olan 2. bölgeden kuantum nesnenin geçme olasılığının bulunmasıdır. Bariyer potansiyeli aşağıdaki gibi formülleştirilebilir.
+%%
+\begin{align}
+V ( x )  = \left\{ 
+\begin{array} { l l } 
+{ \quad 0 } & {\Leftarrow -a > x } \\
+{V _ { 0 } } & {\Leftarrow -a \leq x \leq a } \quad \text{ (bariyerin içi)} \\
+{ \quad 0 } & {\Leftarrow \quad a > x }
+\end{array} \right. 
+\end{align}
+%%
 
+Birinci ve üçüncü bölgelerde Schrdödinger denklemi ve çözümleri bir önceki incelediğimiz sonlu kuyu potansiyelindekilerle aynıdır. Bariyerin içinde (2. bölgede ise) Schrödinger denklemi, 
+%%
+\begin{equation}
+- \frac { \hbar ^ { 2 } } { 2 m } \frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } + V_0 u ( x ) = E u ( x )
+\end{equation}
+%%
+şekline sahip olur. Denklem yeniden düzenlenirse, 
+%%
+\begin{align}
+\frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } -  \frac { 2 m} { \hbar ^ { 2 } }  \left(V _ { 0 }-E \right) u ( x ) = 0 \quad \text{ ve } \quad \frac { 2 m} { \hbar ^ { 2 } }  \left(V _ { 0 } - E \right) = q_b ^ { 2 }
+\end{align}
+%%
+olmak üzere, 
+\begin{align}
+\frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } -  q_b^2 u ( x ) = 0
+\end{align}
+%%
+halini alır. Böylece her üç bölge için dalga fonksiyonları,
+%%
+\begin{align}
+u ( x )  = \left\{ 
+\begin{array} { l l } 
+{u_1(x) = A_I e^{i k x} + A_R e^{-i k x} } & {\Leftarrow -a > x } \\
+{u_2(x) = A e^{- q_b x} + B e^{q_b x} } & {\Leftarrow -a \leq x \leq a } \quad \text{ (bariyerin içi)} \\
+{u_3(x) = A_T e^{i k x}} & {\Leftarrow \quad a > x }
+\end{array} \right. 
+\end{align}
+%%
+olarak bulunur. Dikkat edilirse sonlu kuyu çözümleri ile bariyer çözümleri arasındaki tek fark 2. bölgede ortaya çıkmaktadır. Bu sayede sonlu kuyu için geçtiğimiz aşamalardan geçmeden,
+%%
+\begin{equation}
+q \rightarrow i q_b = i \sqrt{\left(2 m / \hbar^{2}\right)\left(V_{0}-E\right)}
+\end{equation}
+%%
+olacağı da göz önünde tutulursa, $A_R$ ve $A_T$ genlikleri,
+%%
+%%
+\begin{align}
+{A_R= e^{-i 2 k a} \frac{\left(k^{2}+q_b^{2}\right) \sinh 2 q_b a}{\left(k^{2}-q_b^{2}\right) \sinh 2 q_b a - 2 k q_b \cosh 2 q_b a}} \\ 
+{A_T= -e^{-i 2 k a} \frac{2 k q_b}{\left(k^{2}-q_b^{2}\right) \sinh 2 q_b a - 2 k q_b \cosh 2 q_b a}}
+\end{align}
+%%
+%%
+olarak bulunurlar. Böylece, daha önce olduğu gibi yansıma ($R$) ve geçiş ($T$) katsayıları (olasılıkları),
+%%
+\begin{align}
+R &= \frac{|j_\text{yansıyan}|}{|j_\text{gelen}|} = |A_R|^2 \quad \text{(2. bölge sınırından 1. bölgeye)}\\
+T &= \frac{|j_\text{geçen}|}{|j_\text{gelen}|} = |A_T|^2  \quad \text{(1. bölgeden 3. bölgeye)}
+\end{align}
+%%
+eşitlikleriyle hesaplanabilirler.
+
+
+\begin{figure}[hbtp]
+	\begin{minipage}{.48\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{figurler/Bariyer_Potansiyeli_imU.png}
+		\caption{Bir kuantum dalganın sanal kısmının bir bariyer potansiyelinden tünellemesi. Bu örnek için keyfi birimlerde: $a=0.045, E=14, V_0 = 20$ ve $\hbar = m = 1$ alınmıştır.
+		\vspace{12pt}
+		}
+		\label{fig:bariyerpot_imU}
+	\end{minipage}
+	\hspace{24pt}
+	\begin{minipage}{.48\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{figurler/Bariyer_Potansiyeli_TR_EV0.png}
+		\caption{Bu şekilde, Şekil \ref{fig:bariyerpot_imU}'daki örnek için, $0<E/V_0<1$ aralığında $R$ ve $T$ geçiş katsayılarının davranışları gösterilmektedir. Klasik fizik açısından yasaklı olan ikinci bölgeden geçiş katsayısının sıfır olmadığı açıkça görülmektedir.}
+		\label{fig:bariyerpot_TR}
+	\end{minipage}
+\end{figure}
+
+
+\newpage
+\subsection{Sonlu Potansiyel Kuyusunda Bağlı Durumlar}
 \YAZILACAK
 
 \newpage
