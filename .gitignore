@@ -1,5 +1,6 @@
 # personal
 .ipynb_checkpoints
+.fuse_hidden*
 
 # To remove all your .pyc files from your git repo…
 # https://yuji.wordpress.com/2010/10/29/git-remove-all-pyc/
