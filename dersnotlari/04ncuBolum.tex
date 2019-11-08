@@ -607,15 +607,22 @@ R &= \frac{|j_\text{yansıyan}|}{|j_\text{gelen}|} = |A_R|^2 \quad \text{(2. bö
 T &= \frac{|j_\text{geçen}|}{|j_\text{gelen}|} = |A_T|^2  \quad \text{(1. bölgeden 3. bölgeye)}
 \end{align}
 %%
-eşitlikleriyle hesaplanabilirler.
+eşitlikleriyle hesaplanabilirler. Geçiş $T$ katsaysının açık hali,
+%%
+\begin{align}
+T=\frac{(2 k q_b)^{2}}{\left(k^{2}+q_b^{2}\right)^{2} \sinh ^{2} 2 q_b a+(2 k q_b)^{2}}
+\label{eq:bariyerpot_T}
+\end{align}
+%%
+olarak bulunur. Yansıma katsayısı ise $R$ ise  $T+R = 1$ eşitliğinden hesaplanabilir. $T+R = 1$ olduğu birinci ve üçüncü bölgelerin akılarının eşitliklerinden rahatça ortaya konabilir. $T$ ve $R$'nin davranışları Şekil \ref{fig:bariyerpot_imU}'daki sistem için Şekil \ref{fig:bariyerpot_TR}'de çizilmiştir. Şekil \ref{fig:bariyerpot_imU}'da görüleceği üzere klasik olarak yasaklı olan ikinci bölgeden (bariyerin içinden) olasılık dalgaları geçebilmektedir. Bu nedenle $0<E<V_0$ (veya  $0<E/V_0<1$) enerjili bu olasılık dalgalarının geçiş katsayıları Şekil \ref{fig:bariyerpot_TR}'den görüldüğü üzere sıfır olmamıştır.
 
 
 \begin{figure}[hbtp]
 	\begin{minipage}{.48\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{figurler/Bariyer_Potansiyeli_imU.png}
-		\caption{Bir kuantum dalganın sanal kısmının bir bariyer potansiyelinden tünellemesi. Bu örnek için keyfi birimlerde: $a=0.045, E=14, V_0 = 20$ ve $\hbar = m = 1$ alınmıştır.
-		\vspace{12pt}
+		\caption{Bir kuantum dalganın sanal kısmının bir bariyer potansiyelinden tünellemesi. Bu örnek için keyfi birimlerde: $a=0.045, E=14, V_0 = 20$ ve $\hbar = m = 1$ alınmıştır. $E/V_0 = 14/20 = 0.7$ için $T>0.8$ olduğu Şekil \ref{fig:bariyerpot_TR}'den görülebilir.
+%%		\vspace{12pt}
 		}
 		\label{fig:bariyerpot_imU}
 	\end{minipage}
@@ -623,11 +630,53 @@ eşitlikleriyle hesaplanabilirler.
 	\begin{minipage}{.48\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{figurler/Bariyer_Potansiyeli_TR_EV0.png}
-		\caption{Bu şekilde, Şekil \ref{fig:bariyerpot_imU}'daki örnek için, $0<E/V_0<1$ aralığında $R$ ve $T$ geçiş katsayılarının davranışları gösterilmektedir. Klasik fizik açısından yasaklı olan ikinci bölgeden geçiş katsayısının sıfır olmadığı açıkça görülmektedir.}
+		\caption{Bu şekilde, Şekil \ref{fig:bariyerpot_imU}'daki örnek için, $0<E/V_0<1$ aralığında $R$ yansıma ve $T$ geçiş katsayılarının davranışları gösterilmektedir. Klasik fizik açısından yasaklı olan ikinci bölge için geçiş katsayısının sıfır olmadığı açıkça görülmektedir.}
 		\label{fig:bariyerpot_TR}
 	\end{minipage}
 \end{figure}
 
+Olasılık dalgalarının (dalga fonksiyonlarının) geçişi bariyerin genişliğine çok hassastır. 
+\emph{Kalın} bir bariyer $q_b a \gg 1$ ile ifade edilebilir. Bu durumda geçiş katsayısı, 
+%%
+\begin{align}
+T \cong\left(\frac{4 k q_b}{k^{2}+q_b^{2}}\right)^{2} e^{-2 q_b a}
+\label{eq:kalinBariyer}
+\end{align}
+%%
+halini alır. Aslında $q_b a \varpropto (V_0-E) a$ olduğunu biliyoruz. Böylece geçiş katsayısının hem bariyerin kalınlığı $a$'ya hem de bariyer potansiyelinin yüksekliği ve olasılık dalgasının enerjisi arasındaki farka hassas olduğu ortaya çıkmış oluyor. Örneğin, iki iletken tel $a = 1$~nm kalınlığında bir oksit tabaka ile ayrılmışsa ve varsayalım ki, $e^{-2 \kappa a}=10^{-10}$ olarak bulunduysa, (iletim elektronlarının yoğunluğu $10^{22}$~cm$^{-3}$ olduğundan) bir çok elektron bu oksit tabakadan geçebilir. Fakat, oksit tabakanın kalınlığı 5 kat daha fazla olsaydı ($a = 1$~nm), $e^{-2 \kappa a}=10^{-50}$ olurdu. Bu durumda efektif olarak elektronların geçişi yasaklanmış olur. Tünelleme olasılığının bu aşırı hassasiyeti taramalı tünelleme mikroskoplarının geliştirilmesini sağlamıştır \cite{book:Towsend}.
+
+\begin{figure}[!hbtp]
+		\centering
+		\includegraphics[width=.7\linewidth]{figurler/WKB_Bariyer_Potansiyeli.png}
+		\caption{Yavaş değişen bir bariyer potansiyelinin kalın dikdörtgen bariyerler olarak yaklaşık halinin temsili.
+		}
+		\label{fig:yumusak_bariyerpot}
+\end{figure}
+%%
+
+Çoğunlukla gerçek fiziksel sistemler keskin bir dikdörtgen bariyer şeklinde olmayabilirler. Örneğin Şekil \ref{fig:yumusak_bariyerpot}'deki gibi yavaş değişen bir potansiyel şeklinde olabilirler. Yavaş değişen bir potansiyel için Şekil \ref{fig:yumusak_bariyerpot}'te gösterildiği gibi \emph{kalın} bariyerlerden oluşan \emph{dilim}lerin toplamı gibi bir yaklaşıklık yapılabilir. Bu durumda farklı iki $k$ ve $q_b$ değilde yavaş değişen bir $q_b$ varmış gibi düşünülebilir. Böylece $q_b a \gg 1$ için ortaya çıkan Denk. \ref{eq:kalinBariyer}'teki yaklaşıklık her bir dilim için,
+%%
+\begin{equation}
+\ln T_\text{dilim} \cong \ln \left(\frac{4 q_b k}{k^{2}+ q_b^{2}}\right)^{2}-2 q_b a \approx \mathrm{sabit}-2 q_b a
+\end{equation}
+%%
+şeklinde yaklaşık olarak yeniden yazılabilir. Bu ifade bütün bariyer için aşağıdaki gibi yeniden yazılabilir.
+%%
+\begin{align} 
+\ln T &=\sum_{\text {dilim }} \ln T_{\text{dilim}}=-2 \sum_{n} \Delta x_{n}\langle q_b\rangle_{n} \nonumber\\ 
+&=-2 \int\limits_{\text {bariyer }} dx\sqrt{2 m(V(x)-E) / \hbar^{2}} 
+\end{align}
+%%
+Burada $\Delta x_{n}$ her bir dilimin genişliği ve $\langle q_b\rangle_{n}$ ise dilimler için ortalama $q_b$ değeridir. Böylece yavaş değişen böyle bir potansiyel için geçiş katsayısı,
+%%
+\begin{equation}
+T=C e^{-2 \int d x \sqrt{2 m(V(x)-E) / \hbar^{2}}}
+\end{equation}
+%%
+ile hesaplanabilir. Bu yaklaşıklık \emph{dönüm noklarında} (enerji ve bariyer potansiyel yüksekliğinin eşit olduğu değerlerde) iyi çalışmaz. Çünkü, bu durumda, $q_b a \gg 1$ şartı altında Denk. \ref{eq:bariyerpot_T} için Denk. \ref{eq:kalinBariyer} iyi bir yaklaşık olamaz.
+Bu yaklaşıklığın iyi çalışabilmesi için $V(x)$'in $x$'in yavaş değişen bir fonksiyonu olması gerektiği de unutulmamalıdır. Aksi takdirde dilimlerden oluşan yaklaşıklık ancak \emph{dar} bir bariyer potansiyeli için daha uygundur. Her ne kadar bu yaklaşıklık tünelleme olayının fiziğinin anlaşılmasına yardımcı olsa da Denk. \ref{eq:kalinBariyer} çok iyi bir yaklaşılık değildir. Daha iyi bir yaklaşıklık dönüm noktalarını da dikkate alan \emph{WKB (Wentzel–Kramers–Brillouin)} yaklaşıklığıdır.
+
+\subsection{Tünellemenin Bir Uygulaması}
 
 \newpage
 \subsection{Sonlu Potansiyel Kuyusunda Bağlı Durumlar}
