@@ -386,7 +386,7 @@ Elde edilen sonuçlar hakkında bazı fiziksel yorumlar yapılabilir:
 \begin{figure}[hbtp]
 	\centering
 	\includegraphics[width=0.62\linewidth]{figurler/SonluKuyu_Potansiyeli.png}
-	\caption{Sonlu kuyu potansiyeli, $E>V_0$ durumu.}
+	\caption{Sonlu kuyu potansiyeli, $E>0$ durumu.}
 	\label{fig:sonlukuyupotansiyeli}
 \end{figure}
 
@@ -416,7 +416,7 @@ Zamandan bağımsız Schrödinger denklemi bu sistem için yukarıdaki gibi olac
 %%
 ikinci bölge için ise,
 \begin{align}
-\frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } +  \frac { 2 m} { \hbar ^ { 2 } }  \left( E - V _ { 0 } \right) u ( x ) = 0 \quad \text{ ve } \quad \frac { 2 m} { \hbar ^ { 2 } }  \left( E + V _ { 0 } \right) = q ^ { 2 }
+\frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } +  \frac { 2 m} { \hbar ^ { 2 } }  \left( E + V _ { 0 } \right) u ( x ) = 0 \quad \text{ ve } \quad \frac { 2 m} { \hbar ^ { 2 } }  \left( E + V _ { 0 } \right) = q ^ { 2 }
 \end{align}
 %%
 halini alır. Böylece bu sistemin en genel çözümü,
@@ -676,9 +676,23 @@ T=C e^{-2 \int d x \sqrt{2 m(V(x)-E) / \hbar^{2}}}
 ile hesaplanabilir. Bu yaklaşıklık \emph{dönüm noklarında} (enerji ve bariyer potansiyel yüksekliğinin eşit olduğu değerlerde) iyi çalışmaz. Çünkü, bu durumda, $q_b a \gg 1$ şartı altında Denk. \ref{eq:bariyerpot_T} için Denk. \ref{eq:kalinBariyer} iyi bir yaklaşık olamaz.
 Bu yaklaşıklığın iyi çalışabilmesi için $V(x)$'in $x$'in yavaş değişen bir fonksiyonu olması gerektiği de unutulmamalıdır. Aksi takdirde dilimlerden oluşan yaklaşıklık ancak \emph{dar} bir bariyer potansiyeli için daha uygundur. Her ne kadar bu yaklaşıklık tünelleme olayının fiziğinin anlaşılmasına yardımcı olsa da Denk. \ref{eq:kalinBariyer} çok iyi bir yaklaşılık değildir. Daha iyi bir yaklaşıklık dönüm noktalarını da dikkate alan \emph{WKB (Wentzel–Kramers–Brillouin)} yaklaşıklığıdır.
 
-\subsection{Tünellemenin Bir Uygulaması}
+\subsection{Kuantum Tünellemenin Uygulamaları}
 
-\newpage
+Termonükleer reaksiyonlar, metaller ve yarı-iletkenlerde iletkenlik gibi
+fiziksel olguların anlaşılmasında kuantum tünnelleme önemli bir yere sahiptir. 
+Gamov, Condon ve Gurney kararsız ağır çekirdeklerin bünyelerinden alfa (helyum atomunun çekirdeği) parçacıkları atarak kararklı duruma geçişlerini izah edebilmişlerdir. Kurdukları modele göre alfa parçacıkları ağır çekirdeklerin içinde (proton ve nötronlara benzer şekilde) 
+ağır çekirdeğin Coulomb potansiyel alanı tarafından oluşturulan bariyerden daha düşük enerjide
+bulunmaktadırlar. Klasik olarak bu bariyeri aşmaları mümkün değildir. Fakat deneylerde parçacıkların ağır çekirdeklerden yayınlandığı kuantum tünelleme modeline uygun olarak gözlenmiştir. 
+
+Ayrıca, tünelleme olgusu tünel diyodu olarak adlandırılan elektronik devre elemanının da geliştirilmesini sağlamıştır. Bu diyot akım elektronlarının enerjisinin ayarlanmasıyla bariyerin özelliklerinin değiştirilerek tünelleyen elektronların sayısının kontrol edilmesi ilkesine dayanır.
+
+Tünellemenin en önemli uygulaması taramalı tünelleme mikroskobudur. Çok ince uçlu bir iletken yine incelenecek bir iletken yüzeye $\sim1$~nm'den daha yakın tutularak yüzeyin taranması ilkesine dayanır. İncelenecek malzemenin kendisi pozitif potansiyelde tutulursa iletken uçtaki elektronlar malzemeye geçmek isteyecektir. Fakat fotoelektrik etkiden biliyoruz ki; metallerden elektron koparabilmek için aşılması gereken bir iş fonksiyonu (potansiyeli) vardır. Dolayısıyla bu potansiyel çalıştığımız örnekte olduğu gibi tünellemesi gereken bir bariyerdir. Bu bariyerden tünelleyen elektronlar iletken uçtaki akımdaki değişimler olarak okunurlar ve böylece iletken ucun yüzeye ne kadar yakın veya uzak olduğu ölçülmüş olur. Bu sürecin terisi de mümkündür; incelenen malzeme yerine iletken uç pozitif potansiyelde tutulabilir. Sonuçta yine akımdaki değişiklikler iletken ucun malzemeye yakınlığı veya uzaklığı hakkında bilgi verecektir. Böylece malzemenin yüzeyinin haritası çıkarılmış olur \cite{book:Ficek}.
+
+%%https://www.nanoscience.com/techniques/scanning-tunneling-microscopy/
+%% https://my.eng.utah.edu/~lzang/people/zang.html
+%% https://my.eng.utah.edu/~lzang/mse6075&5050-lecture-notes.html
+%% https://my.eng.utah.edu/~lzang/images/Lecture_6_STM.pdf
+
 \subsection{Sonlu Potansiyel Kuyusunda Bağlı Durumlar}
 \YAZILACAK
 
