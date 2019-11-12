@@ -554,6 +554,7 @@ V ( x )  = \left\{
 {V _ { 0 } } & {\Leftarrow -a \leq x \leq a } \quad \text{ (bariyerin içi)} \\
 { \quad 0 } & {\Leftarrow \quad a > x }
 \end{array} \right. 
+\label{eq:sonlukuyupotansiyeli}
 \end{align}
 %%
 
@@ -694,7 +695,17 @@ Tünellemenin en önemli uygulaması taramalı tünelleme mikroskobudur. Çok in
 %% https://my.eng.utah.edu/~lzang/images/Lecture_6_STM.pdf
 
 \subsection{Sonlu Potansiyel Kuyusunda Bağlı Durumlar}
-\YAZILACAK
+
+Şekil \ref{fig:sonlukuyupotansiyeli}'te gösterilen ve Denk. \ref{eq:sonlukuyupotansiyeli} ile tanımlanan sonlu potansiyel kuyusunu $E>0$ (veya saçılma) durumları için çalıştık. Bu potansiyel çekici özellikte bir kuyu şeklinde olduğundan $E<0$ durumu için ise bağlı durum çözümleri ortaya çıkacaktır. Klasik fiziktede bağlı durum potansiyelleri mevcuttur. Örneğin, güneşimiz etrafındaki gezegenler evrensel kütle çekimi ilkesince güneşin çekim potansiyeli ($-G m M/r$) altında bağlı durumda bulunurlar. Böylece kararlı Kepler yörüngelerinde güneş etrafındaki döngülerine devam ederler. Kuantum ve Klasik bağlı durumlar arasındaki en temel fark birincisinin kesikli ikincisinin sürekli enerji seviyelerine sahip olmasıdır.
+
+\begin{align}
+u ( x )  = \left\{ 
+\begin{array} { l l } 
+{u_1(x) = C_1 e^{ k x} } & {\Leftarrow -a > x } \\
+{u_2(x) = A cos -q x + B \sin q x } & {\Leftarrow -a \leq x \leq a } \quad \text{ (kuyunun içi)} \\
+{u_3(x) = C_3 e^{- k x}} & {\Leftarrow \quad a > x }
+\end{array} \right. 
+\end{align}
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
