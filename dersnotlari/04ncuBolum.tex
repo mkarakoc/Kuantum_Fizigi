@@ -134,7 +134,7 @@ aşağıdaki gibi,
 yeniden yazabiliriz. Basamak potansiyelinin değerinin sıfır olduğu ve sıfırdan farklı olduğu bölgeler için, sırasıyla,
 %%
 \begin{equation}
-\frac { 2 m} { \hbar ^ { 2 } } E = k ^ { 2 } \quad \text{ ve } \quad \frac { 2 m} { \hbar ^ { 2 } }  \left( E - V _ { 0 } \right) = q ^ { 2 }
+\frac { 2 m} { \hbar ^ { 2 } } E \equiv k ^ { 2 } \quad \text{ ve } \quad \frac { 2 m} { \hbar ^ { 2 } }  \left( E - V _ { 0 } \right)  \equiv q ^ { 2 }
 \end{equation}
 %%
 tanımlarını yapabiliriz. $x<0$ ve $V(x)=0$ bölgesi için çözüm
@@ -331,7 +331,7 @@ u ( x ) = T e ^ { - \eta x }
 halini alır. Burada $\eta$ ($V_0>E$ olduğundan),
 %%
 \begin{equation}
-\frac { 2 m} { \hbar ^ { 2 } }  \left(V _ { 0 } -E \right) = \eta ^ { 2 }
+\frac { 2 m} { \hbar ^ { 2 } }  \left(V _ { 0 } -E \right) \equiv \eta ^ { 2 }
 \end{equation}
 %%
 olarak tanımlanır. Benzer bir matematiksel süreçten geçilerek hesaplar yapıldığında dalga fonksiyonu genlikleri arasınada,
@@ -411,12 +411,12 @@ olarak yazılabilir. Şekil incelendiğinde 1. ve 3. bölgelerde sabit ve sıfı
 Zamandan bağımsız Schrödinger denklemi bu sistem için yukarıdaki gibi olacaktır. Birinci ve üçüncü bölge için denklem,
 %%
 \begin{align}
-\frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } +  \frac { 2 m} { \hbar ^ { 2 } } E u ( x ) = 0 \quad \text{ ve } \quad \frac { 2 m} { \hbar ^ { 2 } } E = k ^ { 2 }
+\frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } +  \frac { 2 m} { \hbar ^ { 2 } } E u ( x ) = 0 \quad \text{ ve } \quad \frac { 2 m} { \hbar ^ { 2 } } E \equiv k ^ { 2 }
 \end{align}
 %%
 ikinci bölge için ise,
 \begin{align}
-\frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } +  \frac { 2 m} { \hbar ^ { 2 } }  \left( E + V _ { 0 } \right) u ( x ) = 0 \quad \text{ ve } \quad \frac { 2 m} { \hbar ^ { 2 } }  \left( E + V _ { 0 } \right) = q ^ { 2 }
+\frac { d ^ { 2 } u ( x ) } { d x ^ { 2 } } +  \frac { 2 m} { \hbar ^ { 2 } }  \left( E + V _ { 0 } \right) u ( x ) = 0 \quad \text{ ve } \quad \frac { 2 m} { \hbar ^ { 2 } }  \left( E + V _ { 0 } \right) \equiv q ^ { 2 }
 \end{align}
 %%
 halini alır. Böylece bu sistemin en genel çözümü,
@@ -697,15 +697,87 @@ Tünellemenin en önemli uygulaması taramalı tünelleme mikroskobudur. Çok in
 \subsection{Sonlu Potansiyel Kuyusunda Bağlı Durumlar}
 
 Şekil \ref{fig:sonlukuyupotansiyeli}'te gösterilen ve Denk. \ref{eq:sonlukuyupotansiyeli} ile tanımlanan sonlu potansiyel kuyusunu $E>0$ (veya saçılma) durumları için çalıştık. Bu potansiyel çekici özellikte bir kuyu şeklinde olduğundan $E<0$ durumu için ise bağlı durum çözümleri ortaya çıkacaktır. Klasik fiziktede bağlı durum potansiyelleri mevcuttur. Örneğin, güneşimiz etrafındaki gezegenler evrensel kütle çekimi ilkesince güneşin çekim potansiyeli ($-G m M/r$) altında bağlı durumda bulunurlar. Böylece kararlı Kepler yörüngelerinde güneş etrafındaki döngülerine devam ederler. Kuantum ve Klasik bağlı durumlar arasındaki en temel fark birincisinin kesikli ikincisinin sürekli enerji seviyelerine sahip olmasıdır.
+%%
 
+Zamandan bağımsız bir boyutlu Schrdinger denklemi için bağlı durum çözümleri olarak aşağıdaki dalga fonksiyonları önerilebilir.
+%%
 \begin{align}
 u ( x )  = \left\{ 
 \begin{array} { l l } 
 {u_1(x) = C_1 e^{ k x} } & {\Leftarrow -a > x } \\
-{u_2(x) = A cos -q x + B \sin q x } & {\Leftarrow -a \leq x \leq a } \quad \text{ (kuyunun içi)} \\
+{u_2(x) = A \cos q x + B \sin q x } & {\Leftarrow -a \leq x \leq a } \quad \text{ (kuyunun içi)} \\
 {u_3(x) = C_3 e^{- k x}} & {\Leftarrow \quad a > x }
 \end{array} \right. 
+\label{eq:sonlukuyubagli_df}
 \end{align}
+%%
+Bağlı durumlarda $E<0$ durumunu çalıştığımız için enerjiyi $E = -|E|$ şeklinde göstermek daha uygun olacaktır. Böylece dalga fonksiyonlarındaki $k$ ve $q$ dalga sayıları,
+%%
+\begin{align}
+\frac{2 m }{\hbar^{2}} |E| \equiv k^{2} \quad\text{ ve } \quad \frac{2 m }{\hbar^{2}} (V_0-|E|) \equiv q^{2}
+\end{align}
+%%
+olarak tanımlanabilirler. Böylece $k^2$ ve $q^2$ reel ve sıfırdan büyük değerlere sahip olurlar. Schrödinger denklemi $k^2$ ve $q^2$ ifadeleri ile yeniden yazılırsa, Denk. \ref{eq:sonlukuyubagli_df}'deki çözümler elde edilir. 
+
+Dikkat edilirse 1. ve 3. bölge çözümleri üstel davranışlı reel dalga fonksiyonlarıdır. Bunun nedeni $E<0$ durumunda, tünelleme olayında olduğu gibi, bağlı durum dalgasının uç (kuyruk) kısımlarının duvarlardan içeri sızmasıdır. Birinci bölge için ${u_1(x) = C_1 e^{ k x} }$ seçilmiştir, çünkü $-x$ yönünde azalan bir fonksiyondur. Böylece fiziksel olmayan ve ıraksayan bir çözümden kaçınılmış olur. Benzer şekilde üçüncü bölge için ise ${u_3(x) = C_3 e^{ -k x} }$ seçilmiştir, çünkü $+x$ yönünde azalan bir fonksiyondur. İkinci bölgede ise $-V_0<E<0$ olduğundan kuantum nesnesi kuyunun içindedir, fakat kuyunun içinde kalmak şartıyla serbest dalga davranışına sahip olacaktır. Bu nedenle ikinci bölge için sinüs davranışına sahip çözümler önerilmiştir.
+
+Bağlı durum enerji özdeğerlerini elde etmek için gerekli sınır şartlarını uygulamak isteyebiliriz. Fakat daha önce çalıştığımız sonsuz kuyu örneğinde olduğu gibi bu kuyu içinde $x\rightarrow-x$ parite dönüşümü altında $u_2(x)$'in kosinüslü kısmı \emph{çift} sinüslü kısmı ise \emph{tek} pariteye sahip olacaktır. Bu nedenle kuyunun içindeki çözümleri çift ve tek çözümler olarak ayrı ayrı çalışmak gerekir. Çift çözümler için birinci ve üçüncü bölgenin ($k^2$) kuantum özellikleri aynı olduğundan, $C_1 = C_3$ alınabilir. Tek çözümler için ise yine  her iki bölgenin kuantum özellikleri aynı fakat kuyu içindeki dalga fonksiyonu anti simetrik davranışta olduğundan, $C_1 = -C_3$ olmalıdır. $C_1$ ve $C_3$ arasındaki ilişki Şekil \ref{fig:sonlukuyu_tekcift}'ten çok daha iyi anlaşılabilir.
+%%
+\begin{figure}[!hbtp]
+	\centering
+	\includegraphics[width=.7\linewidth]{figurler/SonluKuyu_tek_cift_bagliDurumlar.png}
+	\caption{Tek ve çift çözümler.}
+	\label{fig:sonlukuyu_tekcift}
+\end{figure}
+%%
+
+Önceki çalıştığımız potansiyellere benzer şekilde bu potansiyelin çözümleri olan dalga fonksiyonları ve türevleri de yine $x=\pm a$ noktasında süreklidir. Bu durumda türevlerin dalga fonksiyonlarına oranları da,
+%%
+\begin{equation}
+\frac{1}{u(x)} \frac{d u(x)}{d x}
+\end{equation}
+%%
+$x=\pm a$'da sürekli olacaktır. Çift çözümler için $B=0$ olmalıdır, tek çözümler için ise $A=0$ olmalıdır. Böylece çift çözümler için $u_2(x) = A \cos qx$ ve tek çözümler için $u_2(x) = B \sin qx$ olacaktır.
+%%
+%%
+\begin{align}
+\frac{1}{u(x)} \frac{d u(x)}{d x} = \left\{ 
+\begin{array} { l l } 
+{u_1'/u_1 = k } & \\
+{u_2'/u_2 = -q\tan qx }, & \text{çift çözümler için}\\
+{u_2'/u_2 = +q\cot qx }, & \text{tek çözümler için}\\
+{u_3'/u_3 = -k } & 
+\end{array} \right. 
+\end{align}
+%%
+Tek ve çift çözüm durumları için elde edilen yeni süreklilik şartları $x=-a$ veya $x=+a$'da uygulanabilir. Süreklilik şartları $x=-a$'da uygulanacak olursa, çift çözümler için;
+%%
+\begin{align}
+u_1'/u_1 = u_2'/u_2 \nonumber\\
+k = -q\tan q(-a) \nonumber\\
+k = q\tan q a
+\end{align}
+%%
+tek çözümler için ise,
+%%
+\begin{align}
+u_1'/u_1 = u_2'/u_2 \nonumber\\
+k = q\cot q(-a) \nonumber\\
+k = -q\cot q a
+\end{align}
+%%
+eşitlikleri elde edilir. Elde edilen bu eşitlikler $a$ ile genişletilirse,
+%%
+%%
+\begin{align}
+\begin{array} { l l } 
+ka = +qa\tan q a, & \text{çift çözümler için}\\
+ka = -qa\cot q a, & \text{tek çözümler için}
+\end{array}
+\end{align}
+%%
+hallerini alırlar. Hem $k$ hem de $q$ aslında $E$'nin bir fonksiyonu olduğuna göre,
+
 
 \newpage
 % In the preamble, add "\renewcommand\refname{New Title}" for article type documents 
