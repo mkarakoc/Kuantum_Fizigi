@@ -32,3 +32,6 @@ Laboratuvar deneylerinin programına ve dikkat edilmesi gereken önemli bilgiler
 
 Deney föylerine [bu bağlantıdan erişebilirsiniz.](https://github.com/mkarakoc/Kuantum_Fizigi/blob/master/zz99_laboratuvar_foyu_ileri_fizik)
 
+## Web Kaynakları
+1. [Quantum Mechanics (Physics 4610)](https://physics.weber.edu/schroeder/quantum/) (Daniel V. Schroeder)
+
