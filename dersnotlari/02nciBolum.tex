@@ -694,7 +694,7 @@ olarak yazılabilir. Bu ortalama değer genellikle \emph{beklenen değer} olarak
 \Delta f(x)^2 = \int ^{\infty }_{-\infty }dx \psi^{\ast }\left(x,t\right) f(x)^2 \psi \left( x,t\right) -\left( \int ^{\infty }_{-\infty }dx \psi^{\ast }\left(x,t\right) f(x) \psi \left( x,t\right)\right)^2
 \end{equation}
 %%
-Bir parçacığın konumu için beklenen değeri ve standart sapmayı bulmak kolaydır, $f(x)$ yerine $x$ koymak yeterlidir. 
+Bir parçacığın konumu için beklenen değeri ve standart sapmayı bulmak kolaydır, $f(x)$ yerine $\hat x$ (konum operatörünü) koymak yeterlidir. 
 
 Parçacığın momentumunun beklenen değeri için nasıl bir yol izleyeceğimiz çok açık değildir. P. Ehrenfest \emph{uygunluk prensibi}nden faydalanarak,
 %%
@@ -705,34 +705,40 @@ p = m v = m\frac{dx}{dt}
 klasik ifadesinin,
 %%
 \begin{equation*}
-\langle p \rangle = m\frac{d \langle x \rangle}{dt}
+\langle \hat p \rangle = m\frac{d \langle \hat x \rangle}{dt}
 \end{equation*}
 %%
 olarak kullanılabileceğini göstermiştir. Buradan yola çıkarak,
 %%
 \begin{align}
-\langle p \rangle &= m \frac{d}{dt} \int ^{\infty }_{-\infty }dx \psi^{\ast }\left(x,t\right) x \psi \left( x,t\right)\\
-&=m\int ^{\infty }_{-\infty }dx\left( \dfrac {\partial \psi ^{\ast }\left( x,t\right) }{\partial t}x\psi \left( x,t\right) +\psi ^{\ast }\left( x,t\right) x \dfrac {\partial \psi \left( x,t\right) }{\partial t}\right) \nonumber 
+\langle \hat p \rangle &= m \frac{d}{dt} \int ^{\infty }_{-\infty }dx \psi^{\ast }\left(x,t\right) \hat x \psi \left( x,t\right)\\
+&=m\int ^{\infty }_{-\infty }dx\left( \dfrac {\partial \psi ^{\ast }\left( x,t\right) }{\partial t} \hat x\psi \left( x,t\right) +\psi ^{\ast }\left( x,t\right) \hat x \dfrac {\partial \psi \left( x,t\right) }{\partial t}\right) \nonumber 
 \end{align}
 %%
-yazılabilir. Bu hesapta $dx/dt$ türev ifadesinin yer almadığına dikkat edilmelidir. Zamana bağlı olan ifade $\psi(x,t)$ ve onun eşleniğidir. Dalga fonksiyonunun zamanla değişimi $\langle x \rangle$'deki zamana bağlı değişimi belirler. Olasılık akısını hesaplarken yaptığımız gibi yukarıdaki denklemde Schrödinger denklemini ve eşleniğini kullanalarak,
+%% https://en.wikipedia.org/wiki/Ehrenfest_theorem
+%% Schrödinger picture vs Heisenberg picture
+%% https://physics.stackexchange.com/a/412514
+%% <dx / dt> Equals zero in the Schrödinger picture (which is the one you seem to be working with)
+%% because the operators in the Schrödinger picture are constant. That is, they don't depend explicitly %% on time. What changes in time is their expected value, and this is represented by:
+%%
+yazılabilir. Schrödinger resminde operatörler sabit olduğudan bu hesapta $d \hat x/dt$ türev ifadesinin yer almadığına dikkat edilmelidir. Zamanla değişen operatörlerin beklenen değerleridir çünkü zamana bağlı olan ifade $\psi(x,t)$ ve onun eşleniğidir. Dalga fonksiyonunun zamanla değişimi $\langle \hat x \rangle$'deki zamana bağlı değişimi belirler. Olasılık akısını hesaplarken yaptığımız gibi yukarıdaki denklemde Schrödinger denklemini ve eşleniğini kullanalarak,
 %%
 \begin{equation}
-\langle p\rangle =\dfrac {\hbar }{2i}\int ^{\infty }_{-\infty }dx\left( \dfrac {\partial ^{2}\psi ^{\ast }}{\partial x^{2}}x\psi -\psi ^{\ast }x\dfrac {\partial ^{2}\psi }{\partial x^{2}}\right)
+\langle \hat p\rangle =\dfrac {\hbar }{2i}\int ^{\infty }_{-\infty }dx\left( \dfrac {\partial ^{2}\psi ^{\ast }}{\partial x^{2}}\hat x\psi -\psi ^{\ast } \hat x\dfrac {\partial ^{2}\psi }{\partial x^{2}}\right)
 \label{eq:expectation_val_p_1}
 \end{equation}
 %%
 sonucuna ulaşırız. Bu ifadeyi üzerinde biraz daha matematiksel çalışma yapmalıyız.
 %%
 \begin{align*}
-\dfrac {\partial }{\partial x}\left( \dfrac {\partial \psi ^{\ast }}{\partial x}x\psi \right) =\dfrac {\partial ^{2}\psi^{\ast }}{\partial x^{2}}x\psi +\dfrac {\partial \psi ^{\ast }}{\partial x}\psi +\dfrac {\partial \psi ^{\ast }}{\partial x}x\dfrac {\partial \psi }{\partial x} \\
-\dfrac {\partial }{\partial x}\left( \psi ^{\ast }x\dfrac {\partial \psi }{\partial x}\right) =\dfrac {\partial \psi ^{\ast }}{\partial x}x\dfrac {\partial \psi }{\partial x}+\psi ^{\ast }\dfrac {\partial \psi }{\partial x} + \psi ^{\ast } x \dfrac {\partial ^{2}\psi }{\partial x^{2}}
+\dfrac {\partial }{\partial x}\left( \dfrac {\partial \psi ^{\ast }}{\partial x} \hat x\psi \right) =\dfrac {\partial ^{2}\psi^{\ast }}{\partial x^{2}}\hat x\psi +\dfrac {\partial \psi ^{\ast }}{\partial x}\psi +\dfrac {\partial \psi ^{\ast }}{\partial x}\hat x\dfrac {\partial \psi }{\partial x} \\
+\dfrac {\partial }{\partial x}\left( \psi ^{\ast }\hat x\dfrac {\partial \psi }{\partial x}\right) =\dfrac {\partial \psi ^{\ast }}{\partial x}\hat x\dfrac {\partial \psi }{\partial x}+\psi ^{\ast }\dfrac {\partial \psi }{\partial x} + \psi ^{\ast } \hat x \dfrac {\partial ^{2}\psi }{\partial x^{2}}
 \end{align*}
 %%
 Yukarıdaki iki eşitlikten alttaki üsttekinden çıkarılırsa,
 %%
 \begin{equation*}
-\left( \dfrac {\partial ^{2}\psi ^{\ast }}{\partial x^{2}}x\psi -\psi ^{\ast }x\dfrac {\partial ^{2}\psi }{\partial x^{2}}\right) = \dfrac {\partial }{\partial x}\left( \dfrac {\partial \psi ^{\ast }}{\partial x}x\psi -\psi ^{\ast }x\dfrac {\partial \psi }{\partial x}\right) +\psi ^{\ast }\dfrac {\partial \psi }{\partial x}-\dfrac {\partial \psi ^{\ast }}{\partial x}\psi 
+\left( \dfrac {\partial ^{2}\psi ^{\ast }}{\partial x^{2}}\hat x\psi -\psi ^{\ast }\hat x\dfrac {\partial ^{2}\psi }{\partial x^{2}}\right) = \dfrac {\partial }{\partial x}\left( \dfrac {\partial \psi ^{\ast }}{\partial x}\hat x\psi -\psi ^{\ast } \hat x\dfrac {\partial \psi }{\partial x}\right) +\psi ^{\ast }\dfrac {\partial \psi }{\partial x}-\dfrac {\partial \psi ^{\ast }}{\partial x}\psi 
 \end{equation*}
 %%
 elde edilir. Eşitliğin sol tarafındaki son iki terim için de,
@@ -743,19 +749,19 @@ elde edilir. Eşitliğin sol tarafındaki son iki terim için de,
 bu matematiksel işlemin sonucu kullanılırsa, $\langle p \rangle$ için,
 %%
 \begin{equation*}
-\langle p\rangle =\dfrac {\hbar }{2i}\int ^{\infty }_{-\infty }dx\left( \dfrac {\partial ^{2}\psi ^{\ast }}{\partial x^{2}}x\psi -\psi ^{\ast }x\dfrac {\partial ^{2}\psi }{\partial x^{2}}\right) =  \dfrac {\hbar }{2i}\int ^{\infty }_{-\infty }dx \left[\dfrac {\partial }{\partial x}\left( \dfrac {\partial \psi ^{\ast }}{\partial x}x\psi -\psi ^{\ast }x\dfrac {\partial \psi }{\partial x} + \psi^\ast \psi\right) +2\psi ^{\ast }\dfrac {\partial \psi }{\partial x}\right]
+\langle \hat p\rangle =\dfrac {\hbar }{2i}\int ^{\infty }_{-\infty }dx\left( \dfrac {\partial ^{2}\psi ^{\ast }}{\partial x^{2}} \hat x\psi -\psi ^{\ast } \hat x\dfrac {\partial ^{2}\psi }{\partial x^{2}}\right) =  \dfrac {\hbar }{2i}\int ^{\infty }_{-\infty }dx \left[\dfrac {\partial }{\partial x}\left( \dfrac {\partial \psi ^{\ast }}{\partial x} \hat x\psi -\psi ^{\ast } \hat x\dfrac {\partial \psi }{\partial x} + \psi^\ast \psi\right) +2\psi ^{\ast }\dfrac {\partial \psi }{\partial x}\right]
 \end{equation*}
 %%
 sonucuna ulaşılır. Bu ifadeyi biraz daha açarsak,
 %%
 \begin{equation*}
-\langle p\rangle = \dfrac {\hbar }{2i}\left( \dfrac {\partial \psi ^{\ast }}{\partial x}x\psi -\psi ^{\ast }x\dfrac {\partial \psi }{\partial x} + \psi^\ast \psi \right){\bigg |}_{-\infty}^{\infty} + \int ^{\infty }_{-\infty }dx \psi ^{\ast }\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi
+\langle \hat p\rangle = \dfrac {\hbar }{2i}\left( \dfrac {\partial \psi ^{\ast }}{\partial x}\hat x\psi -\psi ^{\ast } \hat x\dfrac {\partial \psi }{\partial x} + \psi^\ast \psi \right){\bigg |}_{-\infty}^{\infty} + \int ^{\infty }_{-\infty }dx \psi ^{\ast }\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi
 \end{equation*}
 %%
 momentumun beklenen değerini bulmaya daha da yakınlaşmış oluruz. Bu son ifadedeki ilk terimdeki dalga fonksiyonları ve eşlenikleri $\pm\infty$ durumları için sıfıra gideceklerinden ilk terim kaybolur ve momentumun beklenen değeri,
 %%
 \begin{equation}
-\langle p\rangle =  \int ^{\infty }_{-\infty }dx \psi(x,t) ^{\ast }\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi(x,t)
+\langle \hat p\rangle =  \int ^{\infty }_{-\infty }dx \psi(x,t) ^{\ast }\left(\dfrac {\hbar }{i}\dfrac {\partial}{\partial x}\right) \psi(x,t)
 \label{eq:expactation_value_and_op_momentum}
 \end{equation}
 %%
