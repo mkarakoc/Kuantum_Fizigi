@@ -596,11 +596,12 @@ u _ { p } ( x ) = C e ^ { i p x / \hbar }
 şeklindedir. Burada $C$ belirsiz bir sabittir ve normalizasyon ile hesaplanabilir. $p$ özdeğeri reel değerlidir böylece $u_p(x)$ özfonksionu $x \rightarrow \pm \infty$ durumunda patlamaz ve sonlu kalır. Serbest bir parçacık için $\hat p$ operatörünün davranışını incelediğimizden, p özdeğeri kesikli değerler değil sürekli değerler alır. Diğer bir ifadeyle $\hat p$'nin sürekli bir spektrumu vardır, denebilir. Enerji özfonksiyonları gibi momentum özfonksiyonları da,
 %%
 \begin{equation}
+\label{eq:dirac_norm}
 \int _ { - \infty } ^ { \infty } d x u _ { p ^ { \prime } } ^ { * } ( x ) u _ { p } ( x ) = \delta \left( p - p ^ { \prime } \right)
  = \left\{
 \begin{array} { c l } 
-{ 0 } & { \Leftarrow p \neq p^\prime } \\ 
-{ \infty } & { \Leftarrow p   =  p^\prime} 
+{ \infty } & { \Leftarrow p   =  p^\prime} \\
+{ 0 } & { \Leftarrow p \neq p^\prime } 
 \end{array} 
 \right.
 \end{equation}
@@ -608,6 +609,7 @@ u _ { p } ( x ) = C e ^ { i p x / \hbar }
 yukarıda verilen ortonormalite (dik ve birim olma) şartına uyuyorlarsa,
 
 \begin{equation}
+\label{eq:dirac_norm_applied}
 \begin{aligned} 
 \int _ { - \infty } ^ { \infty } d x u _ { p ^ { \prime } } ^ { * } ( x ) u _ { p } ( x ) 
 & = | C | ^ { 2 } \int _ { - \infty } ^ { \infty } d x e ^ { i \left( p - p ^ { \prime } \right) x / \hbar } \\ 
@@ -615,13 +617,13 @@ yukarıda verilen ortonormalite (dik ve birim olma) şartına uyuyorlarsa,
 \end{aligned}
 \end{equation}
 %%
-olacaktır.İntegralin sonucu $p=p^\prime$ için $1$ olacağından $C$'nin değeri de bulunmuş olur. Böylece momentum özfonksiyonu,
+olacaktır. $C$'nin değeri Denklem \ref{eq:dirac_norm_applied}'deki integralin sonucunun Denklem \ref{eq:dirac_norm}'teki normalizasyon integralinin sonucu ile aynı olmasını sağlayacak şekilde seçilir. Böylece momentum özfonksiyonu,
 %%
 \begin{equation}
 u _ { p } ( x ) = \frac { 1 } { \sqrt { 2 \pi \hbar } } e ^ { i p x / \hbar }
 \end{equation}
 %%
-olarak bulunur. Enerji özfonksiyonolarının tam bir setiyle seriye açtığımız $\psi(x)$'i momentum özfonksiyonlarının tam bir setiyle de seriye açabiliriz. Tek fark enerji özdeğerleri kesikli iken, momentum özdeğerleri süreklidir. Eğer momentum özdeğerleri kesikli olsaydı, $\psi(x)$
+olarak bulunur. Enerji özfonksiyonlarının tam bir setiyle seriye açtığımız $\psi(x)$'i momentum özfonksiyonlarının tam bir setiyle de seriye açabiliriz. Tek fark enerji özdeğerleri kesikli iken, momentum özdeğerleri süreklidir. Eğer momentum özdeğerleri kesikli olsaydı, $\psi(x)$
 %%
 \begin{equation}
 \psi ( x ) = \sum _ { n = 1 } ^ { \infty } A _ { p_n } u _ {p_ n } ( x )
