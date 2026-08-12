@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1300" height="975" viewBox="0 0 1300 975"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   id="svg1623" >
+  <metadata>
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <desc>Originally Produced by GNUPLOT 4.0 patchlevel 0</desc>
+  <defs id="defs1627">
+    <path id="atip" stroke-width="1.0" stroke-linejoin="round" fill="currentColor" d="M 0,-1 l12,30 a21,21 0,0,0 -24,0 l12,-30 z"/>
+  </defs>
+  <g style="fill:none;stroke:black;stroke-width:3" >
+    <path d="M125,867 h27 M1223,867 h-27 " />
+    <path d="M125,838 h13 M1223,838 h-13 M125,809 h13 M1223,809 h-13 M125,779 h13    M1223,779 h-13 M125,750 h27 M1223,750 h-27 " />
+    <path d="M125,721 h13 M1223,721 h-13 M125,692 h13 M1223,692 h-13 M125,663 h13    M1223,663 h-13 M125,634 h27 M1223,634 h-27 " />
+    <path d="M125,604 h13 M1223,604 h-13 M125,575 h13 M1223,575 h-13 M125,546 h13    M1223,546 h-13 M125,517 h27 M1223,517 h-27 " />
+    <path d="M125,488 h13 M1223,488 h-13 M125,459 h13 M1223,459 h-13 M125,429 h13    M1223,429 h-13 M125,400 h27 M1223,400 h-27 " />
+    <path d="M125,371 h13 M1223,371 h-13 M125,342 h13 M1223,342 h-13 M125,313 h13    M1223,313 h-13 M125,283 h27 M1223,283 h-27 " />
+    <path d="M125,254 h13 M1223,254 h-13 M125,225 h13 M1223,225 h-13 M125,196 h13    M1223,196 h-13 M125,167 h27 M1223,167 h-27 " />
+    <path d="M125,138 h13 M1223,138 h-13 M125,108 h13 M1223,108 h-13 M125,79  h13    M1223,79  h-13 M125,50  h27 M1223,50  h-27 " />
+    <path d="M125,867 V840 M125,50 V77 " />
+    <path d="M152,867 V854 M152,50 V63 M180,867 V854 M180,50 V63 M207,867 V854     M207,50 V63 M235,867 V854 M235,50 V63 M262,867 V854 M262,50 V63     M290,867 V854 M290,50 V63 M317,867 V854 M317,50 V63 M345,867 V854    M345,50 V63 M372,867 V854 M372,50 V63 M400,867 V840 M400,50 V77 " />
+    <path d="M427,867 V854 M427,50 V63 M454,867 V854 M454,50 V63 M482,867 V854     M482,50 V63 M509,867 V854 M509,50 V63 M537,867 V854 M537,50 V63     M564,867 V854 M564,50 V63 M592,867 V854 M592,50 V63 M619,867 V854    M619,50 V63 M647,867 V854 M647,50 V63 M674,867 V840 M674,50 V77 " />
+    <path d="M701,867 V854 M701,50 V63 M729,867 V854 M729,50 V63 M756,867 V854     M756,50 V63 M784,867 V854 M784,50 V63 M811,867 V854 M811,50 V63     M839,867 V854 M839,50 V63 M866,867 V854 M866,50 V63 M894,867 V854    M894,50 V63 M921,867 V854 M921,50 V63 M949,867 V840 M949,50 V77 " />
+    <path d="M976,867 V854 M976,50 V63 M1003,867 V854 M1003,50 V63 M1031,867 V854    M1031,50 V63 M1058,867 V854 M1058,50 V63 M1086,867 V854 M1086,50 V63    M1113,867 V854 M1113,50 V63 M1141,867 V854 M1141,50 V63 M1168,867 V854    M1168,50 V63 M1196,867 V854 M1196,50 V63 M1223,867 V840 M1223,50 V77 " />
+    <g style="stroke:none;fill:black;font-family:Times;font-size:36.00" >
+     <g transform="translate(100,0)" text-anchor="end">
+      <text y="880">-0.2</text>
+      <text y="763">0.0</text>
+      <text y="647">0.2</text>
+      <text y="530">0.4</text>
+      <text y="413">0.6</text>
+      <text y="296">0.8</text>
+      <text y="180">1.0</text>
+      <text y="63" >1.2</text>
+     </g>
+     <g transform="translate(0,934)" text-anchor="middle">
+      <text x="125" >-2</text>
+      <text x="400" >-1</text>
+      <text x="674" >0</text>
+      <text x="949" >1</text>
+      <text x="1223" >2</text>
+     </g>
+    </g>
+    <g color="#0000ff" stroke="currentColor" >
+      <path d="M125,750 L1223,750 M674,750 L674,167" />
+      <use xlink:href="#atip" x="674" y="167" />
+      <circle fill="#fff" stroke-width="1.0" cx="674" cy="750" r="13.5" />
+    </g>
+    <path stroke="black" d="M125,867 L1223,867 L1223,50 L125,50 L125,867 " />
+  </g>
+</svg>
