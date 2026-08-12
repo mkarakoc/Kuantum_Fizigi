@@ -5,8 +5,11 @@
 
 \usepackage[utf8]{inputenc}
 %https://mirror.hmc.edu/ctan/macros/latex/contrib/babel-contrib/turkish/turkish.pdf
-\usepackage[english]{babel}
-%\usepackage[T1]{fontenc}
+\usepackage[english,turkish]{babel}
+%%\usepackage[T1]{fontenc}
+% Turkish babel'in "=" shorthand'ını kapat
+\AtBeginDocument{ \shorthandoff{=} }
+%\addto\extrasturkish{ \shorthandoff{=} }
 
 \usepackage{amsmath,amssymb,mathabx}%\for eqref
 \usepackage{siunitx} %% SI units
@@ -24,7 +27,7 @@
 %%% \usepackage{svg}
 %%% https://tex.stackexchange.com/questions/122871/include-svg-images-with-the-svg-package/129854
 \usepackage{graphicx}
-\graphicspath{ {./figurler/} }
+\graphicspath{ {./figurler/}, {./kapaklar/}}
 
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{fancyhdr}
@@ -32,6 +35,9 @@
 \usepackage{indentfirst}
 %% paragraf girintisi
 \setlength{\parindent}{5ex}
+
+\usepackage{pdfpages}
+
 
 %% Daha sonra yazılacak kısımları not düşmek için...
 \newcommand{\YAZILACAK}{{\vspace{18pt}\bf\Large \color{red} YAZILACAK}}
@@ -51,18 +57,22 @@
 \author{\setlength{\unitlength}{6mm}
 \begin{picture}(10,10)
 \put(1.1,0){\includegraphics[width=4.5cm]{Leptonic_event_in_Gargamelle_bubble_chamber.jpg}}
-\end{picture} \\ Doç. Dr. Mesut Karakoç}
+\end{picture} \\ Prof. Dr. Mesut Karakoç}
 
 
 \date{\today}
 
 \begin{document}
+	
 
 %% Turkish babel problem
 %% https://tex.stackexchange.com/questions/160385/newgeometry-doesnt-work-with-turkish-babel-package
 %%\shorthandoff{=}% Make = not active any more
 
-\maketitle
+%\maketitle
+
+\includepdf[pages=1,fitpaper=false,width=\paperwidth,height=\paperheight,pagecommand={\thispagestyle{empty}}]{kapak.pdf}
+\setcounter{page}{1}   % sayfa numarasını kapak sonrası sıfırla
 
 \newpage
 
@@ -642,7 +652,7 @@ dalga boyundaki kaymayı veren denklem elde edilmiş olur. $h/m_e c \eqsim 2.4\t
 \subsection{Elektron: Parçacık mı, Dalga mı?}
 
 1923'te {\it Louis de Broglie} ``Işık paketinin geçici teorisi" adlı çalışmasında her ışık paketinin eylemsiz kütlesinin $m_0$ olması gerektiğini ve
-bu kütle çok küçük olduğundan ışık paketinin (fotonun) hızının neredeyse ışık hızı $c$ çok yakın olması gerektiğini öne sürmüştür. Böylece bir fotonun bütün enerjisi için,
+bu kütle çok küçük olduğundan ışık paketinin (fotonun) hızının neredeyse ışık hızı $c$'ye çok yakın olması gerektiğini öne sürmüştür. Böylece bir fotonun bütün enerjisi için,
 \begin{equation}
 \label{eq:foton_deBroglie_E}
 h \nu = \frac{m_0 c^2}{\sqrt{1-v^2/c^2}}

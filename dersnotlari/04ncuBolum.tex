@@ -5,8 +5,11 @@
 
 \usepackage[utf8]{inputenc}
 %https://mirror.hmc.edu/ctan/macros/latex/contrib/babel-contrib/turkish/turkish.pdf
-\usepackage[english]{babel}
-%\usepackage[T1]{fontenc}
+\usepackage[english,turkish]{babel}
+%%\usepackage[T1]{fontenc}
+% Turkish babel'in "=" shorthand'ını kapat
+\AtBeginDocument{ \shorthandoff{=} }
+%\addto\extrasturkish{ \shorthandoff{=} }
 
 \usepackage{amsmath,amssymb,mathabx}%\for eqref
 \usepackage{lscape}
@@ -51,7 +54,7 @@
 \author{\setlength{\unitlength}{6mm}
 \begin{picture}(10,10)
 \put(1.1,0){\includegraphics[width=4.5cm]{Leptonic_event_in_Gargamelle_bubble_chamber.jpg}}
-\end{picture} \\ Doç. Dr. Mesut Karakoç}
+\end{picture} \\ Prof. Dr. Mesut Karakoç}
 
 
 \date{\today}
