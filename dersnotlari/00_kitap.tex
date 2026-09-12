@@ -71,21 +71,12 @@
 % Tek veri tabanı, her bölüm için ayrı refsection.
 % Backend BIBER'dır (BibTeX değil).
 % --------------------------------------------------------------
-%\usepackage[
-%  backend=biber,
-%  style=numeric,
-%  sorting=nyt,
-%  giveninits=true
-%]{biblatex}
-
 \usepackage[
 backend=biber,
-style=numeric,
-sorting=none,
-giveninits=true,
-doi=false,
-isbn=false,
-url=true
+style=phys,
+articletitle=true,
+biblabel=brackets,
+giveninits=true
 ]{biblatex}
 
 
@@ -94,8 +85,9 @@ url=true
 % Her bölümün kaynakçası, o bölümün section başlığının altında
 % bir subsection düzeyinde görünür ve ortak içindekilere eklenir.
 \defbibheading{chapterbibliography}{%
-  \subsection*{Kaynaklar}%
-  \addcontentsline{toc}{subsection}{Kaynaklar}%
+	\subsection*{Kaynaklar}%
+	\phantomsection
+	\addcontentsline{toc}{subsection}{Kaynaklar}%
 }
 
 % Bir bölüm tek başına derleniyorsa kendi refsection'ını açıp kapatır.
