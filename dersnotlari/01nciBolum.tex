@@ -43,18 +43,41 @@ Kuantum fiziğinin bütünüyle sadece bu makaleyle başladığını söylemek p
 On dokuzuncu yüzyılın başlarında fizikçilerin en çok ilgilendikleri konulardan birisi:
 ısıtılmış cisimlerin nasıl ışıma yaptıklarıdır? Bu nedenle ısıtılmış cisimlerin ışıması üzerine bir çok deney yapılmıştır ve teorik olarak açıklanması gereken bir çok deneysel veri ortaya çıkmıştır \cite{book:Sharkov}. Termal ışımalarla ilgili teorik çalışmalar Gustav Kirchhoff'un 1859 yılındaki çalışmaları ile başlar \cite{book:Gasiorowicz}. 
 
-Kirchhoff ``Işık ve ısının yayılımı ve soğurulması arasındaki ilişki" \cite{book:Jammer, Kirchhoff1859} adlı makalesinde etrafları mükemmel yansıtıcılarla sarılmış iki yayıcı ve soğurucu sonsuz paralel plakanın ısıl denge durumundaki ışınım alış verişlerini inceledi. Plakaların ışın yayma, soğurma ve yansıtma özelikleri için sırasıyla $E(\lambda, T)$, $A$ ve $R$ ifadelerini aşağıdaki gibi tanımladı:
+Kirchhoff, ``Işık ve ısının yayılımı ve soğurulması arasındaki ilişki" \cite{book:Jammer, Kirchhoff1859} başlıklı makalesinde, etrafları mükemmel yansıtıcı duvarlarla çevrili, yayıcı ve soğurucu özelliklere sahip, sonsuz genişlikte iki opak paralel plakanın ısıl denge durumundaki ışınım alışverişini inceledi. Plakaların ışın yayma, soğurma ve yansıtma özelikleri için sırasıyla $E(\lambda, T)$, $A$ ve $R$ ifadelerini aşağıdaki gibi tanımladı:
 
 \begin{itemize}
-\item $E(\lambda, T)$ (yayınlanma gücü): herhangi bir $T$ sıcaklığında  birim dalga boyu başına ışımanın birim alan ve birim zaman başına şiddetini tanımlar ve birimi W/m$^3\equiv \frac{\text{J}}{\text{s}} \frac{1}{\text{m}^3}$'dir.
+\item $E(\lambda, T)$ (spektral yayma gücü): $T$ sıcaklığındaki bir cismin $\lambda$ dalga boyunda, birim yüzey alanı, birim zaman ve birim dalga boyu aralığı başına yaydığı ışıma enerjisini tanımlar ve birimi W/m$^3\equiv \frac{\text{J}}{\text{s}} \frac{1}{\text{m}^3}$'dir.
 \item $A$ plakanın kendi üzerine gelen ışının plaka tarafından soğurulma oranıdır.
 \item $R$ plakanın kendi üzerine gelen ışının plaka tarafından yansıtılma  oranıdır.
 \item Bu tanımlara göre $A + R = 1$'dir.
 \end{itemize}
 
-Kirchhoff ortaya attığı problemdeki termal dengedeki levhalardan birinden yayınlanan ışınımın enerjisinin diğeri tarafından soğurulanın enerjiye eşit olması gerektiğini gösterdi ve böylece her iki plaka içinde $E/A$ oranının eşit olacağını gösterdi.
+%Kirchhoff ortaya attığı problemdeki termal dengedeki levhalardan birinden yayınlanan ışınımın %enerjisinin diğeri tarafından soğurulanın enerjiye eşit olması gerektiğini gösterdi ve böylece her %iki plaka içinde $E/A$ oranının eşit olacağını gösterdi.
 
-Daha sonra Kirchhoff ``kara cisim" diye adlandırdığı bütün ışık spektrumunu soğurabilen bir nesne kavramını ortaya attı ve bu nesne için $A=1$ olması gerektiğini fark etti. Bu durumda ``kara cisim" davranışına sahip cisimler için $E(\lambda, T)$  evrensel bir fonksiyon halini almaktadır.
+Burada önemli nokta, bir levhanın yaydığı ışınımın tamamının doğrudan diğer levha tarafından soğurulmamasıdır. Her levha, diğer levhanın yaydığı ışınımın yanı sıra sistem içindeki yansımaları ve çevredeki diğer katkıları da içeren toplam denge ışınım alanına maruz kalır. Bir levhaya gelen toplam spektral ışınım $I_\lambda$ ile gösterilirse, levhanın bu ışınımdan soğurduğu kısım $A I_\lambda$ olur.
+
+Termal dengede her levhanın yaydığı spektral enerji, aynı levhanın ortamdan soğurduğu enerjiye eşittir. Bu nedenle
+%%
+\begin{equation}
+	E_1 = A_1 I_\lambda,
+	\qquad
+	E_2 = A_2 I_\lambda
+\end{equation}
+%%
+yazılır. Buradan aynı sıcaklık ve dalga boyunda
+%%
+\begin{equation}
+	\frac{E_1}{A_1}
+	=
+	\frac{E_2}{A_2}
+	=
+	I_\lambda
+\end{equation}
+%%
+sonucu elde edilir. Böylece $E/A$ oranının cismin cinsinden bağımsız, yalnızca dalga boyu ve sıcaklığa bağlı evrensel bir büyüklük olduğu görülür.
+
+
+Daha sonra Kirchhoff ``kara cisim'' diye adlandırdığı bütün ışık spektrumunu soğurabilen bir nesne kavramını ortaya attı ve bu nesne için $A=1$ olması gerektiğini fark etti. Bu durumda ``kara cisim" davranışına sahip cisimler için $E(\lambda, T)$  evrensel bir fonksiyon halini almaktadır.
 
 
 %\shorthandoff{=}% Make = not active any more
@@ -94,7 +117,7 @@ Kirchhoff bu yasaya dayanarak kovuğun içinde termal ışımanın homojen olmas
 
 %% The third law of thermodynamics is sometimes stated as follows, regarding the properties of closed systems in thermodynamic equilibrium: The entropy of a system approaches a constant value as its temperature approaches absolute zero.
 
-Kovuğun içinde $\lambda$ ile $\lambda+d\lambda$ dalga boyları aralığındaki ışımalar için enerji yoğunluğu $w(\lambda,T) d\lambda$'dır ve yayınlama gücü $E(\lambda,T)$ ile olan ilişkisi aşağıdaki gibidir,
+Kovuğun içinde $\lambda$ ile $\lambda+d\lambda$ dalga boyları aralığındaki ışımalar için enerji yoğunluğu $w(\lambda,T) d\lambda$'dır ve yayma gücü $E(\lambda,T)$ ile olan ilişkisi aşağıdaki gibidir,
  
 \begin{equation}
 \label{eq:emissiveDensity}
@@ -277,14 +300,14 @@ olarak bulunur. Elde edilen bu sonuç birim hacimdeki harmonik osilatör sayıs�
 U(T) = \frac{8 \pi h}{c^{3}} \int\limits_0^\infty d\nu \frac{\nu^{3}}{e^{\frac{h \nu}{k_{B} T}} - 1} = a T^4
 \end{equation}
 %%
-Eğer integral yayınım gücü yoğunluğu üzerinden alınmış olsaydı sonuçta toplam birim alan başına güç ($[E(T)]=$ W/m$^2$) ise,
+Eğer integral yayma gücü yoğunluğu üzerinden alınmış olsaydı sonuçta toplam birim alan başına güç ($[E(T)]=$ W/m$^2$) ise,
 %%
 \begin{equation}
 \label{eq:Planck_E_total}
 E(T) = \sigma T^4
 \end{equation}
 %%
-olurdu. Her iki ifade de karacisim ışınımı için benzeri bir sonucu ifade etmektedir ve Stefan-Bolzman yasası olarak bilinmektedir: ``bütün ışıma spektrumu üzerinden alınan integral sonucu elde edilen ışıma enerji yoğunluğu veya ışıma yayınım gücü sıcaklığın dördüncü kuvvetiyle doğru orantılıdır". Her iki ifadedeki sabitlerin değerleri,
+olurdu. Her iki ifade de karacisim ışınımı için benzeri bir sonucu ifade etmektedir ve Stefan-Bolzman yasası olarak bilinmektedir: ``bütün ışıma spektrumu üzerinden alınan integral sonucu elde edilen ışıma enerji yoğunluğu veya ışıma yayma gücü sıcaklığın dördüncü kuvvetiyle doğru orantılıdır". Her iki ifadedeki sabitlerin değerleri,
 %%
 \begin{align}
 \label{eq:stefan_boltzman}
