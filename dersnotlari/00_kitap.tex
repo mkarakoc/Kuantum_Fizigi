@@ -66,6 +66,36 @@
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
+\usepackage{etoolbox}
+\usepackage{titlesec}
+
+
+\makeatletter
+
+\pretocmd{\section}{%
+	\phantomsection
+	\addtocontents{toc}{\protect\hypertarget{tocsec:\thesection}{}}%
+}{}{}
+
+\pretocmd{\subsection}{%
+	\phantomsection
+	\addtocontents{toc}{\protect\hypertarget{tocsubsec:\thesubsection}{}}%
+}{}{}
+
+\makeatother
+
+\titleformat{\section}
+{\normalfont\Large\bfseries}
+{\thesection}
+{1em}
+{\hyperlink{tocsec:\thesection}}
+
+\titleformat{\subsection}
+{\normalfont\large\bfseries}
+{\thesubsection}
+{1em}
+{\hyperlink{tocsubsec:\thesubsection}}
+
 % --------------------------------------------------------------
 % KAYNAKÇA
 % Tek veri tabanı, her bölüm için ayrı refsection.
@@ -76,7 +106,8 @@ backend=biber,
 style=phys,
 articletitle=true,
 biblabel=brackets,
-giveninits=true
+giveninits=true,
+backref=true
 ]{biblatex}
 
 
