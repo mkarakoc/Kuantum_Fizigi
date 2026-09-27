@@ -26,7 +26,7 @@ sorry I ever got involved with quantum theory.
 \setcounter{section}{1} %% THIS WILL BE DELETED when all chapters merged!
 \section{Dalga-Parçacık İkilemi ve Schrödinger Denklemi}
 
-Kuantum fiziğinin doğum sürecini anlattığımız bir önceki bölümün içeriği genellikle \emph{Eski Kuantum Teorisi} olarak adlandırılır. Çünkü, gerçekleştirilen keşifleri açıklamak için  kullanılan veya ortaya konan kuralların tam olarak birbirleriyle sağlam bir bağlantısının olduğunu söylemek pek mümkün değildir. Daha iyi bir açıklama için ortaya konan ``Kuantum Mekaniği" iki defa keşfedilmiştir denebilir, ilki 1925'te matris mekaniği formalizmiyle Werner Heisenberg tarafından ve ikincisi 1926'da dalga mekaniği ile Erwin Schrödinger tarafındandır. Her ikisinin eş değer olduğu sonradan gösterilmiş olmasına rağmen Schrödinger'in yöntemi daha çok kullanılır hale gelmiştir. Çünkü dalga mekaniğinin matematiği fizikçiler arasında daha yaygındı \cite{book:Gasiorowicz}.
+Kuantum fiziğinin doğum sürecini anlattığımız bir önceki bölümün içeriği genellikle \emph{Eski Kuantum Teorisi} olarak adlandırılır. Çünkü, gerçekleştirilen keşifleri açıklamak için  kullanılan veya ortaya konan kuralların tam olarak birbirleriyle sağlam bir bağlantısının olduğunu söylemek pek mümkün değildir. Daha iyi bir açıklama için ortaya konan ``Kuantum Mekaniği" iki defa keşfedilmiştir denilebilir, ilki 1925'te matris mekaniği formalizmiyle Werner Heisenberg tarafından ve ikincisi 1926'da dalga mekaniği ile Erwin Schrödinger tarafındandır. Her ikisinin eş değer olduğu sonradan gösterilmiş olmasına rağmen Schrödinger'in yöntemi daha çok kullanılır hale gelmiştir. Çünkü dalga mekaniğinin matematiği fizikçiler arasında daha yaygındı \cite{book:Gasiorowicz}.
 
 
 \subsection{Dalga-Parçacık İkilemi}
@@ -44,6 +44,83 @@ Kuantum fiziğini başlatan deneyler ve deneyleri açıklamak için geliştirile
 Bu durumda kuantum fiziğinin sınırları içine giren herhangi bir fiziksel varlık, hem dalga hem de parçacık davranışı gösterebilmektedir. Dalga özelliği gösteriyorsa; kutuplanma, girişim ve kırınım gibi davranışlar göstermesi beklenirken, parçacık özelliği gösterdiğindeyse; klasik fizikteki gibi enerji ve momentum taşıması beklenmektedir. Belirli şartlar altında ışığın veya herhangi bir elektromanyetik dalganın enerji ve momentum taşıdıkları fotoelektrik etkisi, Compton saçılması ve karacisim ışıması deneylerinde göz1enmiştir. İnsan gözüyle fotonlar tek tek seçilemese de, fotonları tek tek seçebilen ve fotoçoklayıcı \cite{book:Gasiorowicz} olarak adlandırılan cihazlar mevcuttur. 
 
 Dirac'ın kuantum mekaniği üzerine yazdığı bir kitabında ilginç bir düşünce deneyi vardır. Belirli bir kutuplanmaya sahip ışık fotoelektrik etkide olduğu gibi elektron elde etmek için kullanılırsa, yayınlanan elektronların açısal dağılımı fotonların kutuplanmasıyla ilişkilidir. Fotoelektrik etkiye göre bir foton bir elektron koparabildiğine göre, fotonların enerji ve momentuma ek olarak kutuplanmaya da sahip oldukları söylenebilir. Buna göre başlangıçta $I_0$ şiddetine sahip ve kutuplanmış bir ışık demetini sadece belli bir kutuplanma eksenindeki ışığın geçmesine izin veren bir kristalden geçirdiğimizi düşünelim. Eğer gelen ışığın tamamı kristalden geçecek kutuplanmaya sahipse geçen ışığın şiddeti de $I_0$ olacaktır. Eğer kutuplanma vektörü kristalin kutuplandırma ekseni ile $\theta$ açısı kadar farka sahipse, geçen ışık şiddeti $I_0 \cos^2 \theta$'a kadar olur. Bu durumu her bir foton için tek tek ele alalım. Eğer ışık demeti tamamen kristalin kutuplanma ekseni ile aynı yönde kutuplanmışsa demeti oluşturan bütün fotonların hepsi aynı yöndeki kutuplanmaya sahiptir. Fakat farklı bir polarizasyona (kutuplanmaya) sahip bir ışık demetinde ise demetin şiddeti  $\cos^2 \theta$ ile belirlenen oran kadar azalacaktır. Bunun anlamı bu oran kadar fotonun kristalden geçebilmesidir. Fakat, \emph{fotonlar bölünemezler} bu durumda bir foton kristalden ya geçer ya da geçemez. Bireysel olarak hangi fotonun geçtiğini bilmemiz mümkün değildir. Bütün söyleyebileceğimiz $N$ tane foton geldiyse, bunun $N \cos^2 \theta$ kadarının geçtiğidir. Böyle bir fotonun bu kristalden geçebilme olasılığı $\cos^2\theta$ olur.
+
+
+\begin{figure}[htbp]
+	\centering
+	\begin{tikzpicture}[
+		>=Latex,
+		photon/.style={-{Latex[length=2.2mm]}, line width=0.8pt},
+		pol/.style={line width=1.15pt, red!75!black},
+		axis/.style={line width=1.25pt, blue!65!black},
+		every node/.style={font=\small}
+		]
+		% Incoming and outgoing beam axes
+		\draw[photon] (-5.4,1.15) -- (-1.25,1.15);
+		\draw[photon] (-5.4,0.55) -- (-1.25,0.55);
+		\draw[photon] (-5.4,-0.05) -- (-1.25,-0.05);
+		\node[align=center] at (-4.25,2.15)
+		{Gelen kutuplanmış \\ ışık şiddeti $I_0$};
+		
+		% Polarization marks on incoming photons (angle theta from vertical)
+		\foreach \x in {-4.75,-3.65,-2.55,-1.65}{
+			\draw[pol] ($(\x,0.55)+(-0.22,-0.38)$) -- ($(\x,0.55)+(0.22,0.38)$);
+		}
+		
+		% Polarizer / crystal
+		\fill[blue!7] (-0.95,-1.25) rectangle (0.95,1.85);
+		\draw[blue!55!black, line width=0.9pt] (-0.95,-1.25) rectangle (0.95,1.85);
+		\foreach \x in {-0.65,-0.25,0.15,0.55}{
+			\draw[blue!25] (\x,-1.15) -- (\x,1.75);
+		}
+		\draw[axis] (0, -0.78) -- (0,1.42);
+		\draw[axis,->] (0,1.02) -- (0,1.68);
+		\node[blue!65!black, align=center] at (0,-1.72)
+		{Kutuplayıcı kristal\\geçiş ekseni};
+		
+		% Angle construction
+		\draw[densely dashed, gray] (-1.62,0.55) -- (-1.62,1.55);
+		\draw[pol,->] (-1.62,0.55) -- (-1.08,1.48);
+		\draw[->, gray!80] (-1.62,1.22) arc[start angle=90,end angle=60,radius=0.67];
+		\node at (-1.30,1.43) {$\theta$};
+		
+		% Transmitted photons: fewer rays, polarization aligned with crystal
+		\draw[photon] (1.05,0.95) -- (5.25,0.95);
+		\draw[photon] (1.05,0.15) -- (5.25,0.15);
+		\foreach \x in {1.55,2.55,3.55,4.55}{
+			\draw[axis] (\x,0.50) -- (\x,1.40);
+		}
+		\node[align=center] at (3.25,2.15)
+		{Geçen ışık\\şiddeti $I_0\cos^2\theta$};
+		\node[draw=blue!55!black, rounded corners=2pt, fill=blue!5,
+		inner sep=5pt, align=center] at (3.25,-0.75)
+		{$I=I_0\cos^2\theta$\\[-1pt]
+			$P(\text{geçiş})=\cos^2\theta$};
+		
+		% Single-photon interpretation
+		\node[draw, rounded corners=2pt, fill=gray!8, minimum width=2.0cm,
+		minimum height=0.8cm] (one) at (0,-3.45) {tek foton};
+		\node[draw=green!50!black, rounded corners=2pt, fill=green!7,
+		align=center, minimum width=3.0cm] (pass) at (3.35,-3.0)
+		{geçer\\$P=\cos^2\theta$};
+		\node[draw=orange!70!black, rounded corners=2pt, fill=orange!8,
+		align=center, minimum width=3.0cm] (stop) at (3.35,-4.25)
+		{geçemez\\$P=\sin^2\theta$};
+		\draw[->, line width=0.85pt] (one.east) -- (pass.west);
+		\draw[->, line width=0.85pt] (one.east) -- (stop.west);
+		\node[align=center, anchor=east] at (-1.35,-3.45)
+		{Foton bölünemez: N tane foton için \\iki olasılıktan biri gerçekleşir.};
+	\end{tikzpicture}
+	\caption{Bir kutuplayıcıdan geçen ışığın topluluk ve tek-foton yorumu.
+		Gelen kutuplanma doğrultusu ile kristalin geçiş ekseni arasındaki açı
+		$\theta$ olduğunda, demetin geçen şiddeti $I_0\cos^2\theta$ olur. Tek bir
+		foton ise parçalanmaz; $\cos^2\theta$ olasılıkla bütünüyle geçer, aksi
+		durumda geçemez. % Şekil bu metin için TikZ ile özgün olarak oluşturulmuştur; lisans: Creative Commons Atıf 4.0 Uluslararası (CC BY 4.0).
+		}
+	\label{fig:tek-foton-kutuplanma}
+\end{figure}
+
+
 
 Klasik optik fiziğine göre  bir çok foton içeren bir ışık demeti girişim ve kırınım gibi dalga özellikleri gösterecektir. Fakat ışığın dalga özelliğinin tek bir foton için de geçerli olduğunu gösteren deneyler de gerçekleştirilmiştir. Bunlardan birisi de \href{https://en.wikipedia.org/wiki/G._I._Taylor#Career_and_research}{G. I. Taylor} tarafından 1909 yılında yapılmıştır. Bu deneyde bir iğne ucu etrafında çok düşük şiddetteki (bir kerede bir fotonun geçtiği) ışığın bile kırınıma uğradığı gösterilmiştir(!?) Bu bize ışığın dalga davranışının fotonların toplu (kollektif) bir davranışı sonucunda değil de, bireysel özelliklerinin bir sonucu olarak var olduğunu göstermiştir. Bu durumda yeni sorunlar ortaya çıkmaktadır. {\color{red} (Taylor'ın deneyinden sonra gerçekleştirilen bir başka deney için bkz. \cite{Grangier_1986}.)} {\color{gray} [Taylor'ın deneyi üzerinde bazı şüpheler mevcut, ders notunun ileriki güncellemelerinden birinde bu şüphelerin giderilmesi iyi olur.]}
 
@@ -76,8 +153,8 @@ Klasik optik fiziğine göre  bir çok foton içeren bir ışık demeti girişim
 
 \begin{figure}[hbtp]
 \center
-\includegraphics[scale=.8]{Double-slit_experiment_unknown_source.png}
-\caption{Buraya benzeri bir başka şekil konacak!}
+\includegraphics[scale=.22]{Double-slit_experiment.png}
+\caption{Çift yarık deneyi: $S$ bir dalga kaynağıdır; $I_1$ ve $I_2$, sırasıyla yalnızca $S_1$ açıkken ve yalnızca $S_2$ açıkken ekranda kaydedilen şiddetlerdir. Her iki yarık da açık olduğunda toplam şiddet artık $I_1$ ve $I_2$'nin toplamına eşit değildir; salınımlı bir terimin eklenmesi gerekir. }
 \label{fig:dobule_slit_experiment}
 \end{figure}
 
