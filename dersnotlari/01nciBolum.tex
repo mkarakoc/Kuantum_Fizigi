@@ -1012,80 +1012,200 @@ Franck-Hertz deneyinin şeması ve deneyde kullanılan civa dolu tüpün bir res
 %
 %%\YAZILACAK
 
-\subsection{Uygunluk İlkesi} 
+%\subsection{Uygunluk İlkesi} 
+%
+%Niels Bohr kuantum teorisinin klasik fiziğin alanına giren bölgelerde klasik fizikle aynı sonuçları vermesi gerektiğini önerdi. Bu fikir \emph{uygunluk ilkesi [correspondence principle]} olarak adlandırıldı. Buna göre bir kuantum sisteminin \emph{"kuantum sayıları"} çok büyük değerlere ulaştığında bu sistemin asimtotik davranışı klasik fizikle uyumlu olmalıdır. 
+%
+%Bir elektronun klasik olarak dairesel yörüngede yapacağı ışımanın frekansı: 
+%\begin{equation} 
+%	\nu_{cl}=\frac{v}{2 \pi r}
+%	=\frac{Z \alpha c}{n}
+%	\frac{Z \alpha m_{e} c}{2 \pi n^{2} \hbar}
+%	=\frac{(Z \alpha)^{2} m_{e} c^{2}}{2 \pi \hbar}
+%	\frac{1}{n^{3}} .
+%\end{equation} 
+%
+%$n\gg 1$ durumunda bir elektronun $n+1 \longrightarrow n$ seviye geçişinde 
+%yapacağı ışımanın frekansı ise
+%\begin{equation} 
+%	\nu=\frac{\omega}{2 \pi}
+%	=\frac{1}{2 \pi \hbar}
+%	\frac{m_{e} c^{2}(Z \alpha)^{2}}{2}
+%	\left(
+%	\frac{1}{n^{2}}-\frac{1}{(n+1)^{2}}
+%	\right) .
+%%\end{equation}
 
-Niels Bohr kuantum teorisinin klasik fiziğin alanına giren bölgelerde klasik fizikle aynı sonuçları vermesi gerektiğini önerdi. Bu fikir \emph{uygunluk ilkesi [correspondence principle]} olarak adlandırıldı. Buna göre bir kuantum sisteminin \emph{"kuantum sayıları"} çok büyük değerlere ulaştığında bu sistemin asimtotik davranışı klasik fizikle uyumlu olmalıdır. 
 
-Bir elektronun klasik olarak dairesel yörüngede yapacağı ışımanın frekansı: 
-\begin{equation} 
-	\nu_{cl}=\frac{v}{2 \pi r}
-	=\frac{Z \alpha c}{n}
-	\frac{Z \alpha m_{e} c}{2 \pi n^{2} \hbar}
-	=\frac{(Z \alpha)^{2} m_{e} c^{2}}{2 \pi \hbar}
-	\frac{1}{n^{3}} .
-\end{equation} 
-
-$n\gg 1$ durumunda bir elektronun $n+1 \longrightarrow n$ seviye geçişinde 
-yapacağı ışımanın frekansı ise
-\begin{equation} 
-	\nu=\frac{\omega}{2 \pi}
-	=\frac{1}{2 \pi \hbar}
-	\frac{m_{e} c^{2}(Z \alpha)^{2}}{2}
-	\left(
-	\frac{1}{n^{2}}-\frac{1}{(n+1)^{2}}
-	\right) .
-\end{equation}
-
-Parantez içindeki ifade
-\begin{equation}
-	\frac{1}{n^{2}}-\frac{1}{(n+1)^{2}}
-	=
-	\frac{(n+1)^{2}-n^{2}}{n^{2}(n+1)^{2}}
-	=
-	\frac{2n+1}{n^{2}(n+1)^{2}}
-\end{equation}
-şeklinde yazılabilir. $n\gg 1$ için
-\begin{equation}
-	2n+1 \simeq 2n,
-	\qquad
-	(n+1)^{2} \simeq n^{2}
-\end{equation}
-olduğundan,
-\begin{equation}
-	\frac{1}{n^{2}}-\frac{1}{(n+1)^{2}}
-	\simeq
-	\frac{2n}{n^{4}}
-	=
-	\frac{2}{n^{3}} .
-\end{equation}
-
-Böylece kuantum geçiş frekansı
-\begin{equation}
-	\nu
-	\simeq
-	\frac{1}{2 \pi \hbar}
-	\frac{m_{e} c^{2}(Z \alpha)^{2}}{2}
-	\frac{2}{n^{3}}
-	=
-	\frac{(Z \alpha)^{2} m_{e} c^{2}}{2 \pi \hbar}
-	\frac{1}{n^{3}}
-\end{equation}
-olur. Bu sonuç klasik yörünge frekansı ile aynıdır:
-\begin{equation}
-	\boxed{\nu \simeq \nu_{cl}}
-	\qquad (n\gg 1).
-\end{equation}
-
-Dolayısıyla büyük kuantum sayıları sınırında, ardışık iki enerji seviyesi arasındaki
-kuantum geçiş frekansı elektronun klasik yörünge frekansına yaklaşır. Bu sonuç,
-Bohr'un uygunluk ilkesinin hidrojen-benzeri atom için açık bir örneğini oluşturur.
-
-Klâsik ve kuantum harmonik osilatörlerin uygunluk ilkesi kapsamında incelemesi için hyperphysics'ten \cite{web:hyperphysics_correspondence_principle} okuma yapabilirsiniz.
 
 
 %%Bir atomun dairesel yörüngesindeki bir elektronun klasik ve kuantum %%davranışları $n+1 \longrightarrow n$ geçişleri uygunluk prensiyle uyumluyken,
 %%$n+2 \longrightarrow n$ geçişi için 
 
+
+
+\subsection{Uygunluk İlkesi}
+
+Niels Bohr, kuantum teorisinin klasik fiziğin geçerli olduğu sınırlarda klasik 
+fizikle uyumlu sonuçlar vermesi gerektiğini öne sürdü. Bu düşünce 
+\emph{uygunluk ilkesi [correspondence principle]} olarak adlandırılır. Buna göre,
+bir kuantum sistemini karakterize eden kuantum sayıları çok büyük değerlere
+ulaştığında sistemin davranışı uygun bir anlamda klasik fiziğin öngörülerine
+yaklaşmalıdır.
+
+Bu ilkeyi hidrojen-benzeri bir atomdaki elektron için inceleyelim. Bohr modelinde
+$n$ kuantum sayısına karşılık gelen dairesel yörüngenin yarıçapı ve elektronun
+bu yörüngedeki hızı
+
+\begin{equation}
+	r_n=\frac{n^2\hbar}{Z\alpha m_e c},
+	\qquad
+	v_n=\frac{Z\alpha c}{n}
+\end{equation}
+
+şeklindedir. Burada $n$, klasik mekaniğin bir değişkeni değil, Bohr modelindeki
+izinli yörüngeleri etiketleyen kuantum sayısıdır.
+
+Şimdi $n$. Bohr yörüngesine karşılık gelen aynı yarıçap ve hız değerlerini
+kullanarak elektronun \emph{klasik dolanma frekansını} hesaplayalım. Dairesel
+hareket için bu frekans
+
+\begin{equation}
+	\nu_{\mathrm{cl}}
+	=
+	\frac{v_n}{2\pi r_n}
+\end{equation}
+
+olduğundan,
+
+\begin{equation}
+	\nu_{\mathrm{cl}}
+	=
+	\frac{Z\alpha c}{n}
+	\frac{Z\alpha m_e c}{2\pi n^2\hbar}
+	=
+	\frac{(Z\alpha)^2m_ec^2}{2\pi\hbar}
+	\frac{1}{n^3}
+\end{equation}
+
+elde edilir.
+
+Burada önemli bir ayrım yapılmalıdır. Yukarıdaki $\nu_{\mathrm{cl}}$, elektronun
+dairesel hareketinin klasik dolanma frekansıdır. Klasik elektrodinamiğe göre
+ivmeli hareket yapan bir yük elektromanyetik ışınım yapar ve dairesel hareketin
+karakteristik frekansı bu dolanma frekansıdır. Buna karşılık Bohr modelinde
+elektronun durağan bir yörüngede hareket ederken ışınım yapmadığı varsayılır.
+Dolayısıyla burada klasik ışınım, Bohr modelindeki durağan yörüngenin fiziksel
+davranışı olarak değil, kuantum sonucuyla karşılaştırılacak klasik referans
+olarak kullanılmaktadır.
+
+Şimdi kuantum teorisinin verdiği geçiş frekansını ele alalım. Hidrojen-benzeri
+bir atomun Bohr enerji düzeyleri
+
+\begin{equation}
+	E_n
+	=
+	-\frac{m_ec^2(Z\alpha)^2}{2n^2}
+\end{equation}
+
+şeklindedir. Elektronun $n+1\longrightarrow n$ geçişinde yayılan fotonun
+frekansı
+
+\begin{equation}
+	\nu
+	=
+	\frac{E_{n+1}-E_n}{h}
+	=
+	\frac{1}{2\pi\hbar}
+	\frac{m_ec^2(Z\alpha)^2}{2}
+	\left(
+	\frac{1}{n^2}
+	-
+	\frac{1}{(n+1)^2}
+	\right)
+\end{equation}
+
+olur.
+
+Parantez içindeki ifade
+
+\begin{equation}
+	\frac{1}{n^2}
+	-
+	\frac{1}{(n+1)^2}
+	=
+	\frac{(n+1)^2-n^2}{n^2(n+1)^2}
+	=
+	\frac{2n+1}{n^2(n+1)^2}
+\end{equation}
+
+şeklinde yazılabilir. Büyük kuantum sayıları için, $n\gg1$ olduğunda,
+
+\begin{equation}
+	2n+1\simeq2n,
+	\qquad
+	(n+1)^2\simeq n^2
+\end{equation}
+
+yaklaşımları yapılabilir. Böylece
+
+\begin{equation}
+	\frac{1}{n^2}
+	-
+	\frac{1}{(n+1)^2}
+	\simeq
+	\frac{2n}{n^4}
+	=
+	\frac{2}{n^3}
+\end{equation}
+
+elde edilir. Bu sonuç geçiş frekansında yerine konulduğunda
+
+\begin{equation}
+	\nu
+	\simeq
+	\frac{1}{2\pi\hbar}
+	\frac{m_ec^2(Z\alpha)^2}{2}
+	\frac{2}{n^3}
+	=
+	\frac{(Z\alpha)^2m_ec^2}{2\pi\hbar}
+	\frac{1}{n^3}
+\end{equation}
+
+bulunur. Bu ifade, $n$. Bohr yörüngesine karşılık gelen klasik dolanma
+frekansıyla aynıdır:
+
+\begin{equation}
+	\boxed{
+		\nu_{n+1\rightarrow n}
+		\simeq
+		\nu_{\mathrm{cl}}
+	}
+	\qquad
+	(n\gg1).
+\end{equation}
+
+Dolayısıyla büyük kuantum sayıları sınırında, ardışık iki enerji düzeyi
+arasındaki geçişte yayılan fotonun frekansı, aynı enerji bölgesine karşılık
+gelen klasik elektron yörüngesinin dönme frekansına yaklaşır. Başka bir
+ifadeyle,
+
+\begin{equation}
+	\lim_{n\rightarrow\infty}
+	\frac{\nu_{n+1\rightarrow n}}
+	{\nu_{\mathrm{cl}}}
+	=
+	1.
+\end{equation}
+
+Bu sonuç, Bohr'un uygunluk ilkesinin hidrojen-benzeri atomlar için en açık
+örneklerinden biridir: kuantum teorisindeki ayrık enerji düzeyleri büyük
+kuantum sayılarında birbirlerine giderek yaklaşır ve komşu düzeyler arasındaki
+geçiş frekansı klasik hareketin karakteristik frekansıyla uyumlu hâle gelir.
+
+Klasik ve kuantum harmonik osilatörlerin uygunluk ilkesi kapsamında
+karşılaştırılması için HyperPhysics kaynağına
+\cite{web:hyperphysics_correspondence_principle} başvurulabilir.
 
 
 
