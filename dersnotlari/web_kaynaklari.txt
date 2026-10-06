@@ -37,3 +37,8 @@ On the Nature of Quantons
 Jean-Marc Lévy-Leblond 
 https://link.springer.com/article/10.1023/A:1025382113814
 https://doi.org/10.1023/A:1025382113814
+
+Wave-Packet
+In Situ Imaging of a Single-Atom Wave Packet in Continuous Space
+https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.083403
+https://sci-net.xyz/10.1103/physrevlett.134.083403

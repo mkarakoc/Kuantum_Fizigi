@@ -268,7 +268,7 @@ gibi, gausyen (gaussian) dağılım olarak adlandırılan, bir dağılım tercih
 $t=0$'daki dalga paketini tanımlayan integral önce $q' = k-k_0$ değişken dönüşümü yapılarak,
 %%
 \begin{equation}
-\psi(x, 0) = \text{e}^{ik_0x} \text{e}^{-x^2/2\alpha} \int\limits_{-\infty}^{\infty}dq' \, \text{e}^{-\alpha q'^2/2} = \sqrt{\frac{2\pi}{\alpha}} \text{e}^{ik_0x} \text{e}^{-x^2/2\alpha}
+\psi(x, 0) = \text{e}^{ik_0x} \text{e}^{-x^2/2\alpha} \int\limits_{-\infty}^{\infty}dq' \, \text{e}^{-\alpha q'^2/2} \text{e}^{iq'x}= \sqrt{\frac{2\pi}{\alpha}} \text{e}^{ik_0x} \text{e}^{-x^2/2\alpha}
 \label{eq:wave_packet_t0}
 \end{equation}
 %%
@@ -333,18 +333,29 @@ dalga fonksiyonunun kendi eşleniği ile çarpılması işlemiyle hesaplanır. B
 olur. Eğer integrale $\omega$'nın ikinci dereceden türevinden gelen terim de diğer yüksek dereceli terimler gibi sıfır olsaydı. Dalga paketi hiç değişmeden $v_g$ hızı ilerlerdi. Örneğin, boşlukta ilerleyen ışık için $\omega=kc$ ve $v_g=c$ olur ve ışık $v_g$ hızlı bir dalga paketi olarak ilerler. $\beta$ sembolü ile temsil edilen ikinci dereceden bu terim sıfırdan farklı olursa, bu durumda $\text{e}^{-iq^2\beta t/2}$ ifadesinden dolayı dalga paketinin şekli (genişliği ve yüksekliği) değişir. 
 
 
+%\begin{figure}[hbtp]
+%\begin{minipage}{.5\textwidth}
+%\center
+%\includegraphics[scale=.6]{wave_packet_w_eq_kc.png}
+%\end{minipage}
+%\begin{minipage}{.5\textwidth}
+%\center
+%\includegraphics[scale=.6]{wave_packet_w_eq_function_of_k.png}
+%\end{minipage}
+%\caption{$\omega(k)/k$ sabitken ve $k$'nın bir fonksiyonu iken Denk. \ref{eq:wave_packet_t_approx} ile hesaplanan $|\psi(x,t)|^2$'nin değişimi.}
+%\label{fig:wave_packet_t}
+%\end{figure}
+
+
 \begin{figure}[hbtp]
-\begin{minipage}{.5\textwidth}
-\center
-\includegraphics[scale=.6]{wave_packet_w_eq_kc.png}
-\end{minipage}
-\begin{minipage}{.5\textwidth}
-\center
-\includegraphics[scale=.6]{wave_packet_w_eq_function_of_k.png}
-\end{minipage}
-\caption{$\omega(k)/k$ sabitken ve $k$'nın bir fonksiyonu iken Denk. \ref{eq:wave_packet_t_approx} ile hesaplanan $|\psi(x,t)|^2$'nin değişimi.}
-\label{fig:wave_packet_t}
+		\center
+		\includegraphics[scale=.6]{wave_packet_w_eq_function_of_k.png}
+	\caption{$\omega(k)/k$ $k$'nın bir fonksiyonu iken Denk. \ref{eq:wave_packet_t_approx} ile hesaplanan $|\psi(x,t)|^2$'nin değişimi.}
+	\label{fig:wave_packet_t}
 \end{figure}
+
+
+
 
 \subsection{Dalga Fonksiyonunun Olasılık Yorumu}
 
