@@ -326,7 +326,7 @@ dalga paketi fonksiyonu elde edilir. Dalga fonksiyonu içinde sanal bir kısım 
 dalga fonksiyonunun kendi eşleniği ile çarpılması işlemiyle hesaplanır. Böylece ilgilenilen dalga paketinin mutlak değerinin karesi,
 %%
 \begin{equation}
-|\psi(x,t)|^2 \eqsim \frac{2\pi}{\sqrt{\alpha^2 + 4 \beta^2 t^2 }} \text{e}^{-\frac{(x-v_g t)^2}{\alpha^2 + 4\beta^2 t^2}}
+|\psi(x,t)|^2 \eqsim \frac{2\pi}{\sqrt{\alpha^2 + 4 \beta^2 t^2 }} \text{e}^{-\frac{\alpha(x-v_g t)^2}{\alpha^2 + 4\beta^2 t^2}}
 \label{eq:wave_packet_t_approx}
 \end{equation}
 %%
@@ -898,6 +898,161 @@ Denklem \ref{eq:parseval_theorem} ve \ref{eq:wave_in_momentum_space}'ya dayanara
 \end{equation}
 %%
 ifadesi ile hesaplanabilir.
+
+
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Bir Foton Demetinin Kırınımı}
+
+Genişliği \(a\) olan bir yarıktan geçen, dalga boyu \(\lambda\) olan
+bir foton demetini ele alalım. Demeti önce elektromanyetik bir dalga
+olarak düşünelim. Tek yarık kırınımından, yarıktan çıkan demetin
+karakteristik açısal yayılmasının
+
+\begin{equation}
+	\theta \sim \frac{\lambda}{a}
+\end{equation}
+
+mertebesinde olduğu bilinir. Daha ayrıntılı kırınım hesabında ilk
+minimum için
+
+\begin{equation}
+	\sin\theta_{\min}=\frac{\lambda}{a}
+\end{equation}
+
+elde edilir.
+
+Şimdi aynı olayı fotonların parçacık özelliği açısından ele alalım.
+Yarıktan önce fotonların yaklaşık olarak \(x\)-doğrultusunda ilerlediğini
+düşünelim. Bir fotonun momentum büyüklüğü
+
+\begin{equation}
+	p=\frac{h}{\lambda}
+\end{equation}
+
+olduğundan, başlangıçta
+
+\begin{equation}
+	p_x\simeq p=\frac{h}{\lambda},
+	\qquad
+	p_y\simeq 0
+\end{equation}
+
+olarak düşünülebilir.
+
+Foton yarıktan geçtiğinde, \(y\)-doğrultusundaki konumu yarık
+genişliğiyle sınırlanır. Dolayısıyla fotonun bu doğrultudaki konumunun
+karakteristik belirsizliği
+
+\begin{equation}
+	\Delta y \sim a
+\end{equation}
+
+mertebesindedir.
+
+Konum ile momentum arasındaki belirsizlik bağıntısı
+
+\begin{equation}
+	\Delta y\,\Delta p_y
+	\geq
+	\frac{\hbar}{2}
+\end{equation}
+
+olduğundan, \(y\)-doğrultusundaki konumun sınırlandırılması,
+\(p_y\) momentum bileşeninin artık tek bir değerle belirlenememesi
+anlamına gelir. Karakteristik olarak
+
+\begin{equation}
+	\Delta p_y
+	\sim
+	\frac{\hbar}{a}
+\end{equation}
+
+mertebesinde bir enine momentum yayılması beklenir.
+
+Böylece yarıktan sonra fotonların momentumlarının büyüklüğü yaklaşık
+olarak aynı kalırken, momentum vektörlerinin yönleri farklılaşabilir.
+Küçük açılar için
+
+\begin{equation}
+	\theta
+	\sim
+	\frac{p_y}{p_x}
+\end{equation}
+
+olduğundan, açısal yayılmanın karakteristik büyüklüğü
+
+\begin{equation}
+	\theta
+	\sim
+	\frac{\Delta p_y}{p_x}
+\end{equation}
+
+şeklinde tahmin edilebilir.
+
+Burada
+
+\begin{equation}
+	p_x\simeq \frac{h}{\lambda}
+\end{equation}
+
+olduğuna göre,
+
+\begin{equation}
+	\theta
+	\sim
+	\frac{\hbar/a}{h/\lambda}
+	=
+	\frac{1}{2\pi}\frac{\lambda}{a}.
+\end{equation}
+
+Bu hesapta ortaya çıkan sayısal katsayıya özel bir anlam
+yüklenmemelidir. Çünkü burada \(\Delta y\), \(\Delta p_y\) ve
+\(\theta\) yalnızca karakteristik genişlikleri temsil etmektedir;
+örneğin \(\Delta p_y\), kırınım deseninin ilk minimumuna karşılık gelen
+momentum değeri değildir.
+
+Belirsizlik ilkesi bu nedenle kırınım açısının tam değerini değil,
+kırınımın karakteristik ölçeğini verir:
+
+\begin{equation}
+	\boxed{
+		\theta \sim \frac{\lambda}{a}
+	}.
+\end{equation}
+
+İlk minimumun tam konumu ise elektromanyetik dalga kuramından veya
+eşdeğer olarak fotonun dalga fonksiyonunun Fourier dönüşümünden
+
+\begin{equation}
+	\boxed{
+		\sin\theta_{\min}=\frac{\lambda}{a}
+	}
+\end{equation}
+
+olarak elde edilir.
+
+Böylece dalga ve parçacık betimlemeleri birbirleriyle tutarlı bir
+sonuca ulaşır: fotonun yarıktan geçerken \(y\)-doğrultusundaki
+konumunun sınırlandırılması, \(y\)-doğrultusundaki momentum
+bileşenlerinin yayılmasına; bu da yarıktan sonra fotonların farklı
+açılarda gözlenebilmesine karşılık gelir.
+
+
+
+
+
+
+
+
 
 
 \BolumKaynakcaBitir
