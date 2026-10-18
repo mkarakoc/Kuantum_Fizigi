@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="408.1625pt" height="211.104pt" viewBox="0 0 408.1625 211.104" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-16T10:10:17.778971</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 211.104 
+L 408.1625 211.104 
+L 408.1625 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 34.1225 205.344 
+L 402.4025 205.344 
+L 402.4025 5.76 
+L 34.1225 5.76 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mc3fe1e0f78" d="M 0 0 
+L -3.5 0 
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mc3fe1e0f78" x="34.1225" y="188.113727" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'DejaVu Serif', serif; text-anchor: end" x="27.1225" y="191.912945" transform="rotate(-0 27.1225 191.912945)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mc3fe1e0f78" x="34.1225" y="159.396604" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'DejaVu Serif', serif; text-anchor: end" x="27.1225" y="163.195823" transform="rotate(-0 27.1225 163.195823)">1</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mc3fe1e0f78" x="34.1225" y="130.679482" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'DejaVu Serif', serif; text-anchor: end" x="27.1225" y="134.478701" transform="rotate(-0 27.1225 134.478701)">2</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mc3fe1e0f78" x="34.1225" y="101.96236" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'DejaVu Serif', serif; text-anchor: end" x="27.1225" y="105.761578" transform="rotate(-0 27.1225 105.761578)">3</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#mc3fe1e0f78" x="34.1225" y="73.245237" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'DejaVu Serif', serif; text-anchor: end" x="27.1225" y="77.044456" transform="rotate(-0 27.1225 77.044456)">4</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mc3fe1e0f78" x="34.1225" y="44.528115" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'DejaVu Serif', serif; text-anchor: end" x="27.1225" y="48.327334" transform="rotate(-0 27.1225 48.327334)">5</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#mc3fe1e0f78" x="34.1225" y="15.810993" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'DejaVu Serif', serif; text-anchor: end" x="27.1225" y="19.610212" transform="rotate(-0 27.1225 19.610212)">6</text>
+     </g>
+    </g>
+    <g id="text_8">
+     <!-- $E/(\hbar\omega)$ -->
+     <g transform="translate(14.01 122.822) rotate(-90)">
+      <text>
+       <tspan x="0" y="-0.75" style="font-size: 11px; font-family: 'cmmi10'">E</tspan>
+       <tspan x="8.115723" y="-0.75" style="font-size: 11px; font-family: 'cmmi10'">=</tspan>
+       <tspan x="23.385742" y="-0.75" style="font-size: 11px; font-family: 'cmmi10'">!</tspan>
+       <tspan x="13.615723" y="-0.75" style="font-size: 11px; font-family: 'cmr10'">(</tspan>
+       <tspan x="30.228516" y="-0.75" style="font-size: 11px; font-family: 'cmr10'">)</tspan>
+       <tspan x="17.885742" y="-0.75" style="font-style: italic; font-size: 11px; font-family: 'STIXGeneral'">ħ</tspan>
+      </text>
+     </g>
+    </g>
+   </g>
+   <g id="LineCollection_1">
+    <path d="M 86.733929 173.755165 
+L 328.7465 173.755165 
+" clip-path="url(#p919ffd1718)" style="fill: none; stroke: #174a72; stroke-width: 1.2"/>
+   </g>
+   <g id="LineCollection_2">
+    <path d="M 86.733929 145.038043 
+L 328.7465 145.038043 
+" clip-path="url(#p919ffd1718)" style="fill: none; stroke: #174a72; stroke-width: 1.2"/>
+   </g>
+   <g id="LineCollection_3">
+    <path d="M 86.733929 116.320921 
+L 328.7465 116.320921 
+" clip-path="url(#p919ffd1718)" style="fill: none; stroke: #174a72; stroke-width: 1.2"/>
+   </g>
+   <g id="LineCollection_4">
+    <path d="M 86.733929 87.603799 
+L 328.7465 87.603799 
+" clip-path="url(#p919ffd1718)" style="fill: none; stroke: #174a72; stroke-width: 1.2"/>
+   </g>
+   <g id="LineCollection_5">
+    <path d="M 86.733929 58.886676 
+L 328.7465 58.886676 
+" clip-path="url(#p919ffd1718)" style="fill: none; stroke: #174a72; stroke-width: 1.2"/>
+   </g>
+   <g id="LineCollection_6">
+    <path d="M 86.733929 30.169554 
+L 328.7465 30.169554 
+" clip-path="url(#p919ffd1718)" style="fill: none; stroke: #174a72; stroke-width: 1.2"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 34.1225 205.344 
+L 34.1225 5.76 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_9">
+    <!-- $|0\rangle$ -->
+    <g transform="translate(339.268786 177.405165)">
+     <text>
+      <tspan x="0" y="-0.252604" style="font-size: 10px; font-family: 'cmsy10'">j</tspan>
+      <tspan x="2.768555" y="-0.252604" style="font-size: 10px; font-family: 'cmr10'">0</tspan>
+      <tspan x="7.768555" y="-9.59375" style="font-size: 10px; font-family: 'cmex10'">®</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_10">
+    <!-- $E_0=(0+1/2)\hbar\omega$ -->
+    <g style="fill: #666666" transform="translate(91.995071 170.309111)">
+     <text>
+      <tspan x="0" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">E</tspan>
+      <tspan x="38.366438" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">=</tspan>
+      <tspan x="53.471891" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">!</tspan>
+      <tspan x="5.902344" y="1.3605" style="font-size: 5.6px; font-family: 'cmr10'; fill: #666666">0</tspan>
+      <tspan x="10.617219" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">=</tspan>
+      <tspan x="18.23675" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">(</tspan>
+      <tspan x="21.342219" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">0</tspan>
+      <tspan x="26.746906" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">+</tspan>
+      <tspan x="34.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">1</tspan>
+      <tspan x="42.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">2</tspan>
+      <tspan x="46.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">)</tspan>
+      <tspan x="49.471906" y="-0" style="font-style: italic; font-size: 8px; font-family: 'STIXGeneral'; fill: #666666">ħ</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_11">
+    <!-- $|1\rangle$ -->
+    <g transform="translate(339.268786 148.688043)">
+     <text>
+      <tspan x="0" y="-0.252604" style="font-size: 10px; font-family: 'cmsy10'">j</tspan>
+      <tspan x="2.768555" y="-0.252604" style="font-size: 10px; font-family: 'cmr10'">1</tspan>
+      <tspan x="7.768555" y="-9.59375" style="font-size: 10px; font-family: 'cmex10'">®</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_12">
+    <!-- $E_1=(1+1/2)\hbar\omega$ -->
+    <g style="fill: #666666" transform="translate(91.995071 141.591988)">
+     <text>
+      <tspan x="0" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">E</tspan>
+      <tspan x="38.366438" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">=</tspan>
+      <tspan x="53.471891" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">!</tspan>
+      <tspan x="5.902344" y="1.3605" style="font-size: 5.6px; font-family: 'cmr10'; fill: #666666">1</tspan>
+      <tspan x="10.617219" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">=</tspan>
+      <tspan x="18.23675" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">(</tspan>
+      <tspan x="21.342219" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">1</tspan>
+      <tspan x="26.746906" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">+</tspan>
+      <tspan x="34.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">1</tspan>
+      <tspan x="42.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">2</tspan>
+      <tspan x="46.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">)</tspan>
+      <tspan x="49.471906" y="-0" style="font-style: italic; font-size: 8px; font-family: 'STIXGeneral'; fill: #666666">ħ</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_13">
+    <!-- $|2\rangle$ -->
+    <g transform="translate(339.268786 119.970921)">
+     <text>
+      <tspan x="0" y="-0.252604" style="font-size: 10px; font-family: 'cmsy10'">j</tspan>
+      <tspan x="2.768555" y="-0.252604" style="font-size: 10px; font-family: 'cmr10'">2</tspan>
+      <tspan x="7.768555" y="-9.59375" style="font-size: 10px; font-family: 'cmex10'">®</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_14">
+    <!-- $E_2=(2+1/2)\hbar\omega$ -->
+    <g style="fill: #666666" transform="translate(91.995071 112.874866)">
+     <text>
+      <tspan x="0" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">E</tspan>
+      <tspan x="38.366438" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">=</tspan>
+      <tspan x="53.471891" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">!</tspan>
+      <tspan x="5.902344" y="1.3605" style="font-size: 5.6px; font-family: 'cmr10'; fill: #666666">2</tspan>
+      <tspan x="10.617219" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">=</tspan>
+      <tspan x="18.23675" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">(</tspan>
+      <tspan x="21.342219" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">2</tspan>
+      <tspan x="26.746906" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">+</tspan>
+      <tspan x="34.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">1</tspan>
+      <tspan x="42.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">2</tspan>
+      <tspan x="46.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">)</tspan>
+      <tspan x="49.471906" y="-0" style="font-style: italic; font-size: 8px; font-family: 'STIXGeneral'; fill: #666666">ħ</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_15">
+    <!-- $|3\rangle$ -->
+    <g transform="translate(339.268786 91.253799)">
+     <text>
+      <tspan x="0" y="-0.252604" style="font-size: 10px; font-family: 'cmsy10'">j</tspan>
+      <tspan x="2.768555" y="-0.252604" style="font-size: 10px; font-family: 'cmr10'">3</tspan>
+      <tspan x="7.768555" y="-9.59375" style="font-size: 10px; font-family: 'cmex10'">®</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_16">
+    <!-- $E_3=(3+1/2)\hbar\omega$ -->
+    <g style="fill: #666666" transform="translate(91.995071 84.157744)">
+     <text>
+      <tspan x="0" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">E</tspan>
+      <tspan x="38.366438" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">=</tspan>
+      <tspan x="53.471891" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">!</tspan>
+      <tspan x="5.902344" y="1.3605" style="font-size: 5.6px; font-family: 'cmr10'; fill: #666666">3</tspan>
+      <tspan x="10.617219" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">=</tspan>
+      <tspan x="18.23675" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">(</tspan>
+      <tspan x="21.342219" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">3</tspan>
+      <tspan x="26.746906" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">+</tspan>
+      <tspan x="34.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">1</tspan>
+      <tspan x="42.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">2</tspan>
+      <tspan x="46.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">)</tspan>
+      <tspan x="49.471906" y="-0" style="font-style: italic; font-size: 8px; font-family: 'STIXGeneral'; fill: #666666">ħ</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_17">
+    <!-- $|4\rangle$ -->
+    <g transform="translate(339.268786 62.536676)">
+     <text>
+      <tspan x="0" y="-0.252604" style="font-size: 10px; font-family: 'cmsy10'">j</tspan>
+      <tspan x="2.768555" y="-0.252604" style="font-size: 10px; font-family: 'cmr10'">4</tspan>
+      <tspan x="7.768555" y="-9.59375" style="font-size: 10px; font-family: 'cmex10'">®</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_18">
+    <!-- $E_4=(4+1/2)\hbar\omega$ -->
+    <g style="fill: #666666" transform="translate(91.995071 55.440622)">
+     <text>
+      <tspan x="0" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">E</tspan>
+      <tspan x="38.366438" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">=</tspan>
+      <tspan x="53.471891" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">!</tspan>
+      <tspan x="5.902344" y="1.3605" style="font-size: 5.6px; font-family: 'cmr10'; fill: #666666">4</tspan>
+      <tspan x="10.617219" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">=</tspan>
+      <tspan x="18.23675" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">(</tspan>
+      <tspan x="21.342219" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">4</tspan>
+      <tspan x="26.746906" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">+</tspan>
+      <tspan x="34.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">1</tspan>
+      <tspan x="42.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">2</tspan>
+      <tspan x="46.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">)</tspan>
+      <tspan x="49.471906" y="-0" style="font-style: italic; font-size: 8px; font-family: 'STIXGeneral'; fill: #666666">ħ</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_19">
+    <!-- $|5\rangle$ -->
+    <g transform="translate(339.268786 33.819554)">
+     <text>
+      <tspan x="0" y="-0.252604" style="font-size: 10px; font-family: 'cmsy10'">j</tspan>
+      <tspan x="2.768555" y="-0.252604" style="font-size: 10px; font-family: 'cmr10'">5</tspan>
+      <tspan x="7.768555" y="-9.59375" style="font-size: 10px; font-family: 'cmex10'">®</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_20">
+    <!-- $E_5=(5+1/2)\hbar\omega$ -->
+    <g style="fill: #666666" transform="translate(91.995071 26.723499)">
+     <text>
+      <tspan x="0" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">E</tspan>
+      <tspan x="38.366438" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">=</tspan>
+      <tspan x="53.471891" y="-0" style="font-size: 8px; font-family: 'cmmi10'; fill: #666666">!</tspan>
+      <tspan x="5.902344" y="1.3605" style="font-size: 5.6px; font-family: 'cmr10'; fill: #666666">5</tspan>
+      <tspan x="10.617219" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">=</tspan>
+      <tspan x="18.23675" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">(</tspan>
+      <tspan x="21.342219" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">5</tspan>
+      <tspan x="26.746906" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">+</tspan>
+      <tspan x="34.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">1</tspan>
+      <tspan x="42.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">2</tspan>
+      <tspan x="46.366438" y="-0" style="font-size: 8px; font-family: 'cmr10'; fill: #666666">)</tspan>
+      <tspan x="49.471906" y="-0" style="font-style: italic; font-size: 8px; font-family: 'STIXGeneral'; fill: #666666">ħ</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="patch_4">
+    <path d="M 197.217929 89.605444 
+Q 197.217929 101.963635 197.217929 112.085758 
+" style="fill: none; stroke: #174a72; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 199.217929 108.085758 
+L 197.217929 112.085758 
+L 195.217929 108.085758 
+" style="fill: none; stroke: #174a72; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_21">
+    <!-- $\hat A\!: \sqrt{3}$ -->
+    <g style="fill: #174a72" transform="translate(144.6065 101.96236)">
+     <text>
+      <tspan x="1.625" y="-3.918125" style="font-size: 11px; font-family: 'cmr10'; fill: #174a72">^</tspan>
+      <tspan x="8.571875" y="-0.59" style="font-size: 11px; font-family: 'cmr10'; fill: #174a72">:</tspan>
+      <tspan x="24.079981" y="-0.984375" style="font-size: 11px; font-family: 'cmr10'; fill: #174a72">3</tspan>
+      <tspan x="0" y="-0.59" style="font-size: 11px; font-family: 'cmmi10'; fill: #174a72">A</tspan>
+      <tspan x="13.548731" y="-10.980625" style="font-size: 9.164497px; font-family: 'cmex10'; fill: #174a72">p</tspan>
+     </text>
+     <rect x="22.704981" y="-11.625" width="8.25" height="0.6875"/>
+    </g>
+   </g>
+   <g id="patch_5">
+    <path d="M 281.396214 85.602153 
+Q 281.396214 73.243962 281.396214 63.121839 
+" style="fill: none; stroke: #a84435; stroke-width: 2; stroke-linecap: round"/>
+    <path d="M 279.396214 67.121839 
+L 281.396214 63.121839 
+L 283.396214 67.121839 
+" style="fill: none; stroke: #a84435; stroke-width: 2; stroke-linecap: round"/>
+   </g>
+   <g id="text_22">
+    <!-- $\hat A^\dagger\!: \sqrt{4}$ -->
+    <g style="fill: #a84435" transform="translate(289.287929 73.245237)">
+     <text>
+      <tspan x="1.625" y="-3.9025" style="font-size: 11px; font-family: 'cmr10'; fill: #a84435">^</tspan>
+      <tspan x="16.318462" y="-0.574375" style="font-size: 11px; font-family: 'cmr10'; fill: #a84435">:</tspan>
+      <tspan x="31.639068" y="-0.984375" style="font-size: 11px; font-family: 'cmr10'; fill: #a84435">4</tspan>
+      <tspan x="0" y="-0.574375" style="font-size: 11px; font-family: 'cmmi10'; fill: #a84435">A</tspan>
+      <tspan x="10.093067" y="-4.783422" style="font-size: 7.7px; font-family: 'STIXGeneral'; fill: #a84435">†</tspan>
+      <tspan x="21.295318" y="-10.980625" style="font-size: 8.969231px; font-family: 'cmex10'; fill: #a84435">p</tspan>
+     </text>
+     <rect x="30.264068" y="-11.625" width="8.25" height="0.6875"/>
+    </g>
+   </g>
+   <g id="text_23">
+    <!-- $\hat A|0\rangle=0$  (sıfır vektörü) -->
+    <g transform="translate(107.7785 197.303206)">
+     <text>
+      <tspan x="1.5625" y="-3.0625" style="font-size: 10px; font-family: 'cmr10'">^</tspan>
+      <tspan x="10.268555" y="-0.03125" style="font-size: 10px; font-family: 'cmr10'">0</tspan>
+      <tspan x="21.746094" y="-0.03125" style="font-size: 10px; font-family: 'cmr10'">=</tspan>
+      <tspan x="31.270508" y="-0.03125" style="font-size: 10px; font-family: 'cmr10'">0</tspan>
+      <tspan x="0" y="-0.03125" style="font-size: 10px; font-family: 'cmmi10'">A</tspan>
+      <tspan x="7.5" y="-0.03125" style="font-size: 10px; font-family: 'cmsy10'">j</tspan>
+      <tspan x="15.268555" y="-9.372396" style="font-size: 10px; font-family: 'cmex10'">®</tspan>
+      <tspan x="36.270508" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'"> </tspan>
+      <tspan x="39.449219" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'"> </tspan>
+      <tspan x="42.62793" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'">(</tspan>
+      <tspan x="46.529297" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'">s</tspan>
+      <tspan x="51.661133" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'">ı</tspan>
+      <tspan x="54.859375" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'">f</tspan>
+      <tspan x="58.560547" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'">ı</tspan>
+      <tspan x="61.758789" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'">r</tspan>
+      <tspan x="66.539062" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'"> </tspan>
+      <tspan x="69.717773" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'">v</tspan>
+      <tspan x="75.367188" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'">e</tspan>
+      <tspan x="81.285156" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'">k</tspan>
+      <tspan x="87.344727" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'">t</tspan>
+      <tspan x="91.363281" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'">ö</tspan>
+      <tspan x="97.383789" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'">r</tspan>
+      <tspan x="102.164062" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'">ü</tspan>
+      <tspan x="108.604492" y="-0.03125" style="font-size: 10px; font-family: 'DejaVu Serif'">)</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_24">
+    <!-- $E_0=\hbar\omega/2$ -->
+    <g transform="translate(297.179643 186.103528)">
+     <text>
+      <tspan x="0" y="-0.5" style="font-size: 10px; font-family: 'cmmi10'">E</tspan>
+      <tspan x="27.795922" y="-0.5" style="font-size: 10px; font-family: 'cmmi10'">!</tspan>
+      <tspan x="34.016625" y="-0.5" style="font-size: 10px; font-family: 'cmmi10'">=</tspan>
+      <tspan x="7.37793" y="1.200625" style="font-size: 7px; font-family: 'cmr10'">0</tspan>
+      <tspan x="13.271523" y="-0.5" style="font-size: 10px; font-family: 'cmr10'">=</tspan>
+      <tspan x="39.016625" y="-0.5" style="font-size: 10px; font-family: 'cmr10'">2</tspan>
+      <tspan x="22.795938" y="-0.5" style="font-style: italic; font-size: 10px; font-family: 'STIXGeneral'">ħ</tspan>
+     </text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p919ffd1718">
+   <rect x="34.1225" y="5.76" width="368.28" height="199.584"/>
+  </clipPath>
+ </defs>
+</svg>

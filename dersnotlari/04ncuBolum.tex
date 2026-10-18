@@ -726,7 +726,7 @@ transandantal denklemleri elde edilir. Yeterli bir çabayla $v$ ve $u$ arasında
 v^2 + u^2 = \frac{2 m }{\hbar^{2}} V_0 a^2
 \end{align}
 %%
-ilişkisinin olduğu rahatça görülebilir. Bu bir çember denklemidir. Transandantal eşitliklerden ve bu denklemden faydalanılarak
+ilişkisinin olduğu rahatça görülebilir. Bu bir çember denklemidir. Transandantal eşitliklerden ve bu çember denkleminden faydalanılarak, kesişim noktaları grafiksel olarak bulunabilir. Bu noktalar izinli bağlı durum enerjilerini belirler.
 
 
 
@@ -761,5 +761,660 @@ ilişkisinin olduğu rahatça görülebilir. Bu bir çember denklemidir. Transan
 %%
 
 
+% ===== El notlarından eklenen alt bölümler: başlangıç =====
+% El notları, s. 1--6: tek ve çift delta kuyuları.
+\subsection{Dirac-Delta Potansiyeli}
+\label{sec:delta_potansiyeli}
+
+Sonlu potansiyel kuyusunda dalga fonksiyonu ve birinci türevi kuyu
+sınırlarında süreklidir. Buna karşılık, çok dar ve çok derin bir kuyunun
+idealleştirilmiş modeli olan Dirac-delta potansiyelinde dalga fonksiyonu
+sürekli kalırken türevi sonlu bir sıçrama gösterir. Basamak potansiyeli
+incelenirken karşılaştığımız bu sınır şartını şimdi bir bağlı durum
+probleminin çözümünde kullanacağız.
+
+Dirac-delta, sıradan bir fonksiyondan çok bir \emph{dağılım} olarak
+tanımlanır. Burada gerekli olan özellikleri,
+\begin{equation}
+ \int_{-\infty}^{\infty}\delta(x-x_0)\,dx=1,
+ \qquad
+ \int_{-\infty}^{\infty}f(x)\delta(x-x_0)\,dx=f(x_0)
+\end{equation}
+şeklindedir. İkinci eşitlik, $f$ fonksiyonu $x_0$ civarında sürekli
+olduğunda geçerlidir. İntegralin boyutsuz olması gerektiğinden
+$[\delta(x)]=L^{-1}$ olur. Şimdi,
+\begin{equation}
+ V(x)=-\frac{\hbar^2}{2m}\frac{\lambda}{a}\delta(x)
+      \equiv-g\delta(x),
+ \qquad g=\frac{\hbar^2\lambda}{2ma}>0
+ \label{eq:delta_tanim}
+\end{equation}
+potansiyelini ele alalım. Burada $a>0$ uzunluk boyutunda bir ölçek,
+$\lambda>0$ boyutsuz bir şiddet parametresidir; $g$ ise enerji çarpı
+uzunluk boyutundadır. Delta kuyusunun sonlu bir genişliği bulunmadığı
+için bu problemde $a$ bir kuyu genişliği değildir. Fiziksel etkileşim
+şiddeti $\lambda/a$ oranıyla belirlenir.
+
+Bu potansiyel, genişliği $b$, derinliği $g/b$ olan dikdörtgen bir kuyunun
+$b\to0$ limitinde, potansiyel eğrisi altında kalan alan $-g$ sabit
+tutularak elde edilebilir. Dolayısıyla burada denetlenen büyüklük
+sonlu bir kuyu derinliğinden ziyade kuyunun tümleşik şiddetidir.
+
+\subsubsection{Bağlı durum ve türevin sıçrama şartı}
+
+Bağlı durumda $E=-|E|<0$ alır ve
+\begin{equation}
+ \kappa^2=\frac{2m|E|}{\hbar^2},\qquad \kappa>0
+\end{equation}
+tanımını yaparsak Schrödinger denklemi,
+\begin{equation}
+ u''(x)-\kappa^2u(x)=-\frac{\lambda}{a}\delta(x)u(x)
+ \label{eq:delta_sch}
+\end{equation}
+halini alır. $x\ne0$ için sağ taraf sıfırdır. Her iki sonsuzda da
+azalan çözümleri seçerek,
+\begin{equation}
+ u(x)=\begin{cases}
+ A e^{\kappa x},&x<0,\\
+ B e^{-\kappa x},&x>0
+ \end{cases}
+\end{equation}
+yazabiliriz. Dalga fonksiyonunun sürekliliği $A=B=C$ verir. Türevin
+sınır şartını bulmak için Denk.~\eqref{eq:delta_sch}'yi sıfırın
+çevresinde integre edelim:
+\begin{equation}
+ u'(\varepsilon)-u'(-\varepsilon)
+ -\kappa^2\int_{-\varepsilon}^{\varepsilon}u(x)\,dx
+ =-\frac{\lambda}{a}u(0).
+\end{equation}
+$\varepsilon\to0^+$ limitinde, $u$ sürekli ve sonlu olduğu için
+integral sıfıra gider. Böylece,
+\begin{equation}
+ \boxed{u'(0^+)-u'(0^-)=-\frac{\lambda}{a}u(0)}
+ \label{eq:delta_sicrama}
+\end{equation}
+elde edilir. Çözümlerin türevlerini yerlerine koyarsak,
+\begin{equation}
+ -\kappa C-\kappa C=-\frac{\lambda}{a}C
+ \quad\Longrightarrow\quad
+ \kappa=\frac{\lambda}{2a}
+\end{equation}
+olur. Sıfırdan farklı bir çözüm için bağlı durum enerjisi tektir:
+\begin{equation}
+ \boxed{E=-\frac{\hbar^2\lambda^2}{8ma^2}
+          =-\frac{mg^2}{2\hbar^2}.}
+ \label{eq:delta_enerji}
+\end{equation}
+Normalizasyon koşulunu da uygulayalım:
+\begin{equation}
+ 1=|C|^2\int_{-\infty}^{\infty}e^{-2\kappa|x|}\,dx
+   =\frac{|C|^2}{\kappa}.
+\end{equation}
+Genel fazı sıfır seçerek normalize edilmiş dalga fonksiyonunu,
+\begin{equation}
+ \boxed{u(x)=\sqrt{\kappa}\,e^{-\kappa|x|},
+ \qquad \kappa=\frac{\lambda}{2a}}
+ \label{eq:delta_normalize}
+\end{equation}
+olarak buluruz. Bu çözüm çift paritelidir ve düğümü yoktur. Tek
+pariteli bir bağlı durum için süreklilik $u(0)=0$ gerektirir;
+üstel azalan dış çözümler bu koşulla ancak her yerde sıfır olabilir.
+Dolayısıyla çekici tek delta kuyusunun yalnızca bir bağlı durumu vardır.
+
+\begin{figure}[tbp]
+ \centering
+ \includegraphics[width=.88\linewidth]{figurler/delta_tek_bagli.pdf}
+ \caption{Tek delta kuyusunun normalize edilmiş bağlı durum dalga
+ fonksiyonu. Dalga fonksiyonu $x=0$'da süreklidir; sağ ve sol türevleri
+ farklıdır. Aşağı yönlü ok çekici delta etkileşimini simgeler;
+ okun uzunluğu sonlu bir potansiyel derinliği göstermez.}
+ \label{fig:delta_tek_bagli}
+\end{figure}
+
+\subsection{Çift Dirac-Delta Potansiyeli}
+\label{sec:cift_delta}
+
+Tek delta kuyusunun çözümünü, merkezleri $x=\pm a$ olan iki özdeş
+çekici etkileşime genişletelim:
+\begin{equation}
+ V(x)=-\frac{\hbar^2}{2m}\frac{\lambda}{a}
+       [\delta(x-a)+\delta(x+a)],\qquad a>0,\quad\lambda>0.
+ \label{eq:cift_delta_tanim}
+\end{equation}
+Bu problemde $2a$ iki delta kuyusu arasındaki uzaklıktır. İki etkileşim
+de aynı $g=\hbar^2\lambda/(2ma)$ şiddetine sahiptir.
+Potansiyel $V(-x)=V(x)$ simetrisini taşıdığından bağlı durumları çift
+ve tek pariteli olarak ayrı ayrı inceleyebiliriz. Yine
+$E=-\hbar^2\kappa^2/(2m)$ alırız. Delta noktaları dışında $u''-\kappa^2u=0$
+olduğu için kuyular arasındaki çözümler salınımlı değil, hiperboliktir.
+
+\subsubsection{Çift pariteli çözüm}
+
+Dalga fonksiyonunu, sürekliliği baştan sağlayacak şekilde,
+\begin{equation}
+ u_+(x)=C_+\begin{cases}
+ \cosh(\kappa a)e^{\kappa(x+a)},&x<-a,\\
+ \cosh(\kappa x),&-a\le x\le a,\\
+ \cosh(\kappa a)e^{-\kappa(x-a)},&x>a
+ \end{cases}
+ \label{eq:cift_delta_cift_df}
+\end{equation}
+yazalım. $u_+(-x)=u_+(x)$ olduğu açıktır. $x=a$ noktasında türevin
+sıçrama şartı,
+\begin{align}
+ u_+'(a^+)-u_+'(a^-)&=-\frac{\lambda}{a}u_+(a),\\
+ -\kappa C_+\cosh(\kappa a)-\kappa C_+\sinh(\kappa a)
+ &=-\frac{\lambda}{a}C_+\cosh(\kappa a)
+\end{align}
+verir. $\cosh(\kappa a)$ sıfır olmadığına göre,
+\begin{equation}
+ \kappa[1+\tanh(\kappa a)]=\frac{\lambda}{a}
+\end{equation}
+elde edilir. $y=\kappa a$ boyutsuz değişkeniyle özdeğer denklemi,
+\begin{equation}
+ \boxed{\tanh y=\frac{\lambda}{y}-1}
+ \qquad\Longleftrightarrow\qquad
+ \boxed{2y=\lambda(1+e^{-2y})}
+ \label{eq:cift_delta_cift_ozdeger}
+\end{equation}
+olur. Simetriden dolayı $x=-a$ noktasındaki şart aynı denklemi verir.
+
+$y>0$ bölgesinde $\tanh y$ sıfırdan bire doğru artarken
+$\lambda/y-1$ sonsuzdan $-1$'e doğru azalır. Dolayısıyla her
+$\lambda>0$ için tam bir pozitif kesişim, yani bir çift pariteli
+bağlı durum vardır. Ayrıca $0<\tanh y<1$ olduğundan,
+\begin{equation}
+ \frac{\lambda}{2}<y_+<\lambda,
+ \qquad
+ E_+=-\frac{\hbar^2y_+^2}{2ma^2}
+       <-\frac{\hbar^2\lambda^2}{8ma^2}.
+ \label{eq:cift_delta_cift_sinir}
+\end{equation}
+Böylece çift pariteli durum, aynı şiddetteki tek delta kuyusunun
+bağlı durumundan daha düşük enerjilidir; başka bir deyişle daha
+kuvvetli bağlıdır.
+
+\subsubsection{Tek pariteli çözüm ve oluşma eşiği}
+
+Tek pariteli dalga fonksiyonu ise,
+\begin{equation}
+ u_-(x)=C_-\begin{cases}
+ -\sinh(\kappa a)e^{\kappa(x+a)},&x<-a,\\
+ \sinh(\kappa x),&-a\le x\le a,\\
+ \sinh(\kappa a)e^{-\kappa(x-a)},&x>a
+ \end{cases}
+ \label{eq:cift_delta_tek_df}
+\end{equation}
+seçilebilir. Bu kez $u_-(-x)=-u_-(x)$ ve $u_-(0)=0$ olur. $x=a$
+noktasında,
+\begin{equation}
+ -\kappa C_-\sinh(\kappa a)-\kappa C_-\cosh(\kappa a)
+ =-\frac{\lambda}{a}C_-\sinh(\kappa a)
+\end{equation}
+koşulundan,
+\begin{equation}
+ \boxed{\coth y=\frac{\lambda}{y}-1}
+ \qquad\Longleftrightarrow\qquad
+ \boxed{2y=\lambda(1-e^{-2y})}
+ \label{eq:cift_delta_tek_ozdeger}
+\end{equation}
+bulunur. Grafiksel çözüm için uygun bir diğer biçim,
+\begin{equation}
+ \tanh y=\frac{y}{\lambda-y},\qquad 0<y<\lambda,
+ \label{eq:cift_delta_tek_tanh}
+\end{equation}
+eşitliğidir. Küçük $y$ değerleri için,
+\begin{equation}
+ \tanh y=y-\frac{y^3}{3}+\cdots,\qquad
+ \frac{y}{\lambda-y}=\frac{y}{\lambda}
+             +\frac{y^2}{\lambda^2}+\cdots
+\end{equation}
+olur. İki eğrinin başlangıç eğimleri sırasıyla $1$ ve $1/\lambda$'dır.
+Pozitif bir kesişim ancak $\lambda>1$ olduğunda ortaya çıkar.
+Bunu daha kesin görmek için
+$f(y)=\lambda(1-e^{-2y})-2y$ tanımlayabiliriz:
+\begin{equation}
+ f(0)=0,\qquad f'(0)=2(\lambda-1),\qquad
+ f''(y)=-4\lambda e^{-2y}<0.
+\end{equation}
+Fonksiyon kesin olarak içbükeydir. $\lambda\le1$ için pozitif kök
+bulunmaz; $\lambda>1$ için ise başlangıçtaki artıştan sonra tam bir
+pozitif kök oluşur. Üstel biçimdeki denklemin her $\lambda$ için
+verdiği $y=0$ kökü bağlı durum değildir: $\kappa=0$, $E=0$ durumunda
+dış çözüm sonsuzda sönmez ve normalize edilemez. Sonuç olarak,
+\begin{equation}
+ \boxed{\begin{array}{ll}
+ 0<\lambda\le1:&\text{yalnızca bir çift pariteli bağlı durum},\\
+ \lambda>1:&\text{bir çift ve bir tek pariteli bağlı durum}
+ \end{array}}
+ \label{eq:cift_delta_durum_sayisi}
+\end{equation}
+elde edilir. Tek çözüm varsa $\coth y>1$ olduğundan,
+\begin{equation}
+ 0<y_-<\frac{\lambda}{2},\qquad
+ -\frac{\hbar^2\lambda^2}{8ma^2}<E_-<0.
+\end{equation}
+Bu durum tek delta kuyusunun bağlı durumundan daha zayıf bağlıdır.
+Her iki çözüm mevcut olduğunda enerji sıralaması
+$E_+<E_{\text{tek delta}}<E_-<0$ olur.
+
+\begin{figure}[tbp]
+ \centering
+ \includegraphics[width=\linewidth]{figurler/delta_transandantal.pdf}
+ \caption{Çift delta kuyusunun özdeğer denklemlerinin grafiksel
+ çözümü. (a) Çift pariteli durumda her pozitif $\lambda$ için bir
+ kesişim vardır. (b) Tek pariteli durumda pozitif kesişim yalnızca
+ $\lambda>1$ için oluşur. Orijin bağlı durum çözümü değildir.}
+ \label{fig:delta_transandantal}
+\end{figure}
+
+\subsubsection{Normalizasyon ve fiziksel yorum}
+
+Her iki parite için de dalga fonksiyonları daha kısa olarak,
+\begin{equation}
+ u_\pm(x)=N_\pm\big[e^{-\kappa_\pm|x-a|}
+                      \pm e^{-\kappa_\pm|x+a|}\big]
+ \label{eq:cift_delta_toplam}
+\end{equation}
+yazılabilir. Burada $\kappa_+$ ve $\kappa_-$ kendi özdeğer
+denklemlerinin pozitif kökleridir. İki üstel fonksiyonun örtüşme
+integrali,
+\begin{equation}
+ \int_{-\infty}^{\infty}
+ e^{-\kappa|x-a|}e^{-\kappa|x+a|}\,dx
+ =\left(2a+\frac{1}{\kappa}\right)e^{-2\kappa a}
+\end{equation}
+olduğundan normalizasyon katsayıları,
+\begin{equation}
+ N_\pm=\left\{\frac{2}{\kappa_\pm}
+ \left[1\pm(1+2\kappa_\pm a)e^{-2\kappa_\pm a}\right]\right\}^{-1/2}
+\end{equation}
+olarak bulunur. Şekil~\ref{fig:delta_cift_parite}, bu çözümleri
+$\lambda=2.5$ için gösterir. Çift çözümün merkezde düğümü yokken tek
+çözümün $x=0$'da bir düğümü vardır. Her ikisi de delta noktalarında
+süreklidir ve türevleri sıçrar.
+
+\begin{figure}[tbp]
+ \centering
+ \includegraphics[width=\linewidth]{figurler/delta_cift_parite.pdf}
+ \caption{$\lambda=2.5$ için çift delta kuyusunun normalize edilmiş
+ çift ve tek pariteli bağlı durumları. Oklar $x=\pm a$ konumlarındaki
+ çekici etkileşimleri simgeler. Dalga fonksiyonu ile potansiyel için
+ ortak bir düşey ölçek kullanılmamaktadır.}
+ \label{fig:delta_cift_parite}
+\end{figure}
+
+Kuyuların fiziksel şiddeti $g$ sabit tutulup aralarındaki uzaklık
+artırılırsa $\kappa_\pm a\gg1$ limitinde üstel örtüşme küçülür.
+Her iki denklem de $\kappa_\pm\simeq mg/\hbar^2$ sonucuna yaklaşır.
+Çift ve tek durumların enerjileri böylece birbirine yaklaşarak
+birbirinden uzak iki tek delta kuyusunun enerji değerine gider.
+Burada $g$ sabitken $\lambda=2mga/\hbar^2$ değerinin $a$ ile birlikte
+değiştiğine dikkat edilmelidir.
+
+% El notları, s. 7--16; eklenmiş kitap sayfaları, s. 17--20.
+\subsection{Harmonik Salınıcı}
+\label{sec:harmonik_salinici}
+
+\subsubsection{Klasik sistemden kuantum problemine}
+
+Sürtünmesiz bir düzlemde, yay sabiti $K$ olan bir yaya bağlı $m$
+kütlesinin denge konumundan uzaklığı $x$ olsun. Geri çağırıcı kuvvet
+$F=-Kx$ olduğuna göre Newton denklemi,
+\begin{equation}
+ m\frac{d^2x}{dt^2}=-Kx
+ \quad\Longrightarrow\quad
+ \frac{d^2x}{dt^2}+\omega^2x=0,
+ \qquad \omega=\sqrt{\frac{K}{m}}
+\end{equation}
+olur. $V(0)=0$ seçilirse potansiyel enerji,
+\begin{equation}
+ V(x)=-\int_0^x F(x')\,dx'
+     =\frac12 Kx^2=\frac12 m\omega^2x^2
+ \label{eq:ho_potansiyel}
+\end{equation}
+şeklindedir. Yay sabitini $K$ ile göstererek önceki alt bölümlerdeki
+dalga sayısı $k$ ile karışmasını önlüyoruz.
+
+\begin{figure}[tbp]
+ \centering
+ \includegraphics[width=\linewidth]{figurler/harmonik_klasik.pdf}
+ \caption{Klasik harmonik salınıcı ve parabolik potansiyeli.
+ Kuvvet denge noktasına yönelir. Sağ panelde
+ $\ell=\sqrt{\hbar/(m\omega)}$ uzunluk ölçeği kullanılmıştır.}
+ \label{fig:harmonik_klasik}
+\end{figure}
+
+Harmonik yaklaşım yalnızca yaylı sistemlerle sınırlı değildir.
+Düzgün bir potansiyelin kararlı denge noktası $x_0$ çevresindeki
+Taylor açılımı,
+\begin{equation}
+ V(x)=V(x_0)+\frac12 V''(x_0)(x-x_0)^2+\cdots
+\end{equation}
+şeklindedir; çünkü dengede $V'(x_0)=0$ olur. $V''(x_0)>0$ olduğunda
+küçük yer değiştirmeler için hareket yaklaşık harmoniktir~\cite{book:Gasiorowicz}.
+Koordinat başlangıcı ve enerji sıfırı değiştirilerek
+Denk.~\eqref{eq:ho_potansiyel} biçimi elde edilir.
+
+\subsubsection{Boyutsuz Schrödinger denklemi}
+
+Aynı potansiyel altındaki kuantum sisteminin zamandan bağımsız
+Schrödinger denklemi,
+\begin{equation}
+ -\frac{\hbar^2}{2m}\frac{d^2u}{dx^2}
+ +\frac12m\omega^2x^2u(x)=Eu(x)
+ \label{eq:ho_sch}
+\end{equation}
+olur. Boyutsuz değişken dönüşümlerini,
+\begin{equation}
+ \ell=\sqrt{\frac{\hbar}{m\omega}},\qquad
+ x=\ell y,\qquad E=\frac{\hbar\omega}{2}\varepsilon
+ \label{eq:ho_boyutsuz}
+\end{equation}
+şeklinde yazalım. $d/dx=\ell^{-1}d/dy$ ve
+$d^2/dx^2=\ell^{-2}d^2/dy^2$ olduğundan,
+\begin{equation}
+ -\frac{\hbar\omega}{2}\frac{d^2u}{dy^2}
+ +\frac{\hbar\omega}{2}y^2u
+ =\frac{\hbar\omega}{2}\varepsilon u
+\end{equation}
+elde edilir. Ortak katsayı sadeleştirildiğinde,
+\begin{equation}
+ \boxed{\frac{d^2u}{dy^2}+(\varepsilon-y^2)u(y)=0}
+ \label{eq:ho_boyutsuz_sch}
+\end{equation}
+bulunur. Burada geçici olarak $u(y)$ yazımı, $u(x=\ell y)$
+fonksiyonunu ifade eder; $dx=\ell\,dy$ olduğundan normalizasyon
+integralinde bu uzunluk çarpanı korunmalıdır.
+
+\subsubsection{Sonsuzdaki davranışın ayrılması}
+
+Bağlı durum çözümü $y\to\pm\infty$ iken sıfıra gitmelidir.
+$y^2\gg|\varepsilon|$ bölgesinde denklem baskın terimleriyle,
+\begin{equation}
+ u''(y)-y^2u(y)\simeq0
+\end{equation}
+biçimindedir. Asimptotik davranışı incelemek için,
+\begin{equation}
+ \frac{d}{dy}\left[(u')^2-y^2u^2\right]=-2yu^2
+ \label{eq:ho_asimptotik_ozdeslik}
+\end{equation}
+yazabiliriz; bu eşitlik indirgenmiş $u''-y^2u=0$ denklemi için
+geçerlidir. Baskın mertebede sağ taraf ihmal edildiğinde
+$(u')^2-y^2u^2\simeq C$ bulunur. Sönen çözüm için $C=0$ seçimi,
+$u'\simeq\pm yu$ ve dolayısıyla $e^{\pm y^2/2}$ üstel
+çarpanlarına götürür. Normalizasyona uygun olan azalan çarpan
+$e^{-y^2/2}$'dir.
+
+Bu işlem bir asimptotik yaklaşımdır: $e^{-y^2/2}$,
+$u''-y^2u=0$ denkleminin tam çözümü değildir; yerine konulduğunda
+$-u$ kalır ve bu terim $|y|\gg1$ bölgesinde $y^2u$'ya göre küçüktür.
+Buna karşılık asıl denklemin çözümünde bu çarpanı ayırmak,
+\begin{equation}
+ u(y)=h(y)e^{-y^2/2},
+ \label{eq:ho_ayirma}
+\end{equation}
+herhangi bir yaklaşım içermez. Türevler,
+\begin{align}
+ u'&=(h'-yh)e^{-y^2/2},\\
+ u''&=[h''-2yh'+(y^2-1)h]e^{-y^2/2}
+\end{align}
+olduğundan Denk.~\eqref{eq:ho_boyutsuz_sch}, tam olarak,
+\begin{equation}
+ \boxed{h''-2yh'+(\varepsilon-1)h=0}
+ \label{eq:ho_h_denklemi}
+\end{equation}
+biçimine dönüşür.
+
+\subsubsection{Kuvvet serisi ve yineleme bağıntısı}
+
+$h(y)$ için orijin çevresinde bir kuvvet serisi önerelim:
+\begin{align}
+ h(y)&=\sum_{r=0}^{\infty}a_ry^r,\\
+ h'(y)&=\sum_{r=1}^{\infty}r a_ry^{r-1},\\
+ h''(y)&=\sum_{r=2}^{\infty}r(r-1)a_ry^{r-2}
+       =\sum_{r=0}^{\infty}(r+2)(r+1)a_{r+2}y^r.
+\end{align}
+Toplama indisini $r$ ile göstererek kütle $m$ ile karışmasını
+önledik. Serileri Denk.~\eqref{eq:ho_h_denklemi}'ne yerleştirirsek,
+\begin{equation}
+ \sum_{r=0}^{\infty}\left[(r+2)(r+1)a_{r+2}
+                  +(\varepsilon-1-2r)a_r\right]y^r=0
+\end{equation}
+olur. Her kuvvetin katsayısı ayrı ayrı sıfır olmalıdır. Böylece,
+\begin{equation}
+ \boxed{a_{r+2}=\frac{2r+1-\varepsilon}{(r+2)(r+1)}a_r}
+ \label{eq:ho_yineleme}
+\end{equation}
+yineleme bağıntısı bulunur. İlk birkaç katsayı,
+\begin{align}
+ a_2&=\frac{1-\varepsilon}{2!}a_0,&
+ a_4&=\frac{(5-\varepsilon)(1-\varepsilon)}{4!}a_0,\\
+ a_3&=\frac{3-\varepsilon}{3!}a_1,&
+ a_5&=\frac{(7-\varepsilon)(3-\varepsilon)}{5!}a_1
+\end{align}
+şeklindedir. $a_0$ yalnızca çift indisli, $a_1$ ise yalnızca tek
+indisli katsayıları üretir. Dolayısıyla seri,
+\begin{equation}
+ h(y)=\underbrace{a_0+a_2y^2+a_4y^4+\cdots}_{\text{çift parite}}
+     +\underbrace{a_1y+a_3y^3+a_5y^5+\cdots}_{\text{tek parite}}
+\end{equation}
+olarak ayrılır. Gauss çarpanı da çift olduğundan $u$ ve $h$ aynı
+pariteye sahiptir. Sonsuz kuyu ve sonlu kuyu problemlerinde olduğu
+gibi bu ayrım, potansiyelin yansıma simetrisinin sonucudur.
+
+\begin{figure}[tbp]
+ \centering
+ \includegraphics[width=\linewidth]{figurler/kuyular_parite.pdf}
+ \caption{Yansıma simetrisine sahip üç potansiyelde çift ve tek
+ pariteli durumlar. Mavi düz eğriler çift, kırmızı kesikli eğriler tek
+ çözümleri gösterir. Gri çizgiler potansiyellerin şematik biçimleridir;
+ dalga fonksiyonlarının düşey ölçeği enerjiden bağımsızdır.}
+ \label{fig:kuyular_parite}
+\end{figure}
+
+\subsubsection{Serinin sonlanması ve enerjinin kuantumlanması}
+
+$r$ çok büyükken yineleme bağıntısı,
+\begin{equation}
+ a_{r+2}\simeq\frac{2}{r}a_r
+\end{equation}
+olur. Bu davranış, $e^{y^2}$ serisinin katsayılarının büyük
+indislerdeki davranışına benzer. Bu karşılaştırmayı
+çift seri üzerinden daha açık yazabiliriz. Büyük bir çift $N=2q$
+indisinden sonra yaklaşık bağıntıyı kullanırsak,
+\begin{equation}
+ h_{\text{kuyruk}}(y)\simeq
+ a_N\left[y^N+\frac{2y^{N+2}}{N}
+     +\frac{2^2y^{N+4}}{N(N+2)}+\cdots\right]
+\end{equation}
+ve dolayısıyla,
+\begin{equation}
+ h_{\text{kuyruk}}(y)\simeq
+ a_{2q}(q-1)!y^2
+ \left[e^{y^2}-\sum_{j=0}^{q-2}\frac{(y^2)^j}{j!}\right]
+\end{equation}
+elde edilir. Buradaki yaklaşım üstel büyümenin nedenini gösterir;
+kuvvet çarpanlarını tam asimptotik doğrulukla belirlemek için yeterli
+değildir. Sonlanmayan sabit pariteli serinin büyüyen bileşeni,
+Gauss çarpanına rağmen $u$'nun bir sonsuzda sönme koşulunu bozar.
+Tek pariteli seri için de aynı sorun ortaya çıkar. Her iki sonsuzda
+normalize edilebilir bir özfonksiyon elde etmek için seçilen paritedeki
+serinin bir polinomda sonlanması gerekir.
+
+$a_n\ne0$ son katsayı olsun. $a_{n+2}=0$ olması için
+Denk.~\eqref{eq:ho_yineleme}'nin payı sıfır olmalıdır:
+\begin{equation}
+ 2n+1-\varepsilon=0
+ \quad\Longrightarrow\quad \varepsilon_n=2n+1,
+ \qquad n=0,1,2,\ldots
+\end{equation}
+$n$ çiftse $a_1=0$, $n$ tekse $a_0=0$ seçilir; böylece diğer
+paritedeki sonlanmayan seri de kaldırılır. Enerji özdeğerleri,
+\begin{equation}
+ \boxed{E_n=\hbar\omega\left(n+\frac12\right),
+ \qquad n=0,1,2,\ldots}
+ \label{eq:ho_enerjiler}
+\end{equation}
+olur. Klasik salınıcıda enerji sürekli değerler alabilirken kuantum
+salınıcıda izinli enerjiler kesiklidir. Ardışık seviyeler arasındaki
+fark sabittir:
+\begin{equation}
+ E_{n+1}-E_n=\hbar\omega.
+\end{equation}
+
+Sonlanmış serinin katsayıları yineleme bağıntısından,
+\begin{align}
+ a_{2j}&=\frac{(-2)^j}{(2j)!}
+       \left[\prod_{s=0}^{j-1}(n-2s)\right]a_0,
+       && n\text{ çift},\\
+ a_{2j+1}&=\frac{(-2)^j}{(2j+1)!}
+       \left[\prod_{s=0}^{j-1}(n-1-2s)\right]a_1,
+       && n\text{ tek}
+\end{align}
+olarak da ifade edilir. Boş çarpım $1$ kabul edilir; polinomun
+derecesini aşan katsayılar sıfırdır.
+
+\begin{figure}[tbp]
+ \centering
+ \includegraphics[width=.9\linewidth]{figurler/harmonik_enerji.pdf}
+ \caption{Harmonik salınıcının ilk altı enerji seviyesi.
+ Kırmızı noktalar $x=\pm\ell\sqrt{2n+1}$ klasik dönüm noktalarıdır.
+ Enerji aralıkları eşittir ve en düşük enerji sıfır değildir.}
+ \label{fig:harmonik_enerji}
+\end{figure}
+
+\subsubsection{Hermite polinomları ve normalize edilmiş özfonksiyonlar}
+
+$\varepsilon=2n+1$ için polinom denklemi,
+\begin{equation}
+ H_n''(y)-2yH_n'(y)+2nH_n(y)=0
+\end{equation}
+olur. Çözümler, sabit bir çarpan dışında fizikçilerin kullandığı
+\emph{Hermite polinomları}dır. Rodrigues formülü,
+\begin{equation}
+ H_n(y)=(-1)^ne^{y^2}\frac{d^n}{dy^n}e^{-y^2}
+ \label{eq:ho_rodrigues}
+\end{equation}
+bu çarpan seçimini belirler. İlk altı polinom,
+\begin{align}
+ H_0(y)&=1, & H_1(y)&=2y,\\
+ H_2(y)&=4y^2-2, & H_3(y)&=8y^3-12y,\\
+ H_4(y)&=16y^4-48y^2+12,\qquad &
+ H_5(y)&=32y^5-160y^3+120y
+\end{align}
+şeklindedir. Bunların paritesi $H_n(-y)=(-1)^nH_n(y)$ ile verilir.
+Diğer yararlı bağıntılar,
+\begin{align}
+ H_{n+1}(y)&=2yH_n(y)-2nH_{n-1}(y),&&n\ge1,\\
+ H_n'(y)&=2nH_{n-1}(y),&&n\ge1,\\
+ \sum_{n=0}^{\infty}H_n(y)\frac{z^n}{n!}&=e^{2yz-z^2}
+\end{align}
+olarak yazılabilir. Son eşitliğin sağ tarafı Hermite polinomlarının
+üreteç fonksiyonudur. Polinomlar tek başlarına tüm gerçek eksende
+kareleri integrallenebilir fonksiyonlar değildir. Diklik ve norm
+bağıntıları Gauss ağırlığı altında geçerlidir:
+\begin{equation}
+ \int_{-\infty}^{\infty}e^{-y^2}H_n(y)H_j(y)\,dy
+ =2^nn!\sqrt{\pi}\,\delta_{nj}.
+ \label{eq:ho_hermite_norm}
+\end{equation}
+Burada $\delta_{nj}$ Kronecker deltasıdır; Dirac-delta dağılımıyla
+karıştırılmamalıdır.
+
+Konum değişkenine dönerek $\int|u_n(x)|^2dx=1$ koşulunu uygularsak,
+\begin{equation}
+ \boxed{u_n(x)=\frac{1}{\pi^{1/4}\sqrt{2^nn!\,\ell}}
+ H_n\!\left(\frac{x}{\ell}\right)
+ \exp\!\left(-\frac{x^2}{2\ell^2}\right),
+ \qquad \ell=\sqrt{\frac{\hbar}{m\omega}}}
+ \label{eq:ho_normalize}
+\end{equation}
+elde edilir. Örneğin,
+\begin{align}
+ u_0(x)&=\frac{1}{\pi^{1/4}\sqrt{\ell}}e^{-x^2/(2\ell^2)},\\
+ u_1(x)&=\sqrt{2}\,\frac{x}{\ell}u_0(x),\\
+ u_2(x)&=\frac{1}{\sqrt{2}}
+       \left(2\frac{x^2}{\ell^2}-1\right)u_0(x).
+\end{align}
+$n$'inci özfonksiyonun sonlu konumlarda $n$ düğümü vardır. Çift $n$
+değerlerinde dalga fonksiyonu çift, tek $n$ değerlerinde tektir.
+Zamana bağlı durağan durum ise,
+\begin{equation}
+ \psi_n(x,t)=u_n(x)e^{-iE_nt/\hbar}
+\end{equation}
+şeklindedir ve olasılık yoğunluğu $|\psi_n(x,t)|^2=|u_n(x)|^2$
+zamandan bağımsızdır.
+
+\begin{figure}[p]
+ \centering
+ \includegraphics[width=.94\linewidth]{figurler/harmonik_ilk_alti.pdf}
+ \caption{Harmonik salınıcının ilk altı normalize edilmiş
+ özfonksiyonu. Yatay eksen $y=x/\ell$, düşey eksen
+ $\sqrt{\ell}\,u_n(x)$'tir; bütün panellerde aynı ölçek kullanılmıştır.
+ Mavi eğriler çift, kırmızı eğriler tek pariteli durumları gösterir.
+ Bunlar dalga fonksiyonlarıdır; olasılık yoğunlukları değildir.}
+ \label{fig:harmonik_ilk_alti}
+\end{figure}
+
+\subsubsection{Özfonksiyonların dikliği}
+
+Diklik, Hermite bağıntısının yanı sıra doğrudan Schrödinger
+denkleminden de gösterilebilir. İki farklı özfonksiyon için,
+\begin{align}
+ -\frac{\hbar^2}{2m}u_n''+Vu_n&=E_nu_n,\\
+ -\frac{\hbar^2}{2m}(u_j^*)''+Vu_j^*&=E_ju_j^*
+\end{align}
+yazalım. İlk denklemi $u_j^*$, ikinciyi $u_n$ ile çarpıp çıkarırsak,
+\begin{equation}
+ \frac{d}{dx}\left[u_j^*u_n'-(u_j^*)'u_n\right]
+ =\frac{2m}{\hbar^2}(E_j-E_n)u_j^*u_n
+\end{equation}
+olur. Bütün gerçek eksen üzerinde integre edildiğinde dalga
+fonksiyonları ve türevleri sonsuzda sıfıra gittiğinden sınır terimi
+yok olur:
+\begin{equation}
+ (E_j-E_n)\int_{-\infty}^{\infty}u_j^*(x)u_n(x)\,dx=0.
+\end{equation}
+$E_j\ne E_n$ olduğunda integral sıfırdır. Normalizasyon da hesaba
+katıldığında,
+\begin{equation}
+ \int_{-\infty}^{\infty}u_j^*(x)u_n(x)\,dx=\delta_{jn}
+\end{equation}
+ortonormallik koşuluna ulaşılır.
+
+\subsubsection{Sıfır nokta enerjisi ve fiziksel anlamı}
+
+En düşük enerji,
+\begin{equation}
+ E_0=\frac12\hbar\omega
+\end{equation}
+olup \emph{sıfır nokta enerjisi} olarak adlandırılır. Klasik
+salınıcı $x=0$, $p=0$ durumunda sıfır enerjiye sahip olabilir.
+Kuantum sisteminde ise hem konumun hem momentumun tam belirli
+olması belirsizlik ilkesiyle bağdaşmaz. Taban durumunda,
+\begin{equation}
+ \langle x\rangle=\langle p\rangle=0,\qquad
+ \Delta x=\frac{\ell}{\sqrt{2}},\qquad
+ \Delta p=\frac{\hbar}{\sqrt{2}\ell},\qquad
+ \Delta x\,\Delta p=\frac{\hbar}{2}
+\end{equation}
+olur. Ortalama kinetik ve potansiyel enerjiler eşittir:
+\begin{equation}
+ \langle T\rangle_0=\langle V\rangle_0=\frac14\hbar\omega.
+\end{equation}
+Dolayısıyla taban durumu, parçacığın denge noktasında hareketsiz
+bulunduğu klasik bir durum değildir. Bu sonuç parçacığa belirli bir
+klasik yörünge atamayı da gerektirmez; taban durumunun olasılık
+yoğunluğu zamanla değişmez.
+
+Klasik olarak $|x|>\ell\sqrt{2n+1}$ bölgesinde $V(x)>E_n$ olduğundan
+hareket yasaktır. Kuantum özfonksiyonlarının bu bölgelerde üstel
+azalan kuyrukları bulunur. Sonlu kuyuda gördüğümüz gibi, klasik
+dönüm noktalarının ötesinde de sıfırdan farklı bulunma olasılığı
+vardır. Harmonik salınıcı; kesikli enerjiyi, pariteyi, düğüm sayısını
+ve klasik olarak yasaklı bölgeye sızmayı aynı modelde bir araya getirir.
+
+% ===== El notlarından eklenen alt bölümler: son =====
 \BolumKaynakcaBitir
 \end{document}
